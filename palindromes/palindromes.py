@@ -1,12 +1,12 @@
 #!/usr/bin/python
 
-from string import letters
-import random
-import argparse
-
 """
 Generating positive and negative samples for palindromes classification
 """
+
+from string import letters
+import random
+import argparse
 
 class PalindromeBuilder():
 	"""
