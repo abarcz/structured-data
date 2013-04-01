@@ -3,7 +3,7 @@ function [pos neg] = readstringdata(datasetName)
 % Read palindrome dataset - both .pos and .neg files.
 % append label at first column
 % Example:
-% 	[pos neg] = readpalin("palin_10")
+% 	[pos neg] = readpalin('palin_10')
 
 	posFilename = strcat(datasetName, '.pos');
 	negFilename = strcat(datasetName, '.neg');

@@ -1,5 +1,5 @@
 
-function [net rmsErrors trainCorrectRates validationCorrectRates] = trainnet(net, samples, nEpochs, learningConstant)
+function [net rmsErrors trainCorrectRates validationCorrectRates] = trainfnn(net, samples, nEpochs, learningConstant)
 % trains two-layer neural network
 % returns: v - hidden layer weights, w - visible layer weights
 % samples - row = sample (without class information)
