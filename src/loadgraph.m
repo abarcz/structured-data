@@ -9,6 +9,13 @@ function graph = loadgraph(graphName)
 % The edges file is supposed to contain a comma-separated matrix
 % of edge labels. Label a(i,j) is the label of edge from v_i to v_j.
 % Zero label means no edge.
+%
+% Resulting graph contains:
+% - nodes : a vector of node labels, as read from .csv file
+% - edges : a matrix of edge labels, as read from .csv file
+% - nNodes : number of nodes in graph
+% - maxIndegree : max indegree of a node in graph (number of edges pointing to a node)
+% - sourceNodes : for each node n a vector of nodes connected to n by edge
 
 	NO_EDGE = 0;
 
@@ -32,10 +39,12 @@ function graph = loadgraph(graphName)
 			end
 		end
 	end
+	maxIndegree = max(sum(edges));
 
 	graph = struct(...
 		'nodes', nodes,...
 		'edges', edges,...
 		'nNodes', nNodes,...
+		'maxIndegree', maxIndegree,...
 		'sourceNodes', {sourceNodes});
 end

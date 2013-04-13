@@ -1,13 +1,14 @@
 
-function stable = stablestate(lastState, state)
-% return true, if difference is insignificant
-	MAX_DIFF = 0.001;
+function stable = stablestate(lastState, state, minStateDiff)
+% Helper function for forward()
+% return true, if difference between two states is insignificant
+
 	nNodes = size(state, 2);
 	stable = true;
 	for i = 1:nNodes
 		nodeState = state{i};
 		for j = 1:size(nodeState, 2)
-			if (abs(lastState{i}(j) - state{i}(j)) > MAX_DIFF)
+			if (abs(lastState{i}(j) - state{i}(j)) >= minStateDiff)
 				stable = false;
 				break;
 			end

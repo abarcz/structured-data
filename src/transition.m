@@ -1,5 +1,6 @@
 
 function newState = transition(gnn, state, graph)
+% Helper function for forward()
 % Calculate global transition function
 
 	nInputLines = gnn.transitionNet.nInputLines;
