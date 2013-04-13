@@ -8,9 +8,8 @@ function gnn = initgnn(maxIndegree, stateSize, nHiddenNeurons, nOutputNeurons, m
 % nOutputNeurons : number of output neurons for the output network
 % minStateDiff : min difference between two state variables to treat the states as different
 
-	edgeDirectionSize = 1;	% 1 for incoming edge, -1 for outgoing, 0 for bidirectional
 	labelSize = 1;
-	singleNodeInputSize = stateSize + edgeDirectionSize + labelSize;
+	singleNodeInputSize = stateSize + labelSize;
 	% create nnet for calculating state
 	nInputLines = labelSize + maxIndegree * singleNodeInputSize;
 	transitionNet = initfnn(nInputLines, nHiddenNeurons, stateSize);
