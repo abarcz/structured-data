@@ -18,4 +18,3 @@ function stable = stablestate(lastState, state, minStateDiff)
 		end
 	end
 end
-	
