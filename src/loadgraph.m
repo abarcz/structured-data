@@ -22,28 +22,28 @@ function graph = loadgraph(graphName)
 	nodesFilename = strcat(graphName, '_nodes.csv');
 	edgesFilename = strcat(graphName, '_edges.csv');
 
-	nodes = csvread(nodesFilename);
-	edges = csvread(edgesFilename);
+	nodeLabels = csvread(nodesFilename);
+	edgeLabels = csvread(edgesFilename);
 
-	nNodes = size(nodes, 2);
-	assert(size(nodes, 1) == 1);
-	assert(size(edges, 1) == nNodes);
-	assert(size(edges, 2) == nNodes);
+	nNodes = size(nodeLabels, 2);
+	assert(size(nodeLabels, 1) == 1);
+	assert(size(edgeLabels, 1) == nNodes);
+	assert(size(edgeLabels, 2) == nNodes);
 
 	sourceNodes = {};
 	for targetIndex = 1:nNodes
 		sourceNodes{targetIndex} = [];
 		for sourceIndex = 1:nNodes
-			if edges(sourceIndex, targetIndex) != NO_EDGE
+			if edgeLabels(sourceIndex, targetIndex) != NO_EDGE
 				sourceNodes{targetIndex} = [sourceNodes{targetIndex} sourceIndex];
 			end
 		end
 	end
-	maxIndegree = max(sum(edges));
+	maxIndegree = max(sum(edgeLabels));
 
 	graph = struct(...
-		'nodes', nodes,...
-		'edges', edges,...
+		'nodeLabels', nodeLabels,...
+		'edgeLabels', edgeLabels,...
 		'nNodes', nNodes,...
 		'maxIndegree', maxIndegree,...
 		'sourceNodes', {sourceNodes});
