@@ -1,6 +1,12 @@
 
 function A = calculatea(gnn, graph, state)
 % Calculate the dF/dx(x) matrix, where F is the transition function
+%
+% usage: A = calculatea(gnn, graph, state)
+%
+% Each box of box matrix A[n,u] contains:
+% - d(hw)/d(inputs) [transition.nInputs x stateSize] if edge u->n exists
+% - empty cell otherwise
 
 	stateSize = gnn.stateSize;
 	A = {};

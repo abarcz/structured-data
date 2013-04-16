@@ -4,6 +4,8 @@ function graph = loadgraph(graphName)
 % - graphName_nodes.csv
 % - graphName_edges.csv
 %
+% usage: graph = loadgraph(graphName)
+%
 % The nodes file is supposed to contain a comma-separated list of node labels
 %
 % The edges file is supposed to contain a comma-separated matrix

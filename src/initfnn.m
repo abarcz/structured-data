@@ -4,7 +4,8 @@ function net = initfnn(nInputLines, nHiddenNeurons, nOutputNeurons)
 % Each column of resulting matrices corresponds to a single neuron weights.
 % Each neuron gets an extra weight for bias.
 %
-% [inputWeights intraWeights] = initfnn(nInputLines, nHiddenNeurons, nOutputNeurons)
+% usage: net = initfnn(nInputLines, nHiddenNeurons, nOutputNeurons)
+%
 % nInputLines : number of input lines, script will add +1 for bias automatically
 
 	inputWeights = initializeweights(nInputLines, nHiddenNeurons);
