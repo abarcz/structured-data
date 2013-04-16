@@ -1,14 +1,14 @@
 
-function A = calculatea(gnn, graph, state)
+function A = calculatea(transitionNet, graph, state)
 % Calculate the dF/dx(x) matrix, where F is the transition function
 %
-% usage: A = calculatea(gnn, graph, state)
+% usage: A = calculatea(transitionNet, graph, state)
 %
 % Each box of box matrix A[n,u] contains:
 % - d(hw)/d(inputs) [transition.nInputs x stateSize] if edge u->n exists
 % - empty cell otherwise
 
-	stateSize = gnn.stateSize;
+	stateSize = transitionNet.nOutputNeurons;
 	A = {};
 	for nodeIndex = 1:graph.nNodes
 		% build transitionNet input for single node
@@ -18,11 +18,11 @@ function A = calculatea(gnn, graph, state)
 			sourceEdgeLabel = graph.edgeLabels(sourceNodeIndexes(i), nodeIndex);
 			sourceNodeState = state(sourceNodeIndexes(i), :);
 			inputs = [nodeLabel, sourceEdgeLabel, sourceNodeState];
-			delta_zx = zeros(gnn.transitionNet.nInputLines, stateSize);
+			delta_zx = zeros(transitionNet.nInputLines, stateSize);
 			for j = 1:stateSize
 				errors = zeros(1, stateSize);
 				errors(j) = 1;
-				delta_zx(:, j) = bp2(gnn.transitionNet, inputs, errors)';
+				delta_zx(:, j) = bp2(transitionNet, inputs, errors)';
 			end
 			A{nodeIndex, sourceNodeIndexes(i)} = delta_zx;
 		end

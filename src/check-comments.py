@@ -30,10 +30,10 @@ def check_comments(filepath):
 	reg_function = re.compile("^function\s+(?P<declaration>.*)\s*$")
 	reg_usage = re.compile("^%\s*usage\s*:.*$")
 	with open(filepath) as f:
-		contents = f.read()
-	lines = contents.split('\n')
+		lines = f.readlines()
 	function = None
-	for line in lines:
+	for index in range(len(lines)):
+		line = lines[index]
 		line = line.strip('\n')
 		if function == None:
 			if reg_empty_line.match(line):
@@ -53,7 +53,9 @@ def check_comments(filepath):
 					printwarn("File '%s' doesn't contain usage line" % filepath)
 					return
 			else:
-				contents = re.sub(line, "% usage: " + function, contents)
+				lines[index] = "% usage: " + function + '\n'
+				print "+ corrected usage in '%s'" % filepath
+				contents = "".join(lines)
 				with open(filepath, 'w') as f:
 					f.write(contents)
 				return

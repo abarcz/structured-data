@@ -7,5 +7,5 @@ function backward(gnn, graph, state)
 % state: stable state, calculated by forward()
 
 	outputs = applynet(gnn.outputNet, [graph.nodeLabels' state]);
-	A = calculatea(gnn, graph, state);
+	A = calculatea(gnn.transitionNet, graph, state);
 end
