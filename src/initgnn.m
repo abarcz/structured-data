@@ -1,5 +1,5 @@
 
-function gnn = initgnn(maxIndegree, stateSize, nHiddenNeurons, nOutputNeurons, minStateDiff=0.001)
+function gnn = initgnn(maxIndegree, stateSize, nHiddenNeurons, nOutputNeurons, minStateDiff=0.001, contractionConstant=0.9)
 % Create a Graph Neural Network
 %
 % usage: gnn = initgnn(maxIndegree, stateSize, nHiddenNeurons, nOutputNeurons, minStateDiff=0.001)
@@ -9,6 +9,11 @@ function gnn = initgnn(maxIndegree, stateSize, nHiddenNeurons, nOutputNeurons, m
 % nHiddenNeurons : number of hidden neurons both for transition and output FNN, affects computational complexity by O(n)
 % nOutputNeurons : number of output neurons for the output network
 % minStateDiff : min difference between two state variables to treat the states as different
+% contractionConstant : in (0, 1), constant used in the penalty, assuring that the transition is a contraction map
+
+	assert(minStateDiff > 0);
+	assert(contractionConstant > 0);
+	assert(contractionConstant < 1);
 
 	nodeLabelSize = 1;
 	edgeLabelSize = 1;
@@ -27,5 +32,6 @@ function gnn = initgnn(maxIndegree, stateSize, nHiddenNeurons, nOutputNeurons, m
 		'stateSize', stateSize,...
 		'nodeLabelSize', nodeLabelSize,...
 		'edgeLabelSize', edgeLabelSize,...
-		'minStateDiff', minStateDiff);
+		'minStateDiff', minStateDiff,
+		'contractionConstant', contractionConstant);
 end

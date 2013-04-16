@@ -1,12 +1,15 @@
 
 function A = calculatea(transitionNet, graph, state)
-% Calculate the dF/dx(x) matrix, where F is the transition function
+% Calculate the A(x) = dF/dx block matrix (NxN blocks, each sxs) (F = transition function)
 %
 % usage: A = calculatea(transitionNet, graph, state)
 %
-% Each box of box matrix A[n,u] contains:
-% - d(hw)/d(inputs) [transition.nInputs x stateSize] if edge u->n exists
-% - empty cell otherwise
+% Each block A[n,u] = dxn/dxu:
+% - describes the effect of node xu on node xn, if an edge xu->xn exists
+% - is null if there is no edge
+%
+% Each element of block A[n, u] : a[i, j]:
+% - describes the effect of ith element of state xu on jth element of state xn
 
 	stateSize = transitionNet.nOutputNeurons;
 	A = {};
@@ -18,11 +21,13 @@ function A = calculatea(transitionNet, graph, state)
 			sourceEdgeLabel = graph.edgeLabels(sourceNodeIndexes(i), nodeIndex);
 			sourceNodeState = state(sourceNodeIndexes(i), :);
 			inputs = [nodeLabel, sourceEdgeLabel, sourceNodeState];
-			delta_zx = zeros(transitionNet.nInputLines, stateSize);
+			delta_zx = zeros(stateSize, stateSize);
 			for j = 1:stateSize
 				errors = zeros(1, stateSize);
 				errors(j) = 1;
-				delta_zx(:, j) = bp2(transitionNet, inputs, errors)';
+				input_deltas = bp2(transitionNet, inputs, errors);
+				state_input_deltas = input_deltas(1, 3:end);	% select only weights corresponding to x_u
+				delta_zx(:, j) = state_input_deltas';
 			end
 			A{nodeIndex, sourceNodeIndexes(i)} = delta_zx;
 		end
