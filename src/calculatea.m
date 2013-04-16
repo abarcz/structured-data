@@ -12,7 +12,8 @@ function A = calculatea(transitionNet, graph, state)
 % - describes the effect of ith element of state xu on jth element of state xn
 
 	stateSize = transitionNet.nOutputNeurons;
-	A = {};
+	aSize = graph.nNodes * stateSize;
+	A = sparse(aSize, aSize);	% zeroed
 	for nodeIndex = 1:graph.nNodes
 		% build transitionNet input for single node
 		sourceNodeIndexes = graph.sourceNodes{nodeIndex};
@@ -29,7 +30,11 @@ function A = calculatea(transitionNet, graph, state)
 				state_input_deltas = input_deltas(1, 3:end);	% select only weights corresponding to x_u
 				delta_zx(:, j) = state_input_deltas';
 			end
-			A{nodeIndex, sourceNodeIndexes(i)} = delta_zx;
+			startX = blockstart(nodeIndex, stateSize);
+			endX = blockend(startX, stateSize);
+			startY = blockstart(sourceNodeIndexes(i), stateSize);
+			endY = blockend(startY, stateSize);
+			A(startX:endX, startY:endY) = delta_zx;
 		end
 	end
 end
