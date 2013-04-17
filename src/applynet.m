@@ -4,9 +4,10 @@ function outputs = applynet(fnn, inputs)
 %
 % usage: outputs = applynet(fnn, inputs)
 %
-% inputs - each column is a single sample
-% outputs - each column contains output for a single sample
+% inputs - each row is a single sample
+% outputs - each row contains output for a single sample
 
+	inputs = inputs';
 	nSamples = size(inputs, 2);
 
 	% hidden layer feed
@@ -15,5 +16,5 @@ function outputs = applynet(fnn, inputs)
 
 	% visible layer feed
 	net2 = fnn.weights2 * hiddenOutputs + repmat(fnn.bias2, 1, nSamples);
-	outputs = fnn.activation2(net2);
+	outputs = fnn.activation2(net2)';
 end

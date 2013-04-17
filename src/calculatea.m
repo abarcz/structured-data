@@ -17,9 +17,9 @@ function A = calculatea(transitionNet, graph, state)
 	for nodeIndex = 1:graph.nNodes
 		% build transitionNet input for single node
 		sourceNodeIndexes = graph.sourceNodes{nodeIndex};
-		nodeLabel = graph.nodeLabels(nodeIndex);
+		nodeLabel = graph.nodeLabels(nodeIndex, :);
 		for i = 1:size(sourceNodeIndexes, 2)
-			sourceEdgeLabel = graph.edgeLabels(sourceNodeIndexes(i), nodeIndex);
+			sourceEdgeLabel = graph.edgeLabels{sourceNodeIndexes(i), nodeIndex};
 			sourceNodeState = state(sourceNodeIndexes(i), :);
 			inputs = [nodeLabel, sourceEdgeLabel, sourceNodeState];
 			delta_zx = zeros(stateSize, stateSize);

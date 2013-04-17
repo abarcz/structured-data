@@ -1,6 +1,13 @@
 
 function delta0 = bp2(fnn, inputs, errors)
 % Perform backpropagation
+%
+% inputs : row = sample
+% errors : row for a sample
+% return : row of errors
+
+	inputs = inputs';
+	errors = errors';
 
 	% fnn feed
 	net1 = fnn.weights1 * inputs + fnn.bias1;
@@ -14,10 +21,10 @@ function delta0 = bp2(fnn, inputs, errors)
 	% calculate delta1 (for all hidden neurons at once)
 	% each row of weights2 corresponds to single hidden neuron
 	% each element of hiddenErrors corresponds to single hidden neuron
-	hiddenErrors = sum(fnn.weights2 .* repmat(delta2, fnn.nHiddenNeurons, 1), 2)';
-	delta1 = hiddenErrors(1, :) .* fnn.activationderivative1(net1);
+	hiddenErrors = fnn.weights2' * delta2;
+	delta1 = hiddenErrors .* fnn.activationderivative1(net1);
 
 	% calculate delta0 (for all input neurons at once)
-	inputErrors = sum(fnn.weights1 .* repmat(delta1, fnn.nInputLines, 1), 2)';
-	delta0 = inputErrors(1, :);
+	inputErrors = fnn.weights1' * delta1;
+	delta0 = inputErrors';
 end
