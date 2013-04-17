@@ -37,15 +37,13 @@ function penaltyDerivative = penaltyderivative(gnn, graph, state, A)
 					sourceNodeState = state(sourceIndex, :);
 					inputs = [nodeLabel, sourceEdgeLabel, sourceNodeState];
 					fnn = gnn.transitionNet;
-					% hidden layer feed
-					netv = inputs * fnn.weights1 + fnn.bias1;
-					zv = fnn.activation(netv);
-					sigma1 =fnn.activationderivative(zv);
 
-					% visible layer feed
-					netw = zv * fnn.weights2 + fnn.bias2;
-					zw = fnn.activation(netw);
-					sigma2 =fnn.activationderivative(zw);
+					% fnn feed
+					net1 = fnn.weights1 * inputs + fnn.bias1;
+					hiddenOutputs = fnn.activation1(net1);
+					net2 = fnn.weights2 * hiddenOutputs + fnn.bias2;
+					sigma1 =fnn.activationderivative1(net1);
+					sigma2 =fnn.activationderivative2(net2);
 
 					stateWeights1 = fnn.weights1(3:end, :);
 

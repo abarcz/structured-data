@@ -1,5 +1,5 @@
 
-function confusionMatrix = classify(net, samples)
+function confusionMatrix = classify(fnn, samples)
 
 	nSamples = size(samples, 1);
 
@@ -7,33 +7,18 @@ function confusionMatrix = classify(net, samples)
 	samples = samples(:, 2:end);
 
 	nClasses = size(unique(labels), 1);
-	samples = addbias(samples);
+	refuseVal = fnn.refuseVal;
 
-	v = net.inputWeights;
-	w = net.intraWeights;
-	activation = net.activation;
-	refuseVal = net.refuseVal;
+	outputs = applynet(fnn, samples');
 
-	% hidden layer feed
-	netv = samples * v;
-	zv = addbias(activation(netv));
-
-	% visible layer feed
-	netw = zv * w;
-	zw = activation(netw);
-
-	% transpose, cause octave calculates max from columns
-	[values indexes] = max(zw');
+	% octave calculates max from columns
+	[values indexes] = max(outputs);
 	indexes = indexes';
 	values = values';
 
 	% value given, when classifier is uncertain
 	refuseVal = nClasses + 1;
-	for i = 1:size(indexes, 1)
-		if values(i, 1) <= 0
-			indexes(i, 1) = refuseVal;
-		end
-	end
+	indexes(values <= 0) = refuseVal;
 
 	confusionMatrix = zeros(nClasses, nClasses + 1);
 	for i = 1:size(indexes, 1)
