@@ -2,7 +2,7 @@
 function b = backward(gnn, graph, state)
 % Perform the 'backward' step of GNN training
 %
-% usage: A = backward(gnn, graph, state)
+% usage: b = backward(gnn, graph, state)
 %
 % state: stable state, calculated by forward()
 

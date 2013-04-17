@@ -1,10 +1,10 @@
 
-function endIndex = blockend(startIndex, stateSize)
+function endIndex = blockend(nodeIndex, stateSize)
 % Helper function for Jacobian block matrix A indexing
 %
-% usage: endIndex = blockend(startIndex, stateSize)
+% usage: endIndex = blockend(nodeIndex, stateSize)
 %
 % returns starting index of block corresponding to nodeIndex
 
-	endIndex = startIndex + stateSize - 1;
+	endIndex = nodeIndex * stateSize;
 end

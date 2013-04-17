@@ -31,9 +31,9 @@ function A = calculatea(transitionNet, graph, state)
 				delta_zx(:, j) = state_input_deltas';
 			end
 			startX = blockstart(nodeIndex, stateSize);
-			endX = blockend(startX, stateSize);
+			endX = blockend(nodeIndex, stateSize);
 			startY = blockstart(sourceNodeIndexes(i), stateSize);
-			endY = blockend(startY, stateSize);
+			endY = blockend(sourceNodeIndexes(i), stateSize);
 			A(startX:endX, startY:endY) = delta_zx;
 		end
 	end
