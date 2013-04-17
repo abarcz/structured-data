@@ -1,5 +1,5 @@
 
-function A = backward(gnn, graph, state)
+function b = backward(gnn, graph, state)
 % Perform the 'backward' step of GNN training
 %
 % usage: A = backward(gnn, graph, state)
@@ -9,5 +9,6 @@ function A = backward(gnn, graph, state)
 	A = calculatea(gnn.transitionNet, graph, state);
 	outputs = applynet(gnn.outputNet, [graph.nodeLabels' state])';
 	errorDerivative = 2 .* (graph.expectedOutput - outputs);
-	%b = calculateb(gnn, graph, state);
+	size(errorDerivative)
+	penaltyDerivative = penaltyderivative(gnn, graph, state, A)
 end
