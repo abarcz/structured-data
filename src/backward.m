@@ -1,8 +1,8 @@
 
-function gnnDeltas = backward(gnn, graph, state)
+function weightDeltas = backward(gnn, graph, state)
 % Perform the 'backward' step of GNN training
 %
-% usage: gnnDeltas = backward(gnn, graph, state)
+% usage: weightDeltas = backward(gnn, graph, state)
 %
 % state : stable state, calculated by forward(graph, state, transitionErrors);)
 % return : deltas for both transition and output networks of gnn
@@ -34,5 +34,5 @@ function gnnDeltas = backward(gnn, graph, state)
 
 	transitionDeltas = adddeltas(transitionDeltas, penaltyDeltas);
 
-	gnnDeltas = struct('output', outputDeltas, 'transition', transitionDeltas);
+	weightDeltas = struct('output', outputDeltas, 'transition', transitionDeltas);
 end

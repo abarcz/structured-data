@@ -9,7 +9,7 @@ function state = forward(gnn, graph)
 	count = 0;
 	do
 		lastState = state;
-		state = transition(gnn, lastState, graph);
+		state = transition(gnn.transitionNet, lastState, graph);
 		count = count + 1;
 	until(stablestate(lastState, state, gnn.minStateDiff));
 	printf('Transitions made until stable state was reached: %d\n', count);

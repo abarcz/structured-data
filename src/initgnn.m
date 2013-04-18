@@ -1,8 +1,8 @@
 
-function gnn = initgnn(maxIndegree, stateSize, nHiddenNeurons, nOutputNeurons, minStateDiff=0.001, minErrorAccDiff=0.01, contractionConstant=0.9)
+function gnn = initgnn(maxIndegree, stateSize, nHiddenNeurons, nOutputNeurons, minStateDiff=0.000001, minErrorAccDiff=0.000001, contractionConstant=0.9)
 % Create a Graph Neural Network
 %
-% usage: gnn = initgnn(maxIndegree, stateSize, nHiddenNeurons, nOutputNeurons, minStateDiff=0.001, minErrorAccDiff=0.01, contractionConstant=0.9)
+% usage: gnn = initgnn(maxIndegree, stateSize, nHiddenNeurons, nOutputNeurons, minStateDiff=0.000001, minErrorAccDiff=0.000001, contractionConstant=0.9)
 %
 % maxIndegree : max indegree of a node in graph
 % stateSize : number of integers used for storing calculated state of a node, affects computational complexity by O(n^2)
