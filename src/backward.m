@@ -2,7 +2,7 @@
 function gnnDeltas = backward(gnn, graph, state)
 % Perform the 'backward' step of GNN training
 %
-% usage: b = backward(gnn, graph, state)
+% usage: gnnDeltas = backward(gnn, graph, state)
 %
 % state : stable state, calculated by forward(graph, state, transitionErrors);)
 % return : deltas for both transition and output networks of gnn
