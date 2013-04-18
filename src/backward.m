@@ -9,5 +9,5 @@ function b = backward(gnn, graph, state)
 	A = calculatea(gnn.transitionNet, graph, state);
 	outputs = applynet(gnn.outputNet, [graph.nodeLabels state]);
 	errorDerivative = 2 .* (graph.expectedOutput - outputs);
-	penaltyDerivative = penaltyderivative(gnn, graph, state, A)
+	penaltyDerivative = penaltyderivative(gnn, graph, state, A);
 end

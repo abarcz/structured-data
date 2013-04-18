@@ -1,45 +1,58 @@
 
 function penaltyDerivative = penaltyderivative(gnn, graph, state, A)
-% Calculate penalty derivative contribution to de/do
+% Calculate penalty derivative contribution to de/do, where:
 % - e = RMSE + contraction_map_penalty (network error)
 % - o - network outputs for all states
 %
 % usage: penaltyDerivative = penaltyderivative(gnn, graph, state, A)
 %
 
+	% note on matrix A:
+	% each s^2 block denotes influence of single source node xu on all s outputs of xn
+	% each block matrix row n denotes influences on taget node xn by all source nodes
+	% each block matrix column u denotes influences of source node xu on target nodes
+	% (edge from xu to xn)
+
 	% sum up influence of each source node on all the other nodes
 	% each s-long block is influence of single source node xu on all s outputs
 	sourceInfluences = sum(A, 1);
+	disp('penalty derivative influences: ')
 	full(sourceInfluences)
 	sourceInfluences = sourceInfluences .* (sourceInfluences > 0.1); % gnn.contractionConstant);
 	full(sourceInfluences)
+
+	fnn = gnn.transitionNet;
+	nWeights2 = fnn.nOutputNeurons * fnn.nHiddenNeurons;
+	nBias2 = fnn.nOutputNeurons;
+	nWeights1 = fnn.nInputLines * fnn.nHiddenNeurons;
+	nBias1 = fnn.nHiddenNeurons;
+	penaltyDerivative = zeros(1, nWeights1 + nBias1 + nWeights2 + nBias2);
 	if sum(sourceInfluences) == 0
-		penaltyDerivative = 0;
-		return
+		disp('no penalty was added');
 	else
+		disp('adding influence penalty..');
+		% matrix B contains influences from A, filtered:
+		% only influences coming from a too influential source are retained
 		B = sign(A) .* repmat(sourceInfluences, size(A, 1), 1);
-		R = {};
 		for sourceIndex = 1:graph.nNodes
 			startX = blockstart(sourceIndex, gnn.stateSize);
 			endX = blockend(sourceIndex, gnn.stateSize);
 			sourceNodeInfluences = sourceInfluences(1, startX:endX);
 			if (sum(sourceNodeInfluences, 2) != 0)
-				% calculate R[n,u] for u = sourceIndex
+				% calculate impactDerivative[n, u] for u = sourceIndex
 				for targetIndex = 1:graph.nNodes
-					if !ismember(sourceIndex, graph.sourceNodes{targetIndex})
+					if !edgeexists(graph, sourceIndex, targetIndex)
 						continue;
 					end
 					startY = blockstart(targetIndex, gnn.stateSize);
 					endY = blockend(targetIndex, gnn.stateSize);
 					Rnu =  full(B(startY:endY, startX:endX));
-					R{targetIndex, sourceIndex} = Rnu;
 
 					% calculate f2'(net2) and f1'(net1)
 					nodeLabel = graph.nodeLabels(targetIndex, :);
 					sourceEdgeLabel = graph.edgeLabels{sourceIndex, targetIndex};
 					sourceNodeState = state(sourceIndex, :);
 					inputs = [nodeLabel, sourceEdgeLabel, sourceNodeState];
-					fnn = gnn.transitionNet;
 
 					% fnn feed
 					net1 = fnn.weights1 * inputs' + fnn.bias1;
@@ -51,7 +64,8 @@ function penaltyDerivative = penaltyderivative(gnn, graph, state, A)
 					% select only weights corresponding to xu at inputs
 					stateWeights1 = fnn.weights1(:, graph.stateWeightsStart:end);
 
-					% da = da1 + da2 + da3 + da4
+
+					% vec(Rnu)' * dvec(Anu)/dw = da1 + da2 + da3 + da4
 					deltaSignal1 = vec(Rnu * stateWeights1' * diag(sigma1) * fnn.weights2')' * vecdiagmatrix(gnn.stateSize);
 					fnn2nd = fnn;
 					fnn2nd.activation1 = fnn.activationderivative1;
@@ -63,10 +77,6 @@ function penaltyDerivative = penaltyderivative(gnn, graph, state, A)
 						vec(deltas1.deltaWeights2); vec(deltas1.deltaBias2)]';
 
 					da2left = vec(diag(sigma2) * Rnu * stateWeights1' * diag(sigma1))';
-					nWeights2 = fnn.nOutputNeurons * fnn.nHiddenNeurons;
-					nBias2 = fnn.nOutputNeurons;
-					nWeights1 = fnn.nInputLines * fnn.nHiddenNeurons;
-					nBias1 = fnn.nHiddenNeurons;
 					weights2dw = [zeros(nWeights2, nWeights1 + nBias1) eye(nWeights2) zeros(nWeights2, nBias2)];
 					da2 = da2left * weights2dw;
 
@@ -85,19 +95,19 @@ function penaltyDerivative = penaltyderivative(gnn, graph, state, A)
 					stateWeights1Dw = zeros(nStateWeights, nWeights1 + nBias1 + nWeights2 + nBias2);
 					% mark with ones weights corresponding to xu
 					for h = 1:fnn.nHiddenNeurons
-						startX = 1 + (h - 1) * fnn.nInputLines + labelsSize;
-						endX = startX + stateSize - 1;
-						startY = 1 + (h - 1) * stateSize;
-						endY = startY + stateSize - 1;
-						stateWeights1Dw(startY:endY, startX:endX) = eye(stateSize);
+						startIndexX = 1 + (h - 1) * fnn.nInputLines + labelsSize;
+						endIndexX = startIndexX + stateSize - 1;
+						startIndexY = 1 + (h - 1) * stateSize;
+						endIndexY = startIndexY + stateSize - 1;
+						stateWeights1Dw(startIndexY:endIndexY, startIndexX:endIndexX) = eye(stateSize);
 					end
 					da4 = da4left * stateWeights1Dw;
 
-					da = da1 + da2 + da3 + da4;
-					size(da)
+					impactDerivative = da1 + da2 + da3 + da4;
+					penaltyDerivative = penaltyDerivative + impactDerivative;
 				end
 			end
 		end
+		penaltyDerivative = penaltyDerivative * 2;
 	end
-	disp(R);
 end
