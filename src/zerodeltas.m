@@ -1,0 +1,16 @@
+
+function deltas = zerodeltas(fnn)
+% Create a structure containing same fields as
+% the structure returned by backpropagate(), but all zeroed.
+% Used for accumulation of single-sample deltas.
+%
+% usage: deltas = zerodeltas(fnn)
+%
+
+	deltas = struct(...
+		'deltaWeights1', zeros(size(fnn.weights1)),...
+		'deltaBias1', zeros(size(fnn.bias1)),...
+		'deltaWeights2', zeros(size(fnn.weights2)),...
+		'deltaBias2', zeros(size(fnn.bias2)),...
+		'deltaInputs', zeros(1, fnn.nInputLines));
+end

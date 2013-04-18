@@ -8,10 +8,10 @@ function net = initfnn(nInputLines, nHiddenNeurons, nOutputNeurons)
 %
 % nInputLines : number of input lines, script will add +1 for bias automatically
 
-	weights1 = initializeweights(nHiddenNeurons, nInputLines);
-	bias1 = initializeweights(nHiddenNeurons, 1);
-	weights2 = initializeweights(nOutputNeurons, nHiddenNeurons);
-	bias2 = initializeweights(nOutputNeurons, 1);
+	weights1 = initializeweights(nInputLines, nHiddenNeurons);
+	bias1 = initializeweights(1, nHiddenNeurons);
+	weights2 = initializeweights(nHiddenNeurons, nOutputNeurons);
+	bias2 = initializeweights(1, nOutputNeurons);
 
 	net = struct(...
 		'weights1', weights1, ...
@@ -32,5 +32,5 @@ end
 
 function weights = initializeweights(nInputLines, nNeurons)
 	% rand returns values uniformly distributed on (0, 1)
-	weights = (rand(nInputLines, nNeurons) - 0.5) .* (2 ./ nInputLines);
+	weights = (rand(nNeurons, nInputLines) - 0.5) .* (2 ./ nInputLines);
 end

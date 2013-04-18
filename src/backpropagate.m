@@ -5,7 +5,7 @@ function deltas = backpropagate(fnn, inputs, errors)
 % usage: deltas = backpropagate(fnn, inputs, errors)
 %
 % inputs : row = sample
-% errors : row for a sample
+% errors : row = error for sample (e.g. 2(expected - fnn(inputs)))
 % return : struct of deltas to affect weights and biases of fnn
 
 	assert(size(inputs, 1) == 1);

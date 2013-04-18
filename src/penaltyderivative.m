@@ -16,16 +16,16 @@ function penaltyDerivative = penaltyderivative(gnn, graph, state, A)
 	% sum up influence of each source node on all the other nodes
 	% each s-long block is influence of single source node xu on all s outputs
 	sourceInfluences = sum(A, 1);
-	disp('penalty derivative influences: ')
-	full(sourceInfluences)
-	sourceInfluences = sourceInfluences .* (sourceInfluences > 0.1); % gnn.contractionConstant);
-	full(sourceInfluences)
+	%disp('penalty derivative influences: ')
+	%full(sourceInfluences)
+	sourceInfluences = sourceInfluences .* (sourceInfluences > gnn.contractionConstant);
+	%full(sourceInfluences)
 
 	fnn = gnn.transitionNet;
-	nWeights2 = fnn.nOutputNeurons * fnn.nHiddenNeurons;
-	nBias2 = fnn.nOutputNeurons;
 	nWeights1 = fnn.nInputLines * fnn.nHiddenNeurons;
 	nBias1 = fnn.nHiddenNeurons;
+	nWeights2 = fnn.nOutputNeurons * fnn.nHiddenNeurons;
+	nBias2 = fnn.nOutputNeurons;
 	penaltyDerivative = zeros(1, nWeights1 + nBias1 + nWeights2 + nBias2);
 	if sum(sourceInfluences) == 0
 		disp('no penalty was added');
@@ -73,8 +73,7 @@ function penaltyDerivative = penaltyderivative(gnn, graph, state, A)
 					fnn2nd.activationderivative1 = fnn.activation2ndderivative1;
 					fnn2nd.activationderivative2 = fnn.activation2ndderivative2;
 					deltas1 = backpropagate(fnn2nd, inputs, deltaSignal1);
-					da1 = [vec(deltas1.deltaWeights1); vec(deltas1.deltaBias1);...
-						vec(deltas1.deltaWeights2); vec(deltas1.deltaBias2)]';
+					da1 = vecdeltas(deltas1)';
 
 					da2left = vec(diag(sigma2) * Rnu * stateWeights1' * diag(sigma1))';
 					weights2dw = [zeros(nWeights2, nWeights1 + nBias1) eye(nWeights2) zeros(nWeights2, nBias2)];
