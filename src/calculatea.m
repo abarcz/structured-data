@@ -27,7 +27,9 @@ function A = calculatea(transitionNet, graph, state)
 				errors = zeros(1, stateSize);
 				errors(j) = 1;
 				input_deltas = bp2(transitionNet, inputs, errors);
-				state_input_deltas = input_deltas(1, 3:end);	% select only weights corresponding to x_u
+				% select only weights corresponding to x_iu
+				stateWeightsStart = 1 + graph.nodeLabelSize + graph.edgeLabelSize;
+				state_input_deltas = input_deltas(1, stateWeightsStart:end);
 				delta_zx(:, j) = state_input_deltas';
 			end
 			startX = blockstart(nodeIndex, stateSize);
