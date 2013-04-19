@@ -16,10 +16,14 @@ function weightDeltas = backward(gnn, graph, state)
 	% A can contain whole training set as a single graph
 	A = calculatea(gnn.transitionNet, graph, state);
 	b = sparse(calculateb(gnn.outputNet, graph, state, outputErrors));
-	accumulator = sparse(randn(1, graph.nNodes * gnn.stateSize));	% zero mean, unit variance
+	accumulator = b;	% accumulator contains dew/do * dG/wx, to be propagated
 	count = 0;
 	do
 		lastAccumulator = accumulator;
+		% for each source node, backpropagate error of its target nodes
+		% A : influence of source nodes on target nodes
+		% accumulator : errors de/dx from previous timestep (t + 1)
+		% b : de/do * dG/dx error, injected at each step
 		accumulator = accumulator * A + b;
 		count = count + 1;
 	until(stablestate(lastAccumulator, accumulator, gnn.minErrorAccDiff));

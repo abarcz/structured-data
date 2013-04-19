@@ -26,6 +26,9 @@ function gnn = initgnn(maxIndegree, stateSize, nHiddenNeurons, nOutputNeurons, m
 	nInputLines = stateSize;
 	outputNet = initfnn(nInputLines, nHiddenNeurons, nOutputNeurons);
 
+	% divide by additional factor, because inputs = fw = maxIn * hw
+	outputNet.weights1 = outputNet.weights1 ./ maxIndegree;
+
 	gnn = struct(...
 		'transitionNet', transitionNet,...
 		'outputNet', outputNet,...
