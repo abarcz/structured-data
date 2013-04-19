@@ -12,7 +12,9 @@ function deltas = outputdeltas(outputNet, graph, state, errors)
 	for nodeIndex = 1:graph.nNodes
 		nodeErrors = errors(nodeIndex, :);
 		nodeState = state(nodeIndex, :);
-		singleNodeDeltas = backpropagate(outputNet, nodeState, nodeErrors);
+		%inputs = [graph.nodeLabels(nodeIndex) nodeState];
+		inputs = nodeState;
+		singleNodeDeltas = backpropagate(outputNet, inputs, nodeErrors);
 		deltas = adddeltas(deltas, singleNodeDeltas);
 	end
 end

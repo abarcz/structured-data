@@ -10,8 +10,10 @@ function b = calculateb(outputNet, graph, state, errorDerivative)
 	for nodeIndex = 1:graph.nNodes
 		errors = errorDerivative(nodeIndex, :);
 		nodeState = state(nodeIndex, :);
-		deltas = backpropagate(outputNet, nodeState, errors);
-		b(:, nodeIndex) = deltas.deltaInputs';
+		%inputs = [graph.nodeLabels(nodeIndex) nodeState];
+		inputs = nodeState;
+		deltas = backpropagate(outputNet, inputs, errors);
+		b(:, nodeIndex) = deltas.deltaInputs(1, :); %1 + graph.nodeLabelSize:end)';
 	end
 	% stack output for each node on one another
 	b = vec(b)';

@@ -7,7 +7,7 @@ function weightDeltas = backward(gnn, graph, state)
 % state : stable state, calculated by forward(graph, state, transitionErrors);)
 % return : deltas for both transition and output networks of gnn
 
-	outputs = applynet(gnn.outputNet, state);
+	outputs = applynet(gnn.outputNet, state); %[graph.nodeLabels state]);
 	outputErrors = 2 .* (graph.expectedOutput - outputs);
 
 	outputDeltas = outputdeltas(gnn.outputNet, graph, state, outputErrors);
