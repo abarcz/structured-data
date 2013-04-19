@@ -1,5 +1,5 @@
 
-function [fnn rmsErrors trainCorrectRates validationCorrectRates] = trainfnn(fnn, samples, nEpochs, learningConstant)
+function [fnn rmsErrors trainCorrectRates validationCorrectRates] = trainfnn2(fnn, samples, nEpochs, learningConstant)
 % trains two-layer neural network
 %
 % usage: [fnn rmsErrors trainCorrectRates validationCorrectRates] = trainfnn(fnn, samples, nEpochs, learningConstant)
@@ -46,34 +46,16 @@ function [fnn rmsErrors trainCorrectRates validationCorrectRates] = trainfnn(fnn
 		rmsError = 0;
 		errorCount = 0;
 		for j = 1:nTrainSamples
-			sample = trainSamples(j, :)';
-			expectedResult = expectedResults(j, :)';
+			sample = trainSamples(j, :);
+			expectedResult = expectedResults(j, :);
 
-			% hidden layer feed
-			net1 = fnn.weights1 * sample + fnn.bias1;
-			hiddenOutputs = fnn.activation1(net1);
+			outputs = applynet(fnn, sample);
+			errors = 0.5 .* (expectedResult - outputs);
+			deltas = backpropagate(fnn, sample, errors);
+			fnn = updateweights(fnn, deltas, learningConstant);
 
-			% visible layer feed
-			net2 = fnn.weights2 * hiddenOutputs + fnn.bias2;
-			outputs = fnn.activation2(net2);
-
-			% calculate delta2 (for all visible neurons at once)
-			delta2 = 0.5 .* (expectedResult - outputs) .* fnn.activationderivative2(net2);
-			deltaWeights2 = (learningConstant .* delta2) * hiddenOutputs';
-			deltaBias2 = (learningConstant .* delta2);
-
-			% calculate delta1 (for all hidden neurons at once)
-			delta1 = (fnn.weights2' * delta2) .* fnn.activationderivative1(net1);
-			deltaWeights1 = (learningConstant .* delta1) * sample';
-			deltaBias1 = (learningConstant .* delta1);
-
-			fnn.weights2 = fnn.weights2 + deltaWeights2;
-			fnn.weights1 = fnn.weights1 + deltaWeights1;
-			fnn.bias2 = fnn.bias2 + deltaBias2;
-			fnn.bias1 = fnn.bias1 + deltaBias1;
-
-			rmsError = rmsError + sum((expectedResult - outputs) .^ 2);
-			[maxValue predictedClass] = max(outputs);
+			rmsError = rmsError + sum((expectedResult' - outputs') .^ 2);
+			[maxValue predictedClass] = max(outputs');
 			if predictedClass != trainLabels(j, 1)
 				errorCount = errorCount + 1;
 			end

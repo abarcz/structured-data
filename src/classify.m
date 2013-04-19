@@ -9,10 +9,10 @@ function confusionMatrix = classify(fnn, samples)
 	nClasses = size(unique(labels), 1);
 	refuseVal = fnn.refuseVal;
 
-	outputs = applynet(fnn, samples');
+	outputs = applynet(fnn, samples);
 
 	% octave calculates max from columns
-	[values indexes] = max(outputs);
+	[values indexes] = max(outputs');
 	indexes = indexes';
 	values = values';
 
