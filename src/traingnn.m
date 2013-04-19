@@ -15,7 +15,7 @@ function gnn = traingnn(gnn, graph, nIterations, learningConstant1=0.5, learning
 			deltas.output, learningConstant2);
 
 		state = forward(gnn, graph);
-		outputs = applynet(gnn.outputNet, state)
+		outputs = applynet(gnn.outputNet, state);
 		err = rmse(graph.expectedOutput, outputs);
 		count = count + 1;
 		printf('RMSE after %d iterations: %f\n', count, err);
