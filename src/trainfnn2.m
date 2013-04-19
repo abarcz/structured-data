@@ -2,7 +2,7 @@
 function [fnn rmsErrors trainCorrectRates validationCorrectRates] = trainfnn2(fnn, samples, nEpochs, learningConstant)
 % trains two-layer neural network
 %
-% usage: [fnn rmsErrors trainCorrectRates validationCorrectRates] = trainfnn(fnn, samples, nEpochs, learningConstant)
+% usage: [fnn rmsErrors trainCorrectRates validationCorrectRates] = trainfnn2(fnn, samples, nEpochs, learningConstant)
 %
 % each 'samples' row = [class sample]
 
