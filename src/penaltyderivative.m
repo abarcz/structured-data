@@ -62,7 +62,8 @@ function penaltyDerivative = penaltyderivative(gnn, graph, state, A)
 					sigma2 = fnn.activationderivative2(net2);
 
 					% select only weights corresponding to xu at inputs
-					stateWeights1 = fnn.weights1(:, graph.stateWeightsStart:end);
+					stateWeightsStart = 1 + graph.nodeLabelSize + graph.edgeLabelSize;
+					stateWeights1 = fnn.weights1(:, stateWeightsStart:end);
 
 
 					% vec(Rnu)' * dvec(Anu)/dw = da1 + da2 + da3 + da4

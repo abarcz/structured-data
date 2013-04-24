@@ -1,6 +1,9 @@
 
-function normalized = normalize(samples)
+function [normalized means stds] = normalize(samples)
 % normalizes data (assures 0-mean, unit variance) for samples
+%
+% usage: [normalized means stds] = normalize(samples)
+%
 % samples : row = sample, column = feature
 
 	nSamples = size(samples, 1);

@@ -1,8 +1,8 @@
 
-function [gnn state] = traingnn(gnn, graph, nIterations, learningConstant1=0.5, learningConstant2=0.5)
+function [gnn state] = traingnn(gnn, graph, nIterations, learningConstant1=0.1, learningConstant2=0.01)
 % Trains GNN using graph as training set
 %
-% usage: [gnn state] = traingnn(gnn, graph, nIterations, learningConstant1=0.5, learningConstant2=0.5)
+% usage: [gnn state] = traingnn(gnn, graph, nIterations, learningConstant1=0.1, learningConstant2=0.01)
 %
 
 	state = forward(gnn,graph);

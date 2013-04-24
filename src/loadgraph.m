@@ -29,6 +29,8 @@ function graph = loadgraph(graphName)
 % - nNodes : number of nodes in graph
 % - maxIndegree : max indegree of a node in graph (number of edges pointing to a node)
 % - sourceNodes : for each node n a vector of node ids connected to n by edge
+% - means and stds : calculated during output normalization:
+%   normalized_output = (output - means) / stds
 
 	NO_EDGE = 0;
 	minLabelSize = 1;
@@ -45,8 +47,11 @@ function graph = loadgraph(graphName)
 		expectedOutput = csvread(expectedOutputFilename);
 		assert(size(expectedOutput, 1) == size(nodeLabels, 1));
 		assert(size(expectedOutput, 2) >= minOutputSize);
+		[expectedOutput means stds] = normalize(expectedOutput);
 	else
 		expectedOutput = [];
+		means = [];
+		stds = [];
 	end
 	nodeOutputSize = size(expectedOutput, 2);
 	nNodes = size(nodeLabels, 1);
@@ -82,6 +87,8 @@ function graph = loadgraph(graphName)
 	graph = struct(...
 		'nodeLabels', normalize(nodeLabels),...
 		'expectedOutput', expectedOutput,...
+		'outputMeans', means,...
+		'outputStds', stds,...
 		'edgeLabels', {edgeLabelsCell},...
 		'nodeLabelSize', nodeLabelSize,...
 		'edgeLabelSize', edgeLabelSize,...
