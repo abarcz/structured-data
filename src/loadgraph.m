@@ -15,7 +15,8 @@ function graph = loadgraph(graphName)
 % The edges file should contain a comma-separated matrix MxR,
 % each row (one row per directed edge) contains two node ids and edge label:
 % src_node_id, target_node_id, b1, b2, ..., bR
-% (edge: src->target, node_id is the row number of node label in nodes file)
+% (edge: src->target, node_id is the row number of node label in nodes file: 1..N)
+% If edges don't have any labels, they will be assigned a 0 label.
 % If an edge is bidirectional, it should have two separate entries.
 %
 % The output file should contain a matrix of desired outputs NxQ,
@@ -57,7 +58,11 @@ function graph = loadgraph(graphName)
 	nNodes = size(nodeLabels, 1);
 
 	assert(size(nodeLabels, 2) >= minLabelSize);
-	assert(size(edgeLabels, 2) >= nodeIdSize * 2 + minLabelSize);
+	assert(size(edgeLabels, 2) >= nodeIdSize * 2);
+	% add zero edge labels if necessary
+	if size(edgeLabels, 2) < nodeIdSize * 2 + minLabelSize
+		edgeLabels = [edgeLabels zeros(size(edgeLabels, 1), 1)];
+	end
 	% check if all node labels in edges are correct
 	assert(isempty(setdiff(unique(edgeLabels(:, 1:2)), [1:nNodes])));
 
