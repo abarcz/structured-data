@@ -36,7 +36,8 @@ function weightDeltas = backward(gnn, graph, state)
 	penaltyDerivative = penaltyderivative(gnn, graph, state, A);
 	penaltyDeltas = reshapedeltas(gnn.transitionNet, penaltyDerivative);
 
-	transitionDeltas = adddeltas(transitionDeltas, penaltyDeltas);
-
-	weightDeltas = struct('output', outputDeltas, 'transition', transitionDeltas);
+	weightDeltas = struct(...
+		'output', outputDeltas,...
+		'transition', transitionDeltas,...
+		'transitionPenalty', penaltyDeltas);
 end

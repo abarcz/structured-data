@@ -1,8 +1,7 @@
 
 function penaltyDerivative = penaltyderivative(gnn, graph, state, A)
-% Calculate penalty derivative contribution to de/do, where:
+% Calculate penalty derivative contribution to de/dw, where:
 % - e = RMSE + contraction_map_penalty (network error)
-% - o - network outputs for all states
 %
 % usage: penaltyDerivative = penaltyderivative(gnn, graph, state, A)
 %
@@ -18,7 +17,8 @@ function penaltyDerivative = penaltyderivative(gnn, graph, state, A)
 	sourceInfluences = sum(A, 1);
 	%disp('penalty derivative influences: ')
 	%full(sourceInfluences)
-	sourceInfluences = sourceInfluences .* (sourceInfluences > gnn.contractionConstant);
+	sourceInfluences = (sourceInfluences - repmat(gnn.contractionConstant, size(sourceInfluences))) .*...
+		(sourceInfluences > gnn.contractionConstant);
 	%full(sourceInfluences)
 
 	fnn = gnn.transitionNet;
@@ -28,7 +28,7 @@ function penaltyDerivative = penaltyderivative(gnn, graph, state, A)
 	nBias2 = fnn.nOutputNeurons;
 	penaltyDerivative = zeros(1, nWeights1 + nBias1 + nWeights2 + nBias2);
 	if sum(sourceInfluences) == 0
-		disp('no penalty was added');
+		%disp('no penalty was added');
 	else
 		disp('adding influence penalty..');
 		% matrix B contains influences from A, filtered:
