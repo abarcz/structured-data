@@ -1,8 +1,8 @@
 
-function outputs = classifygnn(gnn, graph, max_forward_steps=200)
+function outputs = classifygnn(gnn, graph, max_forward_steps=50)
 % Classify graph nodes using gnn
 %
-% usage: outputs = classifygnn(gnn, graph, max_forward_steps=200)
+% usage: outputs = classifygnn(gnn, graph, max_forward_steps=50)
 %
 
 	% normalize graph labels using information stored by traingnn

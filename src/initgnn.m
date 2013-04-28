@@ -1,8 +1,8 @@
 
-function gnn = initgnn(maxIndegree, nHiddenNeurons, nOutputNeurons, outputFun='purelin', minStateDiff=0.00001, minErrorAccDiff=0.00001, contractionConstant=0.1)
+function gnn = initgnn(maxIndegree, nHiddenNeurons, nOutputNeurons, outputFun='purelin', minStateDiff=0.00001, minErrorAccDiff=0.00001, contractionConstant=0.5)
 % Create a Graph Neural Network
 %
-% usage: gnn = initgnn(maxIndegree, nHiddenNeurons, nOutputNeurons, outputFun='purelin', minStateDiff=0.00001, minErrorAccDiff=0.00001, contractionConstant=0.1)
+% usage: gnn = initgnn(maxIndegree, nHiddenNeurons, nOutputNeurons, outputFun='purelin', minStateDiff=0.00001, minErrorAccDiff=0.00001, contractionConstant=0.5)
 %
 % maxIndegree : max indegree of a node in graph
 % nHiddenNeurons : [nTransition, nOutput] number of hidden neurons for transition and output FNN, affects computational complexity by O(n)

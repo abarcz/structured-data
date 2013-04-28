@@ -1,8 +1,8 @@
 
-function gnn = traingnn(gnn, graph, nIterations, learningConstant1=0.1, learningConstant2=0.01, max_forward_steps=200)
+function gnn = traingnn(gnn, graph, nIterations, learningConstant1=0.1, learningConstant2=0.01, max_forward_steps=50)
 % Trains GNN using graph as training set
 %
-% usage: gnn = traingnn(gnn, graph, nIterations, learningConstant1=0.1, learningConstant2=0.01, max_forward_steps=200)
+% usage: gnn = traingnn(gnn, graph, nIterations, learningConstant1=0.1, learningConstant2=0.01, max_forward_steps=50)
 %
 
 	% normalize edge and node labels
@@ -23,11 +23,11 @@ function gnn = traingnn(gnn, graph, nIterations, learningConstant1=0.1, learning
 		gnn.transitionNet = updateweights(gnn.transitionNet,...
 			deltas.transition, learningConstant1);
 		gnn.transitionNet = updateweights(gnn.transitionNet,...
-			deltas.transitionPenalty, 1);
+			deltas.transitionPenalty, learningConstant1);
 
 		try
 			contractionPreserved = true;
-			state = forward(gnn, graph);
+			state = forward(gnn, graph, max_forward_steps);
 		catch
 			disp(lasterr());
 		end
