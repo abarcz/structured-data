@@ -56,7 +56,6 @@ class Graph():
 		for i in range(len(new_nodes)):
 			deleted_index = deleted_indexes[i]
 			self.nodes[deleted_index] = new_nodes[i]
-			self.target_nodes[deleted_index] = set()
 		new_edges = subgraph.edges()
 		for i in range(len(new_edges)):
 			edge = new_edges[i]
@@ -197,7 +196,7 @@ args = parser.parse_args()
 
 basename = "g%ds%s" % (args.nodes_num, args.snodes_num)
 
-subgraph = build_graph(args.snodes_num, args.delta)
+subgraph = build_graph(args.snodes_num, 0.8)
 save_graph("%s_sub" % basename, subgraph)
 
 for i in range(1, args.graphs_num + 1):

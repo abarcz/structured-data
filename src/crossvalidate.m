@@ -1,8 +1,8 @@
 
-function [gnns trainErrors testErrors] = crossvalidate(gnn, graphs, nIterations, nFolds=10)
+function [gnns trainAccuracy testAccuracy] = crossvalidate(gnn, graphs, nIterations, nFolds=10)
 % Perform n-fold crossvalidation on cell of graphs
 %
-% usage: [gnns trainErrors testErrors] = crossvalidate(gnn, graphs, nIterations, nFolds=10)
+% usage: [gnns trainAccuracy testAccuracy] = crossvalidate(gnn, graphs, nIterations, nFolds=10)
 %
 
 	nGraphs = size(graphs, 2);
@@ -14,8 +14,8 @@ function [gnns trainErrors testErrors] = crossvalidate(gnn, graphs, nIterations,
 	assert(nTrainGraphs > 0);
 	assert(nTestGraphs > 0);
 
-	testErrors = zeros(nFolds, 1);
-	trainErrors = zeros(nFolds, nIterations);
+	testAccuracy = zeros(nFolds, 1);
+	trainAccuracy = zeros(nFolds, 1);
 	gnns = {};
 	for i = 1:nFolds
 		testStartX = 1 + (i - 1) * nTestGraphs;
@@ -32,13 +32,14 @@ function [gnns trainErrors testErrors] = crossvalidate(gnn, graphs, nIterations,
 			trainGraphs{size(trainGraphs, 2) + 1} = graphs{j};
 		end
 		trainGraph = mergegraphs(trainGraphs);
-		[trainedGnn gnnErrors] = traingnn(gnn, trainGraph, nIterations);
-		trainErrors(i, :) = gnnErrors';
+		trainedGnn = traingnn(gnn, trainGraph, nIterations);
 		gnns{1, size(gnns, 2) + 1} = trainedGnn;
 
+		trainOutputs = classifygnn(trainedGnn, trainGraph);
+		trainAccuracy(i) = accuracy(trainOutputs, trainGraph.expectedOutput);
+
 		testGraph = mergegraphs(testGraphs);
-		outputs = classifygnn(trainedGnn, testGraph);
-		err = rmse(testGraph.expectedOutput, outputs);
-		testErrors(i) = err;
+		testOutputs = classifygnn(trainedGnn, testGraph);
+		testAccuracy(i) = accuracy(testOutputs, testGraph.expectedOutput);
 	end
 end
