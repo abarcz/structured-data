@@ -1,8 +1,8 @@
 
-function [gnn rmserrors] = traingnn(gnn, graph, nIterations, learningConstant1=0.1, learningConstant2=0.01, max_forward_steps=50)
+function [gnn rmserrors] = traingnn(gnn, graph, nIterations, learningConstant1=0.1, learningConstant2=0.01, max_forward_steps=50, max_backward_steps=200)
 % Trains GNN using graph as training set
 %
-% usage: [gnn rmserrors] = traingnn(gnn, graph, nIterations, learningConstant1=0.1, learningConstant2=0.01, max_forward_steps=50)
+% usage: [gnn rmserrors] = traingnn(gnn, graph, nIterations, learningConstant1=0.1, learningConstant2=0.01, max_forward_steps=50, max_backward_steps=200)
 %
 % return: best gnn obtained during training and all errors
 %
@@ -21,7 +21,7 @@ function [gnn rmserrors] = traingnn(gnn, graph, nIterations, learningConstant1=0
 	minError = Inf;
 	bestGnn = gnn;
 	do
-		deltas = backward(gnn, graph, state);
+		deltas = backward(gnn, graph, state, max_backward_steps);
 		gnn.outputNet = updateweights(gnn.outputNet,...
 			deltas.output, learningConstant2);
 

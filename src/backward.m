@@ -1,8 +1,8 @@
 
-function weightDeltas = backward(gnn, graph, state)
+function weightDeltas = backward(gnn, graph, state, max_backward_steps)
 % Perform the 'backward' step of GNN training
 %
-% usage: weightDeltas = backward(gnn, graph, state)
+% usage: weightDeltas = backward(gnn, graph, state, max_backward_steps)
 %
 % state : stable state, calculated by forward(graph, state, transitionErrors);)
 % return : deltas for both transition and output networks of gnn
@@ -19,6 +19,11 @@ function weightDeltas = backward(gnn, graph, state)
 	accumulator = b;	% accumulator contains dew/do * dG/wx, to be propagated
 	count = 0;
 	do
+		% if there are too many backward steps, we can get infinities as result
+		if count > max_backward_steps
+			printf('Too many backward steps: %d, aborting\n', count);
+			break;
+		end
 		lastAccumulator = accumulator;
 		% for each source node, backpropagate error of its target nodes
 		% A : influence of source nodes on target nodes
