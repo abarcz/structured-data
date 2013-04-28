@@ -1,17 +1,26 @@
 
-function gnn = initgnn(maxIndegree, stateSize, nHiddenNeurons, nOutputNeurons, minStateDiff=0.00001, minErrorAccDiff=0.00001, contractionConstant=0.1)
+function gnn = initgnn(maxIndegree, nHiddenNeurons, nOutputNeurons, outputFun='purelin', minStateDiff=0.00001, minErrorAccDiff=0.00001, contractionConstant=0.1)
 % Create a Graph Neural Network
 %
-% usage: gnn = initgnn(maxIndegree, stateSize, nHiddenNeurons, nOutputNeurons, minStateDiff=0.00001, minErrorAccDiff=0.00001, contractionConstant=0.1)
+% usage: gnn = initgnn(maxIndegree, nHiddenNeurons, nOutputNeurons, outputFun='purelin', minStateDiff=0.00001, minErrorAccDiff=0.00001, contractionConstant=0.1)
 %
 % maxIndegree : max indegree of a node in graph
+% nHiddenNeurons : [nTransition, nOutput] number of hidden neurons for transition and output FNN, affects computational complexity by O(n)
+% nOutputNeurons : [stateSize, nOutputs]
 % stateSize : number of integers used for storing calculated state of a node, affects computational complexity by O(n^2)
-% nHiddenNeurons : number of hidden neurons both for transition and output FNN, affects computational complexity by O(n)
-% nOutputNeurons : number of output neurons for the output network
+% nOutputs : number of output neurons for the output network
+% outputFun : type of gnn output activation function, can be 'tansig' or 'purelin'
 % minStateDiff : min difference between two global states (representing all nodes) to treat them as different
 % minErrorAccDiff : min difference between two de/dx accumulator variables to treat them as different
 % contractionConstant : in (0, 1), constant used in the penalty, assuring that the transition is a contraction map
 
+	if (strcmp(outputFun, 'purelin') == 0) && (strcmp(outputFun, 'tansig') == 0)
+		error(sprintf('Unknown activation function: %s', outputFun));
+	end
+	assert(size(nHiddenNeurons, 1) == 1);
+	assert(size(nHiddenNeurons, 2) == 2);
+	assert(size(nOutputNeurons, 1) == 1);
+	assert(size(nOutputNeurons, 2) == 2);
 	assert(minStateDiff > 0);
 	assert(contractionConstant > 0);
 	assert(contractionConstant < 1);
@@ -19,12 +28,13 @@ function gnn = initgnn(maxIndegree, stateSize, nHiddenNeurons, nOutputNeurons, m
 	nodeLabelSize = 1;
 	edgeLabelSize = 1;
 	% create nnet for calculating state
+	stateSize = nOutputNeurons(1);
 	nInputLines = nodeLabelSize + edgeLabelSize + stateSize;
-	transitionNet = initfnn(nInputLines, nHiddenNeurons, stateSize);
+	transitionNet = initfnn(nInputLines, nHiddenNeurons(1), stateSize, 'tansig');
 
 	% create nnet for calculating output
 	nInputLines = stateSize;
-	outputNet = initfnn(nInputLines, nHiddenNeurons, nOutputNeurons);
+	outputNet = initfnn(nInputLines, nHiddenNeurons(2), nOutputNeurons(2), outputFun);
 
 	% divide by additional factor, because inputs = fw = maxIn * hw
 	outputNet.weights1 = outputNet.weights1 ./ maxIndegree;

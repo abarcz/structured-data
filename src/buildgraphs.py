@@ -191,14 +191,15 @@ parser = argparse.ArgumentParser(description='Build dataset for subgraph matchin
 parser.add_argument("-n", "--nodes_num", type=int, help="number of nodes in the graphs", default=14)
 parser.add_argument("-s", "--snodes_num", type=int, help="number of nodes in the subgraph", default=5)
 parser.add_argument("-g", "--graphs_num", type=int, help="number of graphs to generate", default=1)
-parser.add_argument("-b", "--basename", type=str, help="base name for graphs (used for filenames)", required=True)
 parser.add_argument("-d", "--delta", type=float, help="probability that two nodes will be connected", default=0.2)
 
 args = parser.parse_args()
 
-subgraph = build_graph(args.snodes_num, args.delta)
-save_graph("%s_sub" % args.basename, subgraph)
+basename = "g%ds%s" % (args.nodes_num, args.snodes_num)
 
-for i in range(args.graphs_num):
+subgraph = build_graph(args.snodes_num, args.delta)
+save_graph("%s_sub" % basename, subgraph)
+
+for i in range(1, args.graphs_num + 1):
 	graph = build_graph(args.nodes_num, args.delta, subgraph)
-	save_graph("%s_%d" % (args.basename, i), graph)
+	save_graph("%s_%d" % (basename, i), graph)
