@@ -31,7 +31,6 @@ function graph = loadgraph(graphName)
 % - maxIndegree : max indegree of a node in graph (number of edges pointing to a node)
 % - sourceNodes : for each node n a vector of node ids connected to n by edge
 
-	NO_EDGE = 0;
 	minLabelSize = 1;
 	minOutputSize = 1;
 	nodeIdSize = 1;
