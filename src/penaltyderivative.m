@@ -50,7 +50,7 @@ function penaltyDerivative = penaltyderivative(gnn, graph, state, A)
 
 					% calculate f2'(net2) and f1'(net1)
 					nodeLabel = graph.nodeLabels(targetIndex, :);
-					sourceEdgeLabel = graph.edgeLabels{sourceIndex, targetIndex};
+					sourceEdgeLabel = graph.edgeLabelsCell{sourceIndex, targetIndex};
 					sourceNodeState = state(sourceIndex, :);
 					inputs = [nodeLabel, sourceEdgeLabel, sourceNodeState];
 

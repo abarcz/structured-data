@@ -5,6 +5,14 @@ function gnn = traingnn(gnn, graph, nIterations, learningConstant1=0.1, learning
 % usage: gnn = traingnn(gnn, graph, nIterations, learningConstant1=0.1, learningConstant2=0.01, max_forward_steps=200)
 %
 
+	% normalize edge and node labels
+	% store normalization info inside result gnn
+	[graph.nodeLabels gnn.nodeLabelMeans gnn.nodeLabelStds] = ...
+		normalize(graph.nodeLabels);
+	[graph.edgeLabels(:, 3:end) gnn.edgeLabelMeans gnn.edgeLabelStds] = ...
+		normalize(graph.edgeLabels(:, 3:end));
+	graph = addgraphinfo(graph);
+
 	state = forward(gnn, graph, max_forward_steps);
 	count = 0;
 	do
@@ -23,7 +31,7 @@ function gnn = traingnn(gnn, graph, nIterations, learningConstant1=0.1, learning
 		catch
 			disp(lasterr());
 		end
-		outputs = applynet(gnn.outputNet, state); %[graph.nodeLabels state])
+		outputs = applynet(gnn.outputNet, state);
 		graph.expectedOutput;
 		err = rmse(graph.expectedOutput, outputs);
 		count = count + 1;

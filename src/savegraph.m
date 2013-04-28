@@ -13,18 +13,7 @@ function savegraph(graphName, graph)
 	expectedOutputFilename = strcat(graphName, '_output.csv');
 
 	csvwrite(nodesFilename , graph.nodeLabels);
-
-	edges = [];
-	for i = 1:graph.nNodes
-		for j = 1:graph.nNodes
-			edgeLabel = graph.edgeLabels{i, j};
-			if length(edgeLabel) != 0
-				edgeLabel = [i, j, edgeLabel];
-				edges = [edges; edgeLabel];
-			end
-		end
-	end
-	csvwrite(edgesFilename, edges);
+	csvwrite(edgesFilename, graph.edgeLabels);
 
 	if length(graph.expectedOutput) != 0
 		csvwrite(expectedOutputFilename, graph.expectedOutput);

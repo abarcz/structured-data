@@ -48,8 +48,6 @@ function graph = loadgraph(graphName)
 	else
 		expectedOutput = [];
 	end
-	nodeOutputSize = size(expectedOutput, 2);
-	nNodes = size(nodeLabels, 1);
 
 	assert(size(nodeLabels, 2) >= minLabelSize);
 	assert(size(edgeLabels, 2) >= nodeIdSize * 2);
@@ -58,39 +56,27 @@ function graph = loadgraph(graphName)
 		edgeLabels = [edgeLabels zeros(size(edgeLabels, 1), 1)];
 	end
 	% check if all node labels in edges are correct
+	nNodes = size(nodeLabels, 1);
 	assert(isempty(setdiff(unique(edgeLabels(:, 1:2)), [1:nNodes])));
 
-	sourceNodes = {};
 	maxIndegree = 0;
-	for targetIndex = 1:nNodes
-		sourceNodes{targetIndex} = edgeLabels(edgeLabels(:, 2) == targetIndex, 1)';
-		targetIndegree = size(sourceNodes{targetIndex}, 1);
-		if targetIndegree > maxIndegree
-			maxIndegree = targetIndegree;
+	for i = 1:nNodes
+		indegree = sum(edgeLabels(:, 2) == i);
+		if indegree > maxIndegree
+			maxIndegree = indegree;
 		end
-	end
-
-	% create cell array of edge labels, for better indexing
-	edgeLabels(:, 3:end) = normalize(edgeLabels(:, 3:end));
-	edgeLabelsCell = {};
-	for i = 1:size(edgeLabels, 1)
-		sourceNode = edgeLabels(i, 1);
-		targetNode = edgeLabels(i, 2);
-		label = edgeLabels(i, 3:end);
-		edgeLabelsCell{sourceNode, targetNode} = label;
 	end
 
 	nodeLabelSize = size(nodeLabels, 2);
 	edgeLabelSize = size(edgeLabels(:, 3:end), 2);
-	stateWeightsStart = 1 + nodeLabelSize + edgeLabelSize;
+	nodeOutputSize = size(expectedOutput, 2);
 	graph = struct(...
-		'nodeLabels', normalize(nodeLabels),...
+		'nodeLabels', nodeLabels,...
 		'expectedOutput', expectedOutput,...
-		'edgeLabels', {edgeLabelsCell},...
+		'edgeLabels', edgeLabels,...
 		'nodeLabelSize', nodeLabelSize,...
 		'edgeLabelSize', edgeLabelSize,...
 		'nNodes', nNodes,...
 		'maxIndegree', maxIndegree,...
-		'nodeOutputSize', nodeOutputSize,...
-		'sourceNodes', {sourceNodes});
+		'nodeOutputSize', nodeOutputSize);
 end
