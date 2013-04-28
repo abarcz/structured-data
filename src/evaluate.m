@@ -1,8 +1,8 @@
 
-function [accuracy precision recall] = evaluate(output, expected)
+function stats = evaluate(output, expected)
 % Evaluates classifier outputs
 %
-% usage: [accuracy precision recall] = evaluate(output, expected)
+% usage: stats = evaluate(output, expected)
 %
 % output, expected - column vectors
 
@@ -21,4 +21,6 @@ function [accuracy precision recall] = evaluate(output, expected)
 	precision = truePos / (truePos + falsePos);
 	recall = truePos / (truePos + falseNeg);
 	accuracy = (truePos + trueNeg) / size(expected, 1);
+
+	stats = [accuracy, precision, recall];
 end
