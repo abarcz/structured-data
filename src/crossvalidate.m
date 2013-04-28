@@ -9,6 +9,7 @@ function [gnns trainStats testStats] = crossvalidate(gnn, graphs, nIterations, n
 
 	nGraphs = size(graphs, 2);
 	assert(nGraphs > 1);
+	assert(nGraphs / nFolds == floor(nGraphs / nFolds));
 
 	trainFraction = 1 - 1 / nFolds;
 	nTrainGraphs = floor(nGraphs * trainFraction);
