@@ -1,8 +1,8 @@
 
-function gnn = traingnn(gnn, graph, nIterations, learningConstant1=0.1, learningConstant2=0.01, max_forward_steps=50)
+function [gnn rmserrors] = traingnn(gnn, graph, nIterations, learningConstant1=0.1, learningConstant2=0.01, max_forward_steps=50)
 % Trains GNN using graph as training set
 %
-% usage: gnn = traingnn(gnn, graph, nIterations, learningConstant1=0.1, learningConstant2=0.01, max_forward_steps=50)
+% usage: [gnn rmserrors] = traingnn(gnn, graph, nIterations, learningConstant1=0.1, learningConstant2=0.01, max_forward_steps=50)
 %
 
 	% normalize edge and node labels
@@ -14,6 +14,7 @@ function gnn = traingnn(gnn, graph, nIterations, learningConstant1=0.1, learning
 	graph = addgraphinfo(graph);
 
 	state = forward(gnn, graph, max_forward_steps);
+	rmserrors = zeros(nIterations, 1);
 	count = 0;
 	do
 		deltas = backward(gnn, graph, state);
@@ -36,5 +37,6 @@ function gnn = traingnn(gnn, graph, nIterations, learningConstant1=0.1, learning
 		err = rmse(graph.expectedOutput, outputs);
 		count = count + 1;
 		printf('RMSE after %d iterations: %f\n', count, err);
+		rmserrors(count) = err;
 	until count == nIterations
 end

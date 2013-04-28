@@ -5,12 +5,12 @@ function graph = mergegraphs(graphs)
 % usage: graph = mergegraphs(graphs)
 %
 
-	graphs_num = size(graphs, 2);
-	assert(graphs_num > 0);
+	nGraphs = size(graphs, 2);
+	assert(nGraphs > 0);
 
 	graph = graphs{1};
-	graphEndIndexes = zeros(graphs_num, 1);
-	for i = 2:graphs_num
+	graphEndIndexes = zeros(nGraphs, 1);
+	for i = 2:nGraphs
 		currGraph = graphs{i};
 		assert(graph.nodeLabelSize == currGraph.nodeLabelSize);
 		assert(graph.edgeLabelSize == currGraph.edgeLabelSize);

@@ -1,19 +1,19 @@
 
-function graphs = loadset(basename, graphs_number)
+function graphs = loadset(basename, nGraphs)
 % Load dataset consisting of graphs named <basename>_<graphNumber>,
-% where graphNumber = 1..graphs_number
+% where graphNumber = 1..nGraphs
 %
-% usage: graphs = loadset(basename, graphs_number)
+% usage: graphs = loadset(basename, nGraphs)
 %
 
-	assert(graphs_number > 1);
+	assert(nGraphs > 1);
 	graphs = {};
 
 	% load first graph
 	graphName = sprintf('%s_%d', basename, 1);
 	graph = loadgraph(graphName);
 	graphs{1} = graph;
-	for i = 2:graphs_number
+	for i = 2:nGraphs
 		graphName = sprintf('%s_%d', basename, i);
 		currGraph = loadgraph(graphName);
 		% compare with the first graph
