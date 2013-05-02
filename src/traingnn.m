@@ -20,15 +20,21 @@ function [gnn rmserrors] = traingnn(gnn, graph, nIterations, learningConstant1=0
 	count = 0;
 	minError = Inf;
 	bestGnn = gnn;
+	rpropTransitionState = initrprop(gnn.transitionNet);
+	rpropOutputState = initrprop(gnn.outputNet);
 	do
 		deltas = backward(gnn, graph, state, max_backward_steps);
-		gnn.outputNet = updateweights(gnn.outputNet,...
-			deltas.output, learningConstant2);
 
+		outputDerivatives = deltas.output;
+		[rpropOutputState outputWeightUpdates] = rprop(rpropOutputState, outputDerivatives);
+
+		transitionDerivatives = adddeltas(deltas.transition, deltas.transitionPenalty);
+		[rpropTransitionState transitionWeightUpdates] = rprop(rpropTransitionState, transitionDerivatives);
+
+		gnn.outputNet = updateweights(gnn.outputNet,...
+			outputWeightUpdates, 1);
 		gnn.transitionNet = updateweights(gnn.transitionNet,...
-			deltas.transition, learningConstant1);
-		gnn.transitionNet = updateweights(gnn.transitionNet,...
-			deltas.transitionPenalty, learningConstant1);
+			transitionWeightUpdates, 1);
 
 		try
 			contractionPreserved = true;
