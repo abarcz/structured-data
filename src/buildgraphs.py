@@ -4,6 +4,7 @@ import argparse
 from random import randint, random, sample
 from itertools import combinations
 import networkx as nx
+from copy import deepcopy
 import csv
 
 """
@@ -96,31 +97,45 @@ class Graph():
 			#print "new: ", new_indexes
 			for node_index in node_subset.keys():
 				graph.add_node(new_indexes[node_index], label=node_subset[node_index])
+			edges = []
 			for node_index in node_subset.keys():
 				target_indexes = self.target_nodes[node_index]
 				#print "target: ", target_indexes
 				source_index = new_indexes[node_index]
 				for old_target_index in target_indexes:
+					# remove edges that aren't contained in node subset
 					if not old_target_index in set(node_subset.keys()):
 						continue
 					target_index = new_indexes[old_target_index]
-					graph.add_edge(source_index, target_index)
-			#print "nodes: ", graph.nodes()
-			#print "edges: ", graph.edges()
-			#print "nodes: ", subgraph_nx.nodes()
-			#print "edges: ", subgraph_nx.edges()
-			subgraph_match = nx.is_isomorphic(subgraph_nx, graph,\
-				node_match=lambda d1, d2 : d1["label"] == d2["label"])
-			if subgraph_match:
-				for node_index in node_subset:
-					marked_indexes.append(node_index)
+					edges.append((source_index, target_index))
+			# partial graph can contain edges not present in matched subgraph
+			# we have to check all subsets of edges of valid size
+			edge_subsets = list(combinations(edges, len(subgraph_nx.edges())))
+			for edge_subset in edge_subsets:
+				curr_graph = deepcopy(graph)
+				for edge in edge_subset:
+					curr_graph.add_edge(edge[0], edge[1])
+				#print "nodes: ", curr_graph.nodes()
+				#print "edges: ", curr_graph.edges()
+				#print "nodes: ", subgraph_nx.nodes()
+				#print "edges: ", subgraph_nx.edges()
+				subgraph_match = nx.is_isomorphic(subgraph_nx, curr_graph,\
+					node_match=lambda d1, d2 : d1["label"] == d2["label"])
+				#print subgraph_match
+				if subgraph_match:
+					for node_index in node_subset:
+						marked_indexes.append(node_index)
+					break
 		#print "marked:"
 		#print marked_indexes
 		if len(marked_indexes) == 0:
+			#print self.nodes
+			#print self.target_nodes
+			#print subgraph.nodes
+			#print subgraph.target_nodes
 			raise Exception("No subgraph found in graph!")
 		for index in marked_indexes:
 			self.outputs[index] = SUBGRAPH
-
 
 	def _filter_nodes(self, node_labels):
 		filtered = {}	# node_index -> node_label
@@ -185,6 +200,20 @@ def save_graph(graph_name, graph):
 		for edge in graph.edges():
 			writer.writerow([edge[0] + 1 , edge[1] + 1])
 				
+#n1 = [9, 9, 2, 1, 4, 7]
+#tn1 = {0: set([1, 2, 4, 5]), 1: set([0, 2]), 2: set([0, 1, 5]), 3: set([4]), 4: set([0, 3]), 5: set([0, 2])}
+#n2 = [9, 2, 7]
+#tn2 = {0: set([2]), 1: set([2]), 2: set([0, 1])}
+
+#n1 = [5, 4, 6, 10, 5, 7, 8, 0, 9, 5, 1, 7, 10, 7]
+#tn1 = {0: set([1, 3, 9, 7]), 1: set([0, 9, 3, 7]), 2: set([9, 3]), 3: set([0, 1, 2, 4, 5, 7, 9]), 4: set([3, 6]), 5: set([10, 3]), 6: set([8, 10, 4]), 7: set([0, 1, 3, 8, 9, 11, 12]), 8: set([9, 11, 12, 6, 7]), 9: set([0, 1, 2, 3, 7, 8, 10, 12]), 10: set([9, 5, 6, 13]), 11: set([8, 7]), 12: set([8, 9, 7]), 13: set([10])}
+#n2 = [4, 10, 5, 0, 5]
+#tn2 = {0: set([1, 2, 3, 4]), 1: set([0, 2, 3]), 2: set([0, 1, 3, 4]), 3: set([0, 1, 2, 4]), 4: set([0, 2, 3])}
+
+#graph = Graph(n1, tn1)
+#subgraph = Graph(n2, tn2)
+#graph.mark_occurences(subgraph)
+#exit(0)
 
 parser = argparse.ArgumentParser(description='Build dataset for subgraph matching.')
 parser.add_argument("-n", "--nodes_num", type=int, help="number of nodes in the graphs", default=14)
