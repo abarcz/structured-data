@@ -1,20 +1,20 @@
 
-function state = forward(gnn, graph, max_forward_steps)
+function [state nSteps] = forward(gnn, graph, maxForwardSteps)
 % Perform the 'forward' step of GNN training
 % compute node states until stable state is reached
 %
-% usage: state = forward(gnn, graph, max_forward_steps)
+% usage: [state nSteps] = forward(gnn, graph, maxForwardSteps)
 
 	state = randn(graph.nNodes, gnn.stateSize);	% zero mean, unit variance
-	count = 0;
+	nSteps = 0;
 	do
-		if count > max_forward_steps
-			printf('Too many forward steps: %d, aborting\n', count);
+		if nSteps > maxForwardSteps
+			% printf('Too many forward steps: %d, aborting\n', nSteps);
 			return;
 		end
 		lastState = state;
 		state = transition(gnn.transitionNet, lastState, graph);
-		count = count + 1;
+		nSteps = nSteps + 1;
 	until(stablestate(lastState, state, gnn.minStateDiff));
-	printf('Transitions made until stable state was reached: %d\n', count);
+	% printf('Transitions made until stable state was reached: %d\n', nSteps);
 end

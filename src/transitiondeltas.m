@@ -4,7 +4,7 @@ function deltas = transitiondeltas(transitionNet, graph, state, errors)
 %
 % usage: deltas = transitiondeltas(transitionNet, graph, state, errors)
 %
-% F : global transition function, F(node_labels, edge_labels, node_states)=node_states
+% F : global transition function, F(nodeLabels, edgeLabels, nodeStates)=nodeStates
 % state : each row contains a node state
 % errors : each row contains an error of a node (e.g. 2(d - y))
 

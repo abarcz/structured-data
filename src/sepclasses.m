@@ -1,7 +1,7 @@
 
 function classes = sepclasses(samples)
 % Given samples, separates them into cellarray of classes, preserving ids
-% samples : each row = [ class_id feat_1 feat_2 ... ]
+% samples : each row = [ classId feat1 feat2 ... ]
 
 	% get all classes ids, in ascending order
 	classIds = unique(samples(:, 1));

@@ -1,8 +1,8 @@
 
-function weightDeltas = backward(gnn, graph, state, max_backward_steps)
+function [weightDeltas nSteps penaltyAdded] = backward(gnn, graph, state, maxBackwardSteps)
 % Perform the 'backward' step of GNN training
 %
-% usage: weightDeltas = backward(gnn, graph, state, max_backward_steps)
+% usage: [weightDeltas nSteps penaltyAdded] = backward(gnn, graph, state, maxBackwardSteps)
 %
 % state : stable state, calculated by forward(graph, state, transitionErrors);)
 % return : deltas for both transition and output networks of gnn
@@ -17,11 +17,11 @@ function weightDeltas = backward(gnn, graph, state, max_backward_steps)
 	A = calculatea(gnn.transitionNet, graph, state);
 	b = sparse(calculateb(gnn.outputNet, graph, state, outputErrors));
 	accumulator = b;	% accumulator contains dew/do * dG/wx, to be propagated
-	count = 0;
+	nSteps = 0;
 	do
 		% if there are too many backward steps, we can get infinities as result
-		if count > max_backward_steps
-			printf('Too many backward steps: %d, aborting\n', count);
+		if nSteps > maxBackwardSteps
+			% printf('Too many backward steps: %d, aborting\n', nSteps);
 			break;
 		end
 		lastAccumulator = accumulator;
@@ -30,15 +30,15 @@ function weightDeltas = backward(gnn, graph, state, max_backward_steps)
 		% accumulator : errors de/dx from previous timestep (t + 1)
 		% b : de/do * dG/dx error, injected at each step
 		accumulator = accumulator * A + b;
-		count = count + 1;
+		nSteps = nSteps + 1;
 	until(stablestate(lastAccumulator, accumulator, gnn.minErrorAccDiff));
-	printf('Transitions made until error accumulator reached stable state: %d\n', count);
+	% printf('Transitions made until error accumulator reached stable state: %d\n', nSteps);
 
 	transitionErrors = reshape(accumulator, graph.nNodes, gnn.stateSize);
 	transitionDeltas = transitiondeltas(gnn.transitionNet, graph, state, transitionErrors);
 
 	% calculate penalty dp/dw, assuring that F is a contraction map
-	penaltyDerivative = penaltyderivative(gnn, graph, state, A);
+	[penaltyDerivative penaltyAdded] = penaltyderivative(gnn, graph, state, A);
 	penaltyDeltas = reshapedeltas(gnn.transitionNet, penaltyDerivative);
 
 	weightDeltas = struct(...

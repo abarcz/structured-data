@@ -6,7 +6,7 @@ function A = calculatea(transitionNet, graph, state)
 %
 % Each block A[n,u] = dxn/dxu:
 % - describes the effect of node xu on node xn, if an edge xu->xn exists
-% - is null if there is no edge
+% - is null (zeroed) if there is no edge
 %
 % Each element of block A[n, u] : a[i, j]:
 % - describes the effect of ith element of state xu on jth element of state xn
@@ -22,21 +22,21 @@ function A = calculatea(transitionNet, graph, state)
 			sourceEdgeLabel = graph.edgeLabelsCell{sourceNodeIndexes(i), nodeIndex};
 			sourceNodeState = state(sourceNodeIndexes(i), :);
 			inputs = [nodeLabel, sourceEdgeLabel, sourceNodeState];
-			delta_zx = zeros(stateSize, stateSize);
+			deltaZx = zeros(stateSize, stateSize);
 			for j = 1:stateSize
 				errors = zeros(1, stateSize);
 				errors(j) = 1;
-				input_deltas = bp2(transitionNet, inputs, errors);
+				inputDeltas = bp2(transitionNet, inputs, errors);
 				% select only weights corresponding to x_iu
 				stateWeightsStart = 1 + graph.nodeLabelSize + graph.edgeLabelSize;
-				state_input_deltas = input_deltas(1, stateWeightsStart:end);
-				delta_zx(:, j) = state_input_deltas';
+				stateInputDeltas = inputDeltas(1, stateWeightsStart:end);
+				deltaZx(:, j) = stateInputDeltas';
 			end
 			startX = blockstart(nodeIndex, stateSize);
 			endX = blockend(nodeIndex, stateSize);
 			startY = blockstart(sourceNodeIndexes(i), stateSize);
 			endY = blockend(sourceNodeIndexes(i), stateSize);
-			A(startX:endX, startY:endY) = delta_zx;
+			A(startX:endX, startY:endY) = deltaZx;
 		end
 	end
 end

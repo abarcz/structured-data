@@ -1,11 +1,26 @@
 
-function [gnn rmserrors] = traingnn(gnn, graph, nIterations, learningConstant1=0.1, learningConstant2=0.01, max_forward_steps=50, max_backward_steps=200)
+function [bestGnn trainStats] = traingnn(gnn, graph, nIterations, maxForwardSteps=200, maxBackwardSteps=200)
 % Trains GNN using graph as training set
 %
-% usage: [gnn rmserrors] = traingnn(gnn, graph, nIterations, learningConstant1=0.1, learningConstant2=0.01, max_forward_steps=50, max_backward_steps=200)
+% usage: [bestGnn trainStats] = traingnn(gnn, graph, nIterations, maxForwardSteps=200, maxBackwardSteps=200)
 %
-% return: best gnn obtained during training and all errors
+% return:
+% - best gnn obtained during training and all errors
+% - trainStats, containing in ith row:
+%		+ RMSE after (i - 1) iterations
+%		+ forward steps made
+%		+ backward steps made
+%		+ contraction penalty was added during backpropagation (0/1)
+%	the first row contains RMSE of initial network
+%	the last row contains RMSE of the final network and doesn't contain any backpropagation information
 %
+
+	% constants for indexing training stats
+	RMSE = 1;
+	FORWARD_STEPS = 2;
+	BACKWARD_STEPS = 3;
+	PENALTY_ADDED = 4;
+	trainStats = zeros(nIterations + 1, 4);
 
 	% normalize edge and node labels
 	% store normalization info inside result gnn
@@ -15,15 +30,27 @@ function [gnn rmserrors] = traingnn(gnn, graph, nIterations, learningConstant1=0
 		normalize(graph.edgeLabels(:, 3:end));
 	graph = addgraphinfo(graph);
 
-	state = forward(gnn, graph, max_forward_steps);
-	rmserrors = zeros(nIterations, 1);
-	count = 0;
 	minError = Inf;
 	bestGnn = gnn;
 	rpropTransitionState = initrprop(gnn.transitionNet);
 	rpropOutputState = initrprop(gnn.outputNet);
-	do
-		deltas = backward(gnn, graph, state, max_backward_steps);
+	for iteration = 1:nIterations
+	%	printf('\nIteration: %d\n', iteration');
+		[state nForwardSteps] = forward(gnn, graph, maxForwardSteps);
+		trainStats(iteration, FORWARD_STEPS) = nForwardSteps;
+
+		outputs = applynet(gnn.outputNet, state);
+		err = rmse(graph.expectedOutput, outputs);
+		trainStats(iteration, RMSE) = err;
+	%	printf('RMSE after %d iterations: %f\n', iteration - 1, err);
+		if err < minError
+			minError = err;
+			bestGnn = gnn;
+		end
+
+		[deltas nBackwardSteps penaltyAdded] = backward(gnn, graph, state, maxBackwardSteps);
+		trainStats(iteration, FORWARD_STEPS) = nForwardSteps;
+		trainStats(iteration, PENALTY_ADDED) = penaltyAdded;
 
 		outputDerivatives = deltas.output;
 		[rpropOutputState outputWeightUpdates] = rprop(rpropOutputState, outputDerivatives);
@@ -35,23 +62,20 @@ function [gnn rmserrors] = traingnn(gnn, graph, nIterations, learningConstant1=0
 			outputWeightUpdates, 1);
 		gnn.transitionNet = updateweights(gnn.transitionNet,...
 			transitionWeightUpdates, 1);
+	end
 
-		try
-			contractionPreserved = true;
-			state = forward(gnn, graph, max_forward_steps);
-		catch
-			disp(lasterr());
-		end
-		outputs = applynet(gnn.outputNet, state);
-		graph.expectedOutput;
-		err = rmse(graph.expectedOutput, outputs);
-		count = count + 1;
-		printf('RMSE after %d iterations: %f\n', count, err);
-		rmserrors(count) = err;
-		if err < minError
-			minError = err;
-			bestGnn = gnn;
-		end
-	until count == nIterations
-	gnn = bestGnn;
+	% calculate RMSE of final GNN
+	iteration = nIterations + 1;
+
+	[state nForwardSteps] = forward(gnn, graph, maxForwardSteps);
+	trainStats(iteration, FORWARD_STEPS) = nForwardSteps;
+
+	outputs = applynet(gnn.outputNet, state);
+	err = rmse(graph.expectedOutput, outputs);
+	trainStats(iteration, RMSE) = err;
+	%printf('RMSE after %d iterations: %f\n', iteration - 1, err);
+	if err < minError
+		minError = err;
+		bestGnn = gnn;
+	end
 end

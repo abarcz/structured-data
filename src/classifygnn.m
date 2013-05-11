@@ -1,8 +1,8 @@
 
-function outputs = classifygnn(gnn, graph, max_forward_steps=50)
+function [outputs nForwardSteps] = classifygnn(gnn, graph, maxForwardSteps=200)
 % Classify graph nodes using gnn
 %
-% usage: outputs = classifygnn(gnn, graph, max_forward_steps=50)
+% usage: [outputs nForwardSteps] = classifygnn(gnn, graph, maxForwardSteps=200)
 %
 
 	% normalize graph labels using information stored by traingnn
@@ -12,6 +12,6 @@ function outputs = classifygnn(gnn, graph, max_forward_steps=50)
 		gnn.edgeLabelMeans, gnn.edgeLabelStds);
 	graph = addgraphinfo(graph);
 
-	state = forward(gnn,graph, max_forward_steps);
+	[state nForwardSteps] = forward(gnn,graph, maxForwardSteps);
 	outputs = applynet(gnn.outputNet, state);
 end

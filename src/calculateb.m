@@ -2,7 +2,7 @@
 function b = calculateb(outputNet, graph, state, errorDerivative)
 % Calculate b matrix = dew/do * dGw/dx
 %
-% G : global output function, G(node_states)=outputs
+% G : global output function, G(nodeStates)=outputs
 % errorDerivative : each row contains an error of a node
 % state : each row contains a node state
 
