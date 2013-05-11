@@ -35,21 +35,19 @@ function [bestGnn trainStats] = traingnn(gnn, graph, nIterations, maxForwardStep
 	rpropTransitionState = initrprop(gnn.transitionNet);
 	rpropOutputState = initrprop(gnn.outputNet);
 	for iteration = 1:nIterations
-	%	printf('\nIteration: %d\n', iteration');
 		[state nForwardSteps] = forward(gnn, graph, maxForwardSteps);
 		trainStats(iteration, FORWARD_STEPS) = nForwardSteps;
 
 		outputs = applynet(gnn.outputNet, state);
 		err = rmse(graph.expectedOutput, outputs);
 		trainStats(iteration, RMSE) = err;
-	%	printf('RMSE after %d iterations: %f\n', iteration - 1, err);
 		if err < minError
 			minError = err;
 			bestGnn = gnn;
 		end
 
 		[deltas nBackwardSteps penaltyAdded] = backward(gnn, graph, state, maxBackwardSteps);
-		trainStats(iteration, FORWARD_STEPS) = nForwardSteps;
+		trainStats(iteration, BACKWARD_STEPS) = nBackwardSteps;
 		trainStats(iteration, PENALTY_ADDED) = penaltyAdded;
 
 		outputDerivatives = deltas.output;
