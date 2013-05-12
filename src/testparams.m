@@ -1,11 +1,15 @@
 
 function testparams(nGnns, graph, nIterations, basename, contractionConstants, minDiffs)
+%
+% usage: testparams(nGnns, graph, nIterations, basename, contractionConstants, minDiffs)
+%
+
 	assert(size(contractionConstants, 1) == 1);
 	assert(size(minDiffs, 1) == 1);
 
 	for k = 1:nGnns
 		testname = strcat(basename, sprintf('_gnn%d', k));
-		gnn = initgnn(graph.maxIndegree, [5 5] [5 graph.nodeOutputSize], 'tansig');
+		gnn = initgnn(graph.maxIndegree, [5 5], [5 graph.nodeOutputSize], 'tansig');
 
 		mainFilename = strcat(testname, '.mat');
 		packedGnn = presavegnn(gnn);
