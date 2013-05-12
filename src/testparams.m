@@ -4,9 +4,8 @@ function testparams(gnn, graph, nIterations, testname, contractionConstants, min
 	assert(size(minDiffs, 1) == 1);
 
 	mainFilename = strcat(testname, '.mat');
-	gnnFilename = strcat(testname, '_gnn.mat');
-	save(mainFilename, 'graph', 'nIterations', 'contractionConstants', 'minDiffs');
-	save(gnnFilename, 'gnn');
+	packedGnn = presavegnn(gnn);
+	save(mainFilename, 'packedGnn', 'graph', 'nIterations', 'contractionConstants', 'minDiffs');
 
 	nContractionConstants = size(contractionConstants, 2);
 	nMinDiffs = size(minDiffs, 2);
@@ -38,5 +37,5 @@ function testparams(gnn, graph, nIterations, testname, contractionConstants, min
 		end
 	end
 	% resave test stats with times added
-	save(mainFilename, 'graph', 'nIterations', 'contractionConstants', 'minDiffs', 'timesElapsed', 'precisions', 'accuracies', 'recalls');
+	save(mainFilename, 'packedGnn', 'graph', 'nIterations', 'contractionConstants', 'minDiffs', 'timesElapsed', 'precisions', 'accuracies', 'recalls');
 end
