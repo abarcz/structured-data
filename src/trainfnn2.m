@@ -64,7 +64,7 @@ function [fnn rmsErrors trainCorrectRates validationCorrectRates] = trainfnn2(fn
 		trainCorrectRate = (nTrainSamples - errorCount) ./ nTrainSamples * 100;
 		
 		% use validation set
-		confusionMatrix = classify(fnn, validationSamples);
+		confusionMatrix = classifyfnn(fnn, validationSamples);
 		validationCorrectRate = interpretconfusionmatrix(confusionMatrix)(1) * 100;
 
 	%	if rmsError > lastRmsError

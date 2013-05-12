@@ -11,6 +11,7 @@ function [bestGnn trainStats] = traingnn(gnn, graph, nIterations, maxForwardStep
 %		+ forward steps made
 %		+ backward steps made
 %		+ contraction penalty was added during backpropagation (0/1)
+%		+ transitionstats() output
 %	the first row contains RMSE of initial network
 %	the last row contains RMSE of the final network and doesn't contain any backpropagation information
 %
@@ -20,7 +21,9 @@ function [bestGnn trainStats] = traingnn(gnn, graph, nIterations, maxForwardStep
 	FORWARD_STEPS = 2;
 	BACKWARD_STEPS = 3;
 	PENALTY_ADDED = 4;
-	trainStats = zeros(nIterations + 1, 4);
+	TRANS_STATS_START = 5;
+	TRANS_STATS_END = TRANS_STATS_START + 3;
+	trainStats = zeros(nIterations + 1, TRANS_STATS_END);
 
 	% normalize edge and node labels
 	% store normalization info inside result gnn
@@ -49,6 +52,7 @@ function [bestGnn trainStats] = traingnn(gnn, graph, nIterations, maxForwardStep
 		[deltas nBackwardSteps penaltyAdded] = backward(gnn, graph, state, maxBackwardSteps);
 		trainStats(iteration, BACKWARD_STEPS) = nBackwardSteps;
 		trainStats(iteration, PENALTY_ADDED) = penaltyAdded;
+		trainStats(iteration, TRANS_STATS_START:TRANS_STATS_END) = round(transitionstats(deltas));
 
 		outputDerivatives = deltas.output;
 		[rpropOutputState outputWeightUpdates] = rprop(rpropOutputState, outputDerivatives);

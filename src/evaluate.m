@@ -5,6 +5,7 @@ function stats = evaluate(output, expected)
 % usage: stats = evaluate(output, expected)
 %
 % output, expected - column vectors
+% stats - accuracy, precision, recall
 
 	assert(unique(expected) == [-1; 1]);
 	assert(size(output, 1) == size(expected, 1));

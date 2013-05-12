@@ -1,5 +1,5 @@
 
-function confusionMatrix = classify(fnn, samples)
+function confusionMatrix = classifyfnn(fnn, samples)
 
 	nSamples = size(samples, 1);
 
