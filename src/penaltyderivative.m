@@ -8,7 +8,7 @@ function [penaltyDerivative penaltyAdded] = penaltyderivative(gnn, graph, state,
 
 	% note on matrix A:
 	% each s^2 block denotes influence of single source node xu on all s outputs of xn
-	% each block matrix row n denotes influences on taget node xn by all source nodes
+	% each block matrix row n denotes influences on target node xn by all source nodes
 	% each block matrix column u denotes influences of source node xu on target nodes
 	% (edge from xu to xn)
 

@@ -1,8 +1,8 @@
 
-function rpropStruct = rpropupdate(rpropStruct, errorDerivatives, deltaMin, deltaMax)
+function [rpropStruct nReverted] = rpropupdate(rpropStruct, errorDerivatives, deltaMin, deltaMax)
 % Helper function for rprop(), operates on sigle matrix of weights
 %
-% usage: rpropStruct = rpropupdate(rpropStruct, errorDerivatives, deltaMin, deltaMax)
+% usage: [rpropStruct nReverted] = rpropupdate(rpropStruct, errorDerivatives, deltaMin, deltaMax)
 %
 % rpropStruct.weightUpdates - deltas that should be added to fnn weights
 
@@ -13,6 +13,7 @@ function rpropStruct = rpropupdate(rpropStruct, errorDerivatives, deltaMin, delt
 	decrease = 0.5;
 	errorDirectionChange = rpropStruct.errors .* errorDerivatives;
 
+	nReverted = 0;
 	for i = 1:size(rpropStruct.deltas, 1)
 		for j = 1:size(rpropStruct.deltas, 2)
 			if errorDirectionChange(i, j) > 0
@@ -26,6 +27,7 @@ function rpropStruct = rpropupdate(rpropStruct, errorDerivatives, deltaMin, delt
 				rpropStruct.weightUpdates(i, j) = - rpropStruct.weightUpdates(i, j);
 				% avoid double punishment in next step
 				rpropStruct.errors(i, j) = 0;
+				nReverted = nReverted + 1;
 			else
 				rpropStruct.weightUpdates(i, j) = sign(errorDerivatives(i, j)) * rpropStruct.deltas(i, j);
 				rpropStruct.errors(i, j) = errorDerivatives(i, j);

@@ -1,8 +1,8 @@
 
-function gnn = initgnn(maxIndegree, nHiddenNeurons, nOutputNeurons, outputFun='purelin', minStateDiff=0.00001, minErrorAccDiff=0.00001, contractionConstant=0.5)
+function gnn = initgnn(maxIndegree, nHiddenNeurons, nOutputNeurons, outputFun='purelin', minStateDiff=0.00000001, minErrorAccDiff=0.00000001, contractionConstant=0.9)
 % Create a Graph Neural Network
 %
-% usage: gnn = initgnn(maxIndegree, nHiddenNeurons, nOutputNeurons, outputFun='purelin', minStateDiff=0.00001, minErrorAccDiff=0.00001, contractionConstant=0.5)
+% usage: gnn = initgnn(maxIndegree, nHiddenNeurons, nOutputNeurons, outputFun='purelin', minStateDiff=0.00000001, minErrorAccDiff=0.00000001, contractionConstant=0.9)
 %
 % maxIndegree : max indegree of a node in graph
 % nHiddenNeurons : [nTransition, nOutput] number of hidden neurons for transition and output FNN, affects computational complexity by O(n)
@@ -13,6 +13,7 @@ function gnn = initgnn(maxIndegree, nHiddenNeurons, nOutputNeurons, outputFun='p
 % minStateDiff : min difference between two global states (representing all nodes) to treat them as different
 % minErrorAccDiff : min difference between two de/dx accumulator variables to treat them as different
 % contractionConstant : in (0, 1), constant used in the penalty, assuring that the transition is a contraction map
+% nWeights : number of weights learned from data
 
 	if (strcmp(outputFun, 'purelin') == 0) && (strcmp(outputFun, 'tansig') == 0)
 		error(sprintf('Unknown activation function: %s', outputFun));
@@ -48,5 +49,6 @@ function gnn = initgnn(maxIndegree, nHiddenNeurons, nOutputNeurons, outputFun='p
 		'edgeLabelSize', edgeLabelSize,...
 		'minStateDiff', minStateDiff,...
 		'minErrorAccDiff', minErrorAccDiff,...
-		'contractionConstant', contractionConstant);
+		'contractionConstant', contractionConstant,...
+		'nWeights', outputNet.nWeights + transitionNet.nWeights);
 end

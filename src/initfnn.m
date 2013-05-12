@@ -7,6 +7,7 @@ function net = initfnn(nInputLines, nHiddenNeurons, nOutputNeurons, outputFun='p
 % usage: net = initfnn(nInputLines, nHiddenNeurons, nOutputNeurons, outputFun='purelin')
 %
 % nInputLines : number of input lines, script will add +1 for bias automatically
+% nWeights : number of weights learned from data
 
 	if (strcmp(outputFun, 'purelin') == 0) && (strcmp(outputFun, 'tansig') == 0)
 		error(sprintf('Unknown activation function: %s', outputFun));
@@ -17,6 +18,8 @@ function net = initfnn(nInputLines, nHiddenNeurons, nOutputNeurons, outputFun='p
 	weights2 = initializeweights(nHiddenNeurons, nOutputNeurons);
 	bias2 = initializeweights(1, nOutputNeurons, nHiddenNeurons + 1);
 
+	nWeights = size([vec(weights1); vec(bias1); vec(weights2); vec(bias2)], 1);
+
 	net = struct(...
 		'weights1', weights1, ...
 		'bias1', bias1, ...
@@ -25,6 +28,8 @@ function net = initfnn(nInputLines, nHiddenNeurons, nOutputNeurons, outputFun='p
 		'nInputLines', nInputLines, ...
 		'nHiddenNeurons', nHiddenNeurons, ...
 		'nOutputNeurons', nOutputNeurons, ...
+		'nWeights', nWeights, ...
+		'outputFun', outputFun, ...
 		'activation1', @(x) tanh(x), ...
 		'activationderivative1', @(x) repmat(1, size(x)) - (tanh(x) .^ 2), ...
 		'activation2ndderivative1', @(x) 2 .* (tanh(x) .^ 3 - tanh(x)));
@@ -38,7 +43,6 @@ function net = initfnn(nInputLines, nHiddenNeurons, nOutputNeurons, outputFun='p
 		net.activationderivative2 = @(x) repmat(1, size(x)) - (tanh(x) .^ 2);
 		net.activation2ndderivative2 = @(x) 2 .* (tanh(x) .^ 3 - tanh(x));
 	end
-	net.outputFun = outputFun;
 end
 
 function weights = initializeweights(nInputLines, nNeurons, factor=0)
