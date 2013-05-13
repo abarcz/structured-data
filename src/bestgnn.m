@@ -1,7 +1,7 @@
 
-function [gnns trainStats testStats initialTrainRmse] = bestgnn(graphs, nGnns, nInitialIterations, nIterations, nFolds)
+function [gnns trainStats testStats initialTrainRmse] = bestgnn(graphs, nGnns, nInitialIterations, nIterations, nFolds, testname)
 %
-% usage: [gnns trainStats testStats initialTrainRmse] = bestgnn(graphs, nGnns, nInitialIterations, nIterations, nFolds)
+% usage: [gnns trainStats testStats initialTrainRmse] = bestgnn(graphs, nGnns, nInitialIterations, nIterations, nFolds, testname)
 %
 
 	% select half of the graphs as training set for initial training
@@ -25,7 +25,18 @@ function [gnns trainStats testStats initialTrainRmse] = bestgnn(graphs, nGnns, n
 			bestRmse = rmse;
 			bestGnn = gnn;	% select untrained gnn for correct future crossvalidate results
 		end
+
+		packedGnn = presavegnn(gnn);
+		filename = strcat(testname, sprintf('_gnn%d', i));
+		save(filename, 'packedGnn', 'trainStats', 'nInitialIterations');
 	end
 
-	%[gnns trainStats testStats] = crossvalidate(bestGnn, graphs, nIterations, nFolds);
+	[gnns trainStats testStats] = crossvalidate(bestGnn, graphs, nIterations, nFolds);
+	filename = strcat(testname, '_best.mat');
+	packedGnns = {};
+	for i = 1:nFolds
+		packedGnns{i} = presavegnn(gnns{i});
+	end
+	packedBestGnn = presavegnn(bestGnn);
+	save(filename, 'packedGnns', 'packedBestGnn', 'graphs', 'trainStats', 'testStats', 'nIterations', 'nFolds', 'initialTrainRmse');
 end

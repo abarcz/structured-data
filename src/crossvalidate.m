@@ -36,7 +36,7 @@ function [gnns trainStats testStats] = crossvalidate(gnn, graphs, nIterations, n
 		end
 		trainGraph = mergegraphs(trainGraphs);
 		trainedGnn = traingnn(gnn, trainGraph, nIterations);
-		gnns{1, size(gnns, 2) + 1} = trainedGnn;
+		gnns{i} = trainedGnn;
 
 		trainOutputs = classifygnn(trainedGnn, trainGraph);
 		trainStats(i, :) = evaluate(trainOutputs, trainGraph.expectedOutput);
