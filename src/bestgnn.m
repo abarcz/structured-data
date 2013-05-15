@@ -29,7 +29,7 @@ function [gnns trainStats testStats initialTrainRmse] = bestgnn(graphs, nGnns, n
 
 		packedGnn = presavegnn(gnn);
 		time = toc();
-		filename = strcat(testname, sprintf('_gnn%d', i));
+		filename = strcat(testname, sprintf('_gnn%d', i), '.mat');
 		save(filename, 'packedGnn', 'trainStats', 'nInitialIterations', 'time');
 	end
 
