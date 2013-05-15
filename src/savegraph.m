@@ -16,6 +16,10 @@ function savegraph(graphName, graph)
 	csvwrite(edgesFilename, graph.edgeLabels);
 
 	if length(graph.expectedOutput) != 0
-		csvwrite(expectedOutputFilename, graph.expectedOutput);
+		if graph.nodeOrientedTask
+			csvwrite(expectedOutputFilename, graph.expectedOutput);
+		else
+			csvwrite(expectedOutputFilename, graph.expectedOutput(1, :));
+		end
 	end
 end

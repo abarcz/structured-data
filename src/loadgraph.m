@@ -43,8 +43,18 @@ function graph = loadgraph(graphName)
 	edgeLabels = csvread(edgesFilename);
 	if exist(expectedOutputFilename, 'file') == 2
 		expectedOutput = csvread(expectedOutputFilename);
-		assert(size(expectedOutput, 1) == size(nodeLabels, 1));
 		assert(size(expectedOutput, 2) >= minOutputSize);
+		if size(expectedOutput, 1) == 1
+			nodeOrientedTask = false;
+			graphOutput = expectedOutput(1, :);
+			% for split & merge to work:
+			expectedOutput = zeros(size(nodeLabels, 1), size(graphOutput, 2));
+			expectedOutput(1, :) = graphOutput;
+		else
+			nodeOrientedTask = true;
+			assert(size(expectedOutput, 1) == size(nodeLabels, 1));
+			assert(size(expectedOutput, 2) >= minOutputSize);
+		end
 	else
 		expectedOutput = [];
 	end
@@ -78,5 +88,6 @@ function graph = loadgraph(graphName)
 		'edgeLabelSize', edgeLabelSize,...
 		'nNodes', nNodes,...
 		'maxIndegree', maxIndegree,...
-		'nodeOutputSize', nodeOutputSize);
+		'nodeOutputSize', nodeOutputSize,...
+		'nodeOrientedTask', nodeOrientedTask);
 end

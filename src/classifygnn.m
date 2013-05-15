@@ -14,4 +14,7 @@ function [outputs nForwardSteps] = classifygnn(gnn, graph, maxForwardSteps=200)
 
 	[state nForwardSteps] = forward(gnn,graph, maxForwardSteps);
 	outputs = applynet(gnn.outputNet, state);
+	if graph.nodeOrientedTask == false
+		outputs = outputs(1, :);
+	else
 end

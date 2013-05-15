@@ -46,7 +46,11 @@ function [bestGnn trainStats] = traingnn(gnn, graph, nIterations, maxForwardStep
 		trainStats(iteration, FORWARD_STEPS) = nForwardSteps;
 
 		outputs = applynet(gnn.outputNet, state);
-		err = rmse(graph.expectedOutput, outputs);
+		if graph.nodeOrientedTask == false
+			err = rmse(graph.expectedOutput(1, :), outputs(1, :));
+		else
+			err = rmse(graph.expectedOutput, outputs);
+		end
 		trainStats(iteration, RMSE) = err;
 		if err < minError
 			minError = err;
@@ -79,7 +83,11 @@ function [bestGnn trainStats] = traingnn(gnn, graph, nIterations, maxForwardStep
 	trainStats(iteration, FORWARD_STEPS) = nForwardSteps;
 
 	outputs = applynet(gnn.outputNet, state);
-	err = rmse(graph.expectedOutput, outputs);
+	if graph.nodeOrientedTask == false
+		err = rmse(graph.expectedOutput(1, :), outputs(1, :));
+	else
+		err = rmse(graph.expectedOutput, outputs);
+	end
 	trainStats(iteration, RMSE) = err;
 	%printf('RMSE after %d iterations: %f\n', iteration - 1, err);
 	if err < minError

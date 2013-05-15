@@ -206,8 +206,11 @@ args = parser.parse_args()
 
 basename = "g%ds%s" % (args.nodes_num, args.snodes_num)
 
-subgraph = build_graph(args.snodes_num, 0.8)
-save_graph("%s_sub" % basename, subgraph)
+if args.snodes_num == 0:
+	subgraph = None
+else:
+	subgraph = build_graph(args.snodes_num, 0.8)
+	save_graph("%s_sub" % basename, subgraph)
 
 for i in range(1, args.graphs_num + 1):
 	graph = build_graph(args.nodes_num, args.delta, subgraph)
