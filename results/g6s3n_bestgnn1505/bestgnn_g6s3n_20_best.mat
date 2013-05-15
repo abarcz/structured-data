@@ -1,0 +1,3514 @@
+# Created by Octave 3.6.2, Wed May 15 01:59:53 2013 CEST <alex@desktop>
+# name: packedGnns
+# type: cell
+# rows: 1
+# columns: 5
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 14
+# name: transitionNet
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 15
+# name: weights1
+# type: matrix
+# rows: 5
+# columns: 7
+ -0.2204882049024002 1.164693141486857 -0.1676511415210945 -0.2366908831205396 -0.1001527958053377 -0.1020544843761826 -0.4551701537979636
+ 1.254303630997773 2.112473871393585 0.09289584045311371 -0.3007356772314903 0.008870280818839277 -0.2208583125600415 0.1903742070249505
+ 0.5135707734062072 -0.02033235434753632 0.6361204480462406 0.05030015497416793 0.1196081854103342 0.04536785356644326 0.2143432620990096
+ 0.1997285965128503 0.006865356968477121 -0.2264318553303238 0.04088505948957883 -0.3491422063102946 0.0918870309307301 0.2112965012133343
+ -0.03266602365691473 -0.0005586477901510095 -3.543676343672295 -0.1057636979041792 -1.532509995605496 -0.8959690107399045 -0.05245604437238066
+
+
+# name: bias1
+# type: matrix
+# rows: 5
+# columns: 1
+ 0.1844409551307369
+ 0.1368197088278273
+ -0.6776860331019486
+ 0.5017069456896565
+ 0.07040743122413136
+
+
+# name: weights2
+# type: matrix
+# rows: 5
+# columns: 5
+ -0.3982493581334653 -0.2116307263993008 -0.05949218863405192 0.3700322093233422 0.1037295385252671
+ -0.4406627483299726 0.3678312787533909 -0.06489717333482856 0.7213409856437766 0.7170464739958241
+ -0.1231617731203649 0.09741036085928879 0.01534369776647303 0.6730603559687128 0.1086237511972687
+ -0.02463621433710387 0.1896139838507971 -0.1665742052347765 0.5036613066077663 0.3809175612547639
+ -1.288671076104753 0.3961649391967257 1.044823354358721 0.2178287847614743 -0.06936082275587713
+
+
+# name: bias2
+# type: matrix
+# rows: 5
+# columns: 1
+ 0.1827056904524619
+ 0.1060312252996931
+ 0.1373021926420416
+ 0.3886766274095773
+ -0.2089760357137749
+
+
+# name: nInputLines
+# type: scalar
+7
+
+
+# name: nHiddenNeurons
+# type: scalar
+5
+
+
+# name: nOutputNeurons
+# type: scalar
+5
+
+
+# name: nWeights
+# type: scalar
+70
+
+
+# name: outputFun
+# type: sq_string
+# elements: 1
+# length: 6
+tansig
+
+
+# name: activation1
+# type: matrix
+# rows: 0
+# columns: 0
+
+
+# name: activationderivative1
+# type: matrix
+# rows: 0
+# columns: 0
+
+
+# name: activation2ndderivative1
+# type: matrix
+# rows: 0
+# columns: 0
+
+
+# name: activation2
+# type: matrix
+# rows: 0
+# columns: 0
+
+
+# name: activationderivative2
+# type: matrix
+# rows: 0
+# columns: 0
+
+
+# name: activation2ndderivative2
+# type: matrix
+# rows: 0
+# columns: 0
+
+
+
+
+# name: outputNet
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 15
+# name: weights1
+# type: matrix
+# rows: 5
+# columns: 5
+ -1.626182969114373 0.08461295488769141 1.226619459352236 0.1048248502229455 0.2051733309019035
+ -0.1639389260104621 -0.06776853306220834 -0.03891200121752156 3.207989717452258 -0.01172423703205136
+ 0.635601320509123 0.06253818045366483 0.7779919405103907 0.1482162323913718 -0.2088990318947758
+ -0.006520197688817109 -0.01213122603084459 -0.115802584848996 0.6007282484085802 -0.03739909056404804
+ 1.20330700867178 -0.1294114543791617 -1.21491581525818 0.08171468266982521 -0.08200905502750382
+
+
+# name: bias1
+# type: matrix
+# rows: 5
+# columns: 1
+ 1.392549138571308
+ -0.7875662027243199
+ -0.639234618281558
+ 0.1556802788460815
+ -1.112555526140514
+
+
+# name: weights2
+# type: matrix
+# rows: 1
+# columns: 5
+ -0.2534324820910709 0.041775830770945 0.3974433802783759 0.2081315845866069 0.5534746267310811
+
+
+# name: bias2
+# type: scalar
+0.08482715846916981
+
+
+# name: nInputLines
+# type: scalar
+5
+
+
+# name: nHiddenNeurons
+# type: scalar
+5
+
+
+# name: nOutputNeurons
+# type: scalar
+1
+
+
+# name: nWeights
+# type: scalar
+36
+
+
+# name: outputFun
+# type: sq_string
+# elements: 1
+# length: 6
+tansig
+
+
+# name: activation1
+# type: matrix
+# rows: 0
+# columns: 0
+
+
+# name: activationderivative1
+# type: matrix
+# rows: 0
+# columns: 0
+
+
+# name: activation2ndderivative1
+# type: matrix
+# rows: 0
+# columns: 0
+
+
+# name: activation2
+# type: matrix
+# rows: 0
+# columns: 0
+
+
+# name: activationderivative2
+# type: matrix
+# rows: 0
+# columns: 0
+
+
+# name: activation2ndderivative2
+# type: matrix
+# rows: 0
+# columns: 0
+
+
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: stateSize
+# type: scalar
+5
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: minStateDiff
+# type: scalar
+1e-08
+
+
+# name: minErrorAccDiff
+# type: scalar
+1e-08
+
+
+# name: contractionConstant
+# type: scalar
+0.9
+
+
+# name: nWeights
+# type: scalar
+106
+
+
+# name: nodeLabelMeans
+# type: scalar
+4.540492598804657
+
+
+# name: nodeLabelStds
+# type: scalar
+3.965839626980314
+
+
+# name: edgeLabelMeans
+# type: scalar
+0
+
+
+# name: edgeLabelStds
+# type: scalar
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 14
+# name: transitionNet
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 15
+# name: weights1
+# type: matrix
+# rows: 5
+# columns: 7
+ -0.865142315646698 0.08494914148685689 0.1389312079388701 -0.1053845403578075 0.414014534883326 0.1344531970011917 0.1133957358504355
+ 0.5544764656452731 0.00256539139358497 -0.231449783310827 -0.1872835473727569 0.02690720535556398 -0.2506386052757275 -0.2598177004158044
+ 0.2182459198342579 -0.02033235434753632 0.4605155613321976 0.5761083972793996 0.2137345495084059 1.52396219617788 -0.8024404681013658
+ -0.07505695623576868 0.006865356968477121 -0.02547984942428828 -0.03855874363280901 -0.2372360636394762 -0.6626631301762209 -0.001600611710449301
+ 4.797708401468919 -28.33089127514375 -0.1191395919605628 0.005023685213827051 -0.2234811491938286 -0.2695092884006832 -0.3095921706201076
+
+
+# name: bias1
+# type: matrix
+# rows: 5
+# columns: 1
+ -0.002879343896637516
+ 0.09440426555532243
+ -0.2785139897913603
+ 0.1937783859416882
+ 0.1308218396754172
+
+
+# name: weights2
+# type: matrix
+# rows: 5
+# columns: 5
+ -0.4306931263832947 -0.1090075417119173 -0.1144072064375297 0.2918930088340098 0.02285876218162061
+ -0.2166160044437604 -0.06812323006590562 76.87159773546335 0.2123091556718415 -0.01483272671513525
+ 3.520884596140538 7.552572067290732 0.3976808368988777 0.01733770314589949 -1.291434334359539
+ -0.2570240011534001 0.2989471737087288 4.938036392343813 1.772029735709734 -4.81810445424619
+ -0.03850222296320667 0.02896835183660006 -1.284048138176796 0.5192090557107797 0.1107235745884763
+
+
+# name: bias2
+# type: matrix
+# rows: 5
+# columns: 1
+ 20.26414999911363
+ 6.56018366594493
+ -0.9451712541172268
+ 0.1352658739272989
+ 1.107374648885152
+
+
+# name: nInputLines
+# type: scalar
+7
+
+
+# name: nHiddenNeurons
+# type: scalar
+5
+
+
+# name: nOutputNeurons
+# type: scalar
+5
+
+
+# name: nWeights
+# type: scalar
+70
+
+
+# name: outputFun
+# type: sq_string
+# elements: 1
+# length: 6
+tansig
+
+
+# name: activation1
+# type: matrix
+# rows: 0
+# columns: 0
+
+
+# name: activationderivative1
+# type: matrix
+# rows: 0
+# columns: 0
+
+
+# name: activation2ndderivative1
+# type: matrix
+# rows: 0
+# columns: 0
+
+
+# name: activation2
+# type: matrix
+# rows: 0
+# columns: 0
+
+
+# name: activationderivative2
+# type: matrix
+# rows: 0
+# columns: 0
+
+
+# name: activation2ndderivative2
+# type: matrix
+# rows: 0
+# columns: 0
+
+
+
+
+# name: outputNet
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 15
+# name: weights1
+# type: matrix
+# rows: 5
+# columns: 5
+ -0.3880373475889247 0.4725285234956824 0.5386709336350667 -0.3454787425829429 2.052274317305148
+ -0.2803871767716883 -0.02239563589662383 0.03298717831671263 0.6893446565347623 0.3247327076940145
+ -0.2152817938694904 -0.03288656485234726 0.02814122760869035 0.5772654755947826 0.4300616972791511
+ -0.1337627007348603 -0.04691821501498003 0.001847090197694593 0.4509022963200927 0.2779470559302765
+ 0.07926337227556254 0.03033469336617624 -0.001989513247596986 -0.2146191007581537 -0.1223793808845096
+
+
+# name: bias1
+# type: matrix
+# rows: 5
+# columns: 1
+ -0.2056706455145929
+ -1.184078301960964
+ -1.240241243775663
+ -1.278276882424833
+ -0.2213396129005073
+
+
+# name: weights2
+# type: matrix
+# rows: 1
+# columns: 5
+ -0.7845779511396915 2.034750355043419 0.1712073030533933 0.1861636802479104 2.124488703155138
+
+
+# name: bias2
+# type: scalar
+0.5281859409877252
+
+
+# name: nInputLines
+# type: scalar
+5
+
+
+# name: nHiddenNeurons
+# type: scalar
+5
+
+
+# name: nOutputNeurons
+# type: scalar
+1
+
+
+# name: nWeights
+# type: scalar
+36
+
+
+# name: outputFun
+# type: sq_string
+# elements: 1
+# length: 6
+tansig
+
+
+# name: activation1
+# type: matrix
+# rows: 0
+# columns: 0
+
+
+# name: activationderivative1
+# type: matrix
+# rows: 0
+# columns: 0
+
+
+# name: activation2ndderivative1
+# type: matrix
+# rows: 0
+# columns: 0
+
+
+# name: activation2
+# type: matrix
+# rows: 0
+# columns: 0
+
+
+# name: activationderivative2
+# type: matrix
+# rows: 0
+# columns: 0
+
+
+# name: activation2ndderivative2
+# type: matrix
+# rows: 0
+# columns: 0
+
+
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: stateSize
+# type: scalar
+5
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: minStateDiff
+# type: scalar
+1e-08
+
+
+# name: minErrorAccDiff
+# type: scalar
+1e-08
+
+
+# name: contractionConstant
+# type: scalar
+0.9
+
+
+# name: nWeights
+# type: scalar
+106
+
+
+# name: nodeLabelMeans
+# type: scalar
+4.705649887874774
+
+
+# name: nodeLabelStds
+# type: scalar
+3.926172769735345
+
+
+# name: edgeLabelMeans
+# type: scalar
+0
+
+
+# name: edgeLabelStds
+# type: scalar
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 14
+# name: transitionNet
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 15
+# name: weights1
+# type: matrix
+# rows: 5
+# columns: 7
+ -0.5449455864538074 0.08494914148685689 0.07263408983164235 -0.1757288697180514 0.1807660644929532 0.3082465829587255 -0.4859432728420531
+ 0.5660564944537813 0.00256539139358497 -0.01084439473679554 -0.01107643076538828 0.09416645731117847 -0.07909225980910665 -0.0576982162365654
+ 0.8366163638293048 -0.02033235434753632 0.03378254361807458 0.09985685606571257 0.1540890210924176 -0.2193832405912016 -0.1339043020697677
+ 0.05221613073797295 0.006865356968477121 -0.385995220665878 0.1483561211752567 -0.03285333521969715 -0.02885096397190889 0.1178048746489773
+ -0.1438362613730667 -69.25769233498374 -0.02676330632254443 0.2108201081745216 -0.07211369568048907 -0.05263648992389013 -0.2039132983486874
+
+
+# name: bias1
+# type: matrix
+# rows: 5
+# columns: 1
+ -0.2058929231331804
+ 0.1849694474301214
+ 0.0819336857054298
+ 0.04701339971497045
+ 0.002854191687867959
+
+
+# name: weights2
+# type: matrix
+# rows: 5
+# columns: 5
+ 2.436426879017123 -6.025373289052527 -0.2843101704486499 -0.006312869994564525 0.07762534284237346
+ 3.140602301941838 -15.83034332476827 -34.27191735933633 0.2005755528681814 -0.0005793971611143916
+ 1.040961428639915 -0.9951942716670831 -0.6568267568118654 -0.2083750407488951 0.02860175538189436
+ 0.7431123481544093 -1.363128434400834 -0.1731716403908716 -0.4405189952164402 0.02566203843379488
+ 8.645329818534782 1.412118114050711 -0.1331629901238102 0.00322356279254987 0.7413107237646416
+
+
+# name: bias2
+# type: matrix
+# rows: 5
+# columns: 1
+ -1.853676075474101
+ -0.05542611798770082
+ -0.2212273637815409
+ -0.3946260835766576
+ 0.107559775912055
+
+
+# name: nInputLines
+# type: scalar
+7
+
+
+# name: nHiddenNeurons
+# type: scalar
+5
+
+
+# name: nOutputNeurons
+# type: scalar
+5
+
+
+# name: nWeights
+# type: scalar
+70
+
+
+# name: outputFun
+# type: sq_string
+# elements: 1
+# length: 6
+tansig
+
+
+# name: activation1
+# type: matrix
+# rows: 0
+# columns: 0
+
+
+# name: activationderivative1
+# type: matrix
+# rows: 0
+# columns: 0
+
+
+# name: activation2ndderivative1
+# type: matrix
+# rows: 0
+# columns: 0
+
+
+# name: activation2
+# type: matrix
+# rows: 0
+# columns: 0
+
+
+# name: activationderivative2
+# type: matrix
+# rows: 0
+# columns: 0
+
+
+# name: activation2ndderivative2
+# type: matrix
+# rows: 0
+# columns: 0
+
+
+
+
+# name: outputNet
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 15
+# name: weights1
+# type: matrix
+# rows: 5
+# columns: 5
+ 0.9324395677018356 0.5569735809076677 20.85307169883109 -10.57876468529708 0.1811089718998327
+ 4.206569371435543 9.071062331970618 9.801609013968385 -4.984546273812425 0.0602410236330598
+ 0.3990598682274076 -33.14131754563683 -6.684849008816555 10.02414827972899 -0.02036181348257077
+ 0.302602719690219 0.1887603294344443 -0.4768791340792146 -0.01181375461197539 -0.2527965338888377
+ -0.3488172807974665 -0.5468599438464654 0.4642059384034627 0.1009430196641914 0.3241671468104282
+
+
+# name: bias1
+# type: matrix
+# rows: 5
+# columns: 1
+ -0.08647631835524064
+ 0.3831588573077362
+ 0.0679200874412689
+ -0.06329259486970015
+ -0.1084327679729199
+
+
+# name: weights2
+# type: matrix
+# rows: 1
+# columns: 5
+ 0.3800633666342922 0.2162363954983328 -0.5691559859071142 0.7736307280149887 -15.27761149802825
+
+
+# name: bias2
+# type: scalar
+0.334896567899075
+
+
+# name: nInputLines
+# type: scalar
+5
+
+
+# name: nHiddenNeurons
+# type: scalar
+5
+
+
+# name: nOutputNeurons
+# type: scalar
+1
+
+
+# name: nWeights
+# type: scalar
+36
+
+
+# name: outputFun
+# type: sq_string
+# elements: 1
+# length: 6
+tansig
+
+
+# name: activation1
+# type: matrix
+# rows: 0
+# columns: 0
+
+
+# name: activationderivative1
+# type: matrix
+# rows: 0
+# columns: 0
+
+
+# name: activation2ndderivative1
+# type: matrix
+# rows: 0
+# columns: 0
+
+
+# name: activation2
+# type: matrix
+# rows: 0
+# columns: 0
+
+
+# name: activationderivative2
+# type: matrix
+# rows: 0
+# columns: 0
+
+
+# name: activation2ndderivative2
+# type: matrix
+# rows: 0
+# columns: 0
+
+
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: stateSize
+# type: scalar
+5
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: minStateDiff
+# type: scalar
+1e-08
+
+
+# name: minErrorAccDiff
+# type: scalar
+1e-08
+
+
+# name: contractionConstant
+# type: scalar
+0.9
+
+
+# name: nWeights
+# type: scalar
+106
+
+
+# name: nodeLabelMeans
+# type: scalar
+4.681208667048283
+
+
+# name: nodeLabelStds
+# type: scalar
+3.975878344207048
+
+
+# name: edgeLabelMeans
+# type: scalar
+0
+
+
+# name: edgeLabelStds
+# type: scalar
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 14
+# name: transitionNet
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 15
+# name: weights1
+# type: matrix
+# rows: 5
+# columns: 7
+ -2.574470796850871 0.08494914148685689 -0.02693943675949795 -0.07951265375608256 0.368838449898425 0.1787690192308016 0.02429478868737537
+ 4.329553347182905 0.00256539139358497 -0.04055139862686241 0.03447813651991983 0.1033164962633061 0.08681351517470631 0.003384808737365483
+ -0.1089376894406892 -0.02033235434753632 -0.1656141637861269 2.40975764913153 -0.5219762500232088 -0.2390855486933314 -0.2806027728758111
+ -2.542562586068447 0.006865356968477121 -0.08699615802567609 0.1815074204901917 -0.06555987780406188 0.05840990009649794 0.01999164238976927
+ -1.420103794503818 -2.287555789866444 -0.1681947695549167 0.0719088589944057 0.2076710950004886 -0.09029296065751106 -0.2075080497316944
+
+
+# name: bias1
+# type: matrix
+# rows: 5
+# columns: 1
+ -0.06250388405796467
+ -0.5057789179491184
+ 0.1245203998331053
+ 0.01297823482731342
+ -0.03967554572693362
+
+
+# name: weights2
+# type: matrix
+# rows: 5
+# columns: 5
+ -3.031403537749564 1.371382813439313 -1.988525478976236 0.0878583936042525 -0.1125102948301825
+ 4.189115540232568 0.1322972669228741 1.613671077717715 -0.05355464302068327 -33.01567385676796
+ 1.368651337516128 0.07868190383859847 0.08598224360975783 11.9409638709768 0.3258131722690664
+ -0.2819443552879967 25.45384553441026 -0.9647826089592029 -0.6858293077979108 -5.406671152302649
+ 0.5685584240822017 0.2312272042287285 0.1052176560620365 15.79010591993531 0.579128810958627
+
+
+# name: bias2
+# type: matrix
+# rows: 5
+# columns: 1
+ -2.650291242630562
+ 0.05785568914797039
+ -0.8268828484364492
+ -0.1188969855573681
+ 0.9811246278739409
+
+
+# name: nInputLines
+# type: scalar
+7
+
+
+# name: nHiddenNeurons
+# type: scalar
+5
+
+
+# name: nOutputNeurons
+# type: scalar
+5
+
+
+# name: nWeights
+# type: scalar
+70
+
+
+# name: outputFun
+# type: sq_string
+# elements: 1
+# length: 6
+tansig
+
+
+# name: activation1
+# type: matrix
+# rows: 0
+# columns: 0
+
+
+# name: activationderivative1
+# type: matrix
+# rows: 0
+# columns: 0
+
+
+# name: activation2ndderivative1
+# type: matrix
+# rows: 0
+# columns: 0
+
+
+# name: activation2
+# type: matrix
+# rows: 0
+# columns: 0
+
+
+# name: activationderivative2
+# type: matrix
+# rows: 0
+# columns: 0
+
+
+# name: activation2ndderivative2
+# type: matrix
+# rows: 0
+# columns: 0
+
+
+
+
+# name: outputNet
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 15
+# name: weights1
+# type: matrix
+# rows: 5
+# columns: 5
+ -0.2574630026119513 -0.2446243149979056 0.09200562090433081 -0.01174719462584731 0.6824607738807064
+ 0.2648729147431 -0.1062272122288274 0.3722234913970764 0.2571856580137135 0.06521912427903959
+ -0.1036732712408393 0.06427872624494554 -0.08955854314532344 -0.1399845607256659 -0.1062966171547564
+ -0.7620938889884844 -0.04793843908686218 -0.07971792367750978 0.1459664924064188 0.1600804682104149
+ -0.1292871482321186 0.1804605749648216 -0.03985481852232889 -0.1554244727470329 -0.07053605402537252
+
+
+# name: bias1
+# type: matrix
+# rows: 5
+# columns: 1
+ -4.978213281014058
+ 1.361610243128246
+ -0.1029285203414254
+ 0.3183273569954045
+ -5.440172282763513
+
+
+# name: weights2
+# type: matrix
+# rows: 1
+# columns: 5
+ 0.4923707463719927 0.3464561002598822 -3.005833622754339 -0.5164572991192594 -0.1570051175999154
+
+
+# name: bias2
+# type: scalar
+0.01970666821912853
+
+
+# name: nInputLines
+# type: scalar
+5
+
+
+# name: nHiddenNeurons
+# type: scalar
+5
+
+
+# name: nOutputNeurons
+# type: scalar
+1
+
+
+# name: nWeights
+# type: scalar
+36
+
+
+# name: outputFun
+# type: sq_string
+# elements: 1
+# length: 6
+tansig
+
+
+# name: activation1
+# type: matrix
+# rows: 0
+# columns: 0
+
+
+# name: activationderivative1
+# type: matrix
+# rows: 0
+# columns: 0
+
+
+# name: activation2ndderivative1
+# type: matrix
+# rows: 0
+# columns: 0
+
+
+# name: activation2
+# type: matrix
+# rows: 0
+# columns: 0
+
+
+# name: activationderivative2
+# type: matrix
+# rows: 0
+# columns: 0
+
+
+# name: activation2ndderivative2
+# type: matrix
+# rows: 0
+# columns: 0
+
+
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: stateSize
+# type: scalar
+5
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: minStateDiff
+# type: scalar
+1e-08
+
+
+# name: minErrorAccDiff
+# type: scalar
+1e-08
+
+
+# name: contractionConstant
+# type: scalar
+0.9
+
+
+# name: nWeights
+# type: scalar
+106
+
+
+# name: nodeLabelMeans
+# type: scalar
+4.606102279669087
+
+
+# name: nodeLabelStds
+# type: scalar
+3.956987450850857
+
+
+# name: edgeLabelMeans
+# type: scalar
+0
+
+
+# name: edgeLabelStds
+# type: scalar
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 14
+# name: transitionNet
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 15
+# name: weights1
+# type: matrix
+# rows: 5
+# columns: 7
+ 0.7615766943753896 -0.6918508585131431 -0.03678668776106671 0.2745704207124742 0.3743151775316061 0.04900335818520164 0.02881028453559104
+ 0.5918206918013572 0.779365391393585 0.08027223086078092 -0.08141553060508107 0.3073583161591784 0.1392643411543897 -0.2385179860142048
+ 0.3696487072346528 -0.02033235434753632 0.065293966099998 -0.1128266233126109 -0.02510329861543758 -0.2043701771827143 -0.06031145239882189
+ 0.2660609680155864 0.006865356968477121 0.03115729188659763 -0.02650140568681303 -0.09204638374804945 -0.05608298432562678 0.145397695091125
+ 0.1553440581269333 0.9924333522098489 0.3967212914529897 0.1105658866016073 -0.03235990857932888 -0.0261107470437161 0.03881021212398966
+
+
+# name: bias1
+# type: matrix
+# rows: 5
+# columns: 1
+ -0.05091126817175907
+ -0.06413989834414149
+ 0.04065390665209979
+ 0.1077669971607344
+ 0.1211001577676939
+
+
+# name: weights2
+# type: matrix
+# rows: 5
+# columns: 5
+ -0.2434100146523415 0.08278950697114541 -1.087909695677644 -0.1792230465417984 -0.3842272713264421
+ 1.408677135491297 0.1237250832268003 0.02319967546796145 -0.2236564290016639 0.04475275738941744
+ -0.1570512989574668 -0.4589335679594903 -0.4115733110394684 -0.08035890498758867 -0.07021867859597455
+ 0.2159354955846416 0.1467244365597267 -0.5075346856313163 -0.6193460897053218 0.51815827707342
+ -0.4062218706923088 -0.2655711237231553 -0.07364667809154428 -0.07261436566969436 -0.4110770986025828
+
+
+# name: bias2
+# type: matrix
+# rows: 5
+# columns: 1
+ -0.1461902726802349
+ -0.1745786045070662
+ -0.09746776215252045
+ -0.07936812748522407
+ 0.2362945261817203
+
+
+# name: nInputLines
+# type: scalar
+7
+
+
+# name: nHiddenNeurons
+# type: scalar
+5
+
+
+# name: nOutputNeurons
+# type: scalar
+5
+
+
+# name: nWeights
+# type: scalar
+70
+
+
+# name: outputFun
+# type: sq_string
+# elements: 1
+# length: 6
+tansig
+
+
+# name: activation1
+# type: matrix
+# rows: 0
+# columns: 0
+
+
+# name: activationderivative1
+# type: matrix
+# rows: 0
+# columns: 0
+
+
+# name: activation2ndderivative1
+# type: matrix
+# rows: 0
+# columns: 0
+
+
+# name: activation2
+# type: matrix
+# rows: 0
+# columns: 0
+
+
+# name: activationderivative2
+# type: matrix
+# rows: 0
+# columns: 0
+
+
+# name: activation2ndderivative2
+# type: matrix
+# rows: 0
+# columns: 0
+
+
+
+
+# name: outputNet
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 15
+# name: weights1
+# type: matrix
+# rows: 5
+# columns: 5
+ 0.409611731373291 -0.05183921662838165 0.3022502863607696 -0.01944981277563843 0.1541624269674639
+ -0.216913562181976 0.01206856864432166 -0.4537853633823828 -0.007548746995968447 0.5496860024232806
+ 0.4799576839802719 0.3671423492173404 0.6632887972860017 0.03356750600139641 0.4010399482079307
+ -0.210663174955805 -0.02481383247021399 -0.4846048100338975 -0.01819497967944756 0.5255216952598325
+ 0.2164032698002421 0.006108781350030597 0.4798865809199813 0.006579956645603629 -0.5287684281243246
+
+
+# name: bias1
+# type: matrix
+# rows: 5
+# columns: 1
+ -0.1809008902740376
+ 0.3377347962268958
+ 0.1977952973229739
+ 0.2037878084026474
+ -0.2548985084616349
+
+
+# name: weights2
+# type: matrix
+# rows: 1
+# columns: 5
+ 0.07448486277784944 0.1490398444752182 0.6454278510785841 0.1561891565527044 -0.06083185445775187
+
+
+# name: bias2
+# type: scalar
+-0.02699304988292985
+
+
+# name: nInputLines
+# type: scalar
+5
+
+
+# name: nHiddenNeurons
+# type: scalar
+5
+
+
+# name: nOutputNeurons
+# type: scalar
+1
+
+
+# name: nWeights
+# type: scalar
+36
+
+
+# name: outputFun
+# type: sq_string
+# elements: 1
+# length: 6
+tansig
+
+
+# name: activation1
+# type: matrix
+# rows: 0
+# columns: 0
+
+
+# name: activationderivative1
+# type: matrix
+# rows: 0
+# columns: 0
+
+
+# name: activation2ndderivative1
+# type: matrix
+# rows: 0
+# columns: 0
+
+
+# name: activation2
+# type: matrix
+# rows: 0
+# columns: 0
+
+
+# name: activationderivative2
+# type: matrix
+# rows: 0
+# columns: 0
+
+
+# name: activation2ndderivative2
+# type: matrix
+# rows: 0
+# columns: 0
+
+
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: stateSize
+# type: scalar
+5
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: minStateDiff
+# type: scalar
+1e-08
+
+
+# name: minErrorAccDiff
+# type: scalar
+1e-08
+
+
+# name: contractionConstant
+# type: scalar
+0.9
+
+
+# name: nWeights
+# type: scalar
+106
+
+
+# name: nodeLabelMeans
+# type: scalar
+4.756794614744988
+
+
+# name: nodeLabelStds
+# type: scalar
+3.875840698094128
+
+
+# name: edgeLabelMeans
+# type: scalar
+0
+
+
+# name: edgeLabelStds
+# type: scalar
+1
+
+
+
+
+
+
+
+# name: packedBestGnn
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 10
+# name: transitionNet
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 15
+# name: weights1
+# type: matrix
+# rows: 5
+# columns: 7
+ -0.0551325792246103 0.08494914148685689 -0.1007396877610667 -0.1090855792875259 -0.06616011206839374 0.06134735818520159 0.01646628453559104
+ 0.1072229318013574 0.00256539139358497 0.01382799406078092 -0.09849353060508108 -0.01136104384082152 -0.06456029884561031 -0.07933334601420476
+ 0.1062240672346528 -0.02033235434753632 -0.05262803390000202 -0.09240462331261086 -0.02338454861543758 -0.09684517718271431 -0.08073345239882189
+ 0.03244560801558635 0.006865356968477121 -0.1023707081134024 0.003523594313186967 -0.09118700874804943 -0.02605798432562677 0.115372695091125
+ -0.08603617867306666 -0.0005586477901510095 -0.05363447174701035 0.04661288660160726 -0.04842326857932887 -0.02896251024371606 -0.1030051478760104
+
+
+# name: bias1
+# type: matrix
+# rows: 5
+# columns: 1
+ -0.06325526817175907
+ 0.09504474165585849
+ 0.09812890665209978
+ 0.07774199716073443
+ -0.02071520223230612
+
+
+# name: weights2
+# type: matrix
+# rows: 5
+# columns: 5
+ -0.1384660146523415 0.07526450697114544 -0.1447104892776439 0.1394963134582016 0.07087288867355794
+ -0.1622209451947823 0.0789097232268003 0.05161217546796145 -0.03182842900166385 0.03147579738941745
+ -0.02523593895746684 -0.1280818047594904 0.002704525760531558 0.0008130950124113356 -0.05016867859597457
+ 0.1515508555846416 0.1203024365597267 -0.1467309224313163 -0.02987263050532183 -0.00409800094257982
+ -0.0577941074923089 0.03080911307684468 -0.02822467809154426 -0.05219236566969434 0.00117917941341709
+
+
+# name: bias2
+# type: matrix
+# rows: 5
+# columns: 1
+ -0.09971827268023482
+ -0.08619396450706619
+ -0.08642076215252047
+ -0.1594001274852241
+ 0.07381952618172034
+
+
+# name: nInputLines
+# type: scalar
+7
+
+
+# name: nHiddenNeurons
+# type: scalar
+5
+
+
+# name: nOutputNeurons
+# type: scalar
+5
+
+
+# name: nWeights
+# type: scalar
+70
+
+
+# name: outputFun
+# type: sq_string
+# elements: 1
+# length: 6
+tansig
+
+
+# name: activation1
+# type: matrix
+# rows: 0
+# columns: 0
+
+
+# name: activationderivative1
+# type: matrix
+# rows: 0
+# columns: 0
+
+
+# name: activation2ndderivative1
+# type: matrix
+# rows: 0
+# columns: 0
+
+
+# name: activation2
+# type: matrix
+# rows: 0
+# columns: 0
+
+
+# name: activationderivative2
+# type: matrix
+# rows: 0
+# columns: 0
+
+
+# name: activation2ndderivative2
+# type: matrix
+# rows: 0
+# columns: 0
+
+
+
+
+# name: outputNet
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 15
+# name: weights1
+# type: matrix
+# rows: 5
+# columns: 5
+ -0.0183831066427088 -0.01293921662838165 0.001398523160769642 -0.02255765277563841 0.02776242696746389
+ 0.01657820101802404 0.001596568644321672 0.01914775661761704 0.02838589300403156 0.03266136242328065
+ -0.02076167601972804 0.01297034921734042 0.02208371927000175 0.01604250600139641 -0.009011814992069152
+ 0.02282858824419502 -0.01098583247021399 -0.01167169003389763 0.01773966032055243 0.008497055259832648
+ -0.01708849339975791 -0.007719218649969417 0.006953460919981487 -0.02935468335439637 -0.01174378812432457
+
+
+# name: bias1
+# type: matrix
+# rows: 5
+# columns: 1
+ -0.1285162502740376
+ 0.1317430330268958
+ 0.1528202973229739
+ 0.1053531684026474
+ -0.1564638684616349
+
+
+# name: weights2
+# type: matrix
+# rows: 1
+# columns: 5
+ 0.06408486277784946 0.1569618444752182 -0.1260456081214157 0.1641111565527044 -0.06875385445775185
+
+
+# name: bias2
+# type: scalar
+-0.09094604988292986
+
+
+# name: nInputLines
+# type: scalar
+5
+
+
+# name: nHiddenNeurons
+# type: scalar
+5
+
+
+# name: nOutputNeurons
+# type: scalar
+1
+
+
+# name: nWeights
+# type: scalar
+36
+
+
+# name: outputFun
+# type: sq_string
+# elements: 1
+# length: 6
+tansig
+
+
+# name: activation1
+# type: matrix
+# rows: 0
+# columns: 0
+
+
+# name: activationderivative1
+# type: matrix
+# rows: 0
+# columns: 0
+
+
+# name: activation2ndderivative1
+# type: matrix
+# rows: 0
+# columns: 0
+
+
+# name: activation2
+# type: matrix
+# rows: 0
+# columns: 0
+
+
+# name: activationderivative2
+# type: matrix
+# rows: 0
+# columns: 0
+
+
+# name: activation2ndderivative2
+# type: matrix
+# rows: 0
+# columns: 0
+
+
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: stateSize
+# type: scalar
+5
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: minStateDiff
+# type: scalar
+1e-08
+
+
+# name: minErrorAccDiff
+# type: scalar
+1e-08
+
+
+# name: contractionConstant
+# type: scalar
+0.9
+
+
+# name: nWeights
+# type: scalar
+106
+
+
+
+
+# name: graphs
+# type: cell
+# rows: 1
+# columns: 20
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 8
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 1.048929770537382
+ 7.888906265966011
+ 0.2215989725562787
+ 10.20849994266422
+ 10.13468457375922
+ 2.336445809764089
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ 1
+ -1
+ 1
+ -1
+ 1
+ -1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 22
+# columns: 3
+ 1 2 0
+ 1 3 0
+ 1 5 0
+ 1 6 0
+ 2 1 0
+ 2 3 0
+ 2 4 0
+ 3 1 0
+ 3 2 0
+ 3 4 0
+ 3 5 0
+ 3 6 0
+ 4 2 0
+ 4 3 0
+ 4 5 0
+ 4 6 0
+ 5 1 0
+ 5 3 0
+ 5 4 0
+ 6 1 0
+ 6 3 0
+ 6 4 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 8
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 10.17537717205616
+ 0.05012369995334758
+ 6.073258850560165
+ 8.799123890232575
+ 3.144021579469149
+ 1.501159130007386
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ 1
+ 1
+ -1
+ -1
+ -1
+ 1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 26
+# columns: 3
+ 1 2 0
+ 1 3 0
+ 1 4 0
+ 1 5 0
+ 1 6 0
+ 2 1 0
+ 2 5 0
+ 2 6 0
+ 3 1 0
+ 3 4 0
+ 3 5 0
+ 3 6 0
+ 4 1 0
+ 4 3 0
+ 4 5 0
+ 4 6 0
+ 5 1 0
+ 5 2 0
+ 5 3 0
+ 5 4 0
+ 5 6 0
+ 6 1 0
+ 6 2 0
+ 6 3 0
+ 6 4 0
+ 6 5 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 8
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 7.064882002550898
+ 8.664600093669314
+ 9.502550105708172
+ 5.127939627309426
+ 1.456804831543082
+ 0.223714512620499
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ -1
+ -1
+ 1
+ -1
+ 1
+ 1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 28
+# columns: 3
+ 1 2 0
+ 1 3 0
+ 1 4 0
+ 1 5 0
+ 1 6 0
+ 2 1 0
+ 2 3 0
+ 2 4 0
+ 2 5 0
+ 2 6 0
+ 3 1 0
+ 3 2 0
+ 3 5 0
+ 3 6 0
+ 4 1 0
+ 4 2 0
+ 4 5 0
+ 4 6 0
+ 5 1 0
+ 5 2 0
+ 5 3 0
+ 5 4 0
+ 5 6 0
+ 6 1 0
+ 6 2 0
+ 6 3 0
+ 6 4 0
+ 6 5 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 8
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 3.443627497156921
+ 9.552044124941713
+ 0.917752117488509
+ 8.024872361610996
+ -0.02954038878687806
+ 7.547287126817221
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ -1
+ 1
+ 1
+ -1
+ 1
+ -1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 26
+# columns: 3
+ 1 2 0
+ 1 4 0
+ 1 5 0
+ 1 6 0
+ 2 1 0
+ 2 3 0
+ 2 5 0
+ 2 6 0
+ 3 2 0
+ 3 4 0
+ 3 5 0
+ 3 6 0
+ 4 1 0
+ 4 3 0
+ 4 5 0
+ 4 6 0
+ 5 1 0
+ 5 2 0
+ 5 3 0
+ 5 4 0
+ 5 6 0
+ 6 1 0
+ 6 2 0
+ 6 3 0
+ 6 4 0
+ 6 5 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 8
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 1.088448539363567
+ 8.684809224474717
+ 4.899462316849067
+ 0.2651440690610654
+ 9.95096585541668
+ 7.156072924698663
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ 1
+ -1
+ -1
+ 1
+ 1
+ -1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 20
+# columns: 3
+ 1 2 0
+ 1 4 0
+ 1 5 0
+ 2 1 0
+ 2 3 0
+ 2 4 0
+ 2 6 0
+ 3 2 0
+ 3 4 0
+ 3 6 0
+ 4 1 0
+ 4 2 0
+ 4 3 0
+ 4 5 0
+ 4 6 0
+ 5 1 0
+ 5 4 0
+ 6 2 0
+ 6 3 0
+ 6 4 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 8
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 8.834108243944817
+ -0.04792217104479692
+ 7.984388972495369
+ 9.854555965020092
+ 3.058774078553609
+ 1.132146333734212
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ -1
+ 1
+ -1
+ 1
+ -1
+ 1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 26
+# columns: 3
+ 1 2 0
+ 1 3 0
+ 1 4 0
+ 1 6 0
+ 2 1 0
+ 2 3 0
+ 2 4 0
+ 2 5 0
+ 2 6 0
+ 3 1 0
+ 3 2 0
+ 3 4 0
+ 3 5 0
+ 3 6 0
+ 4 1 0
+ 4 2 0
+ 4 3 0
+ 4 6 0
+ 5 2 0
+ 5 3 0
+ 5 6 0
+ 6 1 0
+ 6 2 0
+ 6 3 0
+ 6 4 0
+ 6 5 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 8
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 2.947126865114226
+ -0.1324709848588487
+ 0.9427648493323002
+ 10.04024633069978
+ 9.921687504519616
+ 0.1345525589767738
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ -1
+ 1
+ 1
+ 1
+ 1
+ 1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 24
+# columns: 3
+ 1 3 0
+ 1 5 0
+ 2 3 0
+ 2 4 0
+ 2 5 0
+ 2 6 0
+ 3 1 0
+ 3 2 0
+ 3 4 0
+ 3 5 0
+ 3 6 0
+ 4 2 0
+ 4 3 0
+ 4 5 0
+ 4 6 0
+ 5 1 0
+ 5 2 0
+ 5 3 0
+ 5 4 0
+ 5 6 0
+ 6 2 0
+ 6 3 0
+ 6 4 0
+ 6 5 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 8
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 6.326040815192424
+ -0.2746046235434426
+ 9.721615043779819
+ 1.226329324246133
+ -0.03037776429299689
+ 3.539699647691831
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ -1
+ 1
+ 1
+ 1
+ 1
+ -1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 26
+# columns: 3
+ 1 2 0
+ 1 3 0
+ 1 4 0
+ 1 5 0
+ 1 6 0
+ 2 1 0
+ 2 3 0
+ 2 4 0
+ 2 5 0
+ 3 1 0
+ 3 2 0
+ 3 4 0
+ 3 5 0
+ 3 6 0
+ 4 1 0
+ 4 2 0
+ 4 3 0
+ 4 5 0
+ 5 1 0
+ 5 2 0
+ 5 3 0
+ 5 4 0
+ 5 6 0
+ 6 1 0
+ 6 3 0
+ 6 5 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 8
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 1.147784978750165
+ 4.055300078781296
+ 9.837872229782921
+ 4.422465108736223
+ 0.6867388365792525
+ 7.96741678670821
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ 1
+ -1
+ 1
+ -1
+ 1
+ -1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 26
+# columns: 3
+ 1 2 0
+ 1 3 0
+ 1 4 0
+ 1 5 0
+ 1 6 0
+ 2 1 0
+ 2 4 0
+ 2 5 0
+ 2 6 0
+ 3 1 0
+ 3 4 0
+ 3 5 0
+ 3 6 0
+ 4 1 0
+ 4 2 0
+ 4 3 0
+ 4 5 0
+ 4 6 0
+ 5 1 0
+ 5 2 0
+ 5 3 0
+ 5 4 0
+ 6 1 0
+ 6 2 0
+ 6 3 0
+ 6 4 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 8
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 1.040303317784373
+ 10.0626806652326
+ 6.242002436537303
+ 3.984713387458034
+ -0.2495355488172864
+ 2.20429709693921
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ 1
+ 1
+ -1
+ -1
+ 1
+ -1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 24
+# columns: 3
+ 1 2 0
+ 1 3 0
+ 1 4 0
+ 1 5 0
+ 2 1 0
+ 2 4 0
+ 2 5 0
+ 2 6 0
+ 3 1 0
+ 3 4 0
+ 3 5 0
+ 4 1 0
+ 4 2 0
+ 4 3 0
+ 4 5 0
+ 4 6 0
+ 5 1 0
+ 5 2 0
+ 5 3 0
+ 5 4 0
+ 5 6 0
+ 6 2 0
+ 6 4 0
+ 6 5 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 8
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 9.932425010734319
+ 2.746492050725622
+ 2.093945694657084
+ 0.8274705336581804
+ 9.42080921007266
+ 0.01409146504778731
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ 1
+ -1
+ -1
+ 1
+ -1
+ 1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 26
+# columns: 3
+ 1 3 0
+ 1 4 0
+ 1 5 0
+ 1 6 0
+ 2 3 0
+ 2 4 0
+ 2 5 0
+ 2 6 0
+ 3 1 0
+ 3 2 0
+ 3 5 0
+ 3 6 0
+ 4 1 0
+ 4 2 0
+ 4 5 0
+ 4 6 0
+ 5 1 0
+ 5 2 0
+ 5 3 0
+ 5 4 0
+ 5 6 0
+ 6 1 0
+ 6 2 0
+ 6 3 0
+ 6 4 0
+ 6 5 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 8
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 5.928111901229238
+ 6.495126174647307
+ -0.3034288080778187
+ 10.34266139024141
+ 9.872364121823088
+ 0.7978129995365497
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ -1
+ -1
+ 1
+ 1
+ 1
+ 1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 22
+# columns: 3
+ 1 2 0
+ 1 3 0
+ 1 6 0
+ 2 1 0
+ 2 3 0
+ 2 4 0
+ 2 6 0
+ 3 1 0
+ 3 2 0
+ 3 4 0
+ 3 5 0
+ 3 6 0
+ 4 2 0
+ 4 3 0
+ 4 6 0
+ 5 3 0
+ 5 6 0
+ 6 1 0
+ 6 2 0
+ 6 3 0
+ 6 4 0
+ 6 5 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 8
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ -0.07495795638897232
+ 7.868328095644416
+ 5.541126737639909
+ 3.116772394498277
+ 10.31249620323782
+ 1.328285054493497
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ 1
+ -1
+ -1
+ -1
+ 1
+ 1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 24
+# columns: 3
+ 1 2 0
+ 1 3 0
+ 1 4 0
+ 1 5 0
+ 1 6 0
+ 2 1 0
+ 2 3 0
+ 2 4 0
+ 2 5 0
+ 2 6 0
+ 3 1 0
+ 3 2 0
+ 3 5 0
+ 4 1 0
+ 4 2 0
+ 4 6 0
+ 5 1 0
+ 5 2 0
+ 5 3 0
+ 5 6 0
+ 6 1 0
+ 6 2 0
+ 6 4 0
+ 6 5 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 8
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 6.261974069464651
+ 0.008019397897647563
+ 10.04076053217544
+ 8.893851277973571
+ 4.297999889514814
+ 0.8195967173202572
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ -1
+ 1
+ 1
+ -1
+ -1
+ 1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 24
+# columns: 3
+ 1 2 0
+ 1 4 0
+ 1 6 0
+ 2 1 0
+ 2 3 0
+ 2 4 0
+ 2 5 0
+ 2 6 0
+ 3 2 0
+ 3 4 0
+ 3 5 0
+ 3 6 0
+ 4 1 0
+ 4 2 0
+ 4 3 0
+ 4 5 0
+ 4 6 0
+ 5 2 0
+ 5 3 0
+ 5 4 0
+ 6 1 0
+ 6 2 0
+ 6 3 0
+ 6 4 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 8
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 1.151504426982353
+ 9.961855986914291
+ 0.2788775926714991
+ 9.822936349667081
+ 3.176561925062086
+ 7.944005800429103
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ 1
+ 1
+ 1
+ 1
+ -1
+ -1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 28
+# columns: 3
+ 1 2 0
+ 1 3 0
+ 1 4 0
+ 1 5 0
+ 1 6 0
+ 2 1 0
+ 2 3 0
+ 2 5 0
+ 2 6 0
+ 3 1 0
+ 3 2 0
+ 3 4 0
+ 3 5 0
+ 3 6 0
+ 4 1 0
+ 4 3 0
+ 4 5 0
+ 4 6 0
+ 5 1 0
+ 5 2 0
+ 5 3 0
+ 5 4 0
+ 5 6 0
+ 6 1 0
+ 6 2 0
+ 6 3 0
+ 6 4 0
+ 6 5 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 8
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 2.248313903652343
+ 3.612684059782485
+ -0.1543822986518241
+ 1.158047487634731
+ 10.50117561235053
+ 8.664301047204392
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ -1
+ -1
+ 1
+ 1
+ 1
+ -1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 28
+# columns: 3
+ 1 2 0
+ 1 3 0
+ 1 4 0
+ 1 5 0
+ 1 6 0
+ 2 1 0
+ 2 3 0
+ 2 4 0
+ 2 6 0
+ 3 1 0
+ 3 2 0
+ 3 4 0
+ 3 5 0
+ 3 6 0
+ 4 1 0
+ 4 2 0
+ 4 3 0
+ 4 5 0
+ 4 6 0
+ 5 1 0
+ 5 3 0
+ 5 4 0
+ 5 6 0
+ 6 1 0
+ 6 2 0
+ 6 3 0
+ 6 4 0
+ 6 5 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 8
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 0.03150308676282298
+ 9.705746100255782
+ 8.8921749295847
+ -0.3122149622226275
+ 8.119386342135201
+ 0.9614307779629657
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ 1
+ 1
+ -1
+ 1
+ -1
+ 1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 26
+# columns: 3
+ 1 2 0
+ 1 4 0
+ 1 5 0
+ 1 6 0
+ 2 1 0
+ 2 3 0
+ 2 4 0
+ 2 5 0
+ 2 6 0
+ 3 2 0
+ 3 4 0
+ 3 5 0
+ 3 6 0
+ 4 1 0
+ 4 2 0
+ 4 3 0
+ 4 6 0
+ 5 1 0
+ 5 2 0
+ 5 3 0
+ 5 6 0
+ 6 1 0
+ 6 2 0
+ 6 3 0
+ 6 4 0
+ 6 5 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 8
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 1.155014067105251
+ 9.886825967840162
+ 0.3658863731845546
+ 8.112145638226687
+ 9.993278563009778
+ 0.04213190024303554
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ 1
+ 1
+ 1
+ -1
+ 1
+ 1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 24
+# columns: 3
+ 1 2 0
+ 1 3 0
+ 1 5 0
+ 1 6 0
+ 2 1 0
+ 2 3 0
+ 2 4 0
+ 2 5 0
+ 2 6 0
+ 3 1 0
+ 3 2 0
+ 3 4 0
+ 3 5 0
+ 4 2 0
+ 4 3 0
+ 4 6 0
+ 5 1 0
+ 5 2 0
+ 5 3 0
+ 5 6 0
+ 6 1 0
+ 6 2 0
+ 6 4 0
+ 6 5 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 8
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 9.141309354241717
+ 0.6846789290128934
+ 1.137990623107991
+ 6.095139703652558
+ 0.3164452696822672
+ 9.710850299819931
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ -1
+ 1
+ 1
+ -1
+ 1
+ 1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 28
+# columns: 3
+ 1 2 0
+ 1 3 0
+ 1 4 0
+ 1 6 0
+ 2 1 0
+ 2 3 0
+ 2 4 0
+ 2 5 0
+ 2 6 0
+ 3 1 0
+ 3 2 0
+ 3 4 0
+ 3 5 0
+ 3 6 0
+ 4 1 0
+ 4 2 0
+ 4 3 0
+ 4 5 0
+ 4 6 0
+ 5 2 0
+ 5 3 0
+ 5 4 0
+ 5 6 0
+ 6 1 0
+ 6 2 0
+ 6 3 0
+ 6 4 0
+ 6 5 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 8
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 0.5895487619436039
+ 0.2371257095579512
+ 3.966488498925612
+ 9.97863223773904
+ 3.327395096019456
+ 0.1747568720928153
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ 1
+ -1
+ -1
+ 1
+ -1
+ 1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 24
+# columns: 3
+ 1 2 0
+ 1 3 0
+ 1 4 0
+ 1 5 0
+ 1 6 0
+ 2 1 0
+ 2 3 0
+ 2 5 0
+ 2 6 0
+ 3 1 0
+ 3 2 0
+ 3 4 0
+ 3 5 0
+ 4 1 0
+ 4 3 0
+ 4 5 0
+ 4 6 0
+ 5 1 0
+ 5 2 0
+ 5 3 0
+ 5 4 0
+ 6 1 0
+ 6 2 0
+ 6 4 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+
+
+
+
+
+# name: trainStats
+# type: matrix
+# rows: 5
+# columns: 3
+ 0.7291666666666666 0.8604651162790697 0.6491228070175439
+ 0.8125 0.8333333333333334 0.8333333333333334
+ 0.9166666666666666 0.9 0.9642857142857143
+ 0.8229166666666666 0.819672131147541 0.8928571428571429
+ 0.6979166666666666 0.7727272727272727 0.6415094339622641
+
+
+# name: testStats
+# type: matrix
+# rows: 5
+# columns: 3
+ 0.625 0.6153846153846154 0.6666666666666666
+ 0.8333333333333334 0.8666666666666667 0.8666666666666667
+ 0.7916666666666666 0.7222222222222222 1
+ 0.7916666666666666 0.7857142857142857 0.8461538461538461
+ 0.7083333333333334 0.8461538461538461 0.6875
+
+
+# name: nIterations
+# type: scalar
+200
+
+
+# name: nFolds
+# type: scalar
+5
+
+
+# name: initialTrainRmse
+# type: matrix
+# rows: 1
+# columns: 10
+ 7.705365100250054 6.215481059227834 6.647742296973168 7.53706718777874 5.512915978920825 7.516227958298237 5.887342144859957 7.434035687142202 7.29359510403116 7.363219673789614
+
+
+# name: time
+# type: scalar
+89540.62631011009
+
+

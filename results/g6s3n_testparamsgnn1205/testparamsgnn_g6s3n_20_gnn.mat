@@ -1,0 +1,237 @@
+# Created by Octave 3.6.2, Sun May 12 03:50:49 2013 CEST <alex@desktop>
+# name: gnn
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 9
+# name: transitionNet
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 13
+# name: weights1
+# type: matrix
+# rows: 5
+# columns: 7
+ -0.008042043212711056 -0.1001652485921582 0.03096472831669858 -0.07455720891441102 0.05446756001646608 0.01655371313352069 -0.118401688138283
+ 0.03440645434678405 -0.1047606603815363 -0.09246070689597362 -0.02359603268869444 -0.003628793785997411 -0.09993829967553651 0.07021202225491785
+ 0.10237509411226 -0.07998113538942102 -0.09778227373769784 0.118753937042483 -0.1015883146182249 0.06144762120889855 0.116483539567619
+ 0.03594855430169219 -0.06683308521672414 -0.06333758842426794 0.1064438684963873 -0.03885462984720094 -0.094087470504903 0.0569782772015191
+ -0.04441835207665994 -0.08300593477335576 -0.02851525684266963 0.07542560468107404 0.03036065588008416 -0.04505620060706829 -0.08357376074466884
+
+
+# name: bias1
+# type: matrix
+# rows: 5
+# columns: 1
+ 0.1135669005675363
+ 0.04883037634878115
+ 0.003509139616401424
+ -0.02580679395330716
+ -0.08463280940286276
+
+
+# name: weights2
+# type: matrix
+# rows: 5
+# columns: 5
+ -0.09747971759032482 0.05325673247380702 0.03426784905296076 -0.09293355502561228 0.06078956449028916
+ -0.07135487648377693 -0.1404748626686667 -0.01510230938948396 -0.1338028786220102 0.08962419762312457
+ 0.1437514849161697 0.1469315568398058 -0.1418416343128544 -0.0009944394002670554 -0.05795690243293403
+ -0.03946571302377953 0.1618626918167237 -0.1428927906973754 -0.03562087545242404 -0.1318055167671991
+ -0.1415555481836528 -0.05702843226087852 0.1308712243000066 -0.04951126465357131 0.06470279413822833
+
+
+# name: bias2
+# type: matrix
+# rows: 5
+# columns: 1
+ -0.0649444600422891
+ 0.1178092022030155
+ 0.07951291970310452
+ 0.05660049748238705
+ -0.04611186081632466
+
+
+# name: nInputLines
+# type: scalar
+7
+
+
+# name: nHiddenNeurons
+# type: scalar
+5
+
+
+# name: nOutputNeurons
+# type: scalar
+5
+
+
+# name: activation1
+# type: function handle
+@<anonymous>
+@(x) tanh (x)
+
+
+# name: activationderivative1
+# type: function handle
+@<anonymous>
+@(x) repmat (1, size (x)) - (tanh (x) .^ 2)
+
+
+# name: activation2ndderivative1
+# type: function handle
+@<anonymous>
+@(x) 2 .* (tanh (x) .^ 3 - tanh (x))
+
+
+# name: activation2
+# type: function handle
+@<anonymous>
+@(x) tanh (x)
+
+
+# name: activationderivative2
+# type: function handle
+@<anonymous>
+@(x) repmat (1, size (x)) - (tanh (x) .^ 2)
+
+
+# name: activation2ndderivative2
+# type: function handle
+@<anonymous>
+@(x) 2 .* (tanh (x) .^ 3 - tanh (x))
+
+
+
+
+# name: outputNet
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 13
+# name: weights1
+# type: matrix
+# rows: 5
+# columns: 5
+ -0.0188492815643307 0.02357542598017553 0.007010029360031316 -0.0221422091756144 -0.03148485885993858
+ -0.01779052704919087 0.005652353139364289 -0.02906950470199693 -0.001045631508691661 -0.02008874496341406
+ -0.009621008213911413 -0.01785928222091585 0.03076261780669063 0.03128791578703805 0.0322580260157085
+ -0.0009401143187555324 -0.01492676095816925 -0.03160330428454301 0.02508615024984086 0.028131267962869
+ -0.01113753354066993 0.001009254420265619 -0.02284230521743043 0.02040704585272288 -0.02388291471740759
+
+
+# name: bias1
+# type: matrix
+# rows: 5
+# columns: 1
+ 0.04061421948280264
+ 0.06531306964350891
+ 0.02068928815426385
+ 0.0260615900186106
+ -0.1509398518865441
+
+
+# name: weights2
+# type: matrix
+# rows: 1
+# columns: 5
+ -0.08913035401201162 0.006972645417815245 0.1583156380478734 0.005696923339659617 0.1645442207636857
+
+
+# name: bias2
+# type: scalar
+-0.02123931635601412
+
+
+# name: nInputLines
+# type: scalar
+5
+
+
+# name: nHiddenNeurons
+# type: scalar
+5
+
+
+# name: nOutputNeurons
+# type: scalar
+1
+
+
+# name: activation1
+# type: function handle
+@<anonymous>
+@(x) tanh (x)
+
+
+# name: activationderivative1
+# type: function handle
+@<anonymous>
+@(x) repmat (1, size (x)) - (tanh (x) .^ 2)
+
+
+# name: activation2ndderivative1
+# type: function handle
+@<anonymous>
+@(x) 2 .* (tanh (x) .^ 3 - tanh (x))
+
+
+# name: activation2
+# type: function handle
+@<anonymous>
+@(x) x
+
+
+# name: activationderivative2
+# type: function handle
+@<anonymous>
+@(x) 1
+
+
+# name: activation2ndderivative2
+# type: function handle
+@<anonymous>
+@(x) 0
+
+
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: stateSize
+# type: scalar
+5
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: minStateDiff
+# type: scalar
+1e-05
+
+
+# name: minErrorAccDiff
+# type: scalar
+1e-05
+
+
+# name: contractionConstant
+# type: scalar
+0.5
+
+
+
+
