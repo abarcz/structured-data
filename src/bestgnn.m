@@ -1,25 +1,16 @@
 
-function [gnns trainStats testStats initialTrainRmse] = bestgnn(graphs, nGnns, nInitialIterations, nIterations, nFolds, testname)
+function [gnns trainStats testStats initialTrainRmse] = bestgnn(graphs, nGnns, nInitialIterations, nIterations, nFolds, testname, state)
 %
-% usage: [gnns trainStats testStats initialTrainRmse] = bestgnn(graphs, nGnns, nInitialIterations, nIterations, nFolds, testname)
+% usage: [gnns trainStats testStats initialTrainRmse] = bestgnn(graphs, nGnns, nInitialIterations, nIterations, nFolds, testname, state)
 %
-
-	% select half of the graphs as training set for initial training
-	initialTrainGraphs = {};
-	nInitialGraphs = ceil(size(graphs, 2) / 2);
-	for i = 1:nInitialGraphs
-		initialTrainGraphs{i} = graphs{i};
-	end
-
 	gnns = {};
 	graphsMerged = mergegraphs(graphs);
-	initialTrainGraphsMerged = mergegraphs(initialTrainGraphs);
 	initialTrainRmse = zeros(1, nGnns);
 	bestRmse = Inf;
 	for i = 1:nGnns
 		tic();
 		gnn = initgnn(graphsMerged.maxIndegree, [5 5], [5 graphsMerged.nodeOutputSize], 'tansig');
-		[trainedGnn trainStats] = traingnn(gnn, initialTrainGraphsMerged, nInitialIterations);
+		[trainedGnn trainStats] = traingnn(gnn, graphsMerged, nInitialIterations, state);
 		rmse = trainStats(nInitialIterations, 1);
 		initialTrainRmse(i) = rmse;
 		if rmse < bestRmse
@@ -33,14 +24,19 @@ function [gnns trainStats testStats initialTrainRmse] = bestgnn(graphs, nGnns, n
 		save(filename, 'packedGnn', 'trainStats', 'nInitialIterations', 'time');
 	end
 
-	tic();
-	[gnns trainStats testStats] = crossvalidate(bestGnn, graphs, nIterations, nFolds);
-	time = toc();
-	filename = strcat(testname, '_best.mat');
-	packedGnns = {};
-	for i = 1:nFolds
-		packedGnns{i} = presavegnn(gnns{i});
+	if nIterations != 0
+		tic();
+		[gnns trainStats testStats] = crossvalidate(bestGnn, graphs, nIterations, nFolds);
+		time = toc();
+		filename = strcat(testname, '_best.mat');
+		packedGnns = {};
+		for i = 1:nFolds
+			packedGnns{i} = presavegnn(gnns{i});
+		end
+		packedBestGnn = presavegnn(bestGnn);
+		save(filename, 'packedGnns', 'packedBestGnn', 'graphs', 'trainStats', 'testStats', 'nIterations', 'nFolds', 'initialTrainRmse', 'time');
+	else
+		mainFilename = strcat(testname, '_main.mat');
+		save(mainFilename, 'graphs', 'initialTrainRmse');
 	end
-	packedBestGnn = presavegnn(bestGnn);
-	save(filename, 'packedGnns', 'packedBestGnn', 'graphs', 'trainStats', 'testStats', 'nIterations', 'nFolds', 'initialTrainRmse', 'time');
 end
