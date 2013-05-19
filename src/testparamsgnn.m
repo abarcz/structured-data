@@ -1,7 +1,7 @@
 
-function testparamsgnn(gnn, graph, nIterations, testname, contractionConstants, minDiffs)
+function testparamsgnn(gnn, graph, nIterations, testname, contractionConstants, minDiffs, state)
 %
-% usage: testparamsgnn(gnn, graph, nIterations, testname, contractionConstants, minDiffs)
+% usage: testparamsgnn(gnn, graph, nIterations, testname, contractionConstants, minDiffs, state)
 %
 
 	assert(size(contractionConstants, 1) == 1);
@@ -29,8 +29,8 @@ function testparamsgnn(gnn, graph, nIterations, testname, contractionConstants, 
 			filename = strcat(testname, '_', sprintf('%d', i), '_', sprintf('%d', j), '.mat');
 
 			tic();
-			[gnn2 trainStats] = traingnn(gnn, graph, nIterations);
-			evaluation = evaluate(classifygnn(gnn2, graph), graph.expectedOutput);
+			[gnn2 trainStats] = traingnn(gnn, graph, nIterations, state);
+			evaluation = evaluate(classifygnn(gnn2, graph, state), graph.expectedOutput);
 			timeElapsed = toc();
 
 			save(filename, 'trainStats', 'timeElapsed', 'evaluation', 'contractionConstant', 'minStateDiff', 'minErrorAccDiff');
