@@ -1,6 +1,9 @@
 
-function state = initstate(gnn, graph)
+function state = initstate(nNodes, stateSize)
 % Initialize state for GNN calculation
+%
+%usage:
+%
 
-	state = randn(graph.nNodes, gnn.stateSize);	% zero mean, unit variance
+	state = randn(nNodes, stateSize);	% zero mean, unit variance
 end

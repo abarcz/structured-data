@@ -6,7 +6,7 @@ function [state nSteps] = forward(gnn, graph, maxForwardSteps, state=0)
 % usage: [state nSteps] = forward(gnn, graph, maxForwardSteps, state=0)
 
 	if state == 0
-		state = initstate(gnn, graph);
+		state = initstate(graph.nNodes, gnn.stateSize);
 	end
 	nSteps = 0;
 	do
