@@ -46,8 +46,9 @@ function [bestGnn trainStats] = traingnn(gnn, graph, nIterations, maxForwardStep
 	bestGnn = gnn;
 	rpropTransitionState = initrprop(gnn.transitionNet);
 	rpropOutputState = initrprop(gnn.outputNet);
+	initialState = state;
 	for iteration = 1:nIterations
-		[state nForwardSteps] = forward(gnn, graph, maxForwardSteps, state);
+		[state nForwardSteps] = forward(gnn, graph, maxForwardSteps, initialState);
 		trainStats(iteration, FORWARD_STEPS) = nForwardSteps;
 
 		outputs = applynet(gnn.outputNet, state);
@@ -84,7 +85,7 @@ function [bestGnn trainStats] = traingnn(gnn, graph, nIterations, maxForwardStep
 	% calculate RMSE of final GNN
 	iteration = nIterations + 1;
 
-	[state nForwardSteps] = forward(gnn, graph, maxForwardSteps, state);
+	[state nForwardSteps] = forward(gnn, graph, maxForwardSteps, initialState);
 	trainStats(iteration, FORWARD_STEPS) = nForwardSteps;
 
 	outputs = applynet(gnn.outputNet, state);
