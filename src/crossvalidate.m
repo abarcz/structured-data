@@ -1,8 +1,8 @@
 
-function [gnns trainEval testEval trainStats] = crossvalidate(gnn, graphs, nIterations, nFolds=10)
+function [gnns trainEval testEval trainStats] = crossvalidate(gnn, graphs, nIterations, nFolds=10, testname=0)
 % Perform n-fold crossvalidation on cell of graphs
 %
-% usage: [gnns trainEval testEval trainStats] = crossvalidate(gnn, graphs, nIterations, nFolds=10)
+% usage: [gnns trainEval testEval trainStats] = crossvalidate(gnn, graphs, nIterations, nFolds=10, testname=0)
 %
 % stats are result of evaluate() function (accuracy, precision, recall)
 %
@@ -17,10 +17,17 @@ function [gnns trainEval testEval trainStats] = crossvalidate(gnn, graphs, nIter
 	assert(nTrainGraphs > 0);
 	assert(nTestGraphs > 0);
 
+	if testname != 0
+		filename = strcat(testname, '_main.mat');
+		packedInitialGnn = presavegnn(gnn);
+		save(filename, 'graphs', 'packedInitialGnn', 'nIterations', 'nFolds', 'nGraphs');
+	end
+
 	testEval = zeros(nFolds, 3);
 	trainEval = zeros(nFolds, 3);
 	gnns = {};
 	for i = 1:nFolds
+		tic();
 		testStartX = 1 + (i - 1) * nTestGraphs;
 		testEndX = testStartX + nTestGraphs - 1;
 		trainGraphs = {};
@@ -35,14 +42,23 @@ function [gnns trainEval testEval trainStats] = crossvalidate(gnn, graphs, nIter
 			trainGraphs{size(trainGraphs, 2) + 1} = graphs{j};
 		end
 		trainGraph = mergegraphs(trainGraphs);
-		trainedGnn = traingnn(gnn, trainGraph, nIterations);
+		[trainedGnn trainStats] = traingnn(gnn, trainGraph, nIterations);
 		gnns{i} = trainedGnn;
 
-		[trainOutputs trainStats] = classifygnn(trainedGnn, trainGraph);
+		trainOutputs = classifygnn(trainedGnn, trainGraph);
 		trainEval(i, :) = evaluate(trainOutputs, trainGraph.expectedOutput);
 
 		testGraph = mergegraphs(testGraphs);
 		testOutputs = classifygnn(trainedGnn, testGraph);
 		testEval(i, :) = evaluate(testOutputs, testGraph.expectedOutput);
+		timeElapsed = toc();
+
+		if testname != 0
+			filename = strcat(testname, sprintf('_fold%d.mat', i));
+			currTrainEval = trainEval(i, :);
+			currTestEval = testEval(i, :);
+			packedTrainedGnn = presavegnn(trainedGnn);
+			save(filename, 'packedTrainedGnn', 'trainStats', 'timeElapsed', 'currTrainEval', 'currTestEval', 'nIterations');
+		end
 	end
 end
