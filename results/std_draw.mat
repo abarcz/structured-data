@@ -1,0 +1,170 @@
+# Created by Octave 3.6.2, Wed May 15 22:07:16 2013 CEST <alex@vostro-1520>
+# name: drawRmseSet
+# type: matrix
+# rows: 3
+# columns: 3
+ 1 2 3
+ 4 5 6
+ 7 8 9
+
+
+# name: drawStandardSet
+# type: matrix
+# rows: 3
+# columns: 2
+ 1 4
+ 2 7
+ 3 8
+
+
+# name: trainStatsLegends
+# type: cell
+# rows: 1
+# columns: 8
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 4
+RMSE
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 8
+nForward
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 9
+nBackward
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 7
+penalty
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 17
+reverted trans[%]
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 15
+reverted out[%]
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 19
+de/dw influence [%]
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 19
+dp/dw influence [%]
+
+
+
+
+
+# name: trainStatsMinMax
+# type: cell
+# rows: 1
+# columns: 8
+# name: <cell-element>
+# type: matrix
+# rows: 1
+# columns: 2
+ 5.4 9.6
+
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 0
+# columns: 0
+
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 0
+# columns: 0
+
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 0
+# columns: 0
+
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 1
+# columns: 2
+ 0 100
+
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 1
+# columns: 2
+ 0 100
+
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 1
+# columns: 2
+ 0 119
+
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 1
+# columns: 2
+ 0 119
+
+
+
+
+
+# name: drawRmseCommand
+# type: string
+# elements: 1
+# length: 57
+gridplot(allRmse, drawRmseSet, true, {'RMSE'}, 'gnn', 0);
+
+
+# name: drawStandardSetCommand
+# type: string
+# elements: 1
+# length: 106
+gridplot(gnns{5}.trainStats(1:50, :), drawStandardSet, false, trainStatsLegends, '', 0, trainStatsMinMax);
+
+

@@ -1,25 +1,26 @@
 
-function graphs = loadset(basename, nGraphs)
+function graphs = loadset(basename, nGraphs, startIndex=1)
 % Load dataset consisting of graphs named <basename>_<graphNumber>,
-% where graphNumber = 1..nGraphs
+% where graphNumber = startIndex..startIndex + nGraphs - 1
 %
-% usage: graphs = loadset(basename, nGraphs)
+% usage: graphs = loadset(basename, nGraphs, startIndex=1)
 %
 
 	assert(nGraphs > 1);
 	graphs = {};
 
 	% load first graph
-	graphName = sprintf('%s_%d', basename, 1);
+	graphName = sprintf('%s_%d', basename, startIndex);
 	graph = loadgraph(graphName);
 	graphs{1} = graph;
-	for i = 2:nGraphs
+	endIndex = startIndex + nGraphs - 1;
+	for i = (startIndex + 1):endIndex
 		graphName = sprintf('%s_%d', basename, i);
 		currGraph = loadgraph(graphName);
 		% compare with the first graph
 		assert(graph.nodeLabelSize == currGraph.nodeLabelSize);
 		assert(graph.edgeLabelSize == currGraph.edgeLabelSize);
 		assert(graph.nodeOutputSize == currGraph.nodeOutputSize);
-		graphs{i} = currGraph;
+		graphs{i - startIndex + 1} = currGraph;
 	end
 end

@@ -1,0 +1,9639 @@
+# Created by Octave 3.6.2, Sun May 19 10:51:23 2013 CEST <alex@vostro-1520>
+# name: g6_80
+# type: cell
+# rows: 1
+# columns: 80
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 8
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 1.048929770537382
+ 7.888906265966011
+ 0.2215989725562787
+ 10.20849994266422
+ 10.13468457375922
+ 2.336445809764089
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ 1
+ -1
+ 1
+ -1
+ 1
+ -1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 22
+# columns: 3
+ 1 2 0
+ 1 3 0
+ 1 5 0
+ 1 6 0
+ 2 1 0
+ 2 3 0
+ 2 4 0
+ 3 1 0
+ 3 2 0
+ 3 4 0
+ 3 5 0
+ 3 6 0
+ 4 2 0
+ 4 3 0
+ 4 5 0
+ 4 6 0
+ 5 1 0
+ 5 3 0
+ 5 4 0
+ 6 1 0
+ 6 3 0
+ 6 4 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 8
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 10.17537717205616
+ 0.05012369995334758
+ 6.073258850560165
+ 8.799123890232575
+ 3.144021579469149
+ 1.501159130007386
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ 1
+ 1
+ -1
+ -1
+ -1
+ 1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 26
+# columns: 3
+ 1 2 0
+ 1 3 0
+ 1 4 0
+ 1 5 0
+ 1 6 0
+ 2 1 0
+ 2 5 0
+ 2 6 0
+ 3 1 0
+ 3 4 0
+ 3 5 0
+ 3 6 0
+ 4 1 0
+ 4 3 0
+ 4 5 0
+ 4 6 0
+ 5 1 0
+ 5 2 0
+ 5 3 0
+ 5 4 0
+ 5 6 0
+ 6 1 0
+ 6 2 0
+ 6 3 0
+ 6 4 0
+ 6 5 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 8
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 7.064882002550898
+ 8.664600093669314
+ 9.502550105708172
+ 5.127939627309426
+ 1.456804831543082
+ 0.223714512620499
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ -1
+ -1
+ 1
+ -1
+ 1
+ 1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 28
+# columns: 3
+ 1 2 0
+ 1 3 0
+ 1 4 0
+ 1 5 0
+ 1 6 0
+ 2 1 0
+ 2 3 0
+ 2 4 0
+ 2 5 0
+ 2 6 0
+ 3 1 0
+ 3 2 0
+ 3 5 0
+ 3 6 0
+ 4 1 0
+ 4 2 0
+ 4 5 0
+ 4 6 0
+ 5 1 0
+ 5 2 0
+ 5 3 0
+ 5 4 0
+ 5 6 0
+ 6 1 0
+ 6 2 0
+ 6 3 0
+ 6 4 0
+ 6 5 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 8
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 3.443627497156921
+ 9.552044124941713
+ 0.917752117488509
+ 8.024872361610996
+ -0.02954038878687806
+ 7.547287126817221
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ -1
+ 1
+ 1
+ -1
+ 1
+ -1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 26
+# columns: 3
+ 1 2 0
+ 1 4 0
+ 1 5 0
+ 1 6 0
+ 2 1 0
+ 2 3 0
+ 2 5 0
+ 2 6 0
+ 3 2 0
+ 3 4 0
+ 3 5 0
+ 3 6 0
+ 4 1 0
+ 4 3 0
+ 4 5 0
+ 4 6 0
+ 5 1 0
+ 5 2 0
+ 5 3 0
+ 5 4 0
+ 5 6 0
+ 6 1 0
+ 6 2 0
+ 6 3 0
+ 6 4 0
+ 6 5 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 8
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 1.088448539363567
+ 8.684809224474717
+ 4.899462316849067
+ 0.2651440690610654
+ 9.95096585541668
+ 7.156072924698663
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ 1
+ -1
+ -1
+ 1
+ 1
+ -1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 20
+# columns: 3
+ 1 2 0
+ 1 4 0
+ 1 5 0
+ 2 1 0
+ 2 3 0
+ 2 4 0
+ 2 6 0
+ 3 2 0
+ 3 4 0
+ 3 6 0
+ 4 1 0
+ 4 2 0
+ 4 3 0
+ 4 5 0
+ 4 6 0
+ 5 1 0
+ 5 4 0
+ 6 2 0
+ 6 3 0
+ 6 4 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 8
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 8.834108243944817
+ -0.04792217104479692
+ 7.984388972495369
+ 9.854555965020092
+ 3.058774078553609
+ 1.132146333734212
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ -1
+ 1
+ -1
+ 1
+ -1
+ 1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 26
+# columns: 3
+ 1 2 0
+ 1 3 0
+ 1 4 0
+ 1 6 0
+ 2 1 0
+ 2 3 0
+ 2 4 0
+ 2 5 0
+ 2 6 0
+ 3 1 0
+ 3 2 0
+ 3 4 0
+ 3 5 0
+ 3 6 0
+ 4 1 0
+ 4 2 0
+ 4 3 0
+ 4 6 0
+ 5 2 0
+ 5 3 0
+ 5 6 0
+ 6 1 0
+ 6 2 0
+ 6 3 0
+ 6 4 0
+ 6 5 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 8
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 2.947126865114226
+ -0.1324709848588487
+ 0.9427648493323002
+ 10.04024633069978
+ 9.921687504519616
+ 0.1345525589767738
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ -1
+ 1
+ 1
+ 1
+ 1
+ 1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 24
+# columns: 3
+ 1 3 0
+ 1 5 0
+ 2 3 0
+ 2 4 0
+ 2 5 0
+ 2 6 0
+ 3 1 0
+ 3 2 0
+ 3 4 0
+ 3 5 0
+ 3 6 0
+ 4 2 0
+ 4 3 0
+ 4 5 0
+ 4 6 0
+ 5 1 0
+ 5 2 0
+ 5 3 0
+ 5 4 0
+ 5 6 0
+ 6 2 0
+ 6 3 0
+ 6 4 0
+ 6 5 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 8
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 6.326040815192424
+ -0.2746046235434426
+ 9.721615043779819
+ 1.226329324246133
+ -0.03037776429299689
+ 3.539699647691831
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ -1
+ 1
+ 1
+ 1
+ 1
+ -1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 26
+# columns: 3
+ 1 2 0
+ 1 3 0
+ 1 4 0
+ 1 5 0
+ 1 6 0
+ 2 1 0
+ 2 3 0
+ 2 4 0
+ 2 5 0
+ 3 1 0
+ 3 2 0
+ 3 4 0
+ 3 5 0
+ 3 6 0
+ 4 1 0
+ 4 2 0
+ 4 3 0
+ 4 5 0
+ 5 1 0
+ 5 2 0
+ 5 3 0
+ 5 4 0
+ 5 6 0
+ 6 1 0
+ 6 3 0
+ 6 5 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 8
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 1.147784978750165
+ 4.055300078781296
+ 9.837872229782921
+ 4.422465108736223
+ 0.6867388365792525
+ 7.96741678670821
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ 1
+ -1
+ 1
+ -1
+ 1
+ -1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 26
+# columns: 3
+ 1 2 0
+ 1 3 0
+ 1 4 0
+ 1 5 0
+ 1 6 0
+ 2 1 0
+ 2 4 0
+ 2 5 0
+ 2 6 0
+ 3 1 0
+ 3 4 0
+ 3 5 0
+ 3 6 0
+ 4 1 0
+ 4 2 0
+ 4 3 0
+ 4 5 0
+ 4 6 0
+ 5 1 0
+ 5 2 0
+ 5 3 0
+ 5 4 0
+ 6 1 0
+ 6 2 0
+ 6 3 0
+ 6 4 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 8
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 1.040303317784373
+ 10.0626806652326
+ 6.242002436537303
+ 3.984713387458034
+ -0.2495355488172864
+ 2.20429709693921
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ 1
+ 1
+ -1
+ -1
+ 1
+ -1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 24
+# columns: 3
+ 1 2 0
+ 1 3 0
+ 1 4 0
+ 1 5 0
+ 2 1 0
+ 2 4 0
+ 2 5 0
+ 2 6 0
+ 3 1 0
+ 3 4 0
+ 3 5 0
+ 4 1 0
+ 4 2 0
+ 4 3 0
+ 4 5 0
+ 4 6 0
+ 5 1 0
+ 5 2 0
+ 5 3 0
+ 5 4 0
+ 5 6 0
+ 6 2 0
+ 6 4 0
+ 6 5 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 8
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 9.932425010734319
+ 2.746492050725622
+ 2.093945694657084
+ 0.8274705336581804
+ 9.42080921007266
+ 0.01409146504778731
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ 1
+ -1
+ -1
+ 1
+ -1
+ 1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 26
+# columns: 3
+ 1 3 0
+ 1 4 0
+ 1 5 0
+ 1 6 0
+ 2 3 0
+ 2 4 0
+ 2 5 0
+ 2 6 0
+ 3 1 0
+ 3 2 0
+ 3 5 0
+ 3 6 0
+ 4 1 0
+ 4 2 0
+ 4 5 0
+ 4 6 0
+ 5 1 0
+ 5 2 0
+ 5 3 0
+ 5 4 0
+ 5 6 0
+ 6 1 0
+ 6 2 0
+ 6 3 0
+ 6 4 0
+ 6 5 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 8
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 5.928111901229238
+ 6.495126174647307
+ -0.3034288080778187
+ 10.34266139024141
+ 9.872364121823088
+ 0.7978129995365497
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ -1
+ -1
+ 1
+ 1
+ 1
+ 1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 22
+# columns: 3
+ 1 2 0
+ 1 3 0
+ 1 6 0
+ 2 1 0
+ 2 3 0
+ 2 4 0
+ 2 6 0
+ 3 1 0
+ 3 2 0
+ 3 4 0
+ 3 5 0
+ 3 6 0
+ 4 2 0
+ 4 3 0
+ 4 6 0
+ 5 3 0
+ 5 6 0
+ 6 1 0
+ 6 2 0
+ 6 3 0
+ 6 4 0
+ 6 5 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 8
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ -0.07495795638897232
+ 7.868328095644416
+ 5.541126737639909
+ 3.116772394498277
+ 10.31249620323782
+ 1.328285054493497
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ 1
+ -1
+ -1
+ -1
+ 1
+ 1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 24
+# columns: 3
+ 1 2 0
+ 1 3 0
+ 1 4 0
+ 1 5 0
+ 1 6 0
+ 2 1 0
+ 2 3 0
+ 2 4 0
+ 2 5 0
+ 2 6 0
+ 3 1 0
+ 3 2 0
+ 3 5 0
+ 4 1 0
+ 4 2 0
+ 4 6 0
+ 5 1 0
+ 5 2 0
+ 5 3 0
+ 5 6 0
+ 6 1 0
+ 6 2 0
+ 6 4 0
+ 6 5 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 8
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 6.261974069464651
+ 0.008019397897647563
+ 10.04076053217544
+ 8.893851277973571
+ 4.297999889514814
+ 0.8195967173202572
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ -1
+ 1
+ 1
+ -1
+ -1
+ 1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 24
+# columns: 3
+ 1 2 0
+ 1 4 0
+ 1 6 0
+ 2 1 0
+ 2 3 0
+ 2 4 0
+ 2 5 0
+ 2 6 0
+ 3 2 0
+ 3 4 0
+ 3 5 0
+ 3 6 0
+ 4 1 0
+ 4 2 0
+ 4 3 0
+ 4 5 0
+ 4 6 0
+ 5 2 0
+ 5 3 0
+ 5 4 0
+ 6 1 0
+ 6 2 0
+ 6 3 0
+ 6 4 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 8
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 1.151504426982353
+ 9.961855986914291
+ 0.2788775926714991
+ 9.822936349667081
+ 3.176561925062086
+ 7.944005800429103
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ 1
+ 1
+ 1
+ 1
+ -1
+ -1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 28
+# columns: 3
+ 1 2 0
+ 1 3 0
+ 1 4 0
+ 1 5 0
+ 1 6 0
+ 2 1 0
+ 2 3 0
+ 2 5 0
+ 2 6 0
+ 3 1 0
+ 3 2 0
+ 3 4 0
+ 3 5 0
+ 3 6 0
+ 4 1 0
+ 4 3 0
+ 4 5 0
+ 4 6 0
+ 5 1 0
+ 5 2 0
+ 5 3 0
+ 5 4 0
+ 5 6 0
+ 6 1 0
+ 6 2 0
+ 6 3 0
+ 6 4 0
+ 6 5 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 8
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 2.248313903652343
+ 3.612684059782485
+ -0.1543822986518241
+ 1.158047487634731
+ 10.50117561235053
+ 8.664301047204392
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ -1
+ -1
+ 1
+ 1
+ 1
+ -1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 28
+# columns: 3
+ 1 2 0
+ 1 3 0
+ 1 4 0
+ 1 5 0
+ 1 6 0
+ 2 1 0
+ 2 3 0
+ 2 4 0
+ 2 6 0
+ 3 1 0
+ 3 2 0
+ 3 4 0
+ 3 5 0
+ 3 6 0
+ 4 1 0
+ 4 2 0
+ 4 3 0
+ 4 5 0
+ 4 6 0
+ 5 1 0
+ 5 3 0
+ 5 4 0
+ 5 6 0
+ 6 1 0
+ 6 2 0
+ 6 3 0
+ 6 4 0
+ 6 5 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 8
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 0.03150308676282298
+ 9.705746100255782
+ 8.8921749295847
+ -0.3122149622226275
+ 8.119386342135201
+ 0.9614307779629657
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ 1
+ 1
+ -1
+ 1
+ -1
+ 1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 26
+# columns: 3
+ 1 2 0
+ 1 4 0
+ 1 5 0
+ 1 6 0
+ 2 1 0
+ 2 3 0
+ 2 4 0
+ 2 5 0
+ 2 6 0
+ 3 2 0
+ 3 4 0
+ 3 5 0
+ 3 6 0
+ 4 1 0
+ 4 2 0
+ 4 3 0
+ 4 6 0
+ 5 1 0
+ 5 2 0
+ 5 3 0
+ 5 6 0
+ 6 1 0
+ 6 2 0
+ 6 3 0
+ 6 4 0
+ 6 5 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 8
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 1.155014067105251
+ 9.886825967840162
+ 0.3658863731845546
+ 8.112145638226687
+ 9.993278563009778
+ 0.04213190024303554
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ 1
+ 1
+ 1
+ -1
+ 1
+ 1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 24
+# columns: 3
+ 1 2 0
+ 1 3 0
+ 1 5 0
+ 1 6 0
+ 2 1 0
+ 2 3 0
+ 2 4 0
+ 2 5 0
+ 2 6 0
+ 3 1 0
+ 3 2 0
+ 3 4 0
+ 3 5 0
+ 4 2 0
+ 4 3 0
+ 4 6 0
+ 5 1 0
+ 5 2 0
+ 5 3 0
+ 5 6 0
+ 6 1 0
+ 6 2 0
+ 6 4 0
+ 6 5 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 8
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 9.141309354241717
+ 0.6846789290128934
+ 1.137990623107991
+ 6.095139703652558
+ 0.3164452696822672
+ 9.710850299819931
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ -1
+ 1
+ 1
+ -1
+ 1
+ 1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 28
+# columns: 3
+ 1 2 0
+ 1 3 0
+ 1 4 0
+ 1 6 0
+ 2 1 0
+ 2 3 0
+ 2 4 0
+ 2 5 0
+ 2 6 0
+ 3 1 0
+ 3 2 0
+ 3 4 0
+ 3 5 0
+ 3 6 0
+ 4 1 0
+ 4 2 0
+ 4 3 0
+ 4 5 0
+ 4 6 0
+ 5 2 0
+ 5 3 0
+ 5 4 0
+ 5 6 0
+ 6 1 0
+ 6 2 0
+ 6 3 0
+ 6 4 0
+ 6 5 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 8
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 0.5895487619436039
+ 0.2371257095579512
+ 3.966488498925612
+ 9.97863223773904
+ 3.327395096019456
+ 0.1747568720928153
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ 1
+ -1
+ -1
+ 1
+ -1
+ 1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 24
+# columns: 3
+ 1 2 0
+ 1 3 0
+ 1 4 0
+ 1 5 0
+ 1 6 0
+ 2 1 0
+ 2 3 0
+ 2 5 0
+ 2 6 0
+ 3 1 0
+ 3 2 0
+ 3 4 0
+ 3 5 0
+ 4 1 0
+ 4 3 0
+ 4 5 0
+ 4 6 0
+ 5 1 0
+ 5 2 0
+ 5 3 0
+ 5 4 0
+ 6 1 0
+ 6 2 0
+ 6 4 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 8
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 0.3839237480801954
+ 8.032468570944772
+ 9.997145708815772
+ -0.3728519497918992
+ 1.308816843778624
+ 6.561984145659646
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ 1
+ -1
+ 1
+ 1
+ 1
+ -1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 28
+# columns: 3
+ 1 2 0
+ 1 3 0
+ 1 4 0
+ 1 5 0
+ 1 6 0
+ 2 1 0
+ 2 3 0
+ 2 4 0
+ 2 5 0
+ 2 6 0
+ 3 1 0
+ 3 2 0
+ 3 4 0
+ 3 5 0
+ 3 6 0
+ 4 1 0
+ 4 2 0
+ 4 3 0
+ 4 5 0
+ 5 1 0
+ 5 2 0
+ 5 3 0
+ 5 4 0
+ 5 6 0
+ 6 1 0
+ 6 2 0
+ 6 3 0
+ 6 5 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 8
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 9.96255623371019
+ 10.0277507971901
+ 1.051228542823384
+ 0.386992147841382
+ -0.03222987278085778
+ 3.786729666845267
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ 1
+ 1
+ 1
+ 1
+ 1
+ -1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 24
+# columns: 3
+ 1 2 0
+ 1 3 0
+ 1 5 0
+ 2 1 0
+ 2 3 0
+ 2 4 0
+ 2 5 0
+ 3 1 0
+ 3 2 0
+ 3 4 0
+ 3 5 0
+ 3 6 0
+ 4 2 0
+ 4 3 0
+ 4 5 0
+ 4 6 0
+ 5 1 0
+ 5 2 0
+ 5 3 0
+ 5 4 0
+ 5 6 0
+ 6 3 0
+ 6 4 0
+ 6 5 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 8
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ -0.2627811757906364
+ 10.06752867501323
+ 9.842141290736578
+ 5.681469612700087
+ 0.8409142113431365
+ 6.141457862179664
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ 1
+ 1
+ 1
+ -1
+ 1
+ -1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 24
+# columns: 3
+ 1 2 0
+ 1 3 0
+ 1 4 0
+ 1 5 0
+ 1 6 0
+ 2 1 0
+ 2 3 0
+ 2 5 0
+ 3 1 0
+ 3 2 0
+ 3 4 0
+ 3 5 0
+ 4 1 0
+ 4 3 0
+ 4 5 0
+ 4 6 0
+ 5 1 0
+ 5 2 0
+ 5 3 0
+ 5 4 0
+ 5 6 0
+ 6 1 0
+ 6 4 0
+ 6 5 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 8
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 10.10358344385246
+ 2.264242909996987
+ 4.07444637975368
+ 8.909452191812063
+ 1.418149126865307
+ 0.4141590296402882
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ 1
+ -1
+ -1
+ -1
+ 1
+ 1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 26
+# columns: 3
+ 1 2 0
+ 1 4 0
+ 1 5 0
+ 1 6 0
+ 2 1 0
+ 2 3 0
+ 2 5 0
+ 2 6 0
+ 3 2 0
+ 3 4 0
+ 3 5 0
+ 3 6 0
+ 4 1 0
+ 4 3 0
+ 4 5 0
+ 4 6 0
+ 5 1 0
+ 5 2 0
+ 5 3 0
+ 5 4 0
+ 5 6 0
+ 6 1 0
+ 6 2 0
+ 6 3 0
+ 6 4 0
+ 6 5 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 8
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 0.8625033958448527
+ 9.755354875095803
+ 0.899703391757452
+ 0.2312133900477853
+ 5.999625290708154
+ -0.3176312734696897
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ 1
+ 1
+ -1
+ 1
+ -1
+ 1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 24
+# columns: 3
+ 1 2 0
+ 1 3 0
+ 1 4 0
+ 1 5 0
+ 1 6 0
+ 2 1 0
+ 2 3 0
+ 2 4 0
+ 2 5 0
+ 2 6 0
+ 3 1 0
+ 3 2 0
+ 3 5 0
+ 4 1 0
+ 4 2 0
+ 4 6 0
+ 5 1 0
+ 5 2 0
+ 5 3 0
+ 5 6 0
+ 6 1 0
+ 6 2 0
+ 6 4 0
+ 6 5 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 8
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 9.071084308969898
+ 1.107456206131173
+ 9.118995265837833
+ 9.588886266661527
+ 0.3481377634491362
+ 3.306774898223518
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ -1
+ 1
+ -1
+ 1
+ 1
+ -1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 24
+# columns: 3
+ 1 4 0
+ 1 5 0
+ 1 6 0
+ 2 3 0
+ 2 4 0
+ 2 5 0
+ 2 6 0
+ 3 2 0
+ 3 4 0
+ 3 5 0
+ 3 6 0
+ 4 1 0
+ 4 2 0
+ 4 3 0
+ 4 5 0
+ 4 6 0
+ 5 1 0
+ 5 2 0
+ 5 3 0
+ 5 4 0
+ 6 1 0
+ 6 2 0
+ 6 3 0
+ 6 4 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 8
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 10.1088933697243
+ 1.316344889876262
+ 4.943226674840673
+ 0.1310860143394235
+ 9.124817372760273
+ 0.8001397284539706
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ 1
+ 1
+ -1
+ 1
+ -1
+ -1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 24
+# columns: 3
+ 1 2 0
+ 1 3 0
+ 1 4 0
+ 2 1 0
+ 2 3 0
+ 2 4 0
+ 2 5 0
+ 2 6 0
+ 3 1 0
+ 3 2 0
+ 3 4 0
+ 3 5 0
+ 3 6 0
+ 4 1 0
+ 4 2 0
+ 4 3 0
+ 4 5 0
+ 4 6 0
+ 5 2 0
+ 5 3 0
+ 5 4 0
+ 6 2 0
+ 6 3 0
+ 6 4 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 8
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 0.3316495914864598
+ 9.641571612820316
+ 6.668599943516787
+ 7.026005425043517
+ 0.7059762367513214
+ 0.8264826596758438
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ 1
+ 1
+ -1
+ -1
+ 1
+ 1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 28
+# columns: 3
+ 1 2 0
+ 1 3 0
+ 1 4 0
+ 1 5 0
+ 1 6 0
+ 2 1 0
+ 2 3 0
+ 2 4 0
+ 2 5 0
+ 2 6 0
+ 3 1 0
+ 3 2 0
+ 3 4 0
+ 3 5 0
+ 4 1 0
+ 4 2 0
+ 4 3 0
+ 4 5 0
+ 4 6 0
+ 5 1 0
+ 5 2 0
+ 5 3 0
+ 5 4 0
+ 5 6 0
+ 6 1 0
+ 6 2 0
+ 6 4 0
+ 6 5 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 8
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 10.43764627664038
+ -0.1376924829174725
+ 2.790141719556107
+ 1.007597704393463
+ 9.186265578906053
+ 3.429991862916093
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ 1
+ 1
+ -1
+ 1
+ -1
+ -1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 24
+# columns: 3
+ 1 2 0
+ 1 3 0
+ 1 4 0
+ 1 5 0
+ 2 1 0
+ 2 3 0
+ 2 4 0
+ 2 5 0
+ 2 6 0
+ 3 1 0
+ 3 2 0
+ 3 4 0
+ 3 5 0
+ 4 1 0
+ 4 2 0
+ 4 3 0
+ 4 5 0
+ 5 1 0
+ 5 2 0
+ 5 3 0
+ 5 4 0
+ 5 6 0
+ 6 2 0
+ 6 5 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 8
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 8.695245241103677
+ 3.014915861244638
+ 0.9844621684757564
+ 10.09141179249257
+ 7.361445295874976
+ 0.3936256199107171
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ -1
+ -1
+ 1
+ 1
+ -1
+ 1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 26
+# columns: 3
+ 1 2 0
+ 1 3 0
+ 1 4 0
+ 1 6 0
+ 2 1 0
+ 2 3 0
+ 2 4 0
+ 2 5 0
+ 2 6 0
+ 3 1 0
+ 3 2 0
+ 3 4 0
+ 3 5 0
+ 3 6 0
+ 4 1 0
+ 4 2 0
+ 4 3 0
+ 4 5 0
+ 4 6 0
+ 5 2 0
+ 5 3 0
+ 5 4 0
+ 6 1 0
+ 6 2 0
+ 6 3 0
+ 6 4 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 8
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 4.00386120001347
+ 5.92425513525493
+ 1.078074829119675
+ -0.2749790222667464
+ 1.28882336985416
+ 9.755200307367209
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ -1
+ -1
+ 1
+ 1
+ -1
+ 1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 24
+# columns: 3
+ 1 2 0
+ 1 3 0
+ 1 4 0
+ 1 6 0
+ 2 1 0
+ 2 3 0
+ 2 4 0
+ 2 5 0
+ 3 1 0
+ 3 2 0
+ 3 4 0
+ 3 5 0
+ 3 6 0
+ 4 1 0
+ 4 2 0
+ 4 3 0
+ 4 6 0
+ 5 2 0
+ 5 3 0
+ 5 6 0
+ 6 1 0
+ 6 3 0
+ 6 4 0
+ 6 5 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 8
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ -0.1943107964870505
+ 1.087826170775185
+ 10.25850420532765
+ 8.111113662778076
+ 8.180533690409574
+ 3.980478726703325
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ 1
+ 1
+ 1
+ -1
+ -1
+ -1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 26
+# columns: 3
+ 1 2 0
+ 1 3 0
+ 1 4 0
+ 1 5 0
+ 1 6 0
+ 2 1 0
+ 2 3 0
+ 2 4 0
+ 2 5 0
+ 3 1 0
+ 3 2 0
+ 3 4 0
+ 3 5 0
+ 4 1 0
+ 4 2 0
+ 4 3 0
+ 4 5 0
+ 4 6 0
+ 5 1 0
+ 5 2 0
+ 5 3 0
+ 5 4 0
+ 5 6 0
+ 6 1 0
+ 6 4 0
+ 6 5 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 8
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 0.2573831623098463
+ 0.2516741902120223
+ -0.02197284213413342
+ 8.488585187705247
+ 1.155840988061117
+ 9.677500136183184
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ 1
+ 1
+ -1
+ -1
+ 1
+ 1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 28
+# columns: 3
+ 1 2 0
+ 1 3 0
+ 1 4 0
+ 1 5 0
+ 1 6 0
+ 2 1 0
+ 2 3 0
+ 2 4 0
+ 2 5 0
+ 2 6 0
+ 3 1 0
+ 3 2 0
+ 3 4 0
+ 3 5 0
+ 4 1 0
+ 4 2 0
+ 4 3 0
+ 4 5 0
+ 4 6 0
+ 5 1 0
+ 5 2 0
+ 5 3 0
+ 5 4 0
+ 5 6 0
+ 6 1 0
+ 6 2 0
+ 6 4 0
+ 6 5 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 8
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 5.201131640192357
+ 0.3490736482083834
+ 7.129190730353996
+ 2.839244528419316
+ 9.717194491261967
+ 1.080760829551159
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ -1
+ 1
+ -1
+ -1
+ 1
+ 1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 24
+# columns: 3
+ 1 2 0
+ 1 3 0
+ 1 5 0
+ 1 6 0
+ 2 1 0
+ 2 3 0
+ 2 4 0
+ 2 5 0
+ 2 6 0
+ 3 1 0
+ 3 2 0
+ 3 4 0
+ 3 5 0
+ 4 2 0
+ 4 3 0
+ 4 6 0
+ 5 1 0
+ 5 2 0
+ 5 3 0
+ 5 6 0
+ 6 1 0
+ 6 2 0
+ 6 4 0
+ 6 5 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 8
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 0.7983078362419267
+ 9.981853039136949
+ -0.2414510913248651
+ 9.238676637086135
+ 1.942174455964943
+ -0.2169720049977997
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ 1
+ 1
+ 1
+ -1
+ -1
+ 1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 22
+# columns: 3
+ 1 2 0
+ 1 3 0
+ 1 4 0
+ 1 5 0
+ 1 6 0
+ 2 1 0
+ 2 3 0
+ 2 4 0
+ 2 6 0
+ 3 1 0
+ 3 2 0
+ 3 4 0
+ 3 5 0
+ 4 1 0
+ 4 2 0
+ 4 3 0
+ 4 6 0
+ 5 1 0
+ 5 3 0
+ 6 1 0
+ 6 2 0
+ 6 4 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 8
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 10.11665489700955
+ 5.535517641951936
+ 0.9116138842488229
+ 2.801913079949644
+ -0.1359676359175765
+ 0.6515477927282851
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ 1
+ -1
+ 1
+ -1
+ 1
+ 1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 28
+# columns: 3
+ 1 2 0
+ 1 3 0
+ 1 4 0
+ 1 5 0
+ 1 6 0
+ 2 1 0
+ 2 3 0
+ 2 4 0
+ 2 5 0
+ 2 6 0
+ 3 1 0
+ 3 2 0
+ 3 4 0
+ 3 5 0
+ 3 6 0
+ 4 1 0
+ 4 2 0
+ 4 3 0
+ 4 5 0
+ 5 1 0
+ 5 2 0
+ 5 3 0
+ 5 4 0
+ 5 6 0
+ 6 1 0
+ 6 2 0
+ 6 3 0
+ 6 5 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 8
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 10.07474368446632
+ 2.870236579762624
+ 1.821803522315413
+ 0.962303307286452
+ 9.020535899330568
+ 0.06236528799491024
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ 1
+ -1
+ -1
+ 1
+ -1
+ 1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 30
+# columns: 3
+ 1 2 0
+ 1 3 0
+ 1 4 0
+ 1 5 0
+ 1 6 0
+ 2 1 0
+ 2 3 0
+ 2 4 0
+ 2 5 0
+ 2 6 0
+ 3 1 0
+ 3 2 0
+ 3 4 0
+ 3 5 0
+ 3 6 0
+ 4 1 0
+ 4 2 0
+ 4 3 0
+ 4 5 0
+ 4 6 0
+ 5 1 0
+ 5 2 0
+ 5 3 0
+ 5 4 0
+ 5 6 0
+ 6 1 0
+ 6 2 0
+ 6 3 0
+ 6 4 0
+ 6 5 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 8
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 9.85145751752485
+ 1.223456768682841
+ 6.245273600545108
+ 0.9977336204866821
+ 6.969482559157775
+ -0.1621079016355094
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ 1
+ -1
+ -1
+ 1
+ -1
+ 1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 22
+# columns: 3
+ 1 2 0
+ 1 3 0
+ 1 4 0
+ 1 5 0
+ 1 6 0
+ 2 1 0
+ 2 3 0
+ 2 4 0
+ 3 1 0
+ 3 2 0
+ 3 5 0
+ 3 6 0
+ 4 1 0
+ 4 2 0
+ 4 5 0
+ 4 6 0
+ 5 1 0
+ 5 3 0
+ 5 4 0
+ 6 1 0
+ 6 3 0
+ 6 4 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 8
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 0.1986946650956265
+ -0.2001368393121503
+ -0.1482724034830214
+ 0.8799228326472528
+ 10.3636682895951
+ -0.2403524773800056
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ 1
+ -1
+ 1
+ 1
+ 1
+ 1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 26
+# columns: 3
+ 1 2 0
+ 1 3 0
+ 1 4 0
+ 1 5 0
+ 2 1 0
+ 2 3 0
+ 2 5 0
+ 2 6 0
+ 3 1 0
+ 3 2 0
+ 3 4 0
+ 3 5 0
+ 3 6 0
+ 4 1 0
+ 4 3 0
+ 4 5 0
+ 4 6 0
+ 5 1 0
+ 5 2 0
+ 5 3 0
+ 5 4 0
+ 5 6 0
+ 6 2 0
+ 6 3 0
+ 6 4 0
+ 6 5 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 8
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 10.01348191334117
+ 1.244657871406154
+ 4.621679622421433
+ 7.762450499904977
+ 4.03756902291143
+ -0.2003651128373515
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ 1
+ 1
+ -1
+ -1
+ -1
+ 1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 26
+# columns: 3
+ 1 2 0
+ 1 3 0
+ 1 5 0
+ 1 6 0
+ 2 1 0
+ 2 3 0
+ 2 4 0
+ 2 5 0
+ 2 6 0
+ 3 1 0
+ 3 2 0
+ 3 4 0
+ 3 5 0
+ 3 6 0
+ 4 2 0
+ 4 3 0
+ 4 5 0
+ 4 6 0
+ 5 1 0
+ 5 2 0
+ 5 3 0
+ 5 4 0
+ 6 1 0
+ 6 2 0
+ 6 3 0
+ 6 4 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 8
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 6.713543599695411
+ 7.023451420162684
+ 6.050546792089968
+ 10.16056112191038
+ -0.1984743085472316
+ 1.262228148501287
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ -1
+ -1
+ -1
+ 1
+ 1
+ 1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 24
+# columns: 3
+ 1 2 0
+ 1 3 0
+ 1 4 0
+ 1 6 0
+ 2 1 0
+ 2 4 0
+ 2 6 0
+ 3 1 0
+ 3 4 0
+ 3 5 0
+ 3 6 0
+ 4 1 0
+ 4 2 0
+ 4 3 0
+ 4 5 0
+ 4 6 0
+ 5 3 0
+ 5 4 0
+ 5 6 0
+ 6 1 0
+ 6 2 0
+ 6 3 0
+ 6 4 0
+ 6 5 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 8
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 0.3004539484346352
+ 2.413119558976766
+ 9.269937685262203
+ 10.09979602299003
+ 4.531835737858038
+ 0.4941003580238865
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ 1
+ -1
+ -1
+ 1
+ -1
+ 1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 26
+# columns: 3
+ 1 2 0
+ 1 3 0
+ 1 4 0
+ 1 5 0
+ 1 6 0
+ 2 1 0
+ 2 3 0
+ 2 4 0
+ 2 5 0
+ 2 6 0
+ 3 1 0
+ 3 2 0
+ 3 4 0
+ 3 6 0
+ 4 1 0
+ 4 2 0
+ 4 3 0
+ 4 6 0
+ 5 1 0
+ 5 2 0
+ 5 6 0
+ 6 1 0
+ 6 2 0
+ 6 3 0
+ 6 4 0
+ 6 5 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 8
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 1.366532768293144
+ 4.320178371957999
+ 0.09016350146043565
+ 3.620116998190393
+ 10.234323542306
+ 8.283975535541048
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ 1
+ -1
+ 1
+ -1
+ 1
+ -1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 24
+# columns: 3
+ 1 3 0
+ 1 4 0
+ 1 5 0
+ 1 6 0
+ 2 4 0
+ 2 6 0
+ 3 1 0
+ 3 4 0
+ 3 5 0
+ 3 6 0
+ 4 1 0
+ 4 2 0
+ 4 3 0
+ 4 5 0
+ 4 6 0
+ 5 1 0
+ 5 3 0
+ 5 4 0
+ 5 6 0
+ 6 1 0
+ 6 2 0
+ 6 3 0
+ 6 4 0
+ 6 5 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 8
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 0.8311366044048136
+ 5.017373726128492
+ 0.6767029825209647
+ 10.14801013153562
+ -0.3995849626883151
+ 6.083120137789331
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ 1
+ -1
+ 1
+ 1
+ 1
+ -1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 22
+# columns: 3
+ 1 2 0
+ 1 3 0
+ 1 4 0
+ 1 5 0
+ 1 6 0
+ 2 1 0
+ 2 4 0
+ 2 6 0
+ 3 1 0
+ 3 4 0
+ 3 5 0
+ 4 1 0
+ 4 2 0
+ 4 3 0
+ 4 5 0
+ 4 6 0
+ 5 1 0
+ 5 3 0
+ 5 4 0
+ 6 1 0
+ 6 2 0
+ 6 4 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 8
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 5.076893563365978
+ 1.074820778198456
+ 1.99046078798331
+ 2.466331494836526
+ 0.2446018193401993
+ 10.20620531752117
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ -1
+ 1
+ -1
+ -1
+ 1
+ 1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 26
+# columns: 3
+ 1 2 0
+ 1 3 0
+ 1 4 0
+ 1 5 0
+ 1 6 0
+ 2 1 0
+ 2 4 0
+ 2 5 0
+ 2 6 0
+ 3 1 0
+ 3 5 0
+ 3 6 0
+ 4 1 0
+ 4 2 0
+ 4 5 0
+ 4 6 0
+ 5 1 0
+ 5 2 0
+ 5 3 0
+ 5 4 0
+ 5 6 0
+ 6 1 0
+ 6 2 0
+ 6 3 0
+ 6 4 0
+ 6 5 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 8
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 5.179223543014105
+ 0.06587725963196571
+ 0.5603815237308071
+ 0.7543746826707265
+ 10.28508412987767
+ 9.717173813365662
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ -1
+ 1
+ 1
+ 1
+ 1
+ 1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 22
+# columns: 3
+ 1 2 0
+ 1 3 0
+ 1 6 0
+ 2 1 0
+ 2 3 0
+ 2 4 0
+ 2 5 0
+ 2 6 0
+ 3 1 0
+ 3 2 0
+ 3 5 0
+ 3 6 0
+ 4 2 0
+ 4 6 0
+ 5 2 0
+ 5 3 0
+ 5 6 0
+ 6 1 0
+ 6 2 0
+ 6 3 0
+ 6 4 0
+ 6 5 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 8
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 1.945197138374562
+ 10.02488732733119
+ -0.05641143035291091
+ 3.197697290743008
+ 1.196421576219823
+ 6.564074359885038
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ -1
+ 1
+ 1
+ -1
+ 1
+ -1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 22
+# columns: 3
+ 1 2 0
+ 1 3 0
+ 1 5 0
+ 1 6 0
+ 2 1 0
+ 2 3 0
+ 2 5 0
+ 2 6 0
+ 3 1 0
+ 3 2 0
+ 3 4 0
+ 3 5 0
+ 3 6 0
+ 4 3 0
+ 5 1 0
+ 5 2 0
+ 5 3 0
+ 5 6 0
+ 6 1 0
+ 6 2 0
+ 6 3 0
+ 6 5 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 8
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 4.480214244574449
+ 0.8899756643705066
+ 3.86364912327541
+ 0.1180532611579645
+ 1.88627527862042
+ 9.606608102943273
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ -1
+ 1
+ -1
+ 1
+ -1
+ 1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 24
+# columns: 3
+ 1 3 0
+ 1 4 0
+ 1 5 0
+ 1 6 0
+ 2 4 0
+ 2 5 0
+ 2 6 0
+ 3 1 0
+ 3 5 0
+ 3 6 0
+ 4 1 0
+ 4 2 0
+ 4 5 0
+ 4 6 0
+ 5 1 0
+ 5 2 0
+ 5 3 0
+ 5 4 0
+ 5 6 0
+ 6 1 0
+ 6 2 0
+ 6 3 0
+ 6 4 0
+ 6 5 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 8
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 0.7621194578347412
+ 9.672947825153022
+ 9.688448911483283
+ 0.03667419069960754
+ -0.5248455284762402
+ 8.16110754970345
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ 1
+ 1
+ 1
+ 1
+ 1
+ -1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 26
+# columns: 3
+ 1 2 0
+ 1 3 0
+ 1 4 0
+ 1 5 0
+ 1 6 0
+ 2 1 0
+ 2 3 0
+ 2 4 0
+ 2 5 0
+ 3 1 0
+ 3 2 0
+ 3 4 0
+ 3 6 0
+ 4 1 0
+ 4 2 0
+ 4 3 0
+ 4 5 0
+ 4 6 0
+ 5 1 0
+ 5 2 0
+ 5 4 0
+ 5 6 0
+ 6 1 0
+ 6 3 0
+ 6 4 0
+ 6 5 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 8
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 9.874537724926077
+ -0.02202284970382442
+ 0.2495691636892286
+ 3.425401181135073
+ 1.284229392222779
+ -0.3584900086672285
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ 1
+ 1
+ 1
+ -1
+ 1
+ 1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 20
+# columns: 3
+ 1 2 0
+ 1 3 0
+ 1 5 0
+ 1 6 0
+ 2 1 0
+ 2 5 0
+ 2 6 0
+ 3 1 0
+ 3 4 0
+ 3 5 0
+ 4 3 0
+ 4 5 0
+ 5 1 0
+ 5 2 0
+ 5 3 0
+ 5 4 0
+ 5 6 0
+ 6 1 0
+ 6 2 0
+ 6 5 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 8
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 9.771172587246083
+ 0.3143254247234051
+ 9.724237825963568
+ 0.5759358796702279
+ 0.8853444942991902
+ 0.3470741549872624
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ 1
+ 1
+ 1
+ 1
+ 1
+ 1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 22
+# columns: 3
+ 1 4 0
+ 1 5 0
+ 1 6 0
+ 2 3 0
+ 2 4 0
+ 2 5 0
+ 2 6 0
+ 3 2 0
+ 3 5 0
+ 3 6 0
+ 4 1 0
+ 4 2 0
+ 4 6 0
+ 5 1 0
+ 5 2 0
+ 5 3 0
+ 5 6 0
+ 6 1 0
+ 6 2 0
+ 6 3 0
+ 6 4 0
+ 6 5 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 8
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 7.890527901296305
+ 0.2840006929400086
+ 1.033532111970242
+ 9.866870912551162
+ 8.339686260872737
+ 0.1241158125649547
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ -1
+ 1
+ 1
+ 1
+ -1
+ -1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 22
+# columns: 3
+ 1 2 0
+ 1 5 0
+ 1 6 0
+ 2 1 0
+ 2 3 0
+ 2 4 0
+ 2 5 0
+ 2 6 0
+ 3 2 0
+ 3 4 0
+ 3 5 0
+ 4 2 0
+ 4 3 0
+ 4 5 0
+ 5 1 0
+ 5 2 0
+ 5 3 0
+ 5 4 0
+ 5 6 0
+ 6 1 0
+ 6 2 0
+ 6 5 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 8
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ -0.05166754979635149
+ 3.023780400541859
+ 10.10849410777088
+ 8.811280949323084
+ 0.06768442351120234
+ 1.318150828351049
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ 1
+ -1
+ 1
+ -1
+ 1
+ 1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 30
+# columns: 3
+ 1 2 0
+ 1 3 0
+ 1 4 0
+ 1 5 0
+ 1 6 0
+ 2 1 0
+ 2 3 0
+ 2 4 0
+ 2 5 0
+ 2 6 0
+ 3 1 0
+ 3 2 0
+ 3 4 0
+ 3 5 0
+ 3 6 0
+ 4 1 0
+ 4 2 0
+ 4 3 0
+ 4 5 0
+ 4 6 0
+ 5 1 0
+ 5 2 0
+ 5 3 0
+ 5 4 0
+ 5 6 0
+ 6 1 0
+ 6 2 0
+ 6 3 0
+ 6 4 0
+ 6 5 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 8
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 1.431384695634059
+ 7.569249492780976
+ -0.2455314255926382
+ 0.3935085757001944
+ 5.986054816239867
+ 10.01757932567257
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ -1
+ -1
+ 1
+ 1
+ -1
+ 1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 22
+# columns: 3
+ 1 2 0
+ 1 3 0
+ 1 5 0
+ 2 1 0
+ 2 5 0
+ 2 6 0
+ 3 1 0
+ 3 4 0
+ 3 5 0
+ 3 6 0
+ 4 3 0
+ 4 5 0
+ 4 6 0
+ 5 1 0
+ 5 2 0
+ 5 3 0
+ 5 4 0
+ 5 6 0
+ 6 2 0
+ 6 3 0
+ 6 4 0
+ 6 5 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 8
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 2.866321082299877
+ -0.139181785292034
+ 0.01435850859037037
+ 0.9132864343635201
+ 8.375979295956981
+ 9.907566036707754
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ -1
+ 1
+ 1
+ 1
+ -1
+ 1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 24
+# columns: 3
+ 1 2 0
+ 1 4 0
+ 1 5 0
+ 1 6 0
+ 2 1 0
+ 2 4 0
+ 2 6 0
+ 3 4 0
+ 3 5 0
+ 3 6 0
+ 4 1 0
+ 4 2 0
+ 4 3 0
+ 4 5 0
+ 4 6 0
+ 5 1 0
+ 5 3 0
+ 5 4 0
+ 5 6 0
+ 6 1 0
+ 6 2 0
+ 6 3 0
+ 6 4 0
+ 6 5 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 8
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 1.958207035273709
+ -0.2090203194895637
+ 1.48329131406377
+ 2.801898670337931
+ 1.441106804893943
+ 10.01036796077253
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ -1
+ 1
+ 1
+ -1
+ 1
+ 1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 28
+# columns: 3
+ 1 2 0
+ 1 3 0
+ 1 4 0
+ 1 5 0
+ 1 6 0
+ 2 1 0
+ 2 3 0
+ 2 4 0
+ 2 5 0
+ 2 6 0
+ 3 1 0
+ 3 2 0
+ 3 5 0
+ 3 6 0
+ 4 1 0
+ 4 2 0
+ 4 5 0
+ 4 6 0
+ 5 1 0
+ 5 2 0
+ 5 3 0
+ 5 4 0
+ 5 6 0
+ 6 1 0
+ 6 2 0
+ 6 3 0
+ 6 4 0
+ 6 5 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 8
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 0.7274091025250572
+ 0.4368964675372098
+ 4.08051776125691
+ 10.08964581392566
+ 4.593125098136523
+ 0.6276839491296189
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ 1
+ 1
+ -1
+ 1
+ -1
+ 1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 22
+# columns: 3
+ 1 2 0
+ 1 3 0
+ 1 4 0
+ 1 5 0
+ 1 6 0
+ 2 1 0
+ 2 3 0
+ 2 4 0
+ 2 6 0
+ 3 1 0
+ 3 2 0
+ 3 4 0
+ 3 5 0
+ 4 1 0
+ 4 2 0
+ 4 3 0
+ 4 6 0
+ 5 1 0
+ 5 3 0
+ 6 1 0
+ 6 2 0
+ 6 4 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 8
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 4.67945516380602
+ 0.8814516145686995
+ 2.767327460911
+ 5.900352008003769
+ 9.917729139311591
+ -0.02262055516797516
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ -1
+ 1
+ -1
+ -1
+ 1
+ 1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 22
+# columns: 3
+ 1 2 0
+ 1 6 0
+ 2 1 0
+ 2 3 0
+ 2 5 0
+ 2 6 0
+ 3 2 0
+ 3 4 0
+ 3 5 0
+ 3 6 0
+ 4 3 0
+ 4 5 0
+ 4 6 0
+ 5 2 0
+ 5 3 0
+ 5 4 0
+ 5 6 0
+ 6 1 0
+ 6 2 0
+ 6 3 0
+ 6 4 0
+ 6 5 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 8
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 7.001452133341272
+ 0.3039549804621012
+ -0.116795363142435
+ 0.9780337196962492
+ 2.944058797557979
+ 9.501100624115951
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ -1
+ -1
+ 1
+ 1
+ -1
+ 1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 24
+# columns: 3
+ 1 2 0
+ 1 3 0
+ 1 4 0
+ 1 6 0
+ 2 1 0
+ 2 5 0
+ 2 6 0
+ 3 1 0
+ 3 4 0
+ 3 5 0
+ 3 6 0
+ 4 1 0
+ 4 3 0
+ 4 5 0
+ 4 6 0
+ 5 2 0
+ 5 3 0
+ 5 4 0
+ 5 6 0
+ 6 1 0
+ 6 2 0
+ 6 3 0
+ 6 4 0
+ 6 5 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 8
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 0.2329648466451937
+ 10.4335853825394
+ 9.872948909456282
+ 6.933494241593548
+ 7.658896239243674
+ 0.9684800856529169
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ 1
+ 1
+ 1
+ -1
+ -1
+ 1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 26
+# columns: 3
+ 1 2 0
+ 1 3 0
+ 1 4 0
+ 1 5 0
+ 1 6 0
+ 2 1 0
+ 2 4 0
+ 2 5 0
+ 2 6 0
+ 3 1 0
+ 3 5 0
+ 3 6 0
+ 4 1 0
+ 4 2 0
+ 4 5 0
+ 4 6 0
+ 5 1 0
+ 5 2 0
+ 5 3 0
+ 5 4 0
+ 5 6 0
+ 6 1 0
+ 6 2 0
+ 6 3 0
+ 6 4 0
+ 6 5 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 8
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 0.7946912509409665
+ 8.213258371706315
+ 1.184721336832875
+ 9.956306804893654
+ 8.336956270153664
+ -0.03479284609811346
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ 1
+ -1
+ 1
+ 1
+ -1
+ 1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 24
+# columns: 3
+ 1 2 0
+ 1 3 0
+ 1 4 0
+ 1 5 0
+ 1 6 0
+ 2 1 0
+ 2 3 0
+ 2 6 0
+ 3 1 0
+ 3 2 0
+ 3 4 0
+ 3 6 0
+ 4 1 0
+ 4 3 0
+ 4 5 0
+ 4 6 0
+ 5 1 0
+ 5 4 0
+ 5 6 0
+ 6 1 0
+ 6 2 0
+ 6 3 0
+ 6 4 0
+ 6 5 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 8
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 0.1586855175706717
+ 0.2516982278752604
+ 0.9832173634707113
+ 1.388580312438872
+ 10.09858970662749
+ -0.01265683104365257
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ 1
+ -1
+ 1
+ 1
+ 1
+ 1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 24
+# columns: 3
+ 1 2 0
+ 1 3 0
+ 1 4 0
+ 1 5 0
+ 1 6 0
+ 2 1 0
+ 2 4 0
+ 2 6 0
+ 3 1 0
+ 3 5 0
+ 3 6 0
+ 4 1 0
+ 4 2 0
+ 4 5 0
+ 4 6 0
+ 5 1 0
+ 5 3 0
+ 5 4 0
+ 5 6 0
+ 6 1 0
+ 6 2 0
+ 6 3 0
+ 6 4 0
+ 6 5 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 8
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 4.045276561859854
+ -0.5074174228630371
+ 9.831935157237307
+ 1.084977151500291
+ 9.896981688985866
+ 1.122301022586418
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ -1
+ 1
+ 1
+ 1
+ 1
+ 1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 24
+# columns: 3
+ 1 4 0
+ 1 5 0
+ 1 6 0
+ 2 3 0
+ 2 4 0
+ 2 5 0
+ 2 6 0
+ 3 2 0
+ 3 5 0
+ 3 6 0
+ 4 1 0
+ 4 2 0
+ 4 5 0
+ 4 6 0
+ 5 1 0
+ 5 2 0
+ 5 3 0
+ 5 4 0
+ 5 6 0
+ 6 1 0
+ 6 2 0
+ 6 3 0
+ 6 4 0
+ 6 5 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 8
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 9.08830973296492
+ 7.800340347607297
+ 10.08330175034912
+ -0.2756358734956634
+ 0.8118327626747492
+ 10.32831167880721
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ -1
+ -1
+ 1
+ 1
+ 1
+ 1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 28
+# columns: 3
+ 1 2 0
+ 1 3 0
+ 1 4 0
+ 1 5 0
+ 2 1 0
+ 2 3 0
+ 2 4 0
+ 2 5 0
+ 2 6 0
+ 3 1 0
+ 3 2 0
+ 3 4 0
+ 3 5 0
+ 3 6 0
+ 4 1 0
+ 4 2 0
+ 4 3 0
+ 4 5 0
+ 4 6 0
+ 5 1 0
+ 5 2 0
+ 5 3 0
+ 5 4 0
+ 5 6 0
+ 6 2 0
+ 6 3 0
+ 6 4 0
+ 6 5 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 8
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 5.055514469903395
+ 4.050728713544169
+ 7.9860083630964
+ 1.356015748130902
+ -0.424516825004493
+ 10.06757844006254
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ -1
+ -1
+ -1
+ 1
+ 1
+ 1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 28
+# columns: 3
+ 1 2 0
+ 1 4 0
+ 1 5 0
+ 1 6 0
+ 2 1 0
+ 2 3 0
+ 2 4 0
+ 2 5 0
+ 2 6 0
+ 3 2 0
+ 3 4 0
+ 3 5 0
+ 3 6 0
+ 4 1 0
+ 4 2 0
+ 4 3 0
+ 4 5 0
+ 4 6 0
+ 5 1 0
+ 5 2 0
+ 5 3 0
+ 5 4 0
+ 5 6 0
+ 6 1 0
+ 6 2 0
+ 6 3 0
+ 6 4 0
+ 6 5 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 8
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 0.03050541578949791
+ 9.757610342437749
+ 6.666934361052972
+ 1.246197588214159
+ 4.819562385514666
+ 10.22989792786089
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ 1
+ 1
+ -1
+ 1
+ -1
+ 1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 26
+# columns: 3
+ 1 2 0
+ 1 3 0
+ 1 4 0
+ 1 5 0
+ 1 6 0
+ 2 1 0
+ 2 3 0
+ 2 4 0
+ 2 5 0
+ 2 6 0
+ 3 1 0
+ 3 2 0
+ 3 5 0
+ 3 6 0
+ 4 1 0
+ 4 2 0
+ 4 6 0
+ 5 1 0
+ 5 2 0
+ 5 3 0
+ 5 6 0
+ 6 1 0
+ 6 2 0
+ 6 3 0
+ 6 4 0
+ 6 5 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 8
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ -0.2954176872259537
+ 1.748920270200994
+ 9.685225266995925
+ 6.636051674345622
+ 0.4849232483093903
+ 1.011414929196338
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ 1
+ -1
+ 1
+ -1
+ 1
+ 1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 30
+# columns: 3
+ 1 2 0
+ 1 3 0
+ 1 4 0
+ 1 5 0
+ 1 6 0
+ 2 1 0
+ 2 3 0
+ 2 4 0
+ 2 5 0
+ 2 6 0
+ 3 1 0
+ 3 2 0
+ 3 4 0
+ 3 5 0
+ 3 6 0
+ 4 1 0
+ 4 2 0
+ 4 3 0
+ 4 5 0
+ 4 6 0
+ 5 1 0
+ 5 2 0
+ 5 3 0
+ 5 4 0
+ 5 6 0
+ 6 1 0
+ 6 2 0
+ 6 3 0
+ 6 4 0
+ 6 5 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 8
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 7.988487923944312
+ 0.0342153049643643
+ 1.206987971705322
+ 0.80393643202645
+ 10.4450284619412
+ 3.457781179647339
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ -1
+ 1
+ -1
+ 1
+ 1
+ -1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 28
+# columns: 3
+ 1 2 0
+ 1 3 0
+ 1 4 0
+ 1 5 0
+ 1 6 0
+ 2 1 0
+ 2 4 0
+ 2 5 0
+ 2 6 0
+ 3 1 0
+ 3 4 0
+ 3 5 0
+ 3 6 0
+ 4 1 0
+ 4 2 0
+ 4 3 0
+ 4 5 0
+ 4 6 0
+ 5 1 0
+ 5 2 0
+ 5 3 0
+ 5 4 0
+ 5 6 0
+ 6 1 0
+ 6 2 0
+ 6 3 0
+ 6 4 0
+ 6 5 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 8
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 10.2574394292793
+ 1.0093285465163
+ 0.2075646039772054
+ 5.898011383278036
+ 4.978757076342149
+ 0.006822479770743045
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ 1
+ 1
+ 1
+ -1
+ -1
+ 1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 26
+# columns: 3
+ 1 2 0
+ 1 3 0
+ 1 4 0
+ 1 5 0
+ 1 6 0
+ 2 1 0
+ 2 3 0
+ 2 5 0
+ 2 6 0
+ 3 1 0
+ 3 2 0
+ 3 4 0
+ 3 5 0
+ 3 6 0
+ 4 1 0
+ 4 3 0
+ 4 6 0
+ 5 1 0
+ 5 2 0
+ 5 3 0
+ 5 6 0
+ 6 1 0
+ 6 2 0
+ 6 3 0
+ 6 4 0
+ 6 5 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 8
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 1.067486960892677
+ 7.934872358831905
+ 10.06788067251346
+ -0.2131665305361418
+ 5.696604918607593
+ 1.140260718062643
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ 1
+ -1
+ 1
+ 1
+ -1
+ 1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 26
+# columns: 3
+ 1 2 0
+ 1 3 0
+ 1 4 0
+ 1 5 0
+ 2 1 0
+ 2 4 0
+ 2 5 0
+ 2 6 0
+ 3 1 0
+ 3 4 0
+ 3 5 0
+ 3 6 0
+ 4 1 0
+ 4 2 0
+ 4 3 0
+ 4 5 0
+ 4 6 0
+ 5 1 0
+ 5 2 0
+ 5 3 0
+ 5 4 0
+ 5 6 0
+ 6 2 0
+ 6 3 0
+ 6 4 0
+ 6 5 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 8
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 0.2825215261083796
+ 9.981922677308429
+ 5.044823530856655
+ 0.1861413528826512
+ 2.886147714956936
+ 6.081415415497695
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ 1
+ 1
+ -1
+ 1
+ -1
+ -1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 28
+# columns: 3
+ 1 2 0
+ 1 3 0
+ 1 4 0
+ 1 5 0
+ 1 6 0
+ 2 1 0
+ 2 3 0
+ 2 4 0
+ 2 5 0
+ 2 6 0
+ 3 1 0
+ 3 2 0
+ 3 4 0
+ 3 5 0
+ 3 6 0
+ 4 1 0
+ 4 2 0
+ 4 3 0
+ 4 5 0
+ 5 1 0
+ 5 2 0
+ 5 3 0
+ 5 4 0
+ 5 6 0
+ 6 1 0
+ 6 2 0
+ 6 3 0
+ 6 5 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 8
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 10.1707956986268
+ 0.9631510981830286
+ 0.3235233384433487
+ 7.763566745909313
+ 5.070561236234948
+ 10.12036891605053
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ 1
+ 1
+ 1
+ -1
+ -1
+ 1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 26
+# columns: 3
+ 1 2 0
+ 1 3 0
+ 1 5 0
+ 1 6 0
+ 2 1 0
+ 2 3 0
+ 2 5 0
+ 2 6 0
+ 3 1 0
+ 3 2 0
+ 3 4 0
+ 3 5 0
+ 3 6 0
+ 4 3 0
+ 4 5 0
+ 4 6 0
+ 5 1 0
+ 5 2 0
+ 5 3 0
+ 5 4 0
+ 5 6 0
+ 6 1 0
+ 6 2 0
+ 6 3 0
+ 6 4 0
+ 6 5 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 8
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 6.797748000896923
+ -0.01187098321477804
+ 0.9993952177403398
+ 0.2377569051652572
+ 10.23776738009117
+ 2.080233880854288
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ -1
+ -1
+ 1
+ 1
+ 1
+ -1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 26
+# columns: 3
+ 1 2 0
+ 1 3 0
+ 1 4 0
+ 1 5 0
+ 1 6 0
+ 2 1 0
+ 2 4 0
+ 2 5 0
+ 3 1 0
+ 3 4 0
+ 3 5 0
+ 3 6 0
+ 4 1 0
+ 4 2 0
+ 4 3 0
+ 4 5 0
+ 4 6 0
+ 5 1 0
+ 5 2 0
+ 5 3 0
+ 5 4 0
+ 5 6 0
+ 6 1 0
+ 6 3 0
+ 6 4 0
+ 6 5 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 8
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ -0.1641781589504992
+ 0.8771955268433702
+ 9.69861947428414
+ 9.93927565565742
+ 5.201882774943566
+ 0.9839036165847332
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ 1
+ 1
+ -1
+ 1
+ -1
+ 1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 26
+# columns: 3
+ 1 2 0
+ 1 4 0
+ 1 5 0
+ 1 6 0
+ 2 1 0
+ 2 4 0
+ 2 5 0
+ 2 6 0
+ 3 4 0
+ 3 5 0
+ 3 6 0
+ 4 1 0
+ 4 2 0
+ 4 3 0
+ 4 5 0
+ 4 6 0
+ 5 1 0
+ 5 2 0
+ 5 3 0
+ 5 4 0
+ 5 6 0
+ 6 1 0
+ 6 2 0
+ 6 3 0
+ 6 4 0
+ 6 5 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 8
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 1.712709789476971
+ 10.35237462500043
+ 9.046909295962822
+ 1.332332112239128
+ 0.1376395198523117
+ 1.797764547422857
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ -1
+ 1
+ -1
+ 1
+ 1
+ -1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 22
+# columns: 3
+ 1 2 0
+ 1 4 0
+ 1 6 0
+ 2 1 0
+ 2 3 0
+ 2 4 0
+ 2 5 0
+ 3 2 0
+ 3 4 0
+ 3 5 0
+ 3 6 0
+ 4 1 0
+ 4 2 0
+ 4 3 0
+ 4 5 0
+ 5 2 0
+ 5 3 0
+ 5 4 0
+ 5 6 0
+ 6 1 0
+ 6 3 0
+ 6 5 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+4
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 8
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ -0.01893622611719441
+ 0.9712009110055748
+ 9.087349460820001
+ 9.960937636875101
+ 6.64371841934181
+ -0.1676007420716337
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ 1
+ 1
+ -1
+ 1
+ -1
+ 1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 28
+# columns: 3
+ 1 2 0
+ 1 3 0
+ 1 4 0
+ 1 5 0
+ 1 6 0
+ 2 1 0
+ 2 3 0
+ 2 4 0
+ 2 6 0
+ 3 1 0
+ 3 2 0
+ 3 4 0
+ 3 5 0
+ 3 6 0
+ 4 1 0
+ 4 2 0
+ 4 3 0
+ 4 5 0
+ 4 6 0
+ 5 1 0
+ 5 3 0
+ 5 4 0
+ 5 6 0
+ 6 1 0
+ 6 2 0
+ 6 3 0
+ 6 4 0
+ 6 5 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 8
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 10.21454031471858
+ 9.478480158216939
+ 1.090651795832146
+ 0.1679914264830462
+ 3.90585212377454
+ 3.704006833293553
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ 1
+ 1
+ 1
+ 1
+ -1
+ -1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 26
+# columns: 3
+ 1 3 0
+ 1 4 0
+ 1 5 0
+ 1 6 0
+ 2 3 0
+ 2 4 0
+ 2 5 0
+ 2 6 0
+ 3 1 0
+ 3 2 0
+ 3 4 0
+ 3 6 0
+ 4 1 0
+ 4 2 0
+ 4 3 0
+ 4 5 0
+ 4 6 0
+ 5 1 0
+ 5 2 0
+ 5 4 0
+ 5 6 0
+ 6 1 0
+ 6 2 0
+ 6 3 0
+ 6 4 0
+ 6 5 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 8
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 4.159290929795326
+ 0.9931118162787818
+ 6.249532289385549
+ -0.03053946505274831
+ 3.23556955659454
+ 10.13129084550264
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ -1
+ 1
+ -1
+ 1
+ -1
+ 1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 28
+# columns: 3
+ 1 2 0
+ 1 3 0
+ 1 4 0
+ 1 5 0
+ 1 6 0
+ 2 1 0
+ 2 4 0
+ 2 5 0
+ 2 6 0
+ 3 1 0
+ 3 4 0
+ 3 5 0
+ 3 6 0
+ 4 1 0
+ 4 2 0
+ 4 3 0
+ 4 5 0
+ 4 6 0
+ 5 1 0
+ 5 2 0
+ 5 3 0
+ 5 4 0
+ 5 6 0
+ 6 1 0
+ 6 2 0
+ 6 3 0
+ 6 4 0
+ 6 5 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 8
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 1.140503549324225
+ 10.02656889067757
+ 2.987795754525747
+ -0.06716371556730009
+ 2.560781197052455
+ 4.206354241972886
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ 1
+ 1
+ -1
+ 1
+ -1
+ -1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 24
+# columns: 3
+ 1 2 0
+ 1 3 0
+ 1 4 0
+ 1 5 0
+ 1 6 0
+ 2 1 0
+ 2 3 0
+ 2 4 0
+ 2 6 0
+ 3 1 0
+ 3 2 0
+ 3 4 0
+ 3 5 0
+ 4 1 0
+ 4 2 0
+ 4 3 0
+ 4 5 0
+ 4 6 0
+ 5 1 0
+ 5 3 0
+ 5 4 0
+ 6 1 0
+ 6 2 0
+ 6 4 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 8
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 10.13476904729357
+ 6.850437337546336
+ 3.009898405141493
+ 3.066333366357803
+ 0.01124535512535195
+ 1.122359686902861
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ 1
+ -1
+ -1
+ -1
+ 1
+ 1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 30
+# columns: 3
+ 1 2 0
+ 1 3 0
+ 1 4 0
+ 1 5 0
+ 1 6 0
+ 2 1 0
+ 2 3 0
+ 2 4 0
+ 2 5 0
+ 2 6 0
+ 3 1 0
+ 3 2 0
+ 3 4 0
+ 3 5 0
+ 3 6 0
+ 4 1 0
+ 4 2 0
+ 4 3 0
+ 4 5 0
+ 4 6 0
+ 5 1 0
+ 5 2 0
+ 5 3 0
+ 5 4 0
+ 5 6 0
+ 6 1 0
+ 6 2 0
+ 6 3 0
+ 6 4 0
+ 6 5 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+
+
+
+
+
+# name: g6_20
+# type: cell
+# rows: 1
+# columns: 20
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 9
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 10.13476904729357
+ 6.850437337546336
+ 3.009898405141493
+ 3.066333366357803
+ 0.01124535512535195
+ 1.122359686902861
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ 1
+ -1
+ -1
+ -1
+ 1
+ 1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 30
+# columns: 3
+ 1 2 0
+ 1 3 0
+ 1 4 0
+ 1 5 0
+ 1 6 0
+ 2 1 0
+ 2 3 0
+ 2 4 0
+ 2 5 0
+ 2 6 0
+ 3 1 0
+ 3 2 0
+ 3 4 0
+ 3 5 0
+ 3 6 0
+ 4 1 0
+ 4 2 0
+ 4 3 0
+ 4 5 0
+ 4 6 0
+ 5 1 0
+ 5 2 0
+ 5 3 0
+ 5 4 0
+ 5 6 0
+ 6 1 0
+ 6 2 0
+ 6 3 0
+ 6 4 0
+ 6 5 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+# name: nodeOrientedTask
+# type: bool
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 9
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 4.17687290303964
+ 10.13937705077208
+ 6.077902750479068
+ 1.936140827027966
+ 0.7921568692404202
+ -0.1147996655900881
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ -1
+ 1
+ -1
+ -1
+ 1
+ 1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 28
+# columns: 3
+ 1 2 0
+ 1 3 0
+ 1 4 0
+ 1 5 0
+ 2 1 0
+ 2 3 0
+ 2 4 0
+ 2 5 0
+ 2 6 0
+ 3 1 0
+ 3 2 0
+ 3 4 0
+ 3 5 0
+ 3 6 0
+ 4 1 0
+ 4 2 0
+ 4 3 0
+ 4 5 0
+ 4 6 0
+ 5 1 0
+ 5 2 0
+ 5 3 0
+ 5 4 0
+ 5 6 0
+ 6 2 0
+ 6 3 0
+ 6 4 0
+ 6 5 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+# name: nodeOrientedTask
+# type: bool
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 9
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 10.21195668688382
+ 5.619159249514001
+ -0.264556606584439
+ 9.504909234152745
+ 1.166562515446551
+ -0.06562607300212882
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ 1
+ -1
+ 1
+ 1
+ 1
+ 1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 28
+# columns: 3
+ 1 2 0
+ 1 3 0
+ 1 5 0
+ 1 6 0
+ 2 1 0
+ 2 3 0
+ 2 4 0
+ 2 5 0
+ 2 6 0
+ 3 1 0
+ 3 2 0
+ 3 4 0
+ 3 5 0
+ 3 6 0
+ 4 2 0
+ 4 3 0
+ 4 5 0
+ 4 6 0
+ 5 1 0
+ 5 2 0
+ 5 3 0
+ 5 4 0
+ 5 6 0
+ 6 1 0
+ 6 2 0
+ 6 3 0
+ 6 4 0
+ 6 5 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+# name: nodeOrientedTask
+# type: bool
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 9
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ -0.399688365560902
+ 3.062949728176507
+ 6.261480417589447
+ 0.169603559074865
+ 9.815741957202501
+ 0.8363767748606631
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ 1
+ -1
+ -1
+ 1
+ 1
+ 1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 24
+# columns: 3
+ 1 2 0
+ 1 5 0
+ 1 6 0
+ 2 1 0
+ 2 3 0
+ 2 4 0
+ 2 5 0
+ 2 6 0
+ 3 2 0
+ 3 4 0
+ 3 5 0
+ 4 2 0
+ 4 3 0
+ 4 5 0
+ 4 6 0
+ 5 1 0
+ 5 2 0
+ 5 3 0
+ 5 4 0
+ 5 6 0
+ 6 1 0
+ 6 2 0
+ 6 4 0
+ 6 5 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+# name: nodeOrientedTask
+# type: bool
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 9
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 10.4597393736149
+ 1.019397970879518
+ 0.1490445693786377
+ 6.085456212602384
+ 7.676306128590241
+ 10.02238457236898
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ 1
+ 1
+ 1
+ -1
+ -1
+ 1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 28
+# columns: 3
+ 1 2 0
+ 1 3 0
+ 1 4 0
+ 1 5 0
+ 1 6 0
+ 2 1 0
+ 2 3 0
+ 2 4 0
+ 2 5 0
+ 2 6 0
+ 3 1 0
+ 3 2 0
+ 3 4 0
+ 3 5 0
+ 3 6 0
+ 4 1 0
+ 4 2 0
+ 4 3 0
+ 4 5 0
+ 4 6 0
+ 5 1 0
+ 5 2 0
+ 5 3 0
+ 5 4 0
+ 6 1 0
+ 6 2 0
+ 6 3 0
+ 6 4 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+# name: nodeOrientedTask
+# type: bool
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 9
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 3.89852812468816
+ 5.177390649093267
+ -0.2641159345225979
+ 10.11395291130266
+ 1.53654625084198
+ 4.109992468717222
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ -1
+ -1
+ 1
+ 1
+ 1
+ -1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 28
+# columns: 3
+ 1 2 0
+ 1 3 0
+ 1 4 0
+ 1 5 0
+ 1 6 0
+ 2 1 0
+ 2 3 0
+ 2 4 0
+ 2 5 0
+ 2 6 0
+ 3 1 0
+ 3 2 0
+ 3 4 0
+ 3 5 0
+ 3 6 0
+ 4 1 0
+ 4 2 0
+ 4 3 0
+ 4 5 0
+ 5 1 0
+ 5 2 0
+ 5 3 0
+ 5 4 0
+ 5 6 0
+ 6 1 0
+ 6 2 0
+ 6 3 0
+ 6 5 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+# name: nodeOrientedTask
+# type: bool
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 9
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 10.1010370363625
+ 8.793391413523272
+ 8.042095171353916
+ 0.8571128742415117
+ -0.4365819474572112
+ 4.212357508391857
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ 1
+ -1
+ -1
+ 1
+ 1
+ -1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 26
+# columns: 3
+ 1 2 0
+ 1 3 0
+ 1 4 0
+ 1 5 0
+ 1 6 0
+ 2 1 0
+ 2 3 0
+ 2 5 0
+ 2 6 0
+ 3 1 0
+ 3 2 0
+ 3 5 0
+ 3 6 0
+ 4 1 0
+ 4 5 0
+ 4 6 0
+ 5 1 0
+ 5 2 0
+ 5 3 0
+ 5 4 0
+ 5 6 0
+ 6 1 0
+ 6 2 0
+ 6 3 0
+ 6 4 0
+ 6 5 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+# name: nodeOrientedTask
+# type: bool
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 9
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 9.830066570501661
+ 3.854967743728338
+ 0.7825978729423846
+ 0.1360116718062502
+ 0.8627166509829166
+ 8.201540622421835
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ 1
+ -1
+ 1
+ 1
+ -1
+ -1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 24
+# columns: 3
+ 1 2 0
+ 1 3 0
+ 1 4 0
+ 1 6 0
+ 2 1 0
+ 2 4 0
+ 2 5 0
+ 2 6 0
+ 3 1 0
+ 3 4 0
+ 3 5 0
+ 3 6 0
+ 4 1 0
+ 4 2 0
+ 4 3 0
+ 4 5 0
+ 4 6 0
+ 5 2 0
+ 5 3 0
+ 5 4 0
+ 6 1 0
+ 6 2 0
+ 6 3 0
+ 6 4 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+# name: nodeOrientedTask
+# type: bool
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 9
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 10.60098180685291
+ 2.838873815908996
+ 0.1577925526989784
+ 0.09343964824091421
+ 4.983695344473372
+ 1.391390533179402
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ 1
+ -1
+ 1
+ 1
+ -1
+ 1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 28
+# columns: 3
+ 1 2 0
+ 1 3 0
+ 1 4 0
+ 1 5 0
+ 1 6 0
+ 2 1 0
+ 2 3 0
+ 2 4 0
+ 2 6 0
+ 3 1 0
+ 3 2 0
+ 3 4 0
+ 3 5 0
+ 3 6 0
+ 4 1 0
+ 4 2 0
+ 4 3 0
+ 4 5 0
+ 4 6 0
+ 5 1 0
+ 5 3 0
+ 5 4 0
+ 5 6 0
+ 6 1 0
+ 6 2 0
+ 6 3 0
+ 6 4 0
+ 6 5 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+# name: nodeOrientedTask
+# type: bool
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 9
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 0.82767195209023
+ 9.842066682447337
+ 0.1160937569837985
+ 1.743591247239682
+ 8.850085069013661
+ 4.199035490130758
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ 1
+ 1
+ 1
+ -1
+ -1
+ -1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 28
+# columns: 3
+ 1 2 0
+ 1 3 0
+ 1 4 0
+ 1 6 0
+ 2 1 0
+ 2 3 0
+ 2 4 0
+ 2 5 0
+ 2 6 0
+ 3 1 0
+ 3 2 0
+ 3 4 0
+ 3 5 0
+ 3 6 0
+ 4 1 0
+ 4 2 0
+ 4 3 0
+ 4 5 0
+ 4 6 0
+ 5 2 0
+ 5 3 0
+ 5 4 0
+ 5 6 0
+ 6 1 0
+ 6 2 0
+ 6 3 0
+ 6 4 0
+ 6 5 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+# name: nodeOrientedTask
+# type: bool
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 9
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 7.209467914971038
+ 9.23011513954911
+ 10.22765341936759
+ 1.194369833994116
+ 5.719528579105712
+ 0.4805232844504542
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ -1
+ -1
+ 1
+ 1
+ -1
+ 1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 26
+# columns: 3
+ 1 2 0
+ 1 3 0
+ 1 4 0
+ 1 5 0
+ 1 6 0
+ 2 1 0
+ 2 3 0
+ 2 4 0
+ 2 5 0
+ 2 6 0
+ 3 1 0
+ 3 2 0
+ 3 4 0
+ 3 5 0
+ 3 6 0
+ 4 1 0
+ 4 2 0
+ 4 3 0
+ 4 6 0
+ 5 1 0
+ 5 2 0
+ 5 3 0
+ 6 1 0
+ 6 2 0
+ 6 3 0
+ 6 4 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+# name: nodeOrientedTask
+# type: bool
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 9
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 0.2364153741002964
+ 0.7005479327403047
+ 2.086502105533594
+ 10.51669715735736
+ 0.1759093257616728
+ 2.322437571582872
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ 1
+ 1
+ -1
+ 1
+ 1
+ -1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 30
+# columns: 3
+ 1 2 0
+ 1 3 0
+ 1 4 0
+ 1 5 0
+ 1 6 0
+ 2 1 0
+ 2 3 0
+ 2 4 0
+ 2 5 0
+ 2 6 0
+ 3 1 0
+ 3 2 0
+ 3 4 0
+ 3 5 0
+ 3 6 0
+ 4 1 0
+ 4 2 0
+ 4 3 0
+ 4 5 0
+ 4 6 0
+ 5 1 0
+ 5 2 0
+ 5 3 0
+ 5 4 0
+ 5 6 0
+ 6 1 0
+ 6 2 0
+ 6 3 0
+ 6 4 0
+ 6 5 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+# name: nodeOrientedTask
+# type: bool
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 9
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 9.901366791681884
+ 0.6534871374780865
+ 5.830196137798373
+ 3.105256465324154
+ 0.8948519766889582
+ 4.879561667983798
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ 1
+ 1
+ -1
+ -1
+ 1
+ -1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 24
+# columns: 3
+ 1 2 0
+ 1 3 0
+ 1 5 0
+ 1 6 0
+ 2 1 0
+ 2 3 0
+ 2 4 0
+ 2 5 0
+ 2 6 0
+ 3 1 0
+ 3 2 0
+ 3 4 0
+ 3 6 0
+ 4 2 0
+ 4 3 0
+ 4 5 0
+ 4 6 0
+ 5 1 0
+ 5 2 0
+ 5 4 0
+ 6 1 0
+ 6 2 0
+ 6 3 0
+ 6 4 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+# name: nodeOrientedTask
+# type: bool
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 9
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 0.146496278374728
+ 5.84639795170612
+ 2.850831087376602
+ 1.84316492538524
+ 0.8948039080274609
+ 9.717929724134445
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ 1
+ -1
+ -1
+ -1
+ 1
+ 1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 26
+# columns: 3
+ 1 2 0
+ 1 3 0
+ 1 4 0
+ 1 5 0
+ 1 6 0
+ 2 1 0
+ 2 3 0
+ 2 4 0
+ 2 6 0
+ 3 1 0
+ 3 2 0
+ 3 5 0
+ 3 6 0
+ 4 1 0
+ 4 2 0
+ 4 5 0
+ 4 6 0
+ 5 1 0
+ 5 3 0
+ 5 4 0
+ 5 6 0
+ 6 1 0
+ 6 2 0
+ 6 3 0
+ 6 4 0
+ 6 5 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+# name: nodeOrientedTask
+# type: bool
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 9
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 0.02626024785074969
+ 1.168387275632658
+ 9.870098550321705
+ 4.99140172628724
+ 7.307242300590892
+ 7.805329642322077
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ 1
+ 1
+ 1
+ -1
+ -1
+ -1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 28
+# columns: 3
+ 1 2 0
+ 1 3 0
+ 1 4 0
+ 1 5 0
+ 1 6 0
+ 2 1 0
+ 2 3 0
+ 2 5 0
+ 2 6 0
+ 3 1 0
+ 3 2 0
+ 3 4 0
+ 3 5 0
+ 3 6 0
+ 4 1 0
+ 4 3 0
+ 4 5 0
+ 4 6 0
+ 5 1 0
+ 5 2 0
+ 5 3 0
+ 5 4 0
+ 5 6 0
+ 6 1 0
+ 6 2 0
+ 6 3 0
+ 6 4 0
+ 6 5 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+# name: nodeOrientedTask
+# type: bool
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 9
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 0.1059752452686438
+ 1.555350978190682
+ 1.232727308012682
+ 9.95746437064561
+ 6.997048994512234
+ 5.847370570746135
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ 1
+ -1
+ 1
+ 1
+ -1
+ -1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 30
+# columns: 3
+ 1 2 0
+ 1 3 0
+ 1 4 0
+ 1 5 0
+ 1 6 0
+ 2 1 0
+ 2 3 0
+ 2 4 0
+ 2 5 0
+ 2 6 0
+ 3 1 0
+ 3 2 0
+ 3 4 0
+ 3 5 0
+ 3 6 0
+ 4 1 0
+ 4 2 0
+ 4 3 0
+ 4 5 0
+ 4 6 0
+ 5 1 0
+ 5 2 0
+ 5 3 0
+ 5 4 0
+ 5 6 0
+ 6 1 0
+ 6 2 0
+ 6 3 0
+ 6 4 0
+ 6 5 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+# name: nodeOrientedTask
+# type: bool
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 9
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 9.494879690041502
+ 0.2089344143441335
+ 0.5005793349500236
+ 2.796501054798338
+ 4.138326514631381
+ 4.495076488249897
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ 1
+ 1
+ 1
+ -1
+ -1
+ -1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 20
+# columns: 3
+ 1 2 0
+ 1 3 0
+ 1 4 0
+ 1 5 0
+ 1 6 0
+ 2 1 0
+ 2 3 0
+ 2 4 0
+ 2 5 0
+ 2 6 0
+ 3 1 0
+ 3 2 0
+ 4 1 0
+ 4 2 0
+ 4 5 0
+ 5 1 0
+ 5 2 0
+ 5 4 0
+ 6 1 0
+ 6 2 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+# name: nodeOrientedTask
+# type: bool
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 9
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 9.084484796022609
+ 0.02240277436856341
+ 1.286088266127129
+ -0.1364853828712785
+ 9.864560375528724
+ 8.0368235298958
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ -1
+ -1
+ 1
+ 1
+ 1
+ -1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 24
+# columns: 3
+ 1 2 0
+ 1 3 0
+ 1 4 0
+ 1 5 0
+ 2 1 0
+ 2 4 0
+ 2 5 0
+ 2 6 0
+ 3 1 0
+ 3 4 0
+ 3 5 0
+ 3 6 0
+ 4 1 0
+ 4 2 0
+ 4 3 0
+ 4 5 0
+ 5 1 0
+ 5 2 0
+ 5 3 0
+ 5 4 0
+ 5 6 0
+ 6 2 0
+ 6 3 0
+ 6 5 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+# name: nodeOrientedTask
+# type: bool
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 9
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 0.04024709842517679
+ 9.978357944116345
+ 1.162140052658856
+ 1.38218119076051
+ 9.956233637196146
+ 6.985636140805457
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ 1
+ 1
+ 1
+ 1
+ 1
+ -1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 26
+# columns: 3
+ 1 2 0
+ 1 3 0
+ 1 4 0
+ 1 5 0
+ 1 6 0
+ 2 1 0
+ 2 3 0
+ 2 4 0
+ 2 6 0
+ 3 1 0
+ 3 2 0
+ 3 5 0
+ 3 6 0
+ 4 1 0
+ 4 2 0
+ 4 5 0
+ 4 6 0
+ 5 1 0
+ 5 3 0
+ 5 4 0
+ 5 6 0
+ 6 1 0
+ 6 2 0
+ 6 3 0
+ 6 4 0
+ 6 5 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+# name: nodeOrientedTask
+# type: bool
+1
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 9
+# name: nodeLabels
+# type: matrix
+# rows: 6
+# columns: 1
+ 2.007223235802337
+ 3.905930482144832
+ 0.7468821931012273
+ -0.04437890325816408
+ 9.675752317228358
+ 8.991255907332667
+
+
+# name: expectedOutput
+# type: matrix
+# rows: 6
+# columns: 1
+ -1
+ -1
+ 1
+ 1
+ 1
+ -1
+
+
+# name: edgeLabels
+# type: matrix
+# rows: 28
+# columns: 3
+ 1 2 0
+ 1 3 0
+ 1 5 0
+ 1 6 0
+ 2 1 0
+ 2 3 0
+ 2 4 0
+ 2 5 0
+ 2 6 0
+ 3 1 0
+ 3 2 0
+ 3 4 0
+ 3 5 0
+ 3 6 0
+ 4 2 0
+ 4 3 0
+ 4 5 0
+ 4 6 0
+ 5 1 0
+ 5 2 0
+ 5 3 0
+ 5 4 0
+ 5 6 0
+ 6 1 0
+ 6 2 0
+ 6 3 0
+ 6 4 0
+ 6 5 0
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: nNodes
+# type: scalar
+6
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: nodeOutputSize
+# type: scalar
+1
+
+
+# name: nodeOrientedTask
+# type: bool
+1
+
+
+
+
+
+
+
+# name: initGnn
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 10
+# name: transitionNet
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 15
+# name: weights1
+# type: matrix
+# rows: 5
+# columns: 7
+ -0.0551325792246103 0.08494914148685689 -0.1007396877610667 -0.1090855792875259 -0.06616011206839374 0.06134735818520159 0.01646628453559104
+ 0.1072229318013574 0.00256539139358497 0.01382799406078092 -0.09849353060508108 -0.01136104384082152 -0.06456029884561031 -0.07933334601420476
+ 0.1062240672346528 -0.02033235434753632 -0.05262803390000202 -0.09240462331261086 -0.02338454861543758 -0.09684517718271431 -0.08073345239882189
+ 0.03244560801558635 0.006865356968477121 -0.1023707081134024 0.003523594313186967 -0.09118700874804943 -0.02605798432562677 0.115372695091125
+ -0.08603617867306666 -0.0005586477901510095 -0.05363447174701035 0.04661288660160726 -0.04842326857932887 -0.02896251024371606 -0.1030051478760104
+
+
+# name: bias1
+# type: matrix
+# rows: 5
+# columns: 1
+ -0.06325526817175907
+ 0.09504474165585849
+ 0.09812890665209978
+ 0.07774199716073443
+ -0.02071520223230612
+
+
+# name: weights2
+# type: matrix
+# rows: 5
+# columns: 5
+ -0.1384660146523415 0.07526450697114544 -0.1447104892776439 0.1394963134582016 0.07087288867355794
+ -0.1622209451947823 0.0789097232268003 0.05161217546796145 -0.03182842900166385 0.03147579738941745
+ -0.02523593895746684 -0.1280818047594904 0.002704525760531558 0.0008130950124113356 -0.05016867859597457
+ 0.1515508555846416 0.1203024365597267 -0.1467309224313163 -0.02987263050532183 -0.00409800094257982
+ -0.0577941074923089 0.03080911307684468 -0.02822467809154426 -0.05219236566969434 0.00117917941341709
+
+
+# name: bias2
+# type: matrix
+# rows: 5
+# columns: 1
+ -0.09971827268023482
+ -0.08619396450706619
+ -0.08642076215252047
+ -0.1594001274852241
+ 0.07381952618172034
+
+
+# name: nInputLines
+# type: scalar
+7
+
+
+# name: nHiddenNeurons
+# type: scalar
+5
+
+
+# name: nOutputNeurons
+# type: scalar
+5
+
+
+# name: nWeights
+# type: scalar
+70
+
+
+# name: outputFun
+# type: sq_string
+# elements: 1
+# length: 6
+tansig
+
+
+# name: activation1
+# type: matrix
+# rows: 0
+# columns: 0
+
+
+# name: activationderivative1
+# type: matrix
+# rows: 0
+# columns: 0
+
+
+# name: activation2ndderivative1
+# type: matrix
+# rows: 0
+# columns: 0
+
+
+# name: activation2
+# type: matrix
+# rows: 0
+# columns: 0
+
+
+# name: activationderivative2
+# type: matrix
+# rows: 0
+# columns: 0
+
+
+# name: activation2ndderivative2
+# type: matrix
+# rows: 0
+# columns: 0
+
+
+
+
+# name: outputNet
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 15
+# name: weights1
+# type: matrix
+# rows: 5
+# columns: 5
+ -0.0183831066427088 -0.01293921662838165 0.001398523160769642 -0.02255765277563841 0.02776242696746389
+ 0.01657820101802404 0.001596568644321672 0.01914775661761704 0.02838589300403156 0.03266136242328065
+ -0.02076167601972804 0.01297034921734042 0.02208371927000175 0.01604250600139641 -0.009011814992069152
+ 0.02282858824419502 -0.01098583247021399 -0.01167169003389763 0.01773966032055243 0.008497055259832648
+ -0.01708849339975791 -0.007719218649969417 0.006953460919981487 -0.02935468335439637 -0.01174378812432457
+
+
+# name: bias1
+# type: matrix
+# rows: 5
+# columns: 1
+ -0.1285162502740376
+ 0.1317430330268958
+ 0.1528202973229739
+ 0.1053531684026474
+ -0.1564638684616349
+
+
+# name: weights2
+# type: matrix
+# rows: 1
+# columns: 5
+ 0.06408486277784946 0.1569618444752182 -0.1260456081214157 0.1641111565527044 -0.06875385445775185
+
+
+# name: bias2
+# type: scalar
+-0.09094604988292986
+
+
+# name: nInputLines
+# type: scalar
+5
+
+
+# name: nHiddenNeurons
+# type: scalar
+5
+
+
+# name: nOutputNeurons
+# type: scalar
+1
+
+
+# name: nWeights
+# type: scalar
+36
+
+
+# name: outputFun
+# type: sq_string
+# elements: 1
+# length: 6
+tansig
+
+
+# name: activation1
+# type: matrix
+# rows: 0
+# columns: 0
+
+
+# name: activationderivative1
+# type: matrix
+# rows: 0
+# columns: 0
+
+
+# name: activation2ndderivative1
+# type: matrix
+# rows: 0
+# columns: 0
+
+
+# name: activation2
+# type: matrix
+# rows: 0
+# columns: 0
+
+
+# name: activationderivative2
+# type: matrix
+# rows: 0
+# columns: 0
+
+
+# name: activation2ndderivative2
+# type: matrix
+# rows: 0
+# columns: 0
+
+
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: stateSize
+# type: scalar
+5
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: minStateDiff
+# type: scalar
+1e-08
+
+
+# name: minErrorAccDiff
+# type: scalar
+1e-08
+
+
+# name: contractionConstant
+# type: scalar
+0.9
+
+
+# name: nWeights
+# type: scalar
+106
+
+
+
+
+# name: time
+# type: scalar
+45282.41159701347
+
+
+# name: trainEval
+# type: matrix
+# rows: 1
+# columns: 3
+ 0.90208 0.8878200000000001 0.95848
+
+
+# name: trainStats
+# type: matrix
+# rows: 101
+# columns: 10
+ 22.28962235195073 12 8 0 0 0 100 7 7 0
+ 21.36548141969966 14 11 0 47 39 100 7 7 0
+ 24.69401430838698 17 12 0 17 44 100 7 7 0
+ 24.08986098890545 13 8 0 56 53 100 7 7 0
+ 21.80692105546299 20 14 0 21 36 100 7 7 0
+ 21.67476974414375 17 10 0 60 47 100 7 7 0
+ 21.483723771276 26 18 0 3 28 100 7 7 0
+ 21.27884556795785 48 32 0 17 36 100 7 7 0
+ 20.96463583196928 32 27 0 13 14 100 7 7 0
+ 20.76551035019092 33 27 0 16 22 100 7 7 0
+ 20.27717794738274 39 30 1 21 14 94 59 53 306
+ 20.20751575861082 52 41 1 16 50 74 89 63 2404
+ 20.11493038327137 59 44 1 36 14 77 77 54 1103
+ 19.66508424609831 34 26 1 26 36 76 79 54 195
+ 19.33965751025402 127 104 1 24 25 56 89 44 588
+ 19.13760760383527 85 77 1 17 36 69 79 47 550
+ 18.6552041975101 201 201 1 20 17 66 94 60 15221
+ 18.26089764884087 151 179 1 20 11 63 94 57 21311
+ 18.31125439005372 80 88 1 11 14 57 94 51 1198
+ 18.56647788998587 139 145 1 17 31 41 90 31 6762
+ 17.93383756099438 58 29 1 33 17 51 89 40 289
+ 18.22219237938191 121 85 1 11 25 53 94 47 897
+ 17.09397675172244 201 106 1 23 44 57 96 53 14539
+ 18.71165596898612 201 201 1 34 44 77 76 53 569
+ 16.86786039453603 201 201 1 30 42 83 77 60 6081
+ 17.29086436003512 201 201 1 21 22 83 61 44 2348
+ 17.43892326647152 58 32 1 44 22 60 81 41 1417
+ 16.90457815385636 201 79 1 13 31 54 96 50 4835
+ 16.97692583967193 201 201 1 17 61 51 84 36 20998
+ 16.63564633436919 201 201 1 9 19 47 96 43 4754
+ 16.60869137874415 201 201 1 27 6 77 69 46 604
+ 16.17857116216005 201 201 1 14 22 84 57 41 1198
+ 16.01762122126751 201 201 1 51 22 81 74 56 2100
+ 16.16871248324572 201 201 1 13 8 87 63 50 264
+ 15.54995745701521 201 201 1 30 31 81 66 47 1215
+ 14.98089659096551 201 201 1 17 19 81 86 67 4705
+ 14.99319860959481 201 201 1 30 31 84 61 46 218
+ 14.49437771709757 201 201 1 49 0 96 56 51 0
+ 14.13584677485279 201 201 1 20 0 83 54 37 9263
+ 13.34514840372377 201 201 1 29 11 90 49 39 323
+ 13.71301761480928 201 201 1 34 81 57 90 47 5950
+ 14.13232125115135 201 201 1 10 14 84 71 56 7061
+ 13.78822707211228 201 201 1 31 14 90 76 66 1641
+ 13.67804966874802 201 201 1 36 81 90 73 63 9299
+ 13.87106419442636 201 201 1 21 11 81 67 49 2006
+ 13.30419586085904 201 201 1 33 39 87 71 59 621
+ 13.40801762103231 201 201 1 9 0 87 77 64 1706
+ 13.86181756667956 201 201 1 26 8 93 50 43 2572
+ 14.33518932845673 201 201 1 39 8 90 67 57 10352
+ 13.16859690307827 201 201 1 43 31 93 71 64 44
+ 13.49188116180223 201 201 1 23 33 93 61 54 3
+ 13.92257294644597 201 201 1 21 0 96 61 57 0
+ 14.43080873535217 201 201 1 27 11 96 51 47 0
+ 15.55272138734797 201 201 1 26 0 96 54 50 0
+ 18.38483533255578 201 201 1 40 14 91 54 46 10940
+ 14.60676436856529 201 201 1 44 6 96 53 49 0
+ 13.45628816241577 201 201 1 16 44 94 60 54 2
+ 14.27096893752303 201 201 1 39 3 96 47 43 0
+ 12.74149627557432 201 201 1 29 17 94 64 59 4
+ 12.50189142499423 201 201 1 29 28 91 50 41 448
+ 12.87854804530993 201 201 1 40 28 90 57 47 267
+ 12.37843135762198 201 201 1 26 3 91 64 56 256
+ 12.44619384631675 201 201 1 31 17 91 60 51 12552
+ 12.6124243754879 201 201 1 34 3 93 46 39 527
+ 12.88393394800024 201 201 1 30 28 90 57 47 2960
+ 12.63515855859394 201 201 1 20 56 93 63 56 2936
+ 12.65083596715444 201 201 1 27 14 94 54 49 69
+ 12.99393419159636 201 201 1 30 11 57 91 49 22459
+ 12.51129319493587 201 201 1 27 17 83 66 49 14463
+ 12.39280891718026 201 201 1 17 25 87 50 37 5525
+ 12.27262132947085 201 201 1 30 14 89 66 54 9124
+ 12.46794452963597 201 201 1 17 14 93 53 46 2110
+ 12.43976114883175 201 201 1 14 22 90 57 47 17981
+ 12.23752374494848 201 201 1 7 22 89 50 39 12746
+ 12.29925744949683 201 201 1 37 31 89 61 50 114836
+ 12.40823078454244 201 201 1 1 8 89 66 54 57301
+ 12.41615675707621 201 201 1 4 17 89 61 50 107708
+ 12.42339572646189 201 201 1 29 6 50 94 44 356406
+ 12.27100414820011 201 201 1 0 33 54 94 49 25910
+ 12.23477618573053 201 201 1 39 0 87 57 44 38029
+ 12.23302649121793 201 201 1 23 19 86 60 46 203962
+ 12.39084538117884 201 201 1 11 25 53 93 46 28416
+ 12.44316581901727 201 201 1 23 19 86 69 54 34740
+ 12.45873340932587 201 201 1 39 11 87 56 43 28954
+ 12.45510092598826 201 201 1 11 39 59 97 56 29976
+ 12.5100844151013 201 201 1 36 6 87 53 40 12683
+ 12.53877330067039 201 201 1 33 25 93 46 39 82
+ 12.61331940951262 201 201 1 19 28 89 57 46 11699
+ 12.56684401334147 201 201 1 40 25 91 56 47 6749
+ 12.53820058295691 201 201 1 9 17 89 67 56 6549
+ 12.72626811709558 201 201 1 16 17 90 59 49 4104
+ 12.73668163479458 201 153 1 9 8 60 76 36 3954
+ 12.81676975446284 201 86 1 20 17 64 94 59 6059
+ 12.74882931097927 201 174 1 3 11 63 94 57 3090
+ 12.78796589007003 201 201 1 40 11 91 53 44 15
+ 12.78310616630678 201 201 1 6 28 54 93 47 5749
+ 12.89329701582608 201 201 1 3 3 56 93 49 16692
+ 12.65082749863904 201 201 1 26 25 87 67 54 2233
+ 12.63161659840982 201 201 1 14 3 91 73 64 85
+ 12.73825842414811 201 201 1 49 11 89 49 37 710
+ 12.67715054324441 201 0 0 0 0 0 0 0 0
+
+
+# name: trainedGnn
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 14
+# name: transitionNet
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 15
+# name: weights1
+# type: matrix
+# rows: 5
+# columns: 7
+ 1.203127885580246 -50.17419302536423 -0.005064580809947776 -0.3268644519522481 0.06297921531399013 1.654736553316812 0.6085697799479266
+ 2.188071634210733 13.23379788056308 1.90466914911843 -0.1622914498208742 -0.01146654744998413 0.1102017747084001 -0.09594329257366931
+ 1.268712570690858 -0.02033235434753632 0.2371473534298063 0.2790233235643277 0.001179255213150292 0.2631482371947272 -0.09727704191465462
+ -2.612382524934713 0.006865356968477121 -0.1759753318051664 0.2577095841257539 0.2304591027956082 0.008443215168773232 0.09507959306415796
+ -0.9718072772581117 16.37433042116345 -0.09485557840858437 -0.1373116636886478 -0.4607063674803999 -0.1756481727681089 0.03913347141725962
+
+
+# name: bias1
+# type: matrix
+# rows: 5
+# columns: 1
+ 0.2914340044929631
+ 0.106177835096394
+ -0.1054719687543922
+ -0.01665236649857756
+ 0.1025492218041204
+
+
+# name: weights2
+# type: matrix
+# rows: 5
+# columns: 5
+ -2.70296143996433 0.05314981344572254 -0.979649882014664 3.646946659541141 -0.08424004299784302
+ 0.03561312771748078 0.03370494837441818 1.553133549348391 0.118193781671662 -1.366293161472462
+ 0.03135958655170498 -0.2755462894661611 0.3456144941163439 0.7391414647061418 -0.279462957300978
+ 1.607612420433552 1.062520126194923 34.16035461156075 -1.61371637800877 -2.154073483403404
+ -1.215857306140887 0.1359284313874289 -0.4677859127123697 -2.682232652237953 0.9852912626556735
+
+
+# name: bias2
+# type: matrix
+# rows: 5
+# columns: 1
+ -0.5063386974282877
+ -0.2501312802704211
+ -0.175394535801244
+ -0.4555719714177288
+ 0.1522722267628892
+
+
+# name: nInputLines
+# type: scalar
+7
+
+
+# name: nHiddenNeurons
+# type: scalar
+5
+
+
+# name: nOutputNeurons
+# type: scalar
+5
+
+
+# name: nWeights
+# type: scalar
+70
+
+
+# name: outputFun
+# type: sq_string
+# elements: 1
+# length: 6
+tansig
+
+
+# name: activation1
+# type: matrix
+# rows: 0
+# columns: 0
+
+
+# name: activationderivative1
+# type: matrix
+# rows: 0
+# columns: 0
+
+
+# name: activation2ndderivative1
+# type: matrix
+# rows: 0
+# columns: 0
+
+
+# name: activation2
+# type: matrix
+# rows: 0
+# columns: 0
+
+
+# name: activationderivative2
+# type: matrix
+# rows: 0
+# columns: 0
+
+
+# name: activation2ndderivative2
+# type: matrix
+# rows: 0
+# columns: 0
+
+
+
+
+# name: outputNet
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 15
+# name: weights1
+# type: matrix
+# rows: 5
+# columns: 5
+ -0.4704361625863823 0.5474423265772095 -0.2923970631286555 0.2798855764269969 0.03157690189884584
+ 0.03044583670674469 0.08605143112302581 0.03334856702676777 -0.07194332989685021 0.1434573685628561
+ 0.8188078963828044 0.2237309507510377 1.522310395933649 -0.001344554044820137 0.3810868062980047
+ 0.03693907188121835 -1.040547707916534 -0.01992850244780235 -0.06275916462307103 0.1598144141754843
+ -0.02972614602846781 -0.09208032318518898 0.01447929459905101 0.05157716823620444 -0.1611119193085826
+
+
+# name: bias1
+# type: matrix
+# rows: 5
+# columns: 1
+ -0.1247575473378166
+ 0.2613967777685278
+ 0.0866796301290334
+ 0.2449407067010871
+ -0.2837269870349832
+
+
+# name: weights2
+# type: matrix
+# rows: 1
+# columns: 5
+ 1.421945482724226 0.3167108461950217 1.653610307767961 0.356323238255596 -0.1717963028226154
+
+
+# name: bias2
+# type: scalar
+0.759272708841863
+
+
+# name: nInputLines
+# type: scalar
+5
+
+
+# name: nHiddenNeurons
+# type: scalar
+5
+
+
+# name: nOutputNeurons
+# type: scalar
+1
+
+
+# name: nWeights
+# type: scalar
+36
+
+
+# name: outputFun
+# type: sq_string
+# elements: 1
+# length: 6
+tansig
+
+
+# name: activation1
+# type: matrix
+# rows: 0
+# columns: 0
+
+
+# name: activationderivative1
+# type: matrix
+# rows: 0
+# columns: 0
+
+
+# name: activation2ndderivative1
+# type: matrix
+# rows: 0
+# columns: 0
+
+
+# name: activation2
+# type: matrix
+# rows: 0
+# columns: 0
+
+
+# name: activationderivative2
+# type: matrix
+# rows: 0
+# columns: 0
+
+
+# name: activation2ndderivative2
+# type: matrix
+# rows: 0
+# columns: 0
+
+
+
+
+# name: maxIndegree
+# type: scalar
+5
+
+
+# name: stateSize
+# type: scalar
+5
+
+
+# name: nodeLabelSize
+# type: scalar
+1
+
+
+# name: edgeLabelSize
+# type: scalar
+1
+
+
+# name: minStateDiff
+# type: scalar
+1e-08
+
+
+# name: minErrorAccDiff
+# type: scalar
+1e-08
+
+
+# name: contractionConstant
+# type: scalar
+0.9
+
+
+# name: nWeights
+# type: scalar
+106
+
+
+# name: nodeLabelMeans
+# type: scalar
+4.269706868558839
+
+
+# name: nodeLabelStds
+# type: scalar
+3.929420705285365
+
+
+# name: edgeLabelMeans
+# type: scalar
+0
+
+
+# name: edgeLabelStds
+# type: scalar
+1
+
+
+
+
+# name: testEval
+# type: matrix
+# rows: 1
+# columns: 3
+ 0.875 0.8441558441558441 0.9558823529411765
+
+

@@ -1,0 +1,55 @@
+# Created by Octave 3.6.2, Fri May 17 01:03:18 2013 CEST <alex@vostro-1520>
+# name: drawRmseLegends
+# type: cell
+# rows: 1
+# columns: 6
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 12
+(1.2, 1e-08)
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 12
+(0.9, 1e-08)
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 12
+(0.6, 1e-08)
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 12
+(1.2, 1e-07)
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 12
+(0.9, 1e-07)
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 11
+(06, 1e-07)
+
+
+
+
+
