@@ -1,11 +1,13 @@
 
-function [state nSteps] = forward(gnn, graph, maxForwardSteps)
+function [state nSteps] = forward(gnn, graph, maxForwardSteps, state=0)
 % Perform the 'forward' step of GNN training
 % compute node states until stable state is reached
 %
-% usage: [state nSteps] = forward(gnn, graph, maxForwardSteps)
+% usage: [state nSteps] = forward(gnn, graph, maxForwardSteps, state=0)
 
-	state = randn(graph.nNodes, gnn.stateSize);	% zero mean, unit variance
+	if state == 0
+		state = randn(graph.nNodes, gnn.stateSize);	% zero mean, unit variance
+	end
 	nSteps = 0;
 	do
 		if nSteps > maxForwardSteps
