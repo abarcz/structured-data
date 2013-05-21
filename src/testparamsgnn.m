@@ -29,7 +29,7 @@ function testparamsgnn(gnn, graph, nIterations, testname, contractionConstants, 
 			filename = strcat(testname, '_', sprintf('%d', i), '_', sprintf('%d', j), '.mat');
 
 			tic();
-			[gnn2 trainStats] = traingnn(gnn, graph, nIterations, state);
+			[gnn2 trainStats] = traingnn(gnn, graph, nIterations, 200, 200, state);
 			evaluation = evaluate(classifygnn(gnn2, graph, state), graph.expectedOutput);
 			timeElapsed = toc();
 

@@ -10,7 +10,7 @@ function [gnns trainStats testStats initialTrainRmse] = bestgnn(graphs, nGnns, n
 	for i = 1:nGnns
 		tic();
 		gnn = initgnn(graphsMerged.maxIndegree, [5 5], [5 graphsMerged.nodeOutputSize], 'tansig');
-		[trainedGnn trainStats] = traingnn(gnn, graphsMerged, nInitialIterations, state);
+		[trainedGnn trainStats] = traingnn(gnn, graphsMerged, nInitialIterations, 200, 200, state);
 		rmse = trainStats(nInitialIterations, 1);
 		initialTrainRmse(i) = rmse;
 		if rmse < bestRmse
