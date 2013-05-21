@@ -1,0 +1,30 @@
+DATASET
+number of nodes : 14
+number of nodes in subgraph : 7
+edge probability : 0.2
+
+1400 nodes
+1031 with labels contained in subgraph
+702 out of 1031 that actually belong to the subgraph
+
+noise mean : 0
+noise std : 0.25
+
+
+FNN, best fnn of random 10,
+5 hidden tansig, output purelin,
+selected by max mean(mean(trainEval)) of 5fold crossvalidation
+
+5fold crossvalidation results [%]:
+tr - mean	71.589   65.037   93.803
+tr - std	0.34810   0.67736   1.86507
+tst - mean	71.143   64.671   93.593
+tst - std	2.4537   1.7371   2.9341
+
+
+GNN, 50it, 5fold crossvalidation of untrained random gnn with contracionConstant=0.9 and minDiffs=10e-8
+(results of 3 folds out of 5, [%]):
+tr - mean	90.506   86.151   96.618
+tr - std	1.2669   1.1576   2.6202
+tst - mean	90.000   85.281   96.910
+tst - std	3.7287   4.5093   1.6540
