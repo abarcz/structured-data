@@ -1,6 +1,6 @@
 #!/bin/bash
 
-NAME="gnn"
+NAME="sdm"
 
 pdflatex "$NAME.tex" #1>/dev/null
 pdflatex "$NAME.tex" #1>/dev/null

@@ -22,9 +22,8 @@ tst - mean	71.143   64.671   93.593
 tst - std	2.4537   1.7371   2.9341
 
 
-GNN, 50it, 5fold crossvalidation of untrained random gnn with contracionConstant=0.9 and minDiffs=10e-8
-(results of 3 folds out of 5, [%]):
-tr - mean	90.506   86.151   96.618
-tr - std	1.2669   1.1576   2.6202
-tst - mean	90.000   85.281   96.910
-tst - std	3.7287   4.5093   1.6540
+GNN, 50it, 5fold crossvalidation of untrained random gnn with contracionConstant=0.9 and minDiffs=10e-8 [%]
+tr - mean	91.464   87.192   97.294
+tr - std	1.6264   1.7184   2.0720
+tst - mean	91.000   86.449   97.435
+tst - std	3.0660   3.7038   1.3948

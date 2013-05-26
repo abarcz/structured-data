@@ -1,0 +1,24 @@
+test1 = {};
+testname = 'testparams7_g6s3n_20_3';
+test1{1} = load(strcat(testname, '_1_1.mat'));
+test1{2} = load(strcat(testname, '_2_1.mat'));
+test1{3} = load(strcat(testname, '_3_1.mat'));
+test1{4} = load(strcat(testname, '_1_2.mat'));
+test1{5} = load(strcat(testname, '_2_2.mat'));
+test1{6} = load(strcat(testname, '_3_2.mat'));
+
+test1t = {};
+for i = 1:6
+	test1t{i} = test1{i}.trainStats;
+end
+
+allrmse1 = combinestats(test1t, [1]);
+
+gridplot(allrmse1, std.drawRmseSet, true, {'RMSE'}, 'gnn', 0);
+print("rmse3.fig");
+
+std.trainStatsMinMax{1} = [min(min(allrmse1)) - 0.5, max(max(allrmse1)) + 0.5];
+for i = 1:6
+	gridplot(test1{i}.trainStats(1:50, :), std.drawStandardSet, false, std.trainStatsLegends, '', 0, std.trainStatsMinMax);
+	print(sprintf('gnn3_%d.fig', i));
+end

@@ -69,7 +69,6 @@
 \end{itemize}
 \end{frame}
 
-
 \begin{frame}
 \frametitle{Składowe GNN}
 \begin{itemize}
@@ -81,47 +80,53 @@
 \end{frame}
 
 \begin{frame}
-\frametitle{Składowe GNN - grafy niepozycyjne}
+\frametitle{Budowanie stanu węzła - $f_w$}
+\begin{columns}
+	\begin{column}{0.2\textwidth}
+		\begin{center}
+			\includegraphics[scale=0.4]{img/connection}
+		\end{center}
+	\end{column}
+	\begin{column}{0.8\textwidth}
+		\begin{center}
+			\includegraphics[scale=0.4]{img/f}
+		\end{center}
+	\end{column}
+\end{columns}
+\medskip
 \begin{itemize}
-	\item Stan węzła:
-	\\$x_n = f_w(...) = \sum_{u : u \Rightarrow n} h_w(l_n, l_{nu}, x_u)$
-	\item Wyjście węzła:
-	\\$o_n = g_w(x_n)$
+	\item dla węzła $n$ rozpatrywani wszyscy sąsiedzi $u$ (krawędź $u \Rightarrow n$)
+	\item $h_w$ : FNN (wejścia, warstwa $tanh$, warstwa $tanh$)
 \end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Klasyfikacja węzła - $g_w$}
+\begin{center}
+\includegraphics[scale=0.4]{img/g}
+\end{center}
 \begin{itemize}
-	\item $h_w$ : FNN\\(wejścia, warstwa ukryta $tanh$, warstwa wyjściowa $tanh$)
-	\item $g_w$ : FNN\\(wejścia, warstwa ukryta $tanh$, warstwa wyjściowa dowolna)
+	\item wejściem $g_w$ jest stan węzła $n$ : $x_n$, wyznaczony przez $f_w$
+	\item $g_w$ : FNN (wejścia, warstwa $tanh$, warstwa dowolna)
 \end{itemize}
 \end{frame}
 
 \begin{frame}
 \frametitle{Postać globalna}
 \begin{itemize}
-	\item $X = {x_1, x_2, .., x_m}$ : stan - reprezentacja wszystkich węzłów grafu, zbudowana przez $F_w$
-	\item $F_w(X)$ : globalna funkcja przejścia, $F_w(X) = X$
-	\item $F_w$ jest kontrakcją, a wyznaczany $X$ - jej punktem stałym
+	\item $X = {x_1, .., x_m}$ : stan - reprezentacja wszystkich węzłów grafu
+	\item $F_w(X)$ : globalna funkcja przejścia
 	\item $G_w(X)$ : globalna funkcja wyjścia
 \end{itemize}
 \end{frame}
 
 \begin{frame}
-\frametitle{Własności $F_w$ (tw. Banacha)}
-\begin{itemize}
-	\item kontrakcja : $||F_w(X_1) - F_w(X_2)|| \leq ||X_1 - X_2||$
-	\item posiada dokładnie jeden punkt stały
-	\item zbieżność $F_w$ niezależna od punktu początkowego
-	\item zbieżność wykładnicza - potrzebna bardzo mała ilość powtórzeń (ok. 5 do 15)
-	\item jak zapewnić by $F_w$ była kontrakcją?
-\end{itemize}
-\end{frame}
-
-\begin{frame}
-\frametitle{Schemat działania}
+\frametitle{Schemat uczenia GNN}
 \begin{enumerate}
 	\item Losowa inicjalizacja stanu $X$
 	\item do osiągnięcia kryterium stopu:
 	\begin{itemize}
-		\item FORWARD : obliczenie $X = F_w(X)$ aż do osiągnięcia punktu stałego
+		\item FORWARD : obliczanie $X = F_w(X)$ aż do osiągnięcia punktu stałego
 		\item BACKWARD : obliczenie $G_w(X)$ i propagacja wsteczna błędu
 		\item aktualizacja wag $f_w$ i $g_w$
 	\end{itemize}
@@ -129,10 +134,17 @@
 \end{frame}
 
 \begin{frame}
+\frametitle{Przykładowy graf}
+\begin{center}
+	\includegraphics[scale=0.4]{img/graph}
+\end{center}
+\end{frame}
+
+\begin{frame}
 \frametitle{Forward - budowanie stanu}
 \begin{columns}
 	\begin{column}{0.66\textwidth}
-		\includegraphics[scale=0.2]{img/forward}
+		\includegraphics[scale=0.4]{img/forward}
 	\end{column}
 	\begin{column}{0.34\textwidth}
 		\begin{itemize}
@@ -147,19 +159,37 @@
 \frametitle{Backward - propagacja wsteczna błędu}
 \begin{columns}
 	\begin{column}{0.66\textwidth}
-		\includegraphics[scale=0.2]{img/backward}
+		\includegraphics[scale=0.4]{img/backward}
 	\end{column}
 	\begin{column}{0.34\textwidth}
 		\begin{itemize}
 			\item Almeida-Pineda
-			\\$minErrorDiff$
-			\item Kara za brak kontrakcji
-			\\$contracionConstant$
-			\item RPROP
-			\\$deltaMax$
+			\item $minErrorDiff$
 		\end{itemize}
 	\end{column}
 \end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{Własności $F_w$ (tw. Banacha)}
+\begin{itemize}
+	\item kontrakcja : $||F_w(X_1) - F_w(X_2)|| \leq ||X_1 - X_2||$
+	\item posiada dokładnie jeden punkt stały
+	\item zbieżność $F_w$ niezależna od punktu początkowego
+	\item zbieżność wykładnicza - potrzebna bardzo mała ilość powtórzeń (ok. 5 do 15)
+	\item jak zapewnić by $F_w$ była kontrakcją?
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Aktualizacja wag $f_w$ i $g_w$}
+\begin{itemize}
+	\item Kara za brak kontrakcji dla wag $f_w$
+	\item $contractionConstant$
+	\item Duże różnice skali między karą a oryginalną korektą
+	\item RPROP
+	\item $deltaMax$
+\end{itemize}
 \end{frame}
 
 \begin{frame}
@@ -242,7 +272,34 @@ Legenda:
 \end{frame}
 
 \begin{frame}
-\frametitle{Eksperyment 2 : wpływ parametrów GNN}
+\frametitle{Eksperyment 2a : wpływ parametrów GNN}
+\begin{itemize}
+	\item Wykrywanie podgrafu
+	\item 6 węzłów, 3 węzły podgrafu
+	\item 20 grafów
+	\item jeden zestaw początkowych wartości wag
+	\item $contractionConstant$ = 1.2, 0.9, 0.6
+	\item $minStateDiff$ = 10e-08, 10e-07
+	\item $minErrorDiff$ = $minStateDiff$
+	\item wybrana sieć nr 5 z poprzedniego eksperymentu
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\includegraphics[scale=0.065]{img/rmse1}
+\end{frame}
+\begin{frame}
+	\includegraphics[scale=0.065]{img/gnn1_1}
+\end{frame}
+\begin{frame}
+	\includegraphics[scale=0.065]{img/gnn1_2}
+\end{frame}
+\begin{frame}
+	\includegraphics[scale=0.065]{img/gnn1_3}
+\end{frame}
+
+\begin{frame}
+\frametitle{Eksperyment 2b : wpływ parametrów GNN}
 \begin{itemize}
 	\item 20 grafów
 	\item jeden zestaw początkowych wartości wag
@@ -326,14 +383,60 @@ Legenda:
 \end{frame}
 
 \begin{frame}
+\frametitle{Wyniki - zbiór danych}
+\begin{itemize}
+	\item 14 węzłów, 7 węzłów podgrafu
+	\item 100 grafów
+	\item 1031 spośród 1400 węzłów posiada etykiety należące do podgrafu
+	\item 702 spośród 1031 węzłów należy do podgrafu
+	\item FNN : najlepsza z 10ciu, 5-krotna walidacja krzyżowa
+	\item GNN : losowa sieć, 5-krotna walidacja krzyżowa, 50 iteracji
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Wyniki}
+\setlength{\tabcolsep}{2pt}
+\begin{table}[h!]
+	\begin{center}
+	\begin{tabular}{llll}
+	\toprule
+	& accuracy & precision & recall \\
+	\midrule
+	FNN - tr &	71\% &  65\% & 93\% \\
+	FNN - tst &	71\% &  64\% &  93\% \\
+	GNN - tr &	91\% &  87\%&  97\% \\
+	GNN - tst &	91\% &  86\% &  97\% \\
+	\bottomrule
+	\end{tabular}
+	\caption{Średnie wartości na zbiorze uczącym i testowym}
+	\end{center}
+\end{table}
+
+\begin{table}[h!]
+	\begin{center}
+	\begin{tabular}{llll}
+	\toprule
+	& accuracy & precision & recall \\
+	\midrule
+	FNN - tr &	0.34\% &  0.67\% & 1.86\% \\
+	FNN - tst &	2.45\% &  1.73\% &  2.93\% \\
+	GNN - tr &	1.62\% &  1.71\% &  2.07\% \\
+	GNN - tst &	3.06\% &  3.70\% &  1.39\% \\
+	\bottomrule
+	\end{tabular}
+	\caption{Odchylenia standardowe}
+	\end{center}
+\end{table}
+\end{frame}
+
+\begin{frame}
 \frametitle{Wnioski}
 \begin{itemize}
 	\item Najlepszy efekt przy zachowaniu kontrakcji
 	\item Brak zbieżności kontrakcji – brak poprawy
 	\item Balansowanie na granicy zbieżności / ograniczona ilość kroków obliczenia stanu i błędu dopuszczalne
 	\item Należy unikać nakładania niepotrzebnie kary kontrakcji
-	\item Konieczna duża dokładność w sprawdzaniu punktu stałego
-	\item Duża wrażliwość modelu na parametry
 	\item Można dobrać zestaw parametrów (i początkowych wag) na podzbiorze danych
 \end{itemize}
 \end{frame}
