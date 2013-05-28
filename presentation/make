@@ -1,6 +1,15 @@
 #!/bin/bash
 
-NAME="gnn"
+if [ $# -ne 1 ]; then
+	echo "Usage: make NAME"
+	exit 1
+fi
+
+NAME="$1"
+if [ ! -f "$NAME.tex" ]; then
+	echo "File $NAME.tex not found!"
+	exit 1
+fi
 
 pdflatex "$NAME.tex" #1>/dev/null
 pdflatex "$NAME.tex" #1>/dev/null
