@@ -123,9 +123,10 @@
 \begin{frame}
 \frametitle{Schemat uczenia GNN}
 \begin{enumerate}
-	\item Losowa inicjalizacja stanu $X$
+	\item Losowa inicjalizacja wag $h_w$ i $g_w$
 	\item do osiągnięcia kryterium stopu:
 	\begin{itemize}
+		\item losowa inicjalizacja stanu $X$
 		\item FORWARD : obliczanie $X = F_w(X)$ aż do osiągnięcia punktu stałego
 		\item BACKWARD : obliczenie $G_w(X)$ i propagacja wsteczna błędu
 		\item aktualizacja wag $f_w$ i $g_w$
