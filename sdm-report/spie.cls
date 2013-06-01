@@ -336,9 +336,9 @@
 %%%% Figure and table captions %%%
 \long\def\@makecaption#1#2{%     % from article.cls
   \vskip\abovecaptionskip
-  \sbox\@tempboxa{{\footnotesize #1.\ }{\footnotesize #2}}%
+  \sbox\@tempboxa{{\small #1.\ }{\small #2}}%
   \ifdim \wd\@tempboxa >\hsize   % with period
-    {\footnotesize #1.\ }{\footnotesize #2 \par}
+    {\small #1.\ }{\small #2 \par}
   \else
     \global \@minipagefalse
     \hb@xt@\hsize{\hfil\box\@tempboxa\hfil}%
