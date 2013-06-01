@@ -1,0 +1,12 @@
+#!/bin/bash
+DOCUMENT="barcz2013"
+
+pdflatex -file-line-error-style "$DOCUMENT.tex"
+pdflatex -file-line-error-style "$DOCUMENT.tex"
+
+bibtex -min-crossrefs -1 "$DOCUMENT"
+pdflatex -file-line-error-style "$DOCUMENT.tex"
+pdflatex -file-line-error-style "$DOCUMENT.tex"
+
+rm *.aux *.bbl *.blg *.log *.nav *.out *.snm *.toc *.lot *.lof 2>/dev/null
+atril "$DOCUMENT.pdf" 1>/dev/null 2>/dev/null
