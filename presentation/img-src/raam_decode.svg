@@ -40,7 +40,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.98994949"
-     inkscape:cx="325.88691"
+     inkscape:cx="200.12292"
      inkscape:cy="187.85728"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -72,7 +72,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -401,11 +401,13 @@
          sodipodi:role="line"
          id="tspan3043"
          x="160"
-         y="386.94226">R<tspan
-   style="font-size:20px"
-   id="tspan3045">1</tspan><tspan
-   id="tspan4364"
-   style="font-size:40px">'</tspan></tspan></text>
+         y="386.94226"><tspan
+           style="font-size:20px"
+           id="tspan3045"><tspan
+   style="font-size:40px"
+   id="tspan3200">x</tspan>1</tspan><tspan
+           id="tspan4364"
+           style="font-size:40px">'</tspan></tspan></text>
     <text
        xml:space="preserve"
        style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
@@ -416,24 +418,28 @@
          sodipodi:role="line"
          id="tspan3049"
          x="480"
-         y="386.94226">R<tspan
-   style="font-size:20px"
-   id="tspan3051">2</tspan><tspan
-   id="tspan4368"
-   style="font-size:40px">'</tspan></tspan></text>
+         y="386.94226"><tspan
+           style="font-size:20px"
+           id="tspan3051"><tspan
+   style="font-size:40px"
+   id="tspan3202">x</tspan>2</tspan><tspan
+           id="tspan4368"
+           style="font-size:40px">'</tspan></tspan></text>
     <text
        xml:space="preserve"
        style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
        x="420"
-       y="266.80066"
+       y="263.15808"
        id="text3053"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan3055"
          x="420"
-         y="266.80066">R<tspan
-   style="font-size:20px"
-   id="tspan3057">3</tspan></tspan></text>
+         y="263.15808"><tspan
+           id="tspan3210"
+           style="font-size:40px">x</tspan><tspan
+           style="font-size:20px"
+           id="tspan3057">3</tspan></tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        d="M 1,361 141,261"
