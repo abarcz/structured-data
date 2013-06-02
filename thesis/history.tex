@@ -83,20 +83,27 @@ x_i = f(l_i, x_{ch_1}, .., x_{ch_k})
 
 Whenever a node outdegree is smaller than $k$ (especially in the case of terminal nodes), the missing child pointers are substituted by the $NIL$ pointer, a special value representing the lack of node. The value of the node label is stacked together with all the pointers values to form an input vector which is fed to the compressor unit. The number of output neurons of the compressor unit (the size of a pointer $x_i$) is $m$. Let's denote the size of the label $l_i$ by $p$. The compressor unit must have $n = p + k \cdot m$ inputs which is also the number of reconstructor unit output neurons.
 
-Just like the RAAM model, the LRAAM model experience the problem of the \emph{moving target}. The same technique of \emph{shared weights} can be applied, which results in building a large recursive neural network composed of identical units. A sample graph is presented in Fig.~\ref{fig:tree_for_lraam}. The recursive network obtained by cloning the compressor and reconstructor units to match the sample graph structure is presented in Fig.~\ref{fig:lraam_tree}. As $A$ and $B$ are terminal nodes, their labels are fed to the compressor unit altogether with $NIL$ pointers representing the missing nodes. Then the compressed representation $x_{A}$ is built for node $A$ and the compressed representation $x_{B}$ is built for node $B$. The representations $x_A$ and $x_B$ are fed altogether with label $C$ to the compressor once again to build the representation $x_C$ of node $C$, which is also the representation of the whole graph.
-
-\begin{figure}
-\begin{center}
-	\includegraphics[scale=0.4]{img/tree_for_lraam}
-	\caption{A sample graph that can be processed using LRAAM}
-	\label{fig:tree_for_lraam}
-\end{center}
-\end{figure}
+Just like the RAAM model, the LRAAM model experience the problem of the \emph{moving target}. The same technique of \emph{shared weights} can be applied, which results in building a large recursive neural network composed of identical units. A sample graph and the recursive network obtained by cloning the compressor and reconstructor units to match the sample graph structure are presented in Fig.~\ref{fig:lraam_tree}. As $A$ and $B$ are terminal nodes, their labels are fed to the compressor unit altogether with $NIL$ pointers representing the missing nodes. Then the compressed representation $x_{A}$ is built for node $A$ and the compressed representation $x_{B}$ is built for node $B$. The representations $x_A$ and $x_B$ are fed altogether with label $C$ to the compressor once again to build the representation $x_C$ of node $C$, which is also the representation of the whole graph.
 
 \begin{figure}
 \begin{center}
 	\includegraphics[scale=0.4]{img/lraam_tree}
-	\caption{Training LRAAM using the BPTS procedure}
+	\caption{LRAAM encoding tree for the graph shown}
 	\label{fig:lraam_tree}
 \end{center}
 \end{figure}
+
+An extension of the LRAAM model exists for cyclic graphs. Whenever an edge forming a cycle is found, it is converted to a time unit delay. A sample cyclic graph and the resulting LRAAM model with one time delay was presented in Fig.~\ref{fig:lraam_tree_cycle}. The graph presented is similar to the graph used in the previous example, with the exception of the directed edge $A \Rightarrow C$. The additional edge forms a cycle so it must be represented as a time delay. Such an approach makes it possible to deal with cyclic graphs, however it is achieved at the expense of model simplicity. While with the shared weights technique it was possible to treat the encoding tree structure as a single feed-forward neural network with shared weights, with the time delays added the training of the network should consist of multiple time steps, up to a convergent state.
+
+\begin{figure}
+\begin{center}
+	\includegraphics[scale=0.4]{img/lraam_tree_cycle}
+	\caption{LRAAM encoding tree for the cyclic graph shown}
+	\label{fig:lraam_tree_cycle}
+\end{center}
+\end{figure}
+
+A distinctive feature of the LRAAM model is that a compressed representation is built for a given dataset (DPAGs) and the correctness of the representation is verified by mirroring the compression process and reconstructing the original data. When the obtained representation is accurate enough, the output of the LRAAM model is fed to a separate classifier which processes it and yields classification or regression results. The same applies to any new, unseen data, which is transformed by the trained LRAAM model and, if the model was built correctly, is compressed into a meaningful representation. Such separation of representation building and processing can be attractive for two reasons. First, the LRAAM model parameters, such as the size of the representation, can be tuned in a straightforward manner by observing what is the minimal value below which the original data cannot be accurately reconstructed from the compressed vectors. Secondly, any common classifier used for unstructured data can be used to process such compressed representation. On the other hand, it is often safe to presume that not all the data contained in node is crucial for the classification/regression process for which the compressed representation is needed. Such an approach lies beyond the standard LRAAM model and was introduced in the \emph{folding} architecture description~\cite{kuchler1996inductive}.
+
+
+
