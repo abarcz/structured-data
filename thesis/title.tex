@@ -1,0 +1,138 @@
+
+\begin{titlepage}
+    % Strona tytułowa
+    \vbox to\textheight{\hyphenpenalty=10000
+    \begin{center}
+	\begin{tabular}{p{107mm} p{9cm}}
+	    \begin{minipage}{9cm}
+	      \begin{center}
+	      Politechnika Warszawska \\
+	      Wydział Elektroniki i~Technik Informacyjnych \\
+	      Instytut Informatyki
+	      \end{center}
+	    \end{minipage}
+	    &
+	    \begin{minipage}{8cm}
+	    \begin{flushleft}
+	      Rok akademicki 2012/2013
+	    \vspace*{2.75\baselineskip}
+	    \end{flushleft}
+	    \end{minipage} \\
+	\end{tabular}
+	\vspace*{2.5\baselineskip}
+	\begin{center}
+		\includegraphics[height=3.5cm,width=3.5cm]{img/PW_logo.png}
+	\end{center}
+	\vspace*{2.2\baselineskip}{\Large \MakeUppercase{Praca dyplomowa magisterska}\par}
+	\vspace{2\baselineskip}{\large Aleksy Stanisław Barcz\par}
+	\vspace*{2\baselineskip}{\LARGE Implementation aspects of graph neural networks\par}
+
+	\vspace*{7\baselineskip}
+	\hfill\mbox{}\par\vspace*{\baselineskip}\noindent
+	\begin{tabular}[b]{@{}p{3cm}@{\ }l@{}}
+	    {\large\hfill } & {\large }
+	\end{tabular}
+	\hfill
+	\begin{tabular}[b]{c}
+		Opiekun pracy: \\
+		{mgr inż. Zbigniew Szymański}
+	\end{tabular}\par
+	\vspace*{5\baselineskip}
+    \begin{tabular}{p{\textwidth}}
+    \begin{flushleft}
+	\begin{minipage}{7cm}
+	Ocena: \Dotfill
+	\par\vspace{2.5\baselineskip}
+	\Dotfill
+	\vspace{0.5\baselineskip}
+	\par\noindent
+	\centerline{Podpis Przewodniczącego}
+	\centerline{Komisji Egzaminu Dyplomowego}\par
+	\end{minipage}
+    \end{flushleft}
+    \end{tabular}
+    \end{center}}
+
+    % Życiorys
+    \newpage\thispagestyle{empty}
+    \begin{tabular}{p{4cm} p{20cm}}
+    \begin{minipage}{4cm}
+    \includegraphics[height=4.8cm,width=4cm]{img/myphoto_cropped.png}
+    \end{minipage}
+    &
+    \begin{minipage}{20cm}
+    \begin{flushleft}
+    \par\noindent\vspace{1\baselineskip}
+    \begin{tabular}[h]{l l}
+    {\normalsize Kierunek:} & Informatyka\\
+    {\normalsize Specjalność:} & Inżynieria systemów informatycznych
+    \end{tabular}
+    \par\noindent\vspace{2\baselineskip}
+    \begin{tabular}[h]{l r}
+    {\normalsize Data urodzenia:} & {\normalsize 1988.01.28} \\
+    {\normalsize Data rozpoczęcia studiów:} & {\normalsize 2012.02.20}
+    \end{tabular}
+    \par\noindent\vspace{2\baselineskip}
+    \end{flushleft}
+    \end{minipage}
+    \end{tabular}
+    \vspace*{1\baselineskip}
+    \begin{center}
+	{Życiorys}\par\bigskip
+    \end{center}
+
+    \noindent
+	Ukończyłem XXVIII LO im. J.Kochanowskiego w Warszawie, w klasie o profilu matematyczno - informatycznym. Studia inżynierskie ukończyłem w lutym 2012 roku na kierunku Informatyka na Wydziale Elektroniki i Technik Informacyjnych Politechniki Warszawskiej. W trakcie studiów I i II stopnia brałem udział w wymianach studenckich programu Athens na Katholieke Universiteit Leuven \emph{(Fundamentals of artificial intelligence)} oraz w Télécom ParisTech \emph{(Emergence in complex systems)}.
+    \par
+    \vspace{2\baselineskip}
+    \hfill\parbox{15em}{{\small\Dotfill}\\[-.3ex]
+    \centerline{Podpis studenta}}\par
+    \vspace{3\baselineskip}
+ 	{\noindent\MakeUppercase{Egzamin dyplomowy}} \par\bigskip\bigskip
+    \par\noindent\vspace{1.5\baselineskip}
+    Złożył egzamin dyplomowy w dniu \Dotfill 2013~r.
+    \par\noindent\vspace{1.5\baselineskip}
+    z wynikiem \Dotfill
+    \par\noindent\vspace{1.5\baselineskip}
+    Ogólny wynik studiów: \Dotfill
+    \par\noindent\vspace{1.5\baselineskip}
+    Dodatkowe wnioski i uwagi Komisji: \Dotfill
+    \par\noindent\vspace{1.5\baselineskip}
+    \Dotfill
+    \par\noindent\vspace{1.5\baselineskip}
+    \Dotfill
+
+    % Streszczenie
+    \newpage\thispagestyle{empty}
+    \vspace*{2\baselineskip}
+    \begin{center}
+	{\large \MakeUppercase{Summary}}\par\bigskip
+    \end{center}
+
+    {\noindent
+	This thesis describes the process of implementation of a Graph Neural Network, a classifier capable of classifying data represented as graphs. Parameters affecting the classifier efficiency and the learning process were identified and described. Implementation details affecting the classifier efficiency were described. Important similarities to other connectionist models used for graph processing were highlighted.
+	}
+    \vspace*{1\baselineskip}
+
+    \noindent{Keywords}: {Graph neural networks, classification, graph processing, recursive neural networks}
+    \par
+    \vspace{4\baselineskip}
+
+	\begin{center}
+	\line(1,0){250}
+	\end{center}
+
+    \begin{center}
+	{\large \MakeUppercase{ASPEKTY IMPLEMENTACYJNE GRAFOWYCH SIECI NEURONOWYCH}}\par\bigskip
+    \end{center}
+    {\noindent
+	Praca stanowi raport z samodzielnej implementacji klasyfikatora typu Graph Neural Network (grafowa sieć neuronowa), pozwalającego na klasyfikację danych o strukturze grafowej. W ramach pracy zidentyfikowane zostały istotne dla klasyfikatora parametry, wpływające na przebieg procesu uczenia się klasyfikatora oraz na jakość uzyskanych wyników. Opisane zostały szczegóły implementacyjne klasyfikatora istotne dla jego działania. Klasyfikator został przedstawiony w kontekście podobnych rozwiązań w celu ukazania ścisłych powiązań między istniejącymi modelami przetwarzania danych o strukturze grafowej, opartymi na sieciach neuronowych.
+	}
+	
+    \vspace*{1\baselineskip}
+
+    \noindent{Słowa kluczowe}: {Grafowe sieci neuronowe, klasyfikacja, przetwarzanie grafów, rekursywne sieci neuronowe}
+
+\end{titlepage}
+
+% ex: set tabstop=4 shiftwidth=4 softtabstop=4 noexpandtab fileformat=unix filetype=tex spelllang=pl,en spell:
