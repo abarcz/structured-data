@@ -68,6 +68,7 @@
 % ------------------------------------------------------------
 %% based on standard LaTeX article class --
 %% need to define font Size Option inside spie.cls
+
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{spie}[2008/01/19  v3.3 SPIE Proceedings class]
 
