@@ -245,7 +245,7 @@ In 2005, another model for DPAG processing was proposed, the Graph Machines~\cit
 \label{eq:gm_output}
 \end{equation}
 
-The instances of the $f$ function are connected together to form an \emph{encoding network} for a given graph, which reflects the structure of the original graph. Such encoding network is built for every graph in the training set. Such a set of encoding networks is called a \emph{graph machine}. A single encoding network and the corresponding sample graph are shown in Fig.~\ref{fig:graph_machine_tree}, where the light grey areas denote instances of the $f$ network and the dark grey area denote the $g$ network.
+The instances of the $f$ function are connected together to form an \emph{encoding network} for a given graph, which reflects the structure of the graph. Such encoding network is built for every graph in the training set. The resulting set of encoding networks is called a \emph{graph machine}. A single encoding network and the corresponding sample graph are shown in Fig.~\ref{fig:graph_machine_tree}, where the light grey areas denote instances of the $f$ network and the dark grey area denote the $g$ network.
 
 \begin{figure}
 \begin{center}
@@ -255,9 +255,9 @@ The instances of the $f$ function are connected together to form an \emph{encodi
 \end{center}
 \end{figure}
 
-The instances of $f$ function share weights among the instances belonging to single encoding network, and among all the encoding networks. The instances of $g$ function share weights among all the encoding networks. The $f$ and $g$ functions can be implemented by neural networks. Their training occurs on all the graphs from the training set simultaneously. That is, $\frac{\partial J}{\partial \bm{w}}$ is summed over all function instances among all the graphs, where $\bm{w}$ is the set of all weights belonging either to $f$ or $g$ function. A standard gradient optimization algorithm can be used (Levenberg-Marquardt, BFGS, etc.).
+The instances of $f$ function share weights among the instances belonging to single encoding network, and among all the encoding networks. The instances of $g$ function share weights among all the encoding networks. (This is called the \emph{shared weights} technique.) The $f$ and $g$ functions can be implemented by neural networks. Their training occurs on all the graphs from the training set simultaneously. That is, $\frac{\partial J}{\partial \bm{w}}$ is summed over all function instances among all the graphs, where $\bm{w}$ is the set of all weights belonging either to $f$ or $g$ function. A standard gradient optimization algorithm can be used for the training phase (Levenberg-Marquardt, BFGS, etc.).
 
-\noindent The authors of graph machines stated explicitly two fundamental rules which were before implicitly applied in various graph processing connectionist models:
+The authors of graph machines stated explicitly two fundamental rules which were before implicitly applied in various graph processing connectionist models:
 \begin{itemize}
 	\item \emph{The structure of a model should reflect the structure of the processed graph.}
 	\item \emph{The representation of structured data should be learnt instead of being handcrafted.~\cite{goulon2005hopfield}} 
