@@ -16,7 +16,7 @@
    id="svg6759"
    version="1.1"
    inkscape:version="0.48.3.1 r9886"
-   sodipodi:docname="backward.svg">
+   sodipodi:docname="forback.svg">
   <defs
      id="defs6761">
     <marker
@@ -502,8 +502,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.49497475"
-     inkscape:cx="930.64393"
-     inkscape:cy="382.72096"
+     inkscape:cx="202.61202"
+     inkscape:cy="416.06099"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -536,7 +536,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -1033,8 +1033,8 @@
          y="373.34979"
          dy="0">t<tspan
    style="font-size:28px"
-   id="tspan7793-0"
-   dy="4.2857141">n</tspan></tspan></text>
+   id="tspan3520"
+   dy="6.0714293">m</tspan></tspan></text>
     <path
        style="fill:none;stroke:#be0000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow1Mend)"
        d="m 530,302.36218 150,0 0,380 -110,30"
@@ -1540,9 +1540,9 @@
            x="50"
            id="tspan7791-86-0"
            sodipodi:role="line">t<tspan
-   dy="4.2857141"
-   id="tspan7793-0-8"
-   style="font-size:28px">n</tspan></tspan></text>
+   style="font-size:28px"
+   id="tspan3522"
+   dy="6.0609159">m</tspan></tspan></text>
     </g>
   </g>
 </svg>

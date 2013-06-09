@@ -2,12 +2,12 @@
 \chapter{Conclusions}
 The implementation of the GNN model yielded promising experimental results for structured data and proved that it can exploit properly both node labels and the graph structure. Some changes in the original algorithm, as the maximum number of \emph{Forward} and \emph{Backward} iterations were introduced to assure a more predictable computation time. Conditions under which the model works efficiently were described. An important parameter of the GNN model, determining the training efficiency was identified: the contraction constant $\mu$. The most important conclusions are listed below:
 \begin{itemize}
-	\item training yields best results when $F_w$ remains a contraction map
-	\item if $F_w$ definitely ceases to be a contraction map, there are no training effects
+	\item training yields best results when $F_{\bm{w}}$ remains a contraction map
+	\item if $F_{\bm{w}}$ definitely ceases to be a contraction map, there are no training effects
 	\item remaining near the contraction state can still yield good results
 	\item a fixed maximum number of \emph{Forward}/\emph{Backward} iterations can still yield good results
 	\item imposing an unnecessary penalty should be avoided
-	\item too large penalties (too small $\mu$) should be avoided
-	\item the minimum value of $\mu$ should be tuned for the chosen dataset
-	\item the minimum value of $\mu$ can be tuned on a subset of the data.
+	\item too large penalties (a too small $\mu$) should be avoided
+	\item the minimum value of $\mu$ should be tuned to the processed dataset
+	\item the minimum value of $\mu$ can be tuned using a subset of the data.
 \end{itemize}

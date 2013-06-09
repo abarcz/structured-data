@@ -6,10 +6,10 @@
 	\item loadset - loads a set of graphs sharing the same filename prefix
 	\item mergegraphs - merge a cellarray of graphs to a single graph
 	\item initgnn - initialize a new GNN
-	\item traingnn - train GNN with a training graph
+	\item traingnn - train GNN using a training graph
 	\item classifygnn - classify given graph with a trained GNN
 	\item evaluate - evaluate the classification results
-	\item crossvalidate - perform crossvalidation using an untrained GNN and a cellarray of graphs
+	\item crossvalidate - perform cross-validation using an untrained GNN and a set of graphs
 \end{itemize}
 \noindent Help and usage information for each function can be displayed by typing \emph{help <function\_name>} in the Octave command line.\\
 
@@ -19,29 +19,29 @@
 g6 = loadset('../data/g6s3n/g6s3', 10);
 g6merged = mergegraphs(g6);
 gnn = initgnn(g6merged.maxIndegree, [5 5], [5 1], 'tansig');
-gnnTrained = traingnn(gnn, g6merged, 10);
-outputs = classifygnn(gnnTrained, g6merged);
+trainedGnn = traingnn(gnn, g6merged, 20);
+outputs = classifygnn(trainedGnn, g6merged);
 stats = evaluate(outputs, g6merged.expectedOutput);
 \end{lstlisting}
 
-\noindent All subgraph matching datasets were created using the \emph{buildgraphs.py} script. Each graph can be viewed as a pdf file by using the \emph{drawgraphs.py} script. Each graph is stored as three .csv files, containing node labels, edge labels and expected outputs. A sample graph \emph{'test2'} is presented below. Black nodes yield output 2 (the node indegree).
+\noindent All subgraph matching datasets were created using the \emph{buildgraphs.py} script. Each graph can be viewed as a pdf file by using the \emph{drawgraph.py} script. Each graph is stored as three .csv files, containing node labels, edge labels and expected outputs. A sample graph \emph{'test'} is presented below. Nodes yielding output 2 were marked as black.
 
 \begin{figure}
 \begin{floatrow}
 \ffigbox[\FBwidth]{	% use the image width
-	\includegraphics[scale=0.55]{img/test2}
+	\includegraphics[scale=0.55]{img/test}
 }{
 \caption{Sample graph}
 }
 \capbtabbox{
 	\begin{tabular}{lll}
 	\toprule
-	test2\_nodes.csv & test2\_output.csv & test2\_edges.csv \\
+	test\_nodes.csv & test\_output.csv & test\_edges.csv \\
 	\midrule
-	1	&	1	&	1,2,0\\
-	2	&	2	&	2,3,0\\
-	1	&	2	&	3,4,0\\
-	2	&	1	&	4,1,0\\
+	5	&	1	&	1,2,0\\
+	6	&	2	&	2,3,0\\
+	7	&	2	&	3,4,0\\
+	8	&	1	&	4,1,0\\
 		&		&	4,2,0\\
 		&		&	4,3,0\\
 	\bottomrule
