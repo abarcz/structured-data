@@ -1,5 +1,5 @@
 
-\chapter{Graph neural networks}
+\chapter{Graph neural network implementation}
 
 The Graph Neural Network model~\cite{scarselli2009graph} (GNN) is a quite recent (2009) connectionist model, based on recursive neural networks and capable of classifying almost all types of graphs. The main difference between the GNN model and previous connectionist models is the possibility of processing directly nonpositional and cyclic graphs, containing both node labels and edge labels. Although some similar solutions were introduced in an earlier model, the \emph{RNN-LE}~\cite{bianchini2005recursive} in 2005, it was the GNN model that combined several techniques with a novel learning schema to provide a direct and flexible method for graph processing.
 
@@ -55,17 +55,17 @@ At this point it's worth noting that the final value of $\bm{x}_n$ is calculated
 
 The $f_{\bm{w}}$ and $g_{\bm{w}}$ units are presented in Fig.~\ref{fig:gnn_f} and Fig.~\ref{fig:gnn_g}, where the comma-separated list of inputs stands for a vector obtained by stacking all the listed values one after another.
 
-\begin{figure}
+\begin{figure}[h!]
 \begin{center}
-	\includegraphics[scale=0.6]{img/f_ext}
-	\caption{The $f_{\bm{w}}$ unit for a single node with one of the corresponding edges}
+	\includegraphics[scale=0.5]{img/f_ext}
+	\caption{The $f_{\bm{w}}$ unit for a single node and one of the corresponding edges}
 	\label{fig:gnn_f}
 \end{center}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[h!]
 \begin{center}
-	\includegraphics[scale=0.6]{img/g}
+	\includegraphics[scale=0.5]{img/g}
 	\caption{The $g_{\bm{w}}$ unit for a single node}
 	\label{fig:gnn_g}
 \end{center}
@@ -74,7 +74,7 @@ The $f_{\bm{w}}$ and $g_{\bm{w}}$ units are presented in Fig.~\ref{fig:gnn_f} an
 The weights of both the $h_{\bm{w}}$ and $g_{\bm{w}}$ units were initialised according to standard neural network practice, to avoid saturation of any $tanh$ activation function: $net_j = \sum_i w_{ij} y_i \in (-1, 1)$, where $net_j$ is the weighted input to $j$th neuron, $y_i$ is the $i$th input value and $w_{ij}$ is the weight corresponding to the $i$th input. The initial input weights of the $g_{\bm{w}}$ unit were divided by an additional factor, i.e. the maximum node indegree of the processed graphs, to take into consideration the fact, that the input of $g_{\bm{w}}$ unit consists of a sum of $h_{\bm{w}}$ outputs. All the input data (node and edge labels) was normalised appropriately before feeding to the model.
 
 
-\section{The encoding network}
+\section{Encoding network}
 Graph processing by a GNN model consists of two steps: building representation $\bm{x}_n$ for each node and producing an output $\bm{o}_n$. As the representation of a single node depends on other nodes representations, an encoding network for every graph is be built, reflecting the structure of the graph. The encoding network consists of instances of the $f_{\bm{w}}$ unit connected according to the graph connectivity with a $g_{\bm{w}}$ unit attached to every $f_{\bm{w}}$ unit. A sample graph and its encoding network are presented in Fig.~\ref{fig:gnn_encoding}.
 It can be seen that, as a cyclic dependence exists in the sample graph, the calculation of the node \emph{states} should be iterative, until at some point convergence is reached.
 
@@ -87,8 +87,8 @@ It can be seen that, as a cyclic dependence exists in the sample graph, the calc
 \end{figure}
 
 
-\section{The training algorithm}
-To solve the problem of cyclic dependencies, the GNN models adapts a novel learning algorithm for the encoding network. Let's denote by $x$ the \emph{global state} of the graph, that is the set of $\bm{x}_n$ for every node $n$ in the graph. Let's denote by $\bm{l}$ and $\bm{o}$ the sets of all labels and all outputs, respectively. Let's further denote by $F_{\bm{w}}$ and $G_{\bm{w}}$ (\emph{global transition function} and \emph{global output function}) the stacked versions of $f_{\bm{w}}$ and $g_{\bm{w}}$ functions, respectively. Now, equations~\ref{eq:gnn_fmin} and~\ref{eq:gnn_gmin} can be rewritten as Eq.~\ref{eq:gnn_fglobal} and Eq.~\ref{eq:gnn_gglobal}.
+\section{General training algorithm}
+Let's denote by $x$ the \emph{global state} of the graph, that is the set of $\bm{x}_n$ for every node $n$ in the graph. Let's denote by $\bm{l}$ and $\bm{o}$ the sets of all labels and all outputs, respectively. Let's further denote by $F_{\bm{w}}$ and $G_{\bm{w}}$ (\emph{global transition function} and \emph{global output function}) the stacked versions of $f_{\bm{w}}$ and $g_{\bm{w}}$ functions, respectively. Now, equations~\ref{eq:gnn_fmin} and~\ref{eq:gnn_gmin} can be rewritten as Eq.~\ref{eq:gnn_fglobal} and Eq.~\ref{eq:gnn_gglobal}.
 
 \begin{equation}
 \bm{x} = F_{\bm{w}}(\bm{l}, \; \bm{x})
@@ -105,12 +105,129 @@ To solve the problem of cyclic dependencies, the GNN models adapts a novel learn
 	\item initialize $h_{\bm{w}}$ and $g_{\bm{w}}$ weights
 	\item until stop criterion is satisfied:
 	\begin{enumerate}
-		\item initialize $X$ randomly
-		\item FORWARD: calculate $X = F(X)$ until convergence
-		\item BACKWARD: calculate $G(X)$ and backpropagate the error
+		\item initialize $\bm{x}$ randomly
+		\item FORWARD: calculate $\bm{x} = F_{\bm{w}}(\bm{l}, \; \bm{x})$ until convergence
+		\item BACKWARD: calculate $\bm{o} = G_{\bm{w}}(\bm{x})$ and backpropagate the error
 		\item update $h_{\bm{w}}$ and $g_{\bm{w}}$ weights
 	\end{enumerate}
 \end{enumerate}
 
 
+\section{Unfolded network and backpropagation}
+To solve the problem of cyclic dependencies, the GNN models adapts a novel learning algorithm for the encoding network. The encoding network is virtually \emph{unfolded} through time until the state $\bm{x}$ converges to a \emph{fixed point} $\hat{\bm{x}} = \bm{x}(t_n)$ of the function  $F_{\bm{w}}$. Then the output $\bm{o}$ is calculated. Such unfolded network for the sample graph is presented in Fig.~\ref{fig:gnn_forward}. Each time step consists of evaluating the $f_{\bm{w}}$ function at every node. What is important, the connections between nodes are taken into consideration only between time steps. In such a way, the problem of cycles ceases to exist and the processed graph can be even fully connected.
 
+\begin{figure}[h!]
+\begin{center}
+	\includegraphics[scale=0.4]{img/forward}
+	\caption{Unfolded encoding network for the sample graph}
+	\label{fig:gnn_forward}
+\end{center}
+\end{figure}
+
+After the output $\bm{o}$ is calculated, the error $e_n = (d_n - o_n)^2$ is injected to the corresponding $g_{\bm{w}}$ unit for every node $n$, where $d_n$ denotes the expected node output. The error is backpropagated through the $g_{\bm{w}}$ layer, yielding the value $\frac{\partial e_{\bm{w}}}{\partial \bm{o}}\cdot \frac{\partial G_{\bm{w}}}{\partial x}(\hat{\bm{x}})$. That value is backpropagated through the unfolded network using the BPTT/BPTS algorithm. Additionally, at each time step the $\frac{\partial e_{\bm{w}}}{\partial \bm{o}}\cdot \frac{\partial G_{\bm{w}}}{\partial x}(\hat{\bm{x}})$ error is injected to the $f_{\bm{w}}$ layer, as presented in Fig.~\ref{fig:gnn_backward}. In such a way the error backpropagated through the $f_{\bm{w}}$ layer at time $t_i$ comes from two sources. First, it is the output error of the network $\frac{\partial e_{\bm{w}}}{\partial \bm{o}}\cdot \frac{\partial G_{\bm{w}}}{\partial x}(\hat{\bm{x}})$. Second, it is the error backpropagated through the subsequent time layers of the $f_{\bm{w}}$ unit; in other words, the error backpropagated to node $u$ from all nodes connected with the given node $u$ by an edge $u \Rightarrow n$.
+
+\begin{figure}[h!]
+\begin{center}
+	\includegraphics[scale=0.4]{img/backward}
+	\caption{Error backpropagation through the unfolded network}
+	\label{fig:gnn_backward}
+\end{center}
+\end{figure}
+
+By injecting the same error $\frac{\partial e_{\bm{w}}}{\partial \bm{o}}\cdot \frac{\partial G_{\bm{w}}}{\partial x}(\hat{\bm{x}})$ at each time step an important assumption is made, which leads to a simplification of the whole backpropagation process. If the state $\bm{x}$ converged to a \emph{fixed point} $\hat{\bm{x}}$ of function $F_{\bm{w}}$ at time $t_n$, then it can be safely assumed that using the value $\hat{\bm{x}}$ at every previous time step $t_i$ instead of the actually used $\bm{x}(t_i)$ would yield the same result at time $t_n$.
+
+Storing the intermediate values of $\bm{x}(t_i)$ and then backpropagating the error using the BPTT/BPTS algorithm would be memory consuming and complicated. However, due to the assumption that $\bm{x}(t_i) = \hat{\bm{x}}$, a different backpropagation algorithm can be used~\cite{scarselli2009graph}, originating from the domain of recurrent neural networks: the Almeida-Pineda algorithm~\cite{pineda1987generalization}~\cite{williams1995gradient}.
+
+Basically, the modified Almeida-Pineda algorithm consists of initializing an \emph{error accumulator} $\bm{z}(0) = \frac{\partial e_{\bm{w}}}{\partial \bm{o}}\cdot \frac{\partial G_{\bm{w}}}{\partial x}(\hat{\bm{x}})$ and then accumulating the error by backpropagating $\bm{z}(j)$ through the $f_{\bm{w}}$ layer until its value converges to $\hat{\bm{z}}$. At each step $j$ the additional error $\frac{\partial e_{\bm{w}}}{\partial \bm{o}}\cdot \frac{\partial G_{\bm{w}}}{\partial x}(\hat{\bm{x}})$ is injected as was shown previously. If the state calculation converged, the error calculation is guaranteed to converge too. The number of iterations needed for the \emph{error accumulator} $\bm{z}$ to converge can be different than the number of time steps needed for the state $\bm{x}$ to converge. In the conducted experiments it was usually much smaller.
+
+
+\section{Contraction map\label{sec:contraction}}
+In the previous paragraphs, it was stated that a fixed point $\hat{\bm{x}}$ of function $F_{\bm{w}}$ is sought. However, how can it be assumed that such a fixed point exists for the function $F_{\bm{w}}$? How to assure that it will be reached by iterating $\bm{x} = F_{\bm{w}}(\bm{x})$ using a random initial $\bm{x}$?
+
+Actually all of the above can be assured by making $F_{\bm{w}}$ a \emph{contraction map}. A \emph{contraction map} (a \emph{non-expansive} map) is a function $F_{\bm{w}}$ for which $d(F_{\bm{w}}(\bm{x}_1), \; F_{\bm{w}}(\bm{x}_2)) \leq d(\bm{x}_1, \; \bm{x}_2)$, where $d(\bm{x}, \; \bm{y})$ is a distance function. For this implementation a distance function $d(\bm{x}, \; \bm{y}) = max_i(|x_{i} - y_{i}|)$ was chosen, as it is independent of the \emph{state} size and therefore, of the number of nodes in a given graph. The \emph{Banach Fixed Point Theorem} states that a contraction map $F_{\bm{w}}(\bm{x})$ has the following properties:
+\begin{itemize}
+	\item it has a single fixed point $\hat{\bm{x}}$
+	\item it converges to $\hat{\bm{x}}$ from every starting point $\bm{x}(t_0)$
+	\item the convergence to  $\hat{\bm{x}}$ is exponentially fast~\cite{scarselli2009graph}.
+\end{itemize}
+
+\noindent How to assure that $F_{\bm{w}}$, a function composed of neural network instances, is actually a contraction map? The authors propose to impose a penalty function whenever the elements of the Jacobian $\frac{\partial F_{\bm{w}}}{\partial \bm{x}}$ suggest that $F_{\bm{w}}$ isn't a contraction map anymore.
+
+Let $\bm{A} = \frac{\partial F_{\bm{w}}}{\partial \bm{x}}(\bm{x}, \; \bm{l})$ be a block matrix of size $N \times N$ with blocks of size $s \times s$, where $N$ is the number of nodes in the processed graph and $|\bm{x}_n| = s$ is the state size for a single node. A single block $\bm{A}_{n,u}$ measures the influence of the node $u$ on node $n$ if there exists an edge from $n$ to $u$ or is zeroed otherwise. Let's denote by $I_u^j$ the influence of node $u$ on the $j$th element of state $\bm{x}_n$ (Eq.~\ref{eq:gnn_pw_L}). Then the penalty $p_{\bm{w}}$ added to the network error $e_{\bm{w}}$ is defined by Eq.~\ref{eq:gnn_pw}.
+
+\begin{equation}
+p_{\bm{w}} = \sum_{u \in N} \sum_{j = 1}^{s} L(I_u^j, \; \mu)
+\label{eq:gnn_pw}
+\end{equation}
+
+\begin{equation}
+L(y, \; \mu) = \left\{
+\begin{array}{l l}
+	y - \mu		& \quad \text{if $y > \mu$} \\
+	0			& \quad \text{otherwise}
+\end{array} \right.
+\label{eq:gnn_pw_L}
+\end{equation}
+
+\begin{equation}
+I_u^j =  \sum_{(n, u)} \sum_{i = 1}^{s} |\bm{A}_{n, u}^{i, j}|
+\label{eq:gnn_pw_inf}
+\end{equation}
+
+According to these equations, the value of $\frac{\partial p_{\bm{w}}}{\partial \bm{w}}$ is calculated and the final error derivative for the $h_{\bm{w}}$ network is calculated as $\frac{\partial e_{\bm{w}}}{\partial \bm{w}} + \frac{\partial p_{\bm{w}}}{\partial \bm{w}}$. It can be seen from Eq.~\ref{eq:gnn_pw_L} that the  term $\frac{\partial p_{\bm{w}}}{\partial \bm{w}}$ affects only those weights that cause an excessive impact and the value of such penalty is proportional to the value of $I_u^j$.
+
+
+\section{RPROP algorithm}
+The authors of the GNN algorithm suggest the RPROP algorithm~\cite{riedmiller1993direct} as the weights update algorithm, as an efficient gradient descent strategy. The basic idea of the RPROP algorithm is to use the original weight updates $\frac{\partial e_{\bm{w}}}{\partial \bm{w}}$ only to check their sign. The actual weight updates are calculated by the RPROP algorithm according to the past behaviour of $\frac{\partial e_{\bm{w}}}{\partial \bm{w}}$, which includes fast descent of monotonous gradient slopes, small steps in the proximity of a minimum and reverting updates that caused jumping over a local minimum. Actually, in the case of GNN, the RPROP algorithm should be used not only for its efficiency, but also as a way of dealing with the unpredictable behaviour of the $\frac{\partial p_{\bm{w}}}{\partial \bm{w}}$ term. As the subsequent experiments showed, the value of $\frac{\partial p_{\bm{w}}}{\partial \bm{w}}$ can be larger than the original $\frac{\partial e_{\bm{w}}}{\partial \bm{w}}$ by several orders of magnitude, which could disturb severely the learning algorithm if the RPROP algorithm wasn't used. The RPROP algorithm was implemented using standard recommended values~\cite{riedmiller1993direct}, with the exception of $\Delta_{max}$ which was set to $1$ to avoid large weight changes.
+
+
+\section{Maximum number of iterations}
+As was shown in section~\ref{sec:contraction}, the number of \emph{Forward} or \emph{Backward} steps is finite if $F_{\bm{w}}$ is a contraction map. However, it can be seen, that the penalty imposed on the weights is in fact imposed post factum. Only after the norm of the Jacobian $\frac{\partial F_{\bm{w}}}{\partial \bm{x}}$ increases excessively, the penalty is imposed. This means, that:
+\begin{enumerate}
+	\item it is not guaranteed that the Jacobian norm will be correct after the penalty is imposed
+	\item one \emph{Forward} iteration takes place before the penalty is imposed
+\end{enumerate}
+Even if the penalty is efficient enough (it isn't necessarily so, as shown in the subsequent experiments), the problem of a \emph{Forward} iteration that may not converge still remains. During experiments it was observed that while usually the number of \emph{Forward} iterations was about 5 to 50, depending on the dataset, from time to time it reached about 2000 iterations or even more (the calculations had to be aborted due to excessive time). To make the calculation time predictable it was necessary to introduce a modification to the original GNN algorithm - a maximum number of \emph{Forward} iterations. The value chosen for the subsequent experiments was 200, as it seemed to be a value large enough in comparison to the standard number of steps reached to assure that the state calculation will converge if $F_{\bm{w}}$ is still a contraction map. If the state calculation doesn't converge, it is not guaranteed that the error accumulation calculation will. Therefore, another similar restriction was introduced for the \emph{Backward} procedure and the maximum number of \emph{Backward} iterations was set to 200. 
+
+\newpage
+\section{Detailed training algorithm}
+\begin{lstlisting}[mathescape, style=outcode, language=pascal, caption=The learning algorithm]
+MAIN
+	$\bm{w} = \text{initialize}$
+	$\bm{x} = FORWARD(\bm{w})$
+	repeat
+		$[\frac{\partial eh_{\bm{w}}}{\partial \bm{w}}; \; \frac{\partial eg_{\bm{w}}}{\partial \bm{w}}] = BACKWARD(\bm{x}, \; \bm{w})$
+		$\bm{w} = \text{rprop-update}(\bm{w}, \; \frac{\partial eh_{\bm{w}}}{\partial \bm{w}}, \; \frac{\partial eg_{\bm{w}}}{\partial \bm{w}})$
+		$\bm{x} = FORWARD(\bm{w})$
+	until $\text{satisfied(stop-criterion)}$
+	return $\bm{w}$
+end
+
+FORWARD($\bm{w}$):
+	$\bm{x}(0) = \text{random}$
+	$t = 0$
+	repeat:
+		$\bm{x}(t+1) = F_{\bm{w}}(\bm{x}(t), \; \bm{l})$
+		$t = t + 1$
+	until $(max_i(|x_i(t + 1) - x_i(t)|) \leq minStateDiff)$ or $(t > maxForwardSteps)$
+	return $\bm{x}(t)$
+end
+
+BACKWARD($\bm{x}$, $\bm{w}$):
+	$\bm{o} = G_{\bm{w}}(\bm{x})$
+	$\bm{A} = \frac{\partial F_{\bm{w}}}{\partial \bm{x}}(\bm{x}, \; \bm{l})$
+	$\bm{b} = \frac{\partial e_{\bm{w}}}{\partial \bm{o}}\cdot \frac{\partial G_{\bm{w}}}{\partial x}(\bm{x})$
+	$\bm{z}(0) = \bm{b}$
+	$t = 0$
+	repeat:
+		$\bm{z}(t - 1) = \bm{z}(t) \cdot \bm{A} + \bm{b}$
+		$t = t - 1$
+	until $(max_i(|z_i(t - 1) - z_i(t)|) \leq minErrorAccDiff)$ or $(|t| > maxBackwardSteps)$
+	$\frac{\partial eg_{\bm{w}}}{\partial \bm{w}} = b$
+	$\frac{\partial eh_{\bm{w}}}{\partial \bm{w}} = \bm{z}(t) \cdot \frac{\partial F_{\bm{w}}}{\partial \bm{w}}(\bm{x}, \bm{l}) + \frac{\partial p_{\bm{w}}}{\partial \bm{w}}$
+	return $[\frac{\partial eh_{\bm{w}}}{\partial \bm{w}}; \; \frac{\partial eg_{\bm{w}}}{\partial \bm{w}}]$
+end
+\end{lstlisting}
+
+\section{Graph-focused tasks}
+The GNN model can be used for graph-focused tasks by adapting the standard processing algorithm. In a graph-focused task for every graph an output $\bm{o}$ is sought, which is the output of a predefined root node. In such task only the root output error can be measured, as for every other node the expected output is not defined. Thus, the only modification necessary to deal with such a task is to set the error of all non-root nodes to zero. Such a modification was implemented and proved to work well for the modified subgraph matching task (see chapter~\ref{ch:experiments}), where the modified task consisted of determining if a given graph contains the expected subgraph $S$ or not instead of selecting nodes belonging to $S$.

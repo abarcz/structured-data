@@ -6,7 +6,7 @@ import pygraphviz as pgv
 import os
 
 """
-Draw graph to .png file
+Draw graph to .pdf file
 """
 
 def build_label(values, decimals_num=0):
@@ -48,7 +48,7 @@ def loadgraph(name, add_node_ids, directed, mark, edge_labels, decimals_num):
 				graph.get_edge(row[0], row[1]).attr['label'] = build_label(row[2:], decimals_num)
 	return graph
 
-parser = argparse.ArgumentParser(description='Draw graph to <name>.png using input .csv files and graphviz')
+parser = argparse.ArgumentParser(description='Draw graph to <name>.pdf using input .csv files and graphviz')
 parser.add_argument("name", help="graph name, i.e. <name> from <name>_nodes.csv")
 parser.add_argument("-i", "--node_ids", help="add to each node its id (position in nodes file)", default=False, action="store_true")
 parser.add_argument("-u", "--undirected", help="should we draw the graph as directed", default=False, action="store_true")
@@ -60,4 +60,4 @@ args = parser.parse_args()
 
 graph = loadgraph(args.name, args.node_ids, not args.undirected, args.mark, args.edge_labels, args.decimals)
 graph.layout()
-graph.draw('%s.png' % args.name, prog='circo')
+graph.draw('%s.pdf' % args.name, prog='circo')
