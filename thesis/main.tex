@@ -77,6 +77,13 @@
 \usepackage[english]{babel}
 \usepackage[usenames,dvipsnames]{xcolor} % kolory dla listingow kodu
 
+\usepackage{parcolumns}	% two-column paragraphs
+\usepackage{subfigure}
+\usepackage{floatrow}
+% Table float box with bottom caption, box width adjusted to content
+\newfloatcommand{capbtabbox}{table}[][\FBwidth]
+
+
 % \textheight232mm
 % \setlength{\textwidth}{\textwidth}
 % \setlength{\oddsidemargin}{\evensidemargin}
@@ -173,11 +180,6 @@ framerule=0.1pt,
 \tableofcontents
 % \addcontentsline{toc}{chapter}{{Przedmowa1}{vii}}{vii}
 
-% \chapter*{Spis tablic, rysunków i~wydruków}
-% \listoftables
-% \listoffigures
-% \lstlistoflistings
-
 %\setlength{\baselineskip}{7mm}
 \newpage
 \pagenumbering{arabic}
@@ -189,13 +191,15 @@ framerule=0.1pt,
 \input{history}
 \input{gnn}
 \input{experiments}
+\input{conclusions}
 
 \appendix
+%\input{penalty}
+\input{usage}
 
-\listoftables
+%\listoftables
 \listoffigures
-
-% tutaj załączniki
+% \lstlistoflistings
 
 %\nocite{*}
 %\bibliographystyle{plplain}
