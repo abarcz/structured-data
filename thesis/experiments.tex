@@ -25,31 +25,31 @@ To test the impact of initial weight values on the process of a GNN training, 9 
 
 \newpage
 \section{Impact of contraction constant on learning~\label{sec:contraction_constant}}
-During the initial experiments, interesting results were obtained for different values of the contraction constant ($\mu$ from Eq.~\ref{eq:gnn_pw}). It seems that for a given learning task exists a minimum value of $\mu$ below which no learning occurs. Some experiments were conducted for the 6-3 dataset using the best networks from Fig.~\ref{fig:gnn_multiple}: the gnn5 and gnn7 network (initial weight values were used). The results for gnn5 are presented in Fig.~\ref{fig:gnn5} and the results for gnn7 are presented in Fig.~\ref{fig:gnn7}. For both networks three different values of $\mu$ were tested: 1.2, 0.9 and 0.6. In both cases it can be observed that no training occurs for $\mu = 0.6$. For these experiments 20 graphs from the 6-3 dataset were used.
+During the initial experiments, interesting results were obtained for different values of the contraction constant ($\mu$ from Eq.~\ref{eq:gnn_pw}). It seems that for a given learning task exists a minimum value of $\mu$ below which no learning occurs. Some experiments were conducted for the 6-3 dataset using the best networks from Fig.~\ref{fig:gnn_multiple}: the gnn5 and gnn7 network (initial weight values were used). The results for gnn7 are presented in Fig.~\ref{fig:gnn7} and the results for gnn5 are presented in Fig.~\ref{fig:gnn5}. For both networks three different values of $\mu$ were tested: 1.2, 0.9 and 0.6. In both cases it can be observed that no training occurs for $\mu = 0.6$. For these experiments 20 graphs from the 6-3 dataset were used.
 
 \begin{figure}[h!]
 \begin{center}
 	\includegraphics[scale=0.09]{img/rmse_clipped}
-	\caption{RMSE for gnn5 with $\mu \in [1.2, 0.9, 0.6]$}
-	\label{fig:gnn5}
-\end{center}
-\end{figure}
-
-\begin{figure}[h!]
-\begin{center}
-	\includegraphics[scale=0.09]{img/rmse1_clipped}
 	\caption{RMSE for gnn7 with $\mu \in [1.2, 0.9, 0.6]$}
 	\label{fig:gnn7}
 \end{center}
 \end{figure}
 
-A closer look on the process of learning may shed some light on the reasons behind the lack of learning. In Fig.~\ref{fig:gnn7_09} the process of learning of gnn7 with $\mu = 0.9$ is presented. In Fig.~\ref{fig:gnn7_06} the same network gnn7 was trained with $\mu = 0.6$. The different values shown are: \emph{nForward} - number of \emph{Forward} (state building) iterations, \emph{nBackward} - number of \emph{Backward} (error accumulation) iterations, \emph{penalty} - set to 1 if any weight was penalized, \emph{de/dw influence} - percent of combined weight updates that had the same sign as $\frac{\partial e}{\partial w}$ (before passing to RPROP algorithm), \emph{dp/dw influence} - percent of combined weight updates that had the same sign as $\frac{\partial p}{\partial w}$. Some interesting features of the GNN model learning schema can be observed. In the case of $\mu = 0.9$ the number of \emph{Forward} steps reached the maximum a couple of times, which presumably means that at that time the $F_{\bm{w}}$ ceased being a contraction map. The penalty was imposed mostly for short periods of time and only at one moment caused the $\frac{\partial e}{\partial w}$ influence to drop below 50\%. This strategy yielded good results - the imposed penalty reduced the number of \emph{Forward} steps and the RMSE was successfully reduced.
+\begin{figure}[h!]
+\begin{center}
+	\includegraphics[scale=0.09]{img/rmse1a_clipped}
+	\caption{RMSE for gnn5 with $\mu \in [1.2, 0.9, 0.6]$}
+	\label{fig:gnn5}
+\end{center}
+\end{figure}
+
+A closer look on the process of learning may shed some light on the reasons behind the lack of learning. In Fig.~\ref{fig:gnn5_09} the process of learning of gnn5 with $\mu = 0.9$ is presented. In Fig.~\ref{fig:gnn5_06} the same network gnn5 was trained with $\mu = 0.6$. The different values shown are: \emph{nForward} - number of \emph{Forward} (state building) iterations, \emph{nBackward} - number of \emph{Backward} (error accumulation) iterations, \emph{penalty} - set to 1 if any weight was penalized, \emph{de/dw influence} - percent of combined weight updates that had the same sign as $\frac{\partial e}{\partial w}$ (before passing to RPROP algorithm), \emph{dp/dw influence} - percent of combined weight updates that had the same sign as $\frac{\partial p}{\partial w}$. Some interesting features of the GNN model learning schema can be observed. In the case of $\mu = 0.9$ the number of \emph{Forward} steps reached the maximum a couple of times, which presumably means that at that time the $F_{\bm{w}}$ ceased being a contraction map. The penalty was imposed mostly for short periods of time and only at one moment caused the $\frac{\partial e}{\partial w}$ influence to drop below 50\%. This strategy yielded good results - the imposed penalty reduced the number of \emph{Forward} steps and the RMSE was successfully reduced.
 
 \begin{figure}[h!]
 \begin{center}
 	\includegraphics[scale=0.09]{img/gnn1_2}
-	\caption{gnn7 performance with $\mu = 0.9$ for 20 graphs}
-	\label{fig:gnn7_09}
+	\caption{gnn5 performance with $\mu = 0.9$ for 20 graphs}
+	\label{fig:gnn5_09}
 \end{center}
 \end{figure}
 
@@ -58,20 +58,20 @@ A different situation is shown for $\mu = 0.6$. Because of a low $\mu$ value, th
 \begin{figure}[h!]
 \begin{center}
 	\includegraphics[scale=0.09]{img/gnn1_3}
-	\caption{gnn7 performance with $\mu = 0.6$ for 20 graphs}
-	\label{fig:gnn7_06}
+	\caption{gnn5 performance with $\mu = 0.6$ for 20 graphs}
+	\label{fig:gnn5_06}
 \end{center}
 \end{figure}
 
 \newpage
-Another interesting case is presented in Fig.~\ref{fig:gnn5_09}: the learning process of gnn5 on 10 graphs with $\mu = 0.9$. It can be observed that even as the number of \emph{Forward} steps reached in peaks the maximum value, the $F_{\bm{w}}$ function remained a contraction map. A large enough $\mu$ prevented the penalty from being imposed, which enabled the GNN model to train both computation units without any disturbance. The result is a monotonously decreasing RMSE slope, which could be previously observed in Fig.~\ref{fig:gnn_multiple}. It can be concluded, that the most important aspect of building a GNN model is to provide an efficient way to make $F_{\bm{w}}$ a contraction map as fast as possible, so as to provide as much time as possible for undisturbed learning.
+Another interesting case is presented in Fig.~\ref{fig:gnn5_09_10}: the learning process of gnn5 on 10 graphs with $\mu = 0.9$. It can be observed that even as the number of \emph{Forward} steps reached in peaks the maximum value, the $F_{\bm{w}}$ function remained a contraction map. A large enough $\mu$ prevented the penalty from being imposed, which enabled the GNN model to train both computation units without any disturbance. The result is a monotonously decreasing RMSE slope, which could be previously observed in Fig.~\ref{fig:gnn_multiple}. It can be concluded, that the most important aspect of building a GNN model is to provide an efficient way to make $F_{\bm{w}}$ a contraction map as fast as possible, so as to provide as much time as possible for undisturbed learning.
 
 \newpage
 \begin{figure}[h!]
 \begin{center}
 	\includegraphics[scale=0.09]{img/gnn5}
 	\caption{gnn5 performance with $\mu = 0.9$ for 10 graphs}
-	\label{fig:gnn5_09}
+	\label{fig:gnn5_09_10}
 \end{center}
 \end{figure}
 

@@ -1,0 +1,2160 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Creator: fig2dev Version 3.2 Patchlevel 5d -->
+
+<!-- CreationDate: Mon Jun 10 01:25:45 2013 -->
+
+<!-- Magnification: 10.000 -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="5795.8501"
+   height="1998.8865"
+   viewBox="20340 17290 77278.001 26638.678"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.3.1 r9886"
+   sodipodi:docname="rmse1a.svg">
+  <metadata
+     id="metadata634">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs632">
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath3613">
+      <rect
+         style="fill:#666666;fill-opacity:1;stroke:#000000;stroke-width:26.66666603;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         id="rect3615"
+         width="79569.461"
+         height="26796.59"
+         x="20248.855"
+         y="17230.23" />
+    </clipPath>
+  </defs>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1280"
+     inkscape:window-height="750"
+     id="namedview630"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="0.14628727"
+     inkscape:cx="2375.7373"
+     inkscape:cy="699.68626"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
+  <g
+     style="fill:none;stroke-width:0.025in"
+     id="g4"
+     clip-path="url(#clipPath3613)"
+     transform="translate(-1423.2,-100)">
+    <!-- Line -->
+    <polyline
+       points="39710,18780 43460,18780 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline6" />
+    <!-- Line -->
+    <polyline
+       points="24880,28270 25280,30100 25680,17410 26090,28870 26490,29910 26890,32000 27290,31740 27690,33400 28090,34920 28500,37200 28900,36350 29300,37050 29700,39130 30100,38170 30500,34560 30910,35330 31310,37530 31710,38630 32110,38180 32510,36990 32910,38920 33310,38800 33720,39550 34120,38510 34520,36470 34920,37420 35320,40920 35720,40910 36130,35170 36530,41220 36930,38030 37330,39690 37730,38200 38130,37080 38530,37810 38940,37850 39340,38080 39740,39180 40140,39220 40540,39590 40940,39510 41350,38490 41750,38610 42150,40290 42550,39400 42950,39240 43350,38440 43760,40920 44160,39530 44560,38530 44960,37020 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline8" />
+    <!-- Line -->
+    <polyline
+       points="66660,18780 70410,18780 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline10" />
+    <!-- Line -->
+    <polyline
+       points="51830,28270 52230,30100 52630,17410 53040,29360 53440,28490 53840,30070 54240,31340 54640,32010 55040,32660 55450,34920 55850,35520 56250,37920 56650,33390 57050,33920 57450,33740 57860,31720 58260,32650 58660,34100 59060,36020 59460,36210 59860,36140 60260,36890 60670,39520 61070,39780 61470,37980 61870,39070 62270,40180 62670,38800 63080,40570 63480,40180 63880,40840 64280,41010 64680,41190 65080,41070 65480,41290 65890,41060 66290,40360 66690,40260 67090,41970 67490,39980 67890,37850 68300,35930 68700,33500 69100,35460 69500,36080 69900,32700 70300,35260 70710,36880 71110,36810 71510,38050 71910,37730 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline12" />
+    <!-- Line -->
+    <polyline
+       points="93620,18780 97370,18780 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline14" />
+    <!-- Line -->
+    <polyline
+       points="78790,28270 79190,30100 79590,17410 80000,28810 80400,30320 80800,28910 81200,28460 81600,29170 82000,27490 82410,28440 82810,29420 83210,30310 83610,30510 84010,30720 84410,30240 84820,30430 85220,29220 85620,26660 86020,29930 86420,27960 86820,29430 87220,29700 87630,28860 88030,29740 88430,29550 88830,28910 89230,29630 89630,29660 90040,29660 90440,29650 90840,29450 91240,29610 91640,29690 92040,29750 92440,29660 92850,29820 93250,29650 93650,29750 94050,29800 94450,29580 94850,29700 95260,29710 95660,29730 96060,29670 96460,29730 96860,29730 97260,29590 97670,29690 98070,29670 98470,29770 98870,29630 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline16" />
+    <!-- Line -->
+    <polyline
+       points="39710,52900 43460,52900 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline18" />
+    <!-- Line -->
+    <polyline
+       points="24880,62390 25280,64220 25680,51530 26090,62990 26490,63980 26890,64970 27290,64610 27690,66600 28090,67840 28500,69610 28900,71020 29300,69750 29700,70100 30100,69450 30500,70090 30910,66320 31310,64610 31710,65960 32110,64810 32510,62800 32910,62220 33310,60410 33720,61670 34120,61350 34520,62680 34920,63440 35320,63830 35720,64470 36130,63840 36530,64280 36930,64500 37330,64340 37730,64450 38130,64520 38530,64660 38940,64760 39340,65190 39740,65450 40140,65100 40540,64820 40940,64410 41350,64840 41750,64450 42150,64760 42550,64720 42950,64440 43350,65110 43760,64500 44160,64520 44560,64380 44960,65210 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline20" />
+    <!-- Line -->
+    <polyline
+       points="66660,52900 70410,52900 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline22" />
+    <!-- Line -->
+    <polyline
+       points="51830,62390 52230,64220 52630,51530 53040,63470 53440,62610 53840,64180 54240,65460 54640,66120 55040,66770 55450,69030 55850,68760 56250,72020 56650,67750 57050,65720 57450,66040 57860,65190 58260,65950 58660,65870 59060,65270 59460,66250 59860,65910 60260,66310 60670,66450 61070,66440 61470,66960 61870,66770 62270,66710 62670,67050 63080,67380 63480,67580 63880,67690 64280,67620 64680,67860 65080,67800 65480,68270 65890,68260 66290,68760 66690,69280 67090,69690 67490,69680 67890,70220 68300,70300 68700,70640 69100,71260 69500,71890 69900,71680 70300,70650 70710,69340 71110,70480 71510,70880 71910,71510 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline24" />
+    <!-- Line -->
+    <polyline
+       points="93620,52900 97370,52900 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline26" />
+    <!-- Line -->
+    <polyline
+       points="78790,62390 79190,64220 79590,51530 80000,62920 80400,64430 80800,63020 81200,62580 81600,62940 82000,62050 82410,62560 82810,63440 83210,63710 83610,64770 84010,66370 84410,67220 84820,68840 85220,63690 85620,63470 86020,62690 86420,65440 86820,64930 87220,64660 87630,64240 88030,65020 88430,64980 88830,64610 89230,64130 89630,64060 90040,63480 90440,63500 90840,63410 91240,63580 91640,63740 92040,63800 92440,63820 92850,63840 93250,63860 93650,63820 94050,63840 94450,63870 94850,63840 95260,63830 95660,63810 96060,63610 96460,63610 96860,63790 97260,64140 97670,64170 98070,64290 98470,64560 98870,65060 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline28" />
+    <!-- Line -->
+    <polyline
+       points="24480,41550 25530,41550 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline30" />
+    <!-- Line -->
+    <polyline
+       points="44960,41550 43910,41550 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline32" />
+    <!-- Line -->
+    <polyline
+       points="24480,39000 25530,39000 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline34" />
+    <!-- Line -->
+    <polyline
+       points="44960,39000 43910,39000 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline36" />
+    <!-- Line -->
+    <polyline
+       points="24480,36440 25530,36440 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline38" />
+    <!-- Line -->
+    <polyline
+       points="44960,36440 43910,36440 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline40" />
+    <!-- Line -->
+    <polyline
+       points="24480,33890 25530,33890 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline42" />
+    <!-- Line -->
+    <polyline
+       points="44960,33890 43910,33890 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline44" />
+    <!-- Line -->
+    <polyline
+       points="24480,31340 25530,31340 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline46" />
+    <!-- Line -->
+    <polyline
+       points="44960,31340 43910,31340 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline48" />
+    <!-- Line -->
+    <polyline
+       points="24480,28790 25530,28790 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline50" />
+    <!-- Line -->
+    <polyline
+       points="44960,28790 43910,28790 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline52" />
+    <!-- Line -->
+    <polyline
+       points="24480,26240 25530,26240 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline54" />
+    <!-- Line -->
+    <polyline
+       points="44960,26240 43910,26240 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline56" />
+    <!-- Line -->
+    <polyline
+       points="24480,23690 25530,23690 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline58" />
+    <!-- Line -->
+    <polyline
+       points="44960,23690 43910,23690 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline60" />
+    <!-- Line -->
+    <polyline
+       points="24480,21140 25530,21140 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline62" />
+    <!-- Line -->
+    <polyline
+       points="44960,21140 43910,21140 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline64" />
+    <!-- Line -->
+    <polyline
+       points="24480,18580 25530,18580 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline66" />
+    <!-- Line -->
+    <polyline
+       points="44960,18580 43910,18580 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline68" />
+    <!-- Line -->
+    <polyline
+       points="24480,41970 24480,40920 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline70" />
+    <!-- Line -->
+    <polyline
+       points="24480,17410 24480,18460 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline72" />
+    <!-- Line -->
+    <polyline
+       points="28500,41970 28500,40920 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline74" />
+    <!-- Line -->
+    <polyline
+       points="28500,17410 28500,18460 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline76" />
+    <!-- Line -->
+    <polyline
+       points="32510,41970 32510,40920 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline78" />
+    <!-- Line -->
+    <polyline
+       points="32510,17410 32510,18460 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline80" />
+    <!-- Line -->
+    <polyline
+       points="36530,41970 36530,40920 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline82" />
+    <!-- Line -->
+    <polyline
+       points="36530,17410 36530,18460 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline84" />
+    <!-- Line -->
+    <polyline
+       points="40540,41970 40540,40920 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline86" />
+    <!-- Line -->
+    <polyline
+       points="40540,17410 40540,18460 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline88" />
+    <!-- Line -->
+    <polyline
+       points="44560,41970 44560,40920 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline90" />
+    <!-- Line -->
+    <polyline
+       points="44560,17410 44560,18460 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline92" />
+    <!-- Line -->
+    <polyline
+       points="24480,17410 24480,41970 44960,41970 44960,17410 24480,17410 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline94" />
+    <!-- Line -->
+    <!--  End plot #1  -->
+    <polyline
+       points="51430,41550 52480,41550 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline96" />
+    <!-- Line -->
+    <polyline
+       points="71910,41550 70860,41550 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline98" />
+    <!-- Line -->
+    <polyline
+       points="51430,39000 52480,39000 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline100" />
+    <!-- Line -->
+    <polyline
+       points="71910,39000 70860,39000 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline102" />
+    <!-- Line -->
+    <polyline
+       points="51430,36440 52480,36440 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline104" />
+    <!-- Line -->
+    <polyline
+       points="71910,36440 70860,36440 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline106" />
+    <!-- Line -->
+    <polyline
+       points="51430,33890 52480,33890 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline108" />
+    <!-- Line -->
+    <polyline
+       points="71910,33890 70860,33890 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline110" />
+    <!-- Line -->
+    <polyline
+       points="51430,31340 52480,31340 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline112" />
+    <!-- Line -->
+    <polyline
+       points="71910,31340 70860,31340 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline114" />
+    <!-- Line -->
+    <polyline
+       points="51430,28790 52480,28790 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline116" />
+    <!-- Line -->
+    <polyline
+       points="71910,28790 70860,28790 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline118" />
+    <!-- Line -->
+    <polyline
+       points="51430,26240 52480,26240 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline120" />
+    <!-- Line -->
+    <polyline
+       points="71910,26240 70860,26240 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline122" />
+    <!-- Line -->
+    <polyline
+       points="51430,23690 52480,23690 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline124" />
+    <!-- Line -->
+    <polyline
+       points="71910,23690 70860,23690 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline126" />
+    <!-- Line -->
+    <polyline
+       points="51430,21140 52480,21140 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline128" />
+    <!-- Line -->
+    <polyline
+       points="71910,21140 70860,21140 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline130" />
+    <!-- Line -->
+    <polyline
+       points="51430,18580 52480,18580 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline132" />
+    <!-- Line -->
+    <polyline
+       points="71910,18580 70860,18580 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline134" />
+    <!-- Line -->
+    <polyline
+       points="51430,41970 51430,40920 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline136" />
+    <!-- Line -->
+    <polyline
+       points="51430,17410 51430,18460 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline138" />
+    <!-- Line -->
+    <polyline
+       points="55450,41970 55450,40920 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline140" />
+    <!-- Line -->
+    <polyline
+       points="55450,17410 55450,18460 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline142" />
+    <!-- Line -->
+    <polyline
+       points="59460,41970 59460,40920 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline144" />
+    <!-- Line -->
+    <polyline
+       points="59460,17410 59460,18460 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline146" />
+    <!-- Line -->
+    <polyline
+       points="63480,41970 63480,40920 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline148" />
+    <!-- Line -->
+    <polyline
+       points="63480,17410 63480,18460 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline150" />
+    <!-- Line -->
+    <polyline
+       points="67490,41970 67490,40920 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline152" />
+    <!-- Line -->
+    <polyline
+       points="67490,17410 67490,18460 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline154" />
+    <!-- Line -->
+    <polyline
+       points="71510,41970 71510,40920 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline156" />
+    <!-- Line -->
+    <polyline
+       points="71510,17410 71510,18460 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline158" />
+    <!-- Line -->
+    <polyline
+       points="51430,17410 51430,41970 71910,41970 71910,17410 51430,17410 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline160" />
+    <!-- Line -->
+    <!--  End plot #1  -->
+    <polyline
+       points="78390,41550 79440,41550 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline162" />
+    <!-- Line -->
+    <polyline
+       points="98870,41550 97820,41550 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline164" />
+    <!-- Line -->
+    <polyline
+       points="78390,39000 79440,39000 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline166" />
+    <!-- Line -->
+    <polyline
+       points="98870,39000 97820,39000 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline168" />
+    <!-- Line -->
+    <polyline
+       points="78390,36440 79440,36440 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline170" />
+    <!-- Line -->
+    <polyline
+       points="98870,36440 97820,36440 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline172" />
+    <!-- Line -->
+    <polyline
+       points="78390,33890 79440,33890 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline174" />
+    <!-- Line -->
+    <polyline
+       points="98870,33890 97820,33890 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline176" />
+    <!-- Line -->
+    <polyline
+       points="78390,31340 79440,31340 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline178" />
+    <!-- Line -->
+    <polyline
+       points="98870,31340 97820,31340 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline180" />
+    <!-- Line -->
+    <polyline
+       points="78390,28790 79440,28790 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline182" />
+    <!-- Line -->
+    <polyline
+       points="98870,28790 97820,28790 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline184" />
+    <!-- Line -->
+    <polyline
+       points="78390,26240 79440,26240 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline186" />
+    <!-- Line -->
+    <polyline
+       points="98870,26240 97820,26240 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline188" />
+    <!-- Line -->
+    <polyline
+       points="78390,23690 79440,23690 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline190" />
+    <!-- Line -->
+    <polyline
+       points="98870,23690 97820,23690 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline192" />
+    <!-- Line -->
+    <polyline
+       points="78390,21140 79440,21140 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline194" />
+    <!-- Line -->
+    <polyline
+       points="98870,21140 97820,21140 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline196" />
+    <!-- Line -->
+    <polyline
+       points="78390,18580 79440,18580 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline198" />
+    <!-- Line -->
+    <polyline
+       points="98870,18580 97820,18580 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline200" />
+    <!-- Line -->
+    <polyline
+       points="78390,41970 78390,40920 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline202" />
+    <!-- Line -->
+    <polyline
+       points="78390,17410 78390,18460 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline204" />
+    <!-- Line -->
+    <polyline
+       points="82410,41970 82410,40920 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline206" />
+    <!-- Line -->
+    <polyline
+       points="82410,17410 82410,18460 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline208" />
+    <!-- Line -->
+    <polyline
+       points="86420,41970 86420,40920 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline210" />
+    <!-- Line -->
+    <polyline
+       points="86420,17410 86420,18460 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline212" />
+    <!-- Line -->
+    <polyline
+       points="90440,41970 90440,40920 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline214" />
+    <!-- Line -->
+    <polyline
+       points="90440,17410 90440,18460 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline216" />
+    <!-- Line -->
+    <polyline
+       points="94450,41970 94450,40920 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline218" />
+    <!-- Line -->
+    <polyline
+       points="94450,17410 94450,18460 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline220" />
+    <!-- Line -->
+    <polyline
+       points="98470,41970 98470,40920 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline222" />
+    <!-- Line -->
+    <polyline
+       points="98470,17410 98470,18460 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline224" />
+    <!-- Line -->
+    <polyline
+       points="78390,17410 78390,41970 98870,41970 98870,17410 78390,17410 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline226" />
+    <!-- Line -->
+    <!--  End plot #1  -->
+    <polyline
+       points="24480,75660 25530,75660 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline228" />
+    <!-- Line -->
+    <polyline
+       points="44960,75660 43910,75660 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline230" />
+    <!-- Line -->
+    <polyline
+       points="24480,73110 25530,73110 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline232" />
+    <!-- Line -->
+    <polyline
+       points="44960,73110 43910,73110 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline234" />
+    <!-- Line -->
+    <polyline
+       points="24480,70560 25530,70560 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline236" />
+    <!-- Line -->
+    <polyline
+       points="44960,70560 43910,70560 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline238" />
+    <!-- Line -->
+    <polyline
+       points="24480,68010 25530,68010 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline240" />
+    <!-- Line -->
+    <polyline
+       points="44960,68010 43910,68010 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline242" />
+    <!-- Line -->
+    <polyline
+       points="24480,65460 25530,65460 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline244" />
+    <!-- Line -->
+    <polyline
+       points="44960,65460 43910,65460 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline246" />
+    <!-- Line -->
+    <polyline
+       points="24480,62910 25530,62910 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline248" />
+    <!-- Line -->
+    <polyline
+       points="44960,62910 43910,62910 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline250" />
+    <!-- Line -->
+    <polyline
+       points="24480,60360 25530,60360 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline252" />
+    <!-- Line -->
+    <polyline
+       points="44960,60360 43910,60360 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline254" />
+    <!-- Line -->
+    <polyline
+       points="24480,57800 25530,57800 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline256" />
+    <!-- Line -->
+    <polyline
+       points="44960,57800 43910,57800 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline258" />
+    <!-- Line -->
+    <polyline
+       points="24480,55250 25530,55250 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline260" />
+    <!-- Line -->
+    <polyline
+       points="44960,55250 43910,55250 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline262" />
+    <!-- Line -->
+    <polyline
+       points="24480,52700 25530,52700 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline264" />
+    <!-- Line -->
+    <polyline
+       points="44960,52700 43910,52700 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline266" />
+    <!-- Line -->
+    <polyline
+       points="24480,76080 24480,75030 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline268" />
+    <!-- Line -->
+    <polyline
+       points="24480,51530 24480,52580 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline270" />
+    <!-- Line -->
+    <polyline
+       points="28500,76080 28500,75030 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline272" />
+    <!-- Line -->
+    <polyline
+       points="28500,51530 28500,52580 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline274" />
+    <!-- Line -->
+    <polyline
+       points="32510,76080 32510,75030 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline276" />
+    <!-- Line -->
+    <polyline
+       points="32510,51530 32510,52580 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline278" />
+    <!-- Line -->
+    <polyline
+       points="36530,76080 36530,75030 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline280" />
+    <!-- Line -->
+    <polyline
+       points="36530,51530 36530,52580 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline282" />
+    <!-- Line -->
+    <polyline
+       points="40540,76080 40540,75030 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline284" />
+    <!-- Line -->
+    <polyline
+       points="40540,51530 40540,52580 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline286" />
+    <!-- Line -->
+    <polyline
+       points="44560,76080 44560,75030 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline288" />
+    <!-- Line -->
+    <polyline
+       points="44560,51530 44560,52580 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline290" />
+    <!-- Line -->
+    <polyline
+       points="24480,51530 24480,76080 44960,76080 44960,51530 24480,51530 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline292" />
+    <!-- Line -->
+    <!--  End plot #1  -->
+    <polyline
+       points="51430,75660 52480,75660 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline294" />
+    <!-- Line -->
+    <polyline
+       points="71910,75660 70860,75660 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline296" />
+    <!-- Line -->
+    <polyline
+       points="51430,73110 52480,73110 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline298" />
+    <!-- Line -->
+    <polyline
+       points="71910,73110 70860,73110 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline300" />
+    <!-- Line -->
+    <polyline
+       points="51430,70560 52480,70560 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline302" />
+    <!-- Line -->
+    <polyline
+       points="71910,70560 70860,70560 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline304" />
+    <!-- Line -->
+    <polyline
+       points="51430,68010 52480,68010 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline306" />
+    <!-- Line -->
+    <polyline
+       points="71910,68010 70860,68010 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline308" />
+    <!-- Line -->
+    <polyline
+       points="51430,65460 52480,65460 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline310" />
+    <!-- Line -->
+    <polyline
+       points="71910,65460 70860,65460 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline312" />
+    <!-- Line -->
+    <polyline
+       points="51430,62910 52480,62910 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline314" />
+    <!-- Line -->
+    <polyline
+       points="71910,62910 70860,62910 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline316" />
+    <!-- Line -->
+    <polyline
+       points="51430,60360 52480,60360 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline318" />
+    <!-- Line -->
+    <polyline
+       points="71910,60360 70860,60360 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline320" />
+    <!-- Line -->
+    <polyline
+       points="51430,57800 52480,57800 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline322" />
+    <!-- Line -->
+    <polyline
+       points="71910,57800 70860,57800 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline324" />
+    <!-- Line -->
+    <polyline
+       points="51430,55250 52480,55250 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline326" />
+    <!-- Line -->
+    <polyline
+       points="71910,55250 70860,55250 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline328" />
+    <!-- Line -->
+    <polyline
+       points="51430,52700 52480,52700 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline330" />
+    <!-- Line -->
+    <polyline
+       points="71910,52700 70860,52700 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline332" />
+    <!-- Line -->
+    <polyline
+       points="51430,76080 51430,75030 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline334" />
+    <!-- Line -->
+    <polyline
+       points="51430,51530 51430,52580 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline336" />
+    <!-- Line -->
+    <polyline
+       points="55450,76080 55450,75030 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline338" />
+    <!-- Line -->
+    <polyline
+       points="55450,51530 55450,52580 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline340" />
+    <!-- Line -->
+    <polyline
+       points="59460,76080 59460,75030 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline342" />
+    <!-- Line -->
+    <polyline
+       points="59460,51530 59460,52580 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline344" />
+    <!-- Line -->
+    <polyline
+       points="63480,76080 63480,75030 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline346" />
+    <!-- Line -->
+    <polyline
+       points="63480,51530 63480,52580 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline348" />
+    <!-- Line -->
+    <polyline
+       points="67490,76080 67490,75030 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline350" />
+    <!-- Line -->
+    <polyline
+       points="67490,51530 67490,52580 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline352" />
+    <!-- Line -->
+    <polyline
+       points="71510,76080 71510,75030 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline354" />
+    <!-- Line -->
+    <polyline
+       points="71510,51530 71510,52580 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline356" />
+    <!-- Line -->
+    <polyline
+       points="51430,51530 51430,76080 71910,76080 71910,51530 51430,51530 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline358" />
+    <!-- Line -->
+    <!--  End plot #1  -->
+    <polyline
+       points="78390,75660 79440,75660 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline360" />
+    <!-- Line -->
+    <polyline
+       points="98870,75660 97820,75660 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline362" />
+    <!-- Line -->
+    <polyline
+       points="78390,73110 79440,73110 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline364" />
+    <!-- Line -->
+    <polyline
+       points="98870,73110 97820,73110 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline366" />
+    <!-- Line -->
+    <polyline
+       points="78390,70560 79440,70560 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline368" />
+    <!-- Line -->
+    <polyline
+       points="98870,70560 97820,70560 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline370" />
+    <!-- Line -->
+    <polyline
+       points="78390,68010 79440,68010 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline372" />
+    <!-- Line -->
+    <polyline
+       points="98870,68010 97820,68010 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline374" />
+    <!-- Line -->
+    <polyline
+       points="78390,65460 79440,65460 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline376" />
+    <!-- Line -->
+    <polyline
+       points="98870,65460 97820,65460 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline378" />
+    <!-- Line -->
+    <polyline
+       points="78390,62910 79440,62910 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline380" />
+    <!-- Line -->
+    <polyline
+       points="98870,62910 97820,62910 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline382" />
+    <!-- Line -->
+    <polyline
+       points="78390,60360 79440,60360 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline384" />
+    <!-- Line -->
+    <polyline
+       points="98870,60360 97820,60360 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline386" />
+    <!-- Line -->
+    <polyline
+       points="78390,57800 79440,57800 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline388" />
+    <!-- Line -->
+    <polyline
+       points="98870,57800 97820,57800 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline390" />
+    <!-- Line -->
+    <polyline
+       points="78390,55250 79440,55250 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline392" />
+    <!-- Line -->
+    <polyline
+       points="98870,55250 97820,55250 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline394" />
+    <!-- Line -->
+    <polyline
+       points="78390,52700 79440,52700 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline396" />
+    <!-- Line -->
+    <polyline
+       points="98870,52700 97820,52700 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline398" />
+    <!-- Line -->
+    <polyline
+       points="78390,76080 78390,75030 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline400" />
+    <!-- Line -->
+    <polyline
+       points="78390,51530 78390,52580 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline402" />
+    <!-- Line -->
+    <polyline
+       points="82410,76080 82410,75030 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline404" />
+    <!-- Line -->
+    <polyline
+       points="82410,51530 82410,52580 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline406" />
+    <!-- Line -->
+    <polyline
+       points="86420,76080 86420,75030 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline408" />
+    <!-- Line -->
+    <polyline
+       points="86420,51530 86420,52580 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline410" />
+    <!-- Line -->
+    <polyline
+       points="90440,76080 90440,75030 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline412" />
+    <!-- Line -->
+    <polyline
+       points="90440,51530 90440,52580 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline414" />
+    <!-- Line -->
+    <polyline
+       points="94450,76080 94450,75030 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline416" />
+    <!-- Line -->
+    <polyline
+       points="94450,51530 94450,52580 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline418" />
+    <!-- Line -->
+    <polyline
+       points="98470,76080 98470,75030 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline420" />
+    <!-- Line -->
+    <polyline
+       points="98470,51530 98470,52580 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline422" />
+    <!-- Line -->
+    <polyline
+       points="78390,51530 78390,76080 98870,76080 98870,51530 78390,51530 "
+       style="stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline424" />
+    <!-- Text -->
+    <!--  Begin plot #1  -->
+    <text
+       xml:space="preserve"
+       x="38960"
+       y="19400"
+       font-style="normal"
+       font-weight="normal"
+       font-size="1200"
+       id="text426"
+       style="font-size:1200px;font-style:normal;font-weight:normal;text-anchor:end;fill:#000000;font-family:Times">(1.2, 1e-08)</text>
+    <!-- Text -->
+    <!--  Begin plot #1  -->
+    <text
+       xml:space="preserve"
+       x="65910"
+       y="19400"
+       font-style="normal"
+       font-weight="normal"
+       font-size="1200"
+       id="text428"
+       style="font-size:1200px;font-style:normal;font-weight:normal;text-anchor:end;fill:#000000;font-family:Times">(0.9, 1e-08)</text>
+    <!-- Text -->
+    <!--  Begin plot #1  -->
+    <text
+       xml:space="preserve"
+       x="92870"
+       y="19400"
+       font-style="normal"
+       font-weight="normal"
+       font-size="1200"
+       id="text430"
+       style="font-size:1200px;font-style:normal;font-weight:normal;text-anchor:end;fill:#000000;font-family:Times">(0.6, 1e-08)</text>
+    <!-- Text -->
+    <!--  Begin plot #1  -->
+    <text
+       xml:space="preserve"
+       x="38960"
+       y="53520"
+       font-style="normal"
+       font-weight="normal"
+       font-size="1200"
+       id="text432"
+       style="font-size:1200px;font-style:normal;font-weight:normal;text-anchor:end;fill:#000000;font-family:Times">a</text>
+    <!-- Text -->
+    <!--  Begin plot #1  -->
+    <text
+       xml:space="preserve"
+       x="65910"
+       y="53520"
+       font-style="normal"
+       font-weight="normal"
+       font-size="1200"
+       id="text434"
+       style="font-size:1200px;font-style:normal;font-weight:normal;text-anchor:end;fill:#000000;font-family:Times">a</text>
+    <!-- Text -->
+    <!--  Begin plot #1  -->
+    <text
+       xml:space="preserve"
+       x="92870"
+       y="53520"
+       font-style="normal"
+       font-weight="normal"
+       font-size="1200"
+       id="text436"
+       style="font-size:1200px;font-style:normal;font-weight:normal;text-anchor:end;fill:#000000;font-family:Times">a</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="23730"
+       y="42170"
+       font-style="normal"
+       font-weight="normal"
+       font-size="1200"
+       id="text438"
+       style="font-size:1200px;font-style:normal;font-weight:normal;text-anchor:end;fill:#000000;font-family:Times">8.5</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="23730"
+       y="39620"
+       font-style="normal"
+       font-weight="normal"
+       font-size="1200"
+       id="text440"
+       style="font-size:1200px;font-style:normal;font-weight:normal;text-anchor:end;fill:#000000;font-family:Times">9</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="23730"
+       y="37060"
+       font-style="normal"
+       font-weight="normal"
+       font-size="1200"
+       id="text442"
+       style="font-size:1200px;font-style:normal;font-weight:normal;text-anchor:end;fill:#000000;font-family:Times">9.5</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="23730"
+       y="34510"
+       font-style="normal"
+       font-weight="normal"
+       font-size="1200"
+       id="text444"
+       style="font-size:1200px;font-style:normal;font-weight:normal;text-anchor:end;fill:#000000;font-family:Times">10</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="23730"
+       y="31960"
+       font-style="normal"
+       font-weight="normal"
+       font-size="1200"
+       id="text446"
+       style="font-size:1200px;font-style:normal;font-weight:normal;text-anchor:end;fill:#000000;font-family:Times">10.5</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="23730"
+       y="29410"
+       font-style="normal"
+       font-weight="normal"
+       font-size="1200"
+       id="text448"
+       style="font-size:1200px;font-style:normal;font-weight:normal;text-anchor:end;fill:#000000;font-family:Times">11</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="23730"
+       y="26860"
+       font-style="normal"
+       font-weight="normal"
+       font-size="1200"
+       id="text450"
+       style="font-size:1200px;font-style:normal;font-weight:normal;text-anchor:end;fill:#000000;font-family:Times">11.5</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="23730"
+       y="24310"
+       font-style="normal"
+       font-weight="normal"
+       font-size="1200"
+       id="text452"
+       style="font-size:1200px;font-style:normal;font-weight:normal;text-anchor:end;fill:#000000;font-family:Times">12</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="23730"
+       y="21760"
+       font-style="normal"
+       font-weight="normal"
+       font-size="1200"
+       id="text454"
+       style="font-size:1200px;font-style:normal;font-weight:normal;text-anchor:end;fill:#000000;font-family:Times">12.5</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="23730"
+       y="19200"
+       font-style="normal"
+       font-weight="normal"
+       font-size="1200"
+       id="text456"
+       style="font-size:1200px;font-style:normal;font-weight:normal;text-anchor:end;fill:#000000;font-family:Times">13</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="24480"
+       y="43840"
+       font-style="normal"
+       font-weight="normal"
+       font-size="1200"
+       id="text458"
+       style="font-size:1200px;font-style:normal;font-weight:normal;text-anchor:middle;fill:#000000;font-family:Times">0</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="28500"
+       y="43840"
+       font-style="normal"
+       font-weight="normal"
+       font-size="1200"
+       id="text460"
+       style="font-size:1200px;font-style:normal;font-weight:normal;text-anchor:middle;fill:#000000;font-family:Times">10</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="32510"
+       y="43840"
+       font-style="normal"
+       font-weight="normal"
+       font-size="1200"
+       id="text462"
+       style="font-size:1200px;font-style:normal;font-weight:normal;text-anchor:middle;fill:#000000;font-family:Times">20</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="36530"
+       y="43840"
+       font-style="normal"
+       font-weight="normal"
+       font-size="1200"
+       id="text464"
+       style="font-size:1200px;font-style:normal;font-weight:normal;text-anchor:middle;fill:#000000;font-family:Times">30</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="40540"
+       y="43840"
+       font-style="normal"
+       font-weight="normal"
+       font-size="1200"
+       id="text466"
+       style="font-size:1200px;font-style:normal;font-weight:normal;text-anchor:middle;fill:#000000;font-family:Times">40</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="44560"
+       y="43840"
+       font-style="normal"
+       font-weight="normal"
+       font-size="1200"
+       id="text468"
+       style="font-size:1200px;font-style:normal;font-weight:normal;text-anchor:middle;fill:#000000;font-family:Times">50</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="50680"
+       y="42170"
+       font-style="normal"
+       font-weight="normal"
+       font-size="1200"
+       id="text470"
+       style="font-size:1200px;font-style:normal;font-weight:normal;text-anchor:end;fill:#000000;font-family:Times">8.5</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="50680"
+       y="39620"
+       font-style="normal"
+       font-weight="normal"
+       font-size="1200"
+       id="text472"
+       style="font-size:1200px;font-style:normal;font-weight:normal;text-anchor:end;fill:#000000;font-family:Times">9</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="50680"
+       y="37060"
+       font-style="normal"
+       font-weight="normal"
+       font-size="1200"
+       id="text474"
+       style="font-size:1200px;font-style:normal;font-weight:normal;text-anchor:end;fill:#000000;font-family:Times">9.5</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="50680"
+       y="34510"
+       font-style="normal"
+       font-weight="normal"
+       font-size="1200"
+       id="text476"
+       style="font-size:1200px;font-style:normal;font-weight:normal;text-anchor:end;fill:#000000;font-family:Times">10</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="50680"
+       y="31960"
+       font-style="normal"
+       font-weight="normal"
+       font-size="1200"
+       id="text478"
+       style="font-size:1200px;font-style:normal;font-weight:normal;text-anchor:end;fill:#000000;font-family:Times">10.5</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="50680"
+       y="29410"
+       font-style="normal"
+       font-weight="normal"
+       font-size="1200"
+       id="text480"
+       style="font-size:1200px;font-style:normal;font-weight:normal;text-anchor:end;fill:#000000;font-family:Times">11</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="50680"
+       y="26860"
+       font-style="normal"
+       font-weight="normal"
+       font-size="1200"
+       id="text482"
+       style="font-size:1200px;font-style:normal;font-weight:normal;text-anchor:end;fill:#000000;font-family:Times">11.5</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="50680"
+       y="24310"
+       font-style="normal"
+       font-weight="normal"
+       font-size="1200"
+       id="text484"
+       style="font-size:1200px;font-style:normal;font-weight:normal;text-anchor:end;fill:#000000;font-family:Times">12</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="50680"
+       y="21760"
+       font-style="normal"
+       font-weight="normal"
+       font-size="1200"
+       id="text486"
+       style="font-size:1200px;font-style:normal;font-weight:normal;text-anchor:end;fill:#000000;font-family:Times">12.5</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="50680"
+       y="19200"
+       font-style="normal"
+       font-weight="normal"
+       font-size="1200"
+       id="text488"
+       style="font-size:1200px;font-style:normal;font-weight:normal;text-anchor:end;fill:#000000;font-family:Times">13</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="51430"
+       y="43840"
+       font-style="normal"
+       font-weight="normal"
+       font-size="1200"
+       id="text490"
+       style="font-size:1200px;font-style:normal;font-weight:normal;text-anchor:middle;fill:#000000;font-family:Times">0</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="55450"
+       y="43840"
+       font-style="normal"
+       font-weight="normal"
+       font-size="1200"
+       id="text492"
+       style="font-size:1200px;font-style:normal;font-weight:normal;text-anchor:middle;fill:#000000;font-family:Times">10</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="59460"
+       y="43840"
+       font-style="normal"
+       font-weight="normal"
+       font-size="1200"
+       id="text494"
+       style="font-size:1200px;font-style:normal;font-weight:normal;text-anchor:middle;fill:#000000;font-family:Times">20</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="63480"
+       y="43840"
+       font-style="normal"
+       font-weight="normal"
+       font-size="1200"
+       id="text496"
+       style="font-size:1200px;font-style:normal;font-weight:normal;text-anchor:middle;fill:#000000;font-family:Times">30</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="67490"
+       y="43840"
+       font-style="normal"
+       font-weight="normal"
+       font-size="1200"
+       id="text498"
+       style="font-size:1200px;font-style:normal;font-weight:normal;text-anchor:middle;fill:#000000;font-family:Times">40</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="71510"
+       y="43840"
+       font-style="normal"
+       font-weight="normal"
+       font-size="1200"
+       id="text500"
+       style="font-size:1200px;font-style:normal;font-weight:normal;text-anchor:middle;fill:#000000;font-family:Times">50</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="77640"
+       y="42170"
+       font-style="normal"
+       font-weight="normal"
+       font-size="1200"
+       id="text502"
+       style="font-size:1200px;font-style:normal;font-weight:normal;text-anchor:end;fill:#000000;font-family:Times">8.5</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="77640"
+       y="39620"
+       font-style="normal"
+       font-weight="normal"
+       font-size="1200"
+       id="text504"
+       style="font-size:1200px;font-style:normal;font-weight:normal;text-anchor:end;fill:#000000;font-family:Times">9</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="77640"
+       y="37060"
+       font-style="normal"
+       font-weight="normal"
+       font-size="1200"
+       id="text506"
+       style="font-size:1200px;font-style:normal;font-weight:normal;text-anchor:end;fill:#000000;font-family:Times">9.5</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="77640"
+       y="34510"
+       font-style="normal"
+       font-weight="normal"
+       font-size="1200"
+       id="text508"
+       style="font-size:1200px;font-style:normal;font-weight:normal;text-anchor:end;fill:#000000;font-family:Times">10</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="77640"
+       y="31960"
+       font-style="normal"
+       font-weight="normal"
+       font-size="1200"
+       id="text510"
+       style="font-size:1200px;font-style:normal;font-weight:normal;text-anchor:end;fill:#000000;font-family:Times">10.5</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="77640"
+       y="29410"
+       font-style="normal"
+       font-weight="normal"
+       font-size="1200"
+       id="text512"
+       style="font-size:1200px;font-style:normal;font-weight:normal;text-anchor:end;fill:#000000;font-family:Times">11</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="77640"
+       y="26860"
+       font-style="normal"
+       font-weight="normal"
+       font-size="1200"
+       id="text514"
+       style="font-size:1200px;font-style:normal;font-weight:normal;text-anchor:end;fill:#000000;font-family:Times">11.5</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="77640"
+       y="24310"
+       font-style="normal"
+       font-weight="normal"
+       font-size="1200"
+       id="text516"
+       style="font-size:1200px;font-style:normal;font-weight:normal;text-anchor:end;fill:#000000;font-family:Times">12</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="77640"
+       y="21760"
+       font-style="normal"
+       font-weight="normal"
+       font-size="1200"
+       id="text518"
+       style="font-size:1200px;font-style:normal;font-weight:normal;text-anchor:end;fill:#000000;font-family:Times">12.5</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="77640"
+       y="19200"
+       font-style="normal"
+       font-weight="normal"
+       font-size="1200"
+       id="text520"
+       style="font-size:1200px;font-style:normal;font-weight:normal;text-anchor:end;fill:#000000;font-family:Times">13</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="78390"
+       y="43840"
+       font-style="normal"
+       font-weight="normal"
+       font-size="1200"
+       id="text522"
+       style="font-size:1200px;font-style:normal;font-weight:normal;text-anchor:middle;fill:#000000;font-family:Times">0</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="82410"
+       y="43840"
+       font-style="normal"
+       font-weight="normal"
+       font-size="1200"
+       id="text524"
+       style="font-size:1200px;font-style:normal;font-weight:normal;text-anchor:middle;fill:#000000;font-family:Times">10</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="86420"
+       y="43840"
+       font-style="normal"
+       font-weight="normal"
+       font-size="1200"
+       id="text526"
+       style="font-size:1200px;font-style:normal;font-weight:normal;text-anchor:middle;fill:#000000;font-family:Times">20</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="90440"
+       y="43840"
+       font-style="normal"
+       font-weight="normal"
+       font-size="1200"
+       id="text528"
+       style="font-size:1200px;font-style:normal;font-weight:normal;text-anchor:middle;fill:#000000;font-family:Times">30</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="94450"
+       y="43840"
+       font-style="normal"
+       font-weight="normal"
+       font-size="1200"
+       id="text530"
+       style="font-size:1200px;font-style:normal;font-weight:normal;text-anchor:middle;fill:#000000;font-family:Times">40</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="98470"
+       y="43840"
+       font-style="normal"
+       font-weight="normal"
+       font-size="1200"
+       id="text532"
+       style="font-size:1200px;font-style:normal;font-weight:normal;text-anchor:middle;fill:#000000;font-family:Times">50</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="23730"
+       y="76280"
+       font-style="normal"
+       font-weight="normal"
+       font-size="1200"
+       id="text534"
+       style="font-size:1200px;font-style:normal;font-weight:normal;text-anchor:end;fill:#000000;font-family:Times">8.5</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="23730"
+       y="73730"
+       font-style="normal"
+       font-weight="normal"
+       font-size="1200"
+       id="text536"
+       style="font-size:1200px;font-style:normal;font-weight:normal;text-anchor:end;fill:#000000;font-family:Times">9</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="23730"
+       y="71180"
+       font-style="normal"
+       font-weight="normal"
+       font-size="1200"
+       id="text538"
+       style="font-size:1200px;font-style:normal;font-weight:normal;text-anchor:end;fill:#000000;font-family:Times">9.5</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="23730"
+       y="68630"
+       font-style="normal"
+       font-weight="normal"
+       font-size="1200"
+       id="text540"
+       style="font-size:1200px;font-style:normal;font-weight:normal;text-anchor:end;fill:#000000;font-family:Times">10</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="23730"
+       y="66080"
+       font-style="normal"
+       font-weight="normal"
+       font-size="1200"
+       id="text542"
+       style="font-size:1200px;font-style:normal;font-weight:normal;text-anchor:end;fill:#000000;font-family:Times">10.5</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="23730"
+       y="63530"
+       font-style="normal"
+       font-weight="normal"
+       font-size="1200"
+       id="text544"
+       style="font-size:1200px;font-style:normal;font-weight:normal;text-anchor:end;fill:#000000;font-family:Times">11</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="23730"
+       y="60980"
+       font-style="normal"
+       font-weight="normal"
+       font-size="1200"
+       id="text546"
+       style="font-size:1200px;font-style:normal;font-weight:normal;text-anchor:end;fill:#000000;font-family:Times">11.5</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="23730"
+       y="58420"
+       font-style="normal"
+       font-weight="normal"
+       font-size="1200"
+       id="text548"
+       style="font-size:1200px;font-style:normal;font-weight:normal;text-anchor:end;fill:#000000;font-family:Times">12</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="23730"
+       y="55870"
+       font-style="normal"
+       font-weight="normal"
+       font-size="1200"
+       id="text550"
+       style="font-size:1200px;font-style:normal;font-weight:normal;text-anchor:end;fill:#000000;font-family:Times">12.5</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="23730"
+       y="53320"
+       font-style="normal"
+       font-weight="normal"
+       font-size="1200"
+       id="text552"
+       style="font-size:1200px;font-style:normal;font-weight:normal;text-anchor:end;fill:#000000;font-family:Times">13</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="24480"
+       y="77950"
+       font-style="normal"
+       font-weight="normal"
+       font-size="1200"
+       id="text554"
+       style="font-size:1200px;font-style:normal;font-weight:normal;text-anchor:middle;fill:#000000;font-family:Times">0</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="28500"
+       y="77950"
+       font-style="normal"
+       font-weight="normal"
+       font-size="1200"
+       id="text556"
+       style="font-size:1200px;font-style:normal;font-weight:normal;text-anchor:middle;fill:#000000;font-family:Times">10</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="32510"
+       y="77950"
+       font-style="normal"
+       font-weight="normal"
+       font-size="1200"
+       id="text558"
+       style="font-size:1200px;font-style:normal;font-weight:normal;text-anchor:middle;fill:#000000;font-family:Times">20</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="36530"
+       y="77950"
+       font-style="normal"
+       font-weight="normal"
+       font-size="1200"
+       id="text560"
+       style="font-size:1200px;font-style:normal;font-weight:normal;text-anchor:middle;fill:#000000;font-family:Times">30</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="40540"
+       y="77950"
+       font-style="normal"
+       font-weight="normal"
+       font-size="1200"
+       id="text562"
+       style="font-size:1200px;font-style:normal;font-weight:normal;text-anchor:middle;fill:#000000;font-family:Times">40</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="44560"
+       y="77950"
+       font-style="normal"
+       font-weight="normal"
+       font-size="1200"
+       id="text564"
+       style="font-size:1200px;font-style:normal;font-weight:normal;text-anchor:middle;fill:#000000;font-family:Times">50</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="50680"
+       y="76280"
+       font-style="normal"
+       font-weight="normal"
+       font-size="1200"
+       id="text566"
+       style="font-size:1200px;font-style:normal;font-weight:normal;text-anchor:end;fill:#000000;font-family:Times">8.5</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="50680"
+       y="73730"
+       font-style="normal"
+       font-weight="normal"
+       font-size="1200"
+       id="text568"
+       style="font-size:1200px;font-style:normal;font-weight:normal;text-anchor:end;fill:#000000;font-family:Times">9</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="50680"
+       y="71180"
+       font-style="normal"
+       font-weight="normal"
+       font-size="1200"
+       id="text570"
+       style="font-size:1200px;font-style:normal;font-weight:normal;text-anchor:end;fill:#000000;font-family:Times">9.5</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="50680"
+       y="68630"
+       font-style="normal"
+       font-weight="normal"
+       font-size="1200"
+       id="text572"
+       style="font-size:1200px;font-style:normal;font-weight:normal;text-anchor:end;fill:#000000;font-family:Times">10</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="50680"
+       y="66080"
+       font-style="normal"
+       font-weight="normal"
+       font-size="1200"
+       id="text574"
+       style="font-size:1200px;font-style:normal;font-weight:normal;text-anchor:end;fill:#000000;font-family:Times">10.5</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="50680"
+       y="63530"
+       font-style="normal"
+       font-weight="normal"
+       font-size="1200"
+       id="text576"
+       style="font-size:1200px;font-style:normal;font-weight:normal;text-anchor:end;fill:#000000;font-family:Times">11</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="50680"
+       y="60980"
+       font-style="normal"
+       font-weight="normal"
+       font-size="1200"
+       id="text578"
+       style="font-size:1200px;font-style:normal;font-weight:normal;text-anchor:end;fill:#000000;font-family:Times">11.5</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="50680"
+       y="58420"
+       font-style="normal"
+       font-weight="normal"
+       font-size="1200"
+       id="text580"
+       style="font-size:1200px;font-style:normal;font-weight:normal;text-anchor:end;fill:#000000;font-family:Times">12</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="50680"
+       y="55870"
+       font-style="normal"
+       font-weight="normal"
+       font-size="1200"
+       id="text582"
+       style="font-size:1200px;font-style:normal;font-weight:normal;text-anchor:end;fill:#000000;font-family:Times">12.5</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="50680"
+       y="53320"
+       font-style="normal"
+       font-weight="normal"
+       font-size="1200"
+       id="text584"
+       style="font-size:1200px;font-style:normal;font-weight:normal;text-anchor:end;fill:#000000;font-family:Times">13</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="51430"
+       y="77950"
+       font-style="normal"
+       font-weight="normal"
+       font-size="1200"
+       id="text586"
+       style="font-size:1200px;font-style:normal;font-weight:normal;text-anchor:middle;fill:#000000;font-family:Times">0</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="55450"
+       y="77950"
+       font-style="normal"
+       font-weight="normal"
+       font-size="1200"
+       id="text588"
+       style="font-size:1200px;font-style:normal;font-weight:normal;text-anchor:middle;fill:#000000;font-family:Times">10</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="59460"
+       y="77950"
+       font-style="normal"
+       font-weight="normal"
+       font-size="1200"
+       id="text590"
+       style="font-size:1200px;font-style:normal;font-weight:normal;text-anchor:middle;fill:#000000;font-family:Times">20</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="63480"
+       y="77950"
+       font-style="normal"
+       font-weight="normal"
+       font-size="1200"
+       id="text592"
+       style="font-size:1200px;font-style:normal;font-weight:normal;text-anchor:middle;fill:#000000;font-family:Times">30</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="67490"
+       y="77950"
+       font-style="normal"
+       font-weight="normal"
+       font-size="1200"
+       id="text594"
+       style="font-size:1200px;font-style:normal;font-weight:normal;text-anchor:middle;fill:#000000;font-family:Times">40</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="71510"
+       y="77950"
+       font-style="normal"
+       font-weight="normal"
+       font-size="1200"
+       id="text596"
+       style="font-size:1200px;font-style:normal;font-weight:normal;text-anchor:middle;fill:#000000;font-family:Times">50</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="77640"
+       y="76280"
+       font-style="normal"
+       font-weight="normal"
+       font-size="1200"
+       id="text598"
+       style="font-size:1200px;font-style:normal;font-weight:normal;text-anchor:end;fill:#000000;font-family:Times">8.5</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="77640"
+       y="73730"
+       font-style="normal"
+       font-weight="normal"
+       font-size="1200"
+       id="text600"
+       style="font-size:1200px;font-style:normal;font-weight:normal;text-anchor:end;fill:#000000;font-family:Times">9</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="77640"
+       y="71180"
+       font-style="normal"
+       font-weight="normal"
+       font-size="1200"
+       id="text602"
+       style="font-size:1200px;font-style:normal;font-weight:normal;text-anchor:end;fill:#000000;font-family:Times">9.5</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="77640"
+       y="68630"
+       font-style="normal"
+       font-weight="normal"
+       font-size="1200"
+       id="text604"
+       style="font-size:1200px;font-style:normal;font-weight:normal;text-anchor:end;fill:#000000;font-family:Times">10</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="77640"
+       y="66080"
+       font-style="normal"
+       font-weight="normal"
+       font-size="1200"
+       id="text606"
+       style="font-size:1200px;font-style:normal;font-weight:normal;text-anchor:end;fill:#000000;font-family:Times">10.5</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="77640"
+       y="63530"
+       font-style="normal"
+       font-weight="normal"
+       font-size="1200"
+       id="text608"
+       style="font-size:1200px;font-style:normal;font-weight:normal;text-anchor:end;fill:#000000;font-family:Times">11</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="77640"
+       y="60980"
+       font-style="normal"
+       font-weight="normal"
+       font-size="1200"
+       id="text610"
+       style="font-size:1200px;font-style:normal;font-weight:normal;text-anchor:end;fill:#000000;font-family:Times">11.5</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="77640"
+       y="58420"
+       font-style="normal"
+       font-weight="normal"
+       font-size="1200"
+       id="text612"
+       style="font-size:1200px;font-style:normal;font-weight:normal;text-anchor:end;fill:#000000;font-family:Times">12</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="77640"
+       y="55870"
+       font-style="normal"
+       font-weight="normal"
+       font-size="1200"
+       id="text614"
+       style="font-size:1200px;font-style:normal;font-weight:normal;text-anchor:end;fill:#000000;font-family:Times">12.5</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="77640"
+       y="53320"
+       font-style="normal"
+       font-weight="normal"
+       font-size="1200"
+       id="text616"
+       style="font-size:1200px;font-style:normal;font-weight:normal;text-anchor:end;fill:#000000;font-family:Times">13</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="78390"
+       y="77950"
+       font-style="normal"
+       font-weight="normal"
+       font-size="1200"
+       id="text618"
+       style="font-size:1200px;font-style:normal;font-weight:normal;text-anchor:middle;fill:#000000;font-family:Times">0</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="82410"
+       y="77950"
+       font-style="normal"
+       font-weight="normal"
+       font-size="1200"
+       id="text620"
+       style="font-size:1200px;font-style:normal;font-weight:normal;text-anchor:middle;fill:#000000;font-family:Times">10</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="86420"
+       y="77950"
+       font-style="normal"
+       font-weight="normal"
+       font-size="1200"
+       id="text622"
+       style="font-size:1200px;font-style:normal;font-weight:normal;text-anchor:middle;fill:#000000;font-family:Times">20</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="90440"
+       y="77950"
+       font-style="normal"
+       font-weight="normal"
+       font-size="1200"
+       id="text624"
+       style="font-size:1200px;font-style:normal;font-weight:normal;text-anchor:middle;fill:#000000;font-family:Times">30</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="94450"
+       y="77950"
+       font-style="normal"
+       font-weight="normal"
+       font-size="1200"
+       id="text626"
+       style="font-size:1200px;font-style:normal;font-weight:normal;text-anchor:middle;fill:#000000;font-family:Times">40</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="98470"
+       y="77950"
+       font-style="normal"
+       font-weight="normal"
+       font-size="1200"
+       id="text628"
+       style="font-size:1200px;font-style:normal;font-weight:normal;text-anchor:middle;fill:#000000;font-family:Times">50</text>
+  </g>
+</svg>
