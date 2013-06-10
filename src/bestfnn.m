@@ -15,7 +15,7 @@ function [trainEval testEval fnn] = bestfnn(graphs, nFolds, nFnns, testname=0)
 	testEval = [];
 	fnn = [];
 	for i = 1:nFnns
-		currFnn = newff(pr, [5 1], {'tansig', 'purelin'});
+		currFnn = newff(pr, [20 1], {'tansig', 'purelin'});
 		[currTrainEval currTestEval] = crossvalidatefnn(currFnn, graphs, nFolds);
 		result = mean(mean(currTrainEval));
 		if result > bestResult

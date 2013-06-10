@@ -77,7 +77,7 @@ Another interesting case is presented in Fig.~\ref{fig:gnn5_09_10}: the learning
 
 \newpage
 \section{Cross-validation results}
-To compare the performance of the implemented GNN model with a standard FNN, the following subgraph matching experiment was conducted. 5-fold cross-validation was performed on all 100 graphs from the 14-7 dataset. A random GNN was generated. It was trained with a contraction constant $\mu = 0.9$ for 50 iterations for each fold. To provide good FNN results, 10 three-layer FNNs with 5 hidden $tanh$ neurons were evaluated and the one with best mean accuracy was selected. The results are presented in Table~\ref{tab:crossmean} and~\ref{tab:crossstd}. The GNN classifier outperformed the FNN by as much as 20\%. This is due to the fact, that the FNN classifier could make predictions only by analyzing node labels, while the GNN classifier exploited correctly the graph topology.
+To compare the performance of the implemented GNN model with a standard FNN, the following subgraph matching experiment was conducted. 5-fold cross-validation was performed on all 100 graphs from the 14-7 dataset. A random GNN was generated. It was trained with a contraction constant $\mu = 0.9$ for 50 iterations for each fold. To provide good FNN results, 10 three-layer FNNs with 20 hidden $tanh$ neurons were evaluated and the one with best mean accuracy was selected. The results are presented in Table~\ref{tab:crossmean} and~\ref{tab:crossstd}. The GNN classifier outperformed the FNN by more than 15\%. This is due to the fact, that the FNN classifier could make predictions only by analyzing node labels, while the GNN classifier exploited correctly the graph topology.
 
 These results can be better understood by analyzing the classified dataset. The 100 processed graphs consisted in total of 1400 nodes. Amongst these nodes, 1031 had node labels matching the subgraph node labels. Amongst these 1031 nodes only 702 actually belonged to the subgraph. Thus, 329 nodes, 23.5\% of all the nodes would probably be classified as false positives by a classifier taking into consideration only node labels. This hypothesis corresponds quite well with the results presented.
 
@@ -87,9 +87,9 @@ These results can be better understood by analyzing the classified dataset. The 
 	\toprule
 	& accuracy & precision & recall \\
 	\midrule
-	FNN - tr &	71\% &  65\% & 93\% \\
-	FNN - tst &	71\% &  64\% &  93\% \\
-	GNN - tr &	91\% &  87\%&  97\% \\
+	FNN - tr &	75\% &  68\% &  93\% \\
+	FNN - tst &	74\% &  68\% &  93\% \\
+	GNN - tr &	91\% &  87\% &  97\% \\
 	GNN - tst &	91\% &  86\% &  97\% \\
 	\bottomrule
 	\end{tabular}
@@ -104,8 +104,8 @@ These results can be better understood by analyzing the classified dataset. The 
 	\toprule
 	& accuracy & precision & recall \\
 	\midrule
-	FNN - tr &	0.34\% &  0.67\% & 1.86\% \\
-	FNN - tst &	2.45\% &  1.73\% &  2.93\% \\
+	FNN - tr &	0.68\% &  0.82\% &  1.43\% \\
+	FNN - tst &	3.20\% &  2.89\% &  1.85\% \\
 	GNN - tr &	1.62\% &  1.71\% &  2.07\% \\
 	GNN - tst &	3.06\% &  3.70\% &  1.39\% \\
 	\bottomrule
