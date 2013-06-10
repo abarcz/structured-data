@@ -1,0 +1,9 @@
+#!/bin/bash
+set -e	# exit after first command fail
+DOCUMENT="man"
+
+pdflatex -file-line-error-style "$DOCUMENT.tex"
+pdflatex -file-line-error-style "$DOCUMENT.tex"
+
+rm -f *.aux *.bbl *.blg *.log *.nav *.out *.snm *.toc *.lot *.lof
+atril "$DOCUMENT.pdf" 1>/dev/null 2>/dev/null
