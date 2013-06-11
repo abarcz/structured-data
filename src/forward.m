@@ -18,5 +18,4 @@ function [state nSteps] = forward(gnn, graph, maxForwardSteps, state=0)
 		state = transition(gnn.transitionNet, lastState, graph);
 		nSteps = nSteps + 1;
 	until(stablestate(lastState, state, gnn.minStateDiff));
-	% printf('Transitions made until stable state was reached: %d\n', nSteps);
 end

@@ -14,12 +14,9 @@ function [penaltyDerivative penaltyAdded] = penaltyderivative(gnn, graph, state,
 
 	% sum up influence of each source node on all the other nodes
 	% each s-long block is influence of single source node xu on all s outputs
-	sourceInfluences = sum(A, 1);
-	%disp('penalty derivative influences: ')
-	%full(sourceInfluences)
+	sourceInfluences = sum(abs(A), 1);
 	sourceInfluences = (sourceInfluences - repmat(gnn.contractionConstant, size(sourceInfluences))) .*...
 		(sourceInfluences > gnn.contractionConstant);
-	%full(sourceInfluences)
 
 	fnn = gnn.transitionNet;
 	nWeights1 = fnn.nInputLines * fnn.nHiddenNeurons;

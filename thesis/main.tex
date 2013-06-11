@@ -140,6 +140,7 @@ captionpos=b,
 % belowcaptionskip=1pt,
 frame=tb,
 framerule=0pt,
+breaklines=true,
 }
 
 % kody źródłowe z podpisem
@@ -170,6 +171,7 @@ captionpos=b,
 % belowcaptionskip=1pt,
 frame=tb,
 framerule=0.1pt,
+breaklines=true,
 }
 
 \pagenumbering{roman}
@@ -197,10 +199,13 @@ framerule=0.1pt,
 \appendix
 %\input{penalty}
 \input{usage}
+\input{code}
 
 %\listoftables
 \listoffigures
-% \lstlistoflistings
+
+\lstlistoflistings
+\addcontentsline{toc}{chapter}{List of Listings}
 
 %\nocite{*}
 %\bibliographystyle{plplain}

@@ -12,6 +12,22 @@ The datasets for the subgraph matching task were generated as follows. For a giv
 
 Two datasets were generated. One with graph size (number of nodes) equal to 6, the subgraph size equal to 3 and $\delta = 0.8$ (100 graphs, called later the \emph{6-3 dataset}). The second dataset with graph size equal to 14, subgraph size equal to 7 and $\delta = 0.2$ (100 graphs, called later the \emph{14-7 dataset}). A larger $\delta$ was used for the first dataset, as graphs generated with $\delta = 0.2$ were mostly sequences. The first dataset was used to analyze the process of training, while the second one was used for comparison of GNN with a standard FNN classifier.
 
+\begin{figure}[h!]
+\begin{center}
+	\includegraphics[scale=0.6]{img/g6s3_1.pdf}
+	\caption{Sample graph from 6-3 dataset (subgraph in black), before adding noise}
+	\label{fig:gnn_g6s3}
+\end{center}
+\end{figure}
+
+\begin{figure}[h!]
+\begin{center}
+	\includegraphics[scale=0.6]{img/g14s7_7.pdf}
+	\caption{Sample graph from 14-7 dataset (subgraph in black), before adding noise}
+	\label{fig:gnn_g6s3}
+\end{center}
+\end{figure}
+
 \section{Impact of initial weight values on learning}
 To test the impact of initial weight values on the process of a GNN training, 9 different sets of weights were tested. For all tested networks, the contraction constant ($\mu$ from Eq.~\ref{eq:gnn_pw}) was set to $0.9$. The training was performed on 10 graphs belonging to the 6-3 dataset. Each GNN network was trained for 50 iterations. As the default error measure used in GNN training is the Mean Square Error, a similar performance measure - RMSE was used for evaluation. Results are presented in Fig.~\ref{fig:gnn_multiple}. Out of 9 networks, only 4 performed well: gnn2, gnn3, gnn5 and gnn7. The gnn5 network yielded the smallest RMSE at the end of training and also presents a remarkably monotonous RMSE slope compared to gnn7. All the other networks didn't improve significantly on the RMSE value, which may suggest that multiple initial sets of weights should be tried for a given dataset to build an efficient classifier.
 

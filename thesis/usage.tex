@@ -17,11 +17,11 @@
 
 \begin{lstlisting}[style=outcode, language=Matlab, caption=Sample usage session]
 g6 = loadset('../data/g6s3n/g6s3', 10);
-g6merged = mergegraphs(g6);
-gnn = initgnn(g6merged.maxIndegree, [5 5], [5 1], 'tansig');
-trainedGnn = traingnn(gnn, g6merged, 20);
-outputs = classifygnn(trainedGnn, g6merged);
-stats = evaluate(outputs, g6merged.expectedOutput);
+gm = mergegraphs(g6);
+gnn = initgnn(gm.maxIndegree, [5 5], [5 gm.nodeOutputSize], 'tansig');
+trainedGnn = traingnn(gnn, gm, 20);
+outputs = classifygnn(trainedGnn, gm);
+stats = evaluate(outputs, gm.expectedOutput);
 \end{lstlisting}
 
 \noindent All subgraph matching datasets were created using the \emph{buildgraphs.py} script. Each graph can be viewed as a pdf file by using the \emph{drawgraph.py} script. Each graph is stored as three .csv files, containing node labels, edge labels and expected outputs. A sample graph \emph{'test'} is presented below. Nodes yielding output 2 were marked as black.
