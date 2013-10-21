@@ -13,7 +13,7 @@
    height="481"
    id="svg10033"
    version="1.1"
-   inkscape:version="0.48.3.1 r9886"
+   inkscape:version="0.48.4 r9939"
    sodipodi:docname="hopfield.svg">
   <defs
      id="defs10035">
@@ -54,13 +54,13 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.7"
-     inkscape:cx="361.15499"
-     inkscape:cy="253.78372"
+     inkscape:cx="619.05422"
+     inkscape:cy="259.35339"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
      inkscape:window-width="1280"
-     inkscape:window-height="750"
+     inkscape:window-height="976"
      inkscape:window-x="0"
      inkscape:window-y="25"
      inkscape:window-maximized="1"
@@ -92,7 +92,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -229,82 +229,88 @@
        transform="translate(-1141,69.959839)" />
     <text
        xml:space="preserve"
-       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       style="font-size:40px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:FreeSerif;-inkscape-font-specification:FreeSerif Italic"
        x="-740"
-       y="363.29968"
+       y="359.18219"
        id="text5873"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan5875"
          x="-740"
-         y="363.29968">x<tspan
-   style="font-size:20px"
-   id="tspan5877">2</tspan></tspan></text>
+         y="359.18219">x<tspan
+   style="font-size:22px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:FreeSerif;-inkscape-font-specification:FreeSerif Italic"
+   id="tspan5877"
+   dy="4">2</tspan></tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       style="font-size:40px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:FreeSerif;-inkscape-font-specification:FreeSerif Italic"
        x="-742.42859"
-       y="223.29968"
+       y="219.18217"
        id="text5879"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan5881"
          x="-742.42859"
-         y="223.29968">x<tspan
-   style="font-size:20px"
-   id="tspan5883">1</tspan></tspan></text>
+         y="219.18217">x<tspan
+   style="font-size:22px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:FreeSerif;-inkscape-font-specification:FreeSerif Italic"
+   id="tspan5883"
+   dy="4">1</tspan></tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       style="font-size:40px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:FreeSerif;-inkscape-font-specification:FreeSerif Italic"
        x="-740"
-       y="503.15808"
+       y="499.10519"
        id="text5885"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan5887"
          x="-740"
-         y="503.15808">x<tspan
-   style="font-size:20px"
-   id="tspan5889">3</tspan></tspan></text>
+         y="499.10519">x<tspan
+   style="font-size:22px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:FreeSerif;-inkscape-font-specification:FreeSerif Italic"
+   id="tspan5889"
+   dy="4">3</tspan></tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       style="font-size:40px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:FreeSerif;-inkscape-font-specification:FreeSerif Italic"
        x="-300"
-       y="219.13953"
+       y="217.06218"
        id="text5891"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan5893"
          x="-300"
-         y="219.13953">y<tspan
-   style="font-size:20px"
-   id="tspan5895">1</tspan></tspan></text>
+         y="217.06218">y<tspan
+   style="font-size:22px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:FreeSerif;-inkscape-font-specification:FreeSerif Italic"
+   id="tspan5895"
+   dy="4">1</tspan></tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       style="font-size:40px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:FreeSerif;-inkscape-font-specification:FreeSerif Italic"
        x="-300"
-       y="359.13953"
+       y="357.06216"
        id="text5897"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan5899"
          x="-300"
-         y="359.13953">y<tspan
-   style="font-size:20px"
-   id="tspan5901">2</tspan></tspan></text>
+         y="357.06216">y<tspan
+   style="font-size:22px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:FreeSerif;-inkscape-font-specification:FreeSerif Italic"
+   id="tspan5901"
+   dy="4">2</tspan></tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       style="font-size:40px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:FreeSerif;-inkscape-font-specification:FreeSerif Italic"
        x="-300"
-       y="499.13953"
+       y="497.06216"
        id="text5903"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan5905"
          x="-300"
-         y="499.13953">y<tspan
-   style="font-size:20px"
-   id="tspan5907">3</tspan></tspan></text>
+         y="497.06216">y<tspan
+   style="font-size:22px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:FreeSerif;-inkscape-font-specification:FreeSerif Italic"
+   id="tspan5907"
+   dy="4">3</tspan></tspan></text>
     <text
        xml:space="preserve"
        style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
@@ -316,7 +322,7 @@
          sodipodi:role="line"
          id="tspan5911"
          x="410"
-         y="88.116631"></tspan></text>
+         y="88.116631" /></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#DotL)"
        d="m 541,422.40234 -40,60"
@@ -331,19 +337,19 @@
        transform="translate(-1141,69.959839)" />
     <text
        xml:space="preserve"
-       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       style="font-size:40px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:FreeSerif;-inkscape-font-specification:FreeSerif Italic"
        x="-670"
-       y="162.36218"
+       y="167.36218"
        id="text6101"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan6103"
          x="-670"
-         y="162.36218"
-         style="font-size:32px">1</tspan></text>
+         y="167.36218"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:FreeSerif;-inkscape-font-specification:FreeSerif">1</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       style="font-size:40px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:FreeSerif;-inkscape-font-specification:FreeSerif Italic"
        x="-670"
        y="302.36218"
        id="text6101-3"
@@ -352,10 +358,10 @@
          id="tspan6103-7"
          x="-670"
          y="302.36218"
-         style="font-size:32px">1</tspan></text>
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:FreeSerif;-inkscape-font-specification:FreeSerif">1</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       style="font-size:40px;font-style:italic;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:FreeSerif;-inkscape-font-specification:FreeSerif Italic;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr"
        x="-670"
        y="562.36218"
        id="text6101-5"
@@ -364,6 +370,42 @@
          id="tspan6103-8"
          x="-670"
          y="562.36218"
-         style="font-size:32px">1</tspan></text>
+         style="font-size:40px;-inkscape-font-specification:FreeSerif;font-family:FreeSerif;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%">1</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:FreeSerif;-inkscape-font-specification:FreeSerif Italic"
+       x="-568.34003"
+       y="221.78218"
+       id="text3037"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3039"
+         x="-568.34003"
+         y="221.78218"
+         style="font-size:40px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:FreeSerif;-inkscape-font-specification:FreeSerif Italic">f</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:FreeSerif;-inkscape-font-specification:FreeSerif Italic"
+       x="-568.34003"
+       y="361.7822"
+       id="text3037-1"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3039-1"
+         x="-568.34003"
+         y="361.7822"
+         style="font-size:40px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:FreeSerif;-inkscape-font-specification:FreeSerif Italic">f</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:FreeSerif;-inkscape-font-specification:FreeSerif Italic"
+       x="-568.34003"
+       y="501.7822"
+       id="text3037-4"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3039-2"
+         x="-568.34003"
+         y="501.7822"
+         style="font-size:40px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:FreeSerif;-inkscape-font-specification:FreeSerif Italic">f</tspan></text>
   </g>
 </svg>
