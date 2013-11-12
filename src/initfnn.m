@@ -14,9 +14,9 @@ function net = initfnn(nInputLines, nHiddenNeurons, nOutputNeurons, outputFun='p
 	end
 
 	weights1 = initializeweights(nInputLines, nHiddenNeurons);
-	bias1 = initializeweights(1, nHiddenNeurons, nInputLines + 1);
+	bias1 = initializeweights(1, nHiddenNeurons, nInputLines);
 	weights2 = initializeweights(nHiddenNeurons, nOutputNeurons);
-	bias2 = initializeweights(1, nOutputNeurons, nHiddenNeurons + 1);
+	bias2 = initializeweights(1, nOutputNeurons, nHiddenNeurons);
 
 	nWeights = size([vec(weights1); vec(bias1); vec(weights2); vec(bias2)], 1);
 
@@ -47,7 +47,7 @@ end
 
 function weights = initializeweights(nInputLines, nNeurons, factor=0)
 	if factor == 0
-		factor = nInputLines + 1;
+		factor = nInputLines;
 	end
 	% rand returns values uniformly distributed on (0, 1)
 	weights = 2 .* (rand(nNeurons, nInputLines) - 0.5) ./ factor;
