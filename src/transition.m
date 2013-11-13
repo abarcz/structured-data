@@ -13,7 +13,7 @@ function newState = transition(fnn, state, graph)
 			sourceEdgeLabel = graph.edgeLabelsCell{sourceNodeIndexes(i), nodeIndex};
 			sourceNodeState = state(sourceNodeIndexes(i), :);
 			inputs = [nodeLabel, sourceEdgeLabel, sourceNodeState];
-			stateContribution = applynet(fnn, inputs);
+			stateContribution = applynetsingle(fnn, inputs);
 			newNodeState = newNodeState + stateContribution;
 		end
 		% if node has less than maxIndegree input nodes, their contribution is 0
