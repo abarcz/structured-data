@@ -22,7 +22,7 @@ function [weightDeltas nSteps penaltyAdded] = backward(gnn, graph, state, maxBac
 	A = calculatea(gnn.transitionNet, graph, state);
 	b = sparse(calculateb(gnn.outputNet, graph, state, outputErrors));
 	accumulator = b;	% accumulator contains dew/do * dG/wx, to be propagated
-	nSteps = 0;
+	nSteps = 1;
 	do
 		% if there are too many backward steps, we can get infinities as result
 		if nSteps > maxBackwardSteps

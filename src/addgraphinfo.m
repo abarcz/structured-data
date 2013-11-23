@@ -4,15 +4,10 @@ function graph = addgraphinfo(graph)
 
 	% add source nodes
 	sourceNodes = {};
-	maxIndegree = 0;
 	nNodes = graph.nNodes;
 	edgeLabels = graph.edgeLabels;
 	for targetIndex = 1:nNodes
 		sourceNodes{targetIndex} = edgeLabels(edgeLabels(:, 2) == targetIndex, 1)';
-		targetIndegree = size(sourceNodes{targetIndex}, 1);
-		if targetIndegree > maxIndegree
-			maxIndegree = targetIndegree;
-		end
 	end
 
 	% create cell array of edge labels, for better indexing

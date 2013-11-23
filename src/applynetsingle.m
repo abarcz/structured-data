@@ -2,7 +2,7 @@
 function outputs = applynetsingle(fnn, inputs)
 % Apply given FNN to (non-biased) single input
 %
-% usage: outputs = applynet(fnn, inputs)
+% usage: outputs = applynetsingle(fnn, inputs)
 %
 % inputs - single row containing sample
 % outputs - single row containing output for sample

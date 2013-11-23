@@ -5,17 +5,19 @@ function [state nSteps] = forward(gnn, graph, maxForwardSteps, state=0)
 %
 % usage: [state nSteps] = forward(gnn, graph, maxForwardSteps, state=0)
 
-	if state == 0
-		state = initstate(graph.nNodes, gnn.stateSize);
-	end
-	nSteps = 0;
+	inputStruct = buildinputs(graph, gnn.stateSize);
+	stateFirstIndex = inputStruct.stateFirstIndex;
+	nSteps = 1;
 	do
 		if nSteps > maxForwardSteps
 			% printf('Too many forward steps: %d, aborting\n', nSteps);
 			return;
 		end
 		lastState = state;
-		state = transition(gnn.transitionNet, lastState, graph);
+		inputStruct = fillinputs(inputStruct, lastState);
+		stateContributions = applynet(gnn.transitionNet, inputStruct.inputMatrix);
+		inputStruct.inputMatrix(:, stateFirstIndex:end) = stateContributions;
+		state = getnewstate(inputStruct, lastState);
 		nSteps = nSteps + 1;
 	until(stablestate(lastState, state, gnn.minStateDiff));
 end
