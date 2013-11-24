@@ -4,11 +4,13 @@
 {
     /Author (Aleksy Barcz)
     /Title (Implementation aspects of graph neural networks)
-    /Keywords (Graph neural networks, classification, graph processing, recursive neural networks)
+    /Keywords (graph neural networks, classification, graph processing, recursive neural networks)
 }
 %\documentclass[a4paper,polish,onecolumn,oneside,floatssmall,11pt,titleauthor,wide,openright]{mwrep}
 %\usepackage[scale={0.7,0.8},paper=a4paper,twoside]{geometry}
-\documentclass[a4paper,onecolumn,oneside,12pt,wide,floatssmall]{mwrep} % 11pt w szablonie, 12pt dla TimesNewRoman
+\documentclass[a4paper,onecolumn,twoside,12pt,wide,floatssmall]{mwrep} % 11pt w szablonie, 12pt dla TimesNewRoman
+%\usepackage[hmarginratio=3:2]{geometry}
+\usepackage[left=1.15in, right=0.85in]{geometry}
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
@@ -35,17 +37,17 @@
 \usepackage{pslatex} %Times New Roman
 
 % marginesy
-\textwidth\paperwidth
-\advance\textwidth -55mm
-\oddsidemargin-0.9in
-\advance\oddsidemargin 33mm
-\evensidemargin-0.9in
-\advance\evensidemargin 33mm
+%\textwidth\paperwidth
+%\advance\textwidth -55mm
+%\oddsidemargin-0.9in
+%\advance\oddsidemargin 33mm
+%\evensidemargin-0.9in
+%\advance\evensidemargin 33mm
 \topmargin -1in
 \advance\topmargin 13mm
 \setlength\textheight{48\baselineskip}
 \addtolength\textheight{\topskip}
-\marginparwidth15mm
+%\marginparwidth15mm
 
 \clubpenalty=10000 % to kara za sierotki
 \widowpenalty=10000 % nie pozostawia wdów
@@ -182,6 +184,7 @@ breaklines=true,
 
 \tableofcontents
 % \addcontentsline{toc}{chapter}{{Przedmowa1}{vii}}{vii}
+\cleardoublepage
 
 %\setlength{\baselineskip}{7mm}
 \newpage
