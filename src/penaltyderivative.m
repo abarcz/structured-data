@@ -37,10 +37,10 @@ function [penaltyDerivative penaltyAdded] = penaltyderivative(gnn, graph, state,
 			sourceNodeInfluences = sourceInfluences(1, startX:endX);
 			if (sum(sourceNodeInfluences, 2) != 0)
 				% calculate impactDerivative[n, u] for u = sourceIndex
-				for targetIndex = 1:graph.nNodes
-					if !edgeexists(graph, sourceIndex, targetIndex)
-						continue;
-					end
+				targetIndexes = graph.targetNodes{sourceIndex};
+				nTargetNodes = size(targetIndexes, 2);
+				for i = 1:nTargetNodes
+					targetIndex = targetIndexes(i);
 					startY = blockstart(targetIndex, gnn.stateSize);
 					endY = blockend(targetIndex, gnn.stateSize);
 					Rnu =  full(B(startY:endY, startX:endX));

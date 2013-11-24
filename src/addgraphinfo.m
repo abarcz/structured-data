@@ -2,12 +2,19 @@
 function graph = addgraphinfo(graph)
 % Add extra structures to graph, facilitating graph processing
 
-	% add source nodes
-	sourceNodes = {};
 	nNodes = graph.nNodes;
 	edgeLabels = graph.edgeLabels;
+
+	% add source nodes
+	sourceNodes = {};
 	for targetIndex = 1:nNodes
 		sourceNodes{targetIndex} = edgeLabels(edgeLabels(:, 2) == targetIndex, 1)';
+	end
+
+	% add target nodes
+	targetNodes = {};
+	for sourceIndex = 1:nNodes
+		targetNodes{sourceIndex} = edgeLabels(edgeLabels(:, 1) == sourceIndex, 2)';
 	end
 
 	% create cell array of edge labels, for better indexing
@@ -21,5 +28,6 @@ function graph = addgraphinfo(graph)
 	end
 
 	graph.sourceNodes = sourceNodes;
+	graph.targetNodes = targetNodes;
 	graph.edgeLabelsCell = edgeLabelsCell;
 end
