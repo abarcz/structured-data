@@ -23,10 +23,30 @@ function A = calculatea(transitionNet, graph, state)
 			sourceNodeState = state(sourceNodeIndexes(i), :);
 			inputs = [nodeLabel, sourceEdgeLabel, sourceNodeState];
 			deltaZx = zeros(stateSize, stateSize);
+
+			% perform backpropagation - step 1
+			% fnn feed
+			fnn = transitionNet;
+			net1 = fnn.weights1 * inputs' + fnn.bias1;
+			hiddenOutputs = fnn.activation1(net1);
+			net2 = fnn.weights2 * hiddenOutputs + fnn.bias2;
+			bpv1 = fnn.activationderivative1(net1);
+			bpv2 = fnn.activationderivative2(net2);
+
 			for j = 1:stateSize
 				errors = zeros(1, stateSize);
 				errors(j) = 1;
-				inputDeltas = bp2(transitionNet, inputs, errors);
+
+				% perform backpropagation - step 2
+				% calculate delta2 (for all visible neurons at once)
+				delta2 = errors' .* bpv2;
+				% calculate delta1 (for all hidden neurons at once)
+				hiddenErrors = fnn.weights2' * delta2;
+				delta1 = hiddenErrors .* bpv1;
+				% calculate delta0 (for all input neurons at once)
+				inputErrors = fnn.weights1' * delta1;
+				inputDeltas = inputErrors';
+
 				% select only weights corresponding to x_iu
 				stateWeightsStart = 1 + graph.nodeLabelSize + graph.edgeLabelSize;
 				stateInputDeltas = inputDeltas(1, stateWeightsStart:end);
