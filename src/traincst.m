@@ -45,10 +45,16 @@ function trainedFnn = traincst(fnn, inputs, outputs)
 
 		zChange = sum(sum(abs(z - prevZ)))
 		azChange = sum(sum(abs(realatanh(z) - realatanh(prevZ))))
+		% multiplying by inputsWithBias'
+		% (as in the original article):
+		% - can result in singular matrix and yield worse results
+		% - can be minimally faster
+		%weights1 = (az * inputsWithBias') / (inputsWithBias * inputsWithBias');
 		weights1 = az / inputsWithBias;
 
 		% calculate output layer weights
 		zWithBias = [z; repmat(1, 1, nSamples)];
+		%weights2 = (aOutputs * zWithBias') / (zWithBias * zWithBias');
 		weights2 = aOutputs / zWithBias;
 
 
