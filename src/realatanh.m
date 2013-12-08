@@ -4,7 +4,7 @@ function res = realatanh(x)
 % first saturating all elements to [-1, 1],
 % thus avoiding complex results.
 %
-% usage:
+% usage: res = realatanh(x)
 %
 
 	maxVal = 1 - 1e-10;	% max result value = 11.85950

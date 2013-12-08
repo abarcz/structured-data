@@ -43,7 +43,6 @@ function net = initfnn(nInputLines, nHiddenNeurons, nOutputNeurons, outputFun='p
 		net.activationderivative2 = @(x) repmat(1, size(x)) - (tanh(x) .^ 2);
 		net.activation2ndderivative2 = @(x) 2 .* (tanh(x) .^ 3 - tanh(x));
 	end
-	net.activation2name = outputFun;
 end
 
 function weights = initializeweights(nInputLines, nNeurons, factor=0)

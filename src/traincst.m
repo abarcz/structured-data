@@ -1,14 +1,18 @@
 
-function trainedFnn = traincst(fnn, inputs, outputs)
+function [trainedFnn deltaQ1 deltaQ2] = traincst(fnn, inputs, outputs)
+% Train FNN using Castillo method
+%
+% usage: trainedFnn = traincst(fnn, inputs, outputs)
+%
 % inputs - each row is a single sample (normalized)
 % outputs - each row contains output for a single sample (normalized)
 
-	if strcmp(fnn.activation2name, 'purelin') == 1
+	if strcmp(fnn.outputFun, 'purelin') == 1
 		activation2inv = @(x) x;
-	elseif strcmp(fnn.activation2name, 'tansig') == 1
+	elseif strcmp(fnn.outputFun, 'tansig') == 1
 		activation2inv = @(x) realatanh(x);
 	else
-		error(sprintf('Unknown activation function: %s', fnn.activation2name));
+		error(sprintf('Unknown activation function: %s', fnn.outputFun));
 	end
 
 	% Step0: initialize
@@ -17,8 +21,8 @@ function trainedFnn = traincst(fnn, inputs, outputs)
 	prevMse = Inf;
 	prev2Q = Inf;
 	prev2Mse = Inf;
-	minQChange = 1e-10;
-	minMseChange = 1e-10;
+	minQChange = 1e-1;
+	minMseChange = 1e-14;
 	eta = 0.0001;
 	stepSize = 1;
 	nSamples = size(inputs, 1);
@@ -32,9 +36,26 @@ function trainedFnn = traincst(fnn, inputs, outputs)
 
 	% eta seems to do much harm to the learning process
 	z = hiddenOutputs;% + (eta * 2 * (rand(size(hiddenOutputs)) - 0.5));
-	prevZ = z;
 
+
+	% scale the output so that the z values predicted by weights2 are in (-1, 1)
+	%aOutputs = activation2inv(outputs);
+	%zBack = ((aOutputs' .- fnn.bias2) / fnn.weights2')';
+	%div = ceil(max(abs(vec(zBack))));
+	%outputs = outputs ./ div;
+
+	%aOutputs = activation2inv(outputs);
+	%zBack = ((aOutputs' .- fnn.bias2) / fnn.weights2')';
+	%z = (hiddenOutputs + zBack) ./2;
+
+	% adjust the initial weights1
 	aOutputs = activation2inv(outputs);
+	%zBackAdj = fnn.weights2 \ (aOutputs .- fnn.bias2);
+	%weights1 = realatanh(zBackAdj) / inputsWithBias;
+	%net1 = weights1 * inputsWithBias;
+	%z = fnn.activation1(net1);
+
+	prevZ = z;
 	count = 1;
 	while (1)
 		printf('\niteration %d\n', count);
@@ -49,12 +70,16 @@ function trainedFnn = traincst(fnn, inputs, outputs)
 		% (as in the original article):
 		% - can result in singular matrix and yield worse results
 		% - can be minimally faster
-		%weights1 = (az * inputsWithBias') / (inputsWithBias * inputsWithBias');
+		%A1 = (inputsWithBias * inputsWithBias');
+		%b1 = (net1 * inputsWithBias');
+		%weights1 = b1 / A1;
 		weights1 = az / inputsWithBias;
 
 		% calculate output layer weights
 		zWithBias = [z; repmat(1, 1, nSamples)];
-		%weights2 = (aOutputs * zWithBias') / (zWithBias * zWithBias');
+		%A2 = (zWithBias * zWithBias');
+		%b2 = (aOutputs * zWithBias');
+		%weights2 = b2 / A2;
 		weights2 = aOutputs / zWithBias;
 
 
