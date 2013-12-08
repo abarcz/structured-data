@@ -91,6 +91,10 @@ function [trainedFnn deltaQ1 deltaQ2] = traincst(fnn, inputs, outputs)
 		e2 = net2 - aOutputs;
 		q2 = sum(sum(e2 .^ 2));
 		qSum = q1 + q2
+
+		hiddenOutputs = fnn.activation1(net1);	% this can differ from z if z was initialized in non standard way
+		hiddenOutputsWithBias = [hiddenOutputs; repmat(1, 1, nSamples)];
+		net2 = weights2 * hiddenOutputsWithBias;
 		evaluatedOutputs = fnn.activation2(net2);
 		mse = sum((outputs - evaluatedOutputs) .^ 2) / nSamples
 
