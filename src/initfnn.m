@@ -1,16 +1,20 @@
 
-function net = initfnn(nInputLines, nHiddenNeurons, nOutputNeurons, outputFun='purelin')
+function net = initfnn(nInputLines, nHiddenNeurons, nOutputNeurons, outputFun='purelin', hiddenFun='tansig')
 % Initialize weights of a three-layer FNN with logistic activation function.
 % Each column of resulting matrices corresponds to a single neuron weights.
 % Each neuron gets an extra weight for bias.
+% Changing hiddenFun to 'logsig' isn't currently supported by GNN.
 %
-% usage: net = initfnn(nInputLines, nHiddenNeurons, nOutputNeurons, outputFun='purelin')
+% usage: net = initfnn(nInputLines, nHiddenNeurons, nOutputNeurons, outputFun='purelin', hiddenFun='tansig')
 %
 % nInputLines : number of input lines, script will add +1 for bias automatically
 % nWeights : number of weights learned from data
 
 	if (strcmp(outputFun, 'purelin') == 0) && (strcmp(outputFun, 'tansig') == 0)
-		error(sprintf('Unknown activation function: %s', outputFun));
+		error(sprintf('Unknown output activation function: %s', outputFun));
+	end
+	if (strcmp(hiddenFun, 'logsig') == 0) && (strcmp(hiddenFun, 'tansig') == 0)
+		error(sprintf('Unknown hidden activation function: %s', hiddenFun));
 	end
 
 	weights1 = initializeweights(nInputLines, nHiddenNeurons);
@@ -30,9 +34,7 @@ function net = initfnn(nInputLines, nHiddenNeurons, nOutputNeurons, outputFun='p
 		'nOutputNeurons', nOutputNeurons, ...
 		'nWeights', nWeights, ...
 		'outputFun', outputFun, ...
-		'activation1', @(x) tanh(x), ...
-		'activationderivative1', @(x) repmat(1, size(x)) - (tanh(x) .^ 2), ...
-		'activation2ndderivative1', @(x) 2 .* (tanh(x) .^ 3 - tanh(x)));
+		'hiddenFun', hiddenFun);
 
 	if strcmp(outputFun, 'purelin') == 1
 		net.activation2 = @(x) x;
@@ -42,6 +44,15 @@ function net = initfnn(nInputLines, nHiddenNeurons, nOutputNeurons, outputFun='p
 		net.activation2 = @(x) tanh(x);
 		net.activationderivative2 = @(x) repmat(1, size(x)) - (tanh(x) .^ 2);
 		net.activation2ndderivative2 = @(x) 2 .* (tanh(x) .^ 3 - tanh(x));
+	end
+	if strcmp(hiddenFun, 'logsig') == 1
+		net.activation1 = @(x) logsig(x);
+		net.activationderivative1 = @(x) logsig(x) .* (1 - logsig(x));
+		net.activation2ndderivative1 = @(x) error('second derivative of logsig not implemented');
+	else	% tansig
+		net.activation1 = @(x) tanh(x);
+		net.activationderivative1 = @(x) repmat(1, size(x)) - (tanh(x) .^ 2);
+		net.activation2ndderivative1 = @(x) 2 .* (tanh(x) .^ 3 - tanh(x));
 	end
 end
 

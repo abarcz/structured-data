@@ -1,8 +1,8 @@
 
-function [trainedFnn deltaQ1 deltaQ2] = traincst(fnn, inputs, outputs)
+function [trainedFnn deltaQ1 deltaQ2 z net2z] = traincst(fnn, inputs, outputs, nIterations)
 % Train FNN using Castillo method
 %
-% usage: trainedFnn = traincst(fnn, inputs, outputs)
+% usage: [trainedFnn deltaQ1 deltaQ2 z net2z] = traincst(fnn, inputs, outputs, nIterations)
 %
 % inputs - each row is a single sample (normalized)
 % outputs - each row contains output for a single sample (normalized)
@@ -12,7 +12,17 @@ function [trainedFnn deltaQ1 deltaQ2] = traincst(fnn, inputs, outputs)
 	elseif strcmp(fnn.outputFun, 'tansig') == 1
 		activation2inv = @(x) realatanh(x);
 	else
-		error(sprintf('Unknown activation function: %s', fnn.outputFun));
+		error(sprintf('Unknown output activation function: %s', fnn.outputFun));
+	end
+
+	if strcmp(fnn.hiddenFun, 'logsig') == 1
+		activation1inv = @(x) logit(x);
+		activation1invd = @(x) 1 ./ (x .* (1 - x));
+	elseif strcmp(fnn.hiddenFun, 'tansig') == 1
+		activation1inv = @(x) realatanh(x);
+		activation1invd = @(x) 1 ./ (1 - x .^ 2);
+	else
+		error(sprintf('Unknown hidden activation function: %s', fnn.hiddenFun));
 	end
 
 	% Step0: initialize
@@ -36,6 +46,8 @@ function [trainedFnn deltaQ1 deltaQ2] = traincst(fnn, inputs, outputs)
 
 	% eta seems to do much harm to the learning process
 	z = hiddenOutputs;% + (eta * 2 * (rand(size(hiddenOutputs)) - 0.5));
+	%z = rand(size(hiddenOutputs)) .* 0.9 + 0.05;	% uniformly distributed over [0.05, 0.95]
+	%z = rand(size(hiddenOutputs)) .* 1.8 - 0.9;	% uniformly distributed over [-0.6, 0.6]
 
 
 	% scale the output so that the z values predicted by weights2 are in (-1, 1)
@@ -56,16 +68,17 @@ function [trainedFnn deltaQ1 deltaQ2] = traincst(fnn, inputs, outputs)
 	%z = fnn.activation1(net1);
 
 	prevZ = z;
+	z0 = z;
 	count = 1;
 	while (1)
 		printf('\niteration %d\n', count);
 		% Step1: calculate weights and biases
 
 		% calculate hidden layer weights
-		az = realatanh(z);
+		az = activation1inv(z);
 
 		zChange = sum(sum(abs(z - prevZ)))
-		azChange = sum(sum(abs(realatanh(z) - realatanh(prevZ))))
+		azChange = sum(sum(abs(az - activation1inv(prevZ))))
 		% multiplying by inputsWithBias'
 		% (as in the original article):
 		% - can result in singular matrix and yield worse results
@@ -86,40 +99,43 @@ function [trainedFnn deltaQ1 deltaQ2] = traincst(fnn, inputs, outputs)
 		% Step2: evaluate sum of squared errors using calculated weights
 		net1 = weights1 * inputsWithBias;
 		e1 = net1 - az;
-		q1 = sum(sum(e1 .^ 2));
+		q1 = sum(sum(e1 .^ 2))
 		net2 = weights2 * zWithBias;
+		net2z = net2;
 		e2 = net2 - aOutputs;
-		q2 = sum(sum(e2 .^ 2));
+		q2 = sum(sum(e2 .^ 2))
 		qSum = q1 + q2
 
 		hiddenOutputs = fnn.activation1(net1);	% this can differ from z if z was initialized in non standard way
 		hiddenOutputsWithBias = [hiddenOutputs; repmat(1, 1, nSamples)];
-		net2 = weights2 * hiddenOutputsWithBias;
-		evaluatedOutputs = fnn.activation2(net2);
+		net2real = weights2 * hiddenOutputsWithBias;
+		evaluatedOutputs = fnn.activation2(net2real);
+		sat = (sum(sum(net1 > 0.9)) + sum(sum(net1 < -0.9))) ./ size(vec(net1), 1)
+		mase = sum(e2 .^ 2) / nSamples
 		mse = sum((outputs - evaluatedOutputs) .^ 2) / nSamples
 
 
 		% Step3: convergence check
-		if (abs(mse - prevMse) < minMseChange) || (abs(qSum - prevQ) < minQChange)
-			break;
-		end
+		%if (abs(mse - prevMse) < minMseChange) || (abs(qSum - prevQ) < minQChange)
+		%	break;
+		%end
 
 
 		% Step4 + 5: check improvement and update intermediate outputs
-		if qSum > prevQ
-			printf('qSum larger than before\n');
-			stepSize = stepSize / 2
-			z = prevZ;
-			prevMse = prev2Mse;
-			prevQ = prev2Q;
-		else
+		%if qSum > prevQ
+		%	printf('qSum larger than before\n');
+		%	stepSize = stepSize / 2
+		%	z = prevZ;
+		%	prevMse = prev2Mse;
+		%	prevQ = prev2Q;
+		%else
 			printf('qSum smaller\n');
 			prev2Mse = prevMse;
 			prev2Q = prevQ;
 			prevMse = mse;
 			prevQ = qSum;
 
-			deltaQ1 = -2 * e1 ./ fnn.activationderivative1(z);
+			deltaQ1 = -2 * e1 .* activation1invd(z);
 			nColsWeights2 = size(weights2, 2);
 			deltaQ2 = 2 * weights2(:, 1:nColsWeights2 - 1)' * e2;
 			deltaQ = deltaQ1 + deltaQ2;
@@ -128,13 +144,16 @@ function [trainedFnn deltaQ1 deltaQ2] = traincst(fnn, inputs, outputs)
 			prevZ = z;
 
 			deltaZConstant = stepSize * qSum / deltaQnorm
-			deltaZ =  deltaZConstant * deltaQ;
+			deltaZ = deltaZConstant * deltaQ;
 
 			qChange = sum(sum(deltaZ .* deltaQ))
 			maxDeltaZ = max(max(deltaZ))
 			z = z - deltaZ;
-		end
+		%end
 		count = count + 1;
+		if count > nIterations
+			break;
+		end
 	end
 
 	% pack fnn and return
