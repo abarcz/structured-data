@@ -1,8 +1,8 @@
 
-function [trainedFnn deltaQ1 deltaQ2 z net2z] = traincst(fnn, inputs, outputs, nIterations)
+function [trainedFnn minMse deltaQ1 deltaQ2 dw2 dw1 z net2z] = traincst(fnn, inputs, outputs, nIterations, expandDerivatives, zin, activationInv)
 % Train FNN using Castillo method
 %
-% usage: [trainedFnn deltaQ1 deltaQ2 z net2z] = traincst(fnn, inputs, outputs, nIterations)
+% usage: [trainedFnn minMse deltaQ1 deltaQ2 dw2 dw1 z net2z] = traincst(fnn, inputs, outputs, nIterations, expandDerivatives, zin, activationInv)
 %
 % inputs - each row is a single sample (normalized)
 % outputs - each row contains output for a single sample (normalized)
@@ -16,7 +16,7 @@ function [trainedFnn deltaQ1 deltaQ2 z net2z] = traincst(fnn, inputs, outputs, n
 	end
 
 	if strcmp(fnn.hiddenFun, 'logsig') == 1
-		activation1inv = @(x) logit(x);
+		activation1inv = @(x) reallogit(x);
 		activation1invd = @(x) 1 ./ (x .* (1 - x));
 	elseif strcmp(fnn.hiddenFun, 'tansig') == 1
 		activation1inv = @(x) realatanh(x);
@@ -48,6 +48,7 @@ function [trainedFnn deltaQ1 deltaQ2 z net2z] = traincst(fnn, inputs, outputs, n
 	z = hiddenOutputs;% + (eta * 2 * (rand(size(hiddenOutputs)) - 0.5));
 	%z = rand(size(hiddenOutputs)) .* 0.9 + 0.05;	% uniformly distributed over [0.05, 0.95]
 	%z = rand(size(hiddenOutputs)) .* 1.8 - 0.9;	% uniformly distributed over [-0.6, 0.6]
+	%z = zin;
 
 
 	% scale the output so that the z values predicted by weights2 are in (-1, 1)
@@ -70,6 +71,7 @@ function [trainedFnn deltaQ1 deltaQ2 z net2z] = traincst(fnn, inputs, outputs, n
 	prevZ = z;
 	z0 = z;
 	count = 1;
+	minMse = Inf;
 	while (1)
 		printf('\niteration %d\n', count);
 		% Step1: calculate weights and biases
@@ -113,6 +115,9 @@ function [trainedFnn deltaQ1 deltaQ2 z net2z] = traincst(fnn, inputs, outputs, n
 		sat = (sum(sum(net1 > 0.9)) + sum(sum(net1 < -0.9))) ./ size(vec(net1), 1)
 		mase = sum(e2 .^ 2) / nSamples
 		mse = sum((outputs - evaluatedOutputs) .^ 2) / nSamples
+		if mse < minMse
+			minMse = mse;
+		end
 
 
 		% Step3: convergence check
@@ -135,9 +140,55 @@ function [trainedFnn deltaQ1 deltaQ2 z net2z] = traincst(fnn, inputs, outputs, n
 			prevMse = mse;
 			prevQ = qSum;
 
-			deltaQ1 = -2 * e1 .* activation1invd(z);
-			nColsWeights2 = size(weights2, 2);
-			deltaQ2 = 2 * weights2(:, 1:nColsWeights2 - 1)' * e2;
+			if expandDerivatives
+				%e1 = net1 - az;
+				%e2 = net2 - aOutputs;
+				nHidden = fnn.nHiddenNeurons;
+				nOutputs = fnn.nOutputNeurons;
+				dw2 = zeros(nHidden, nSamples);
+				for s = 1:nSamples
+					for h = 1:nHidden
+						acc = 0;
+						for j = 1:nOutputs
+							for k = 1:nHidden
+								% calculate dw_jk/dz_hs
+								if h == k
+									% dw2/dz == 0, but we take into account wjk*zks
+									curr_dw2 = weights2(j, k);
+								else
+									curr_dw2 = - weights2(j, k) ./ z(h, s);
+								end
+								acc = acc + curr_dw2;
+							end
+						end
+						dw2(h, s) = acc;
+					end
+				end
+
+				nInputs = fnn.nInputLines;
+				dw1 = zeros(nHidden, nSamples);
+				for s = 1:nSamples
+					for h = 1:nHidden
+						for i = 1:nInputs
+							% calculate dw_ki/dz_hs
+							% for h != k equal zero (final result)
+							acc = acc + 1 ./ inputs(s, i) .* activation1invd(z(h, s));
+						end
+						dw1(h, s) = acc;
+					end
+				end
+				deltaQ1 = 2 * e1 .* (dw1 - activation1invd(z));
+				deltaQ2 = 2 * repmat(e2, nHidden, 1) .* dw2;
+			else
+				if activationInv
+					deltaQ1 = -2 * e1 .* activation1invd(z);
+				else
+					deltaQ1 = -2 * e1 ./ fnn.activationderivative1(z);
+				end
+				nColsWeights2 = size(weights2, 2);
+				deltaQ2 = 2 * weights2(:, 1:nColsWeights2 - 1)' * e2;
+			end
+
 			deltaQ = deltaQ1 + deltaQ2;
 			deltaQnorm = sum(sum(deltaQ .^ 2))
 
