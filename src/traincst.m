@@ -1,8 +1,8 @@
 
-function [trainedFnn minMse deltaQ1 deltaQ2 dw2 dw1 z net2z] = traincst(fnn, inputs, outputs, nIterations, expandDerivatives, zin, activationInv)
+function [trainedFnn minMse deltaQ1 deltaQ2 z net2z] = traincst(fnn, inputs, outputs, nIterations, activationInv, zin)
 % Train FNN using Castillo method
 %
-% usage: [trainedFnn minMse deltaQ1 deltaQ2 dw2 dw1 z net2z] = traincst(fnn, inputs, outputs, nIterations, expandDerivatives, zin, activationInv)
+% usage: [trainedFnn minMse deltaQ1 deltaQ2 z net2z] = traincst(fnn, inputs, outputs, nIterations, activationInv, zin)
 %
 % inputs - each row is a single sample (normalized)
 % outputs - each row contains output for a single sample (normalized)
@@ -140,54 +140,13 @@ function [trainedFnn minMse deltaQ1 deltaQ2 dw2 dw1 z net2z] = traincst(fnn, inp
 			prevMse = mse;
 			prevQ = qSum;
 
-			if expandDerivatives
-				%e1 = net1 - az;
-				%e2 = net2 - aOutputs;
-				nHidden = fnn.nHiddenNeurons;
-				nOutputs = fnn.nOutputNeurons;
-				dw2 = zeros(nHidden, nSamples);
-				for s = 1:nSamples
-					for h = 1:nHidden
-						acc = 0;
-						for j = 1:nOutputs
-							for k = 1:nHidden
-								% calculate dw_jk/dz_hs
-								if h == k
-									% dw2/dz == 0, but we take into account wjk*zks
-									curr_dw2 = weights2(j, k);
-								else
-									curr_dw2 = - weights2(j, k) ./ z(h, s);
-								end
-								acc = acc + curr_dw2;
-							end
-						end
-						dw2(h, s) = acc;
-					end
-				end
-
-				nInputs = fnn.nInputLines;
-				dw1 = zeros(nHidden, nSamples);
-				for s = 1:nSamples
-					for h = 1:nHidden
-						for i = 1:nInputs
-							% calculate dw_ki/dz_hs
-							% for h != k equal zero (final result)
-							acc = acc + 1 ./ inputs(s, i) .* activation1invd(z(h, s));
-						end
-						dw1(h, s) = acc;
-					end
-				end
-				deltaQ1 = 2 * e1 .* (dw1 - activation1invd(z));
-				deltaQ2 = 2 * repmat(e2, nHidden, 1) .* dw2;
+			if activationInv
+				deltaQ1 = -2 * e1 .* activation1invd(z);
 			else
-				if activationInv
-					deltaQ1 = -2 * e1 .* activation1invd(z);
-				else
-					deltaQ1 = -2 * e1 ./ fnn.activationderivative1(z);
-				end
-				nColsWeights2 = size(weights2, 2);
-				deltaQ2 = 2 * weights2(:, 1:nColsWeights2 - 1)' * e2;
+				deltaQ1 = -2 * e1 ./ fnn.activationderivative1(z);
 			end
+			nColsWeights2 = size(weights2, 2);
+			deltaQ2 = 2 * weights2(:, 1:nColsWeights2 - 1)' * e2;
 
 			deltaQ = deltaQ1 + deltaQ2;
 			deltaQnorm = sum(sum(deltaQ .^ 2))
