@@ -1,0 +1,13 @@
+#!/bin/bash
+set -e	# exit after first command fail
+DOCUMENT="barczcst"
+
+pdflatex -file-line-error-style "$DOCUMENT.tex"
+pdflatex -file-line-error-style "$DOCUMENT.tex"
+
+bibtex -min-crossrefs -1 "$DOCUMENT"
+pdflatex -file-line-error-style "$DOCUMENT.tex"
+pdflatex -file-line-error-style "$DOCUMENT.tex"
+
+rm -f *.aux *.bbl *.blg *.log *.nav *.out *.snm *.toc *.lot *.lof *.lol
+atril "$DOCUMENT.pdf" 1>/dev/null 2>/dev/null
