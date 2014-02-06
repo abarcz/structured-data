@@ -13,7 +13,7 @@ function net = initfnn(nInputLines, nHiddenNeurons, nOutputNeurons, outputFun='p
 	if (strcmp(outputFun, 'purelin') == 0) && (strcmp(outputFun, 'tansig') == 0)
 		error(sprintf('Unknown output activation function: %s', outputFun));
 	end
-	if (strcmp(hiddenFun, 'logsig') == 0) && (strcmp(hiddenFun, 'tansig') == 0)
+	if (strcmp(hiddenFun, 'logsig') == 0) && (strcmp(hiddenFun, 'tansig') == 0) && (strcmp(hiddenFun, 'purelin') == 0)
 		error(sprintf('Unknown hidden activation function: %s', hiddenFun));
 	end
 
@@ -49,10 +49,14 @@ function net = initfnn(nInputLines, nHiddenNeurons, nOutputNeurons, outputFun='p
 		net.activation1 = @(x) logsig(x);
 		net.activationderivative1 = @(x) logsig(x) .* (1 - logsig(x));
 		net.activation2ndderivative1 = @(x) error('second derivative of logsig not implemented');
-	else	% tansig
+	elseif strcmp(hiddenFun, 'tansig') == 1
 		net.activation1 = @(x) tanh(x);
 		net.activationderivative1 = @(x) repmat(1, size(x)) - (tanh(x) .^ 2);
 		net.activation2ndderivative1 = @(x) 2 .* (tanh(x) .^ 3 - tanh(x));
+	else	% purelin
+		net.activation1 = @(x) x;
+		net.activationderivative1 = @(x) 1;
+		net.activation2ndderivative1 = @(x) 0;
 	end
 end
 

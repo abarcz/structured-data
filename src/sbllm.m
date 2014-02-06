@@ -1,8 +1,8 @@
 
-function [trainedFnn mse q nSaturated] = sbllm(fnn, inputs, outputs, nIterations, z0)
+function [trainedFnn mse q nSaturated z] = sbllm(fnn, inputs, outputs, nIterations, z0, useInputBias=true)
 % Train FNN using SBLLM method - internal function used by trainsbllm
 %
-% usage: [trainedFnn mse q nSaturated] = sbllm(fnn, inputs, outputs, nIterations, z0)
+% usage: [trainedFnn mse q nSaturated z] = sbllm(fnn, inputs, outputs, nIterations, z0, useInputBias=true)
 %
 % inputs - each row is a single sample (normalized)
 % outputs - each row contains output for a single sample (normalized)
@@ -22,6 +22,9 @@ function [trainedFnn mse q nSaturated] = sbllm(fnn, inputs, outputs, nIterations
 	elseif strcmp(fnn.hiddenFun, 'tansig') == 1
 		activation1inv = @(x) realatanh(x);
 		activation1invd = @(x) 1 ./ (1 - x .^ 2);
+	elseif strcmp(fnn.hiddenFun, 'purelin') == 1
+		activation1inv = @(x) x;
+		activation1invd = @(x) 1;
 	else
 		error(sprintf('Unknown hidden activation function: %s', fnn.hiddenFun));
 	end
@@ -38,8 +41,13 @@ function [trainedFnn mse q nSaturated] = sbllm(fnn, inputs, outputs, nIterations
 	nSamples = size(inputs, 1);
 	aOutputs = activation2inv(outputs);
 	% unpack fnn and add bias
-	inputsWithBias = [inputs'; repmat(1, 1, nSamples)];
-	weights1 = [fnn.weights1, fnn.bias1];
+	if useInputBias == true
+		inputsWithBias = [inputs'; repmat(1, 1, nSamples)];
+		weights1 = [fnn.weights1, fnn.bias1];
+	else
+		inputsWithBias = inputs';
+		weights1 = fnn.weights1;
+	end
 	weights2 = [fnn.weights2, fnn.bias2];
 
 	mse = zeros(nIterations, 1);
@@ -84,7 +92,7 @@ function [trainedFnn mse q nSaturated] = sbllm(fnn, inputs, outputs, nIterations
 
 		hiddenOutputsWithBias = [fnn.activation1(net1); repmat(1, 1, nSamples)];
 		evaluatedOutputs = fnn.activation2(weights2 * hiddenOutputsWithBias);
-		mse(i) = sum((outputs - evaluatedOutputs) .^ 2) / nSamples;
+		mse(i) = sum(sum((outputs - evaluatedOutputs) .^ 2)) / nSamples;
 		nSaturated(i) = sum(sum(abs(net1) > 0.9));	% number of saturated hidden neurons
 
 		% Step3: convergence check
@@ -118,12 +126,15 @@ function [trainedFnn mse q nSaturated] = sbllm(fnn, inputs, outputs, nIterations
 	end
 
 	% pack fnn and return
-	nCols1 = size(weights1, 2);
-	fnn.weights1 = weights1(:, 1:nCols1 - 1);
-	fnn.bias1 = weights1(:, nCols1);
+	if useInputBias == true
+		fnn.weights1 = weights1(:, 1:size(weights1, 2) - 1);
+		fnn.bias1 = weights1(:, size(weights1, 2));
+	else
+		fnn.weights1 = weights1;
+		fnn.bias1 = zeros(fnn.nHiddenNeurons, 1);
+	end
+	fnn.weights2 = weights2(:, 1:size(weights2, 2) - 1);
+	fnn.bias2 = weights2(:, size(weights2, 2));
 
-	nCols2 = size(weights2, 2);
-	fnn.weights2 = weights2(:, 1:nCols2 - 1);
-	fnn.bias2 = weights2(:, nCols2);
 	trainedFnn = fnn;
 end
