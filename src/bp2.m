@@ -1,18 +1,21 @@
 
 function delta0 = bp2(fnn, inputs, errors)
-% Perform backpropagation
+% Perform matrix backpropagation (for all inputs at once)a
+%
+% usage: delta0 = bp2(fnn, inputs, errors)
 %
 % inputs : row = sample
 % errors : row for a sample
-% return : row of errors
+% return : row of inputErrors
 
+	nSamples = size(inputs, 1);
 	inputs = inputs';
 	errors = errors';
 
 	% fnn feed
-	net1 = fnn.weights1 * inputs + fnn.bias1;
+	net1 = fnn.weights1 * inputs + repmat(fnn.bias1, 1, nSamples);
 	hiddenOutputs = fnn.activation1(net1);
-	net2 = fnn.weights2 * hiddenOutputs + fnn.bias2;
+	net2 = fnn.weights2 * hiddenOutputs + repmat(fnn.bias2, 1, nSamples);
 
 	% calculate delta2 (for all visible neurons at once)
 	outputErrors = errors;

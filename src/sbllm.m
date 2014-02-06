@@ -1,11 +1,12 @@
 
-function [trainedFnn minMse deltaQ1 deltaQ2 z net2z] = traincst(fnn, inputs, outputs, nIterations, activationInv, zin)
-% Train FNN using Castillo method
+function [trainedFnn mse q nSaturated] = sbllm(fnn, inputs, outputs, nIterations, z0)
+% Train FNN using SBLLM method - internal function used by trainsbllm
 %
-% usage: [trainedFnn minMse deltaQ1 deltaQ2 z net2z] = traincst(fnn, inputs, outputs, nIterations, activationInv, zin)
+% usage: [trainedFnn mse q nSaturated] = sbllm(fnn, inputs, outputs, nIterations, z0)
 %
 % inputs - each row is a single sample (normalized)
 % outputs - each row contains output for a single sample (normalized)
+% z0 - initial values of z (can be initialized by trainsbllm)
 
 	if strcmp(fnn.outputFun, 'purelin') == 1
 		activation2inv = @(x) x;
@@ -33,54 +34,24 @@ function [trainedFnn minMse deltaQ1 deltaQ2 z net2z] = traincst(fnn, inputs, out
 	prev2Mse = Inf;
 	minQChange = 1e-1;
 	minMseChange = 1e-14;
-	eta = 0.0001;
 	stepSize = 1;
 	nSamples = size(inputs, 1);
+	aOutputs = activation2inv(outputs);
 	% unpack fnn and add bias
 	inputsWithBias = [inputs'; repmat(1, 1, nSamples)];
 	weights1 = [fnn.weights1, fnn.bias1];
 	weights2 = [fnn.weights2, fnn.bias2];
-	% hidden layer feed
-	net1 = weights1 * inputsWithBias;
-	hiddenOutputs = fnn.activation1(net1);
 
-	% eta seems to do much harm to the learning process
-	z = hiddenOutputs;% + (eta * 2 * (rand(size(hiddenOutputs)) - 0.5));
-	%z = rand(size(hiddenOutputs)) .* 0.9 + 0.05;	% uniformly distributed over [0.05, 0.95]
-	%z = rand(size(hiddenOutputs)) .* 1.8 - 0.9;	% uniformly distributed over [-0.6, 0.6]
-	%z = zin;
-
-
-	% scale the output so that the z values predicted by weights2 are in (-1, 1)
-	%aOutputs = activation2inv(outputs);
-	%zBack = ((aOutputs' .- fnn.bias2) / fnn.weights2')';
-	%div = ceil(max(abs(vec(zBack))));
-	%outputs = outputs ./ div;
-
-	%aOutputs = activation2inv(outputs);
-	%zBack = ((aOutputs' .- fnn.bias2) / fnn.weights2')';
-	%z = (hiddenOutputs + zBack) ./2;
-
-	% adjust the initial weights1
-	aOutputs = activation2inv(outputs);
-	%zBackAdj = fnn.weights2 \ (aOutputs .- fnn.bias2);
-	%weights1 = realatanh(zBackAdj) / inputsWithBias;
-	%net1 = weights1 * inputsWithBias;
-	%z = fnn.activation1(net1);
-
+	mse = zeros(nIterations, 1);
+	q = zeros(nIterations, 1);
+	nSaturated = zeros(nIterations, 1);
+	z = z0;
 	prevZ = z;
-	z0 = z;
-	count = 1;
-	minMse = Inf;
-	while (1)
-		printf('\niteration %d\n', count);
+	for i = 1:nIterations
 		% Step1: calculate weights and biases
 
 		% calculate hidden layer weights
-		az = activation1inv(z);
 
-		zChange = sum(sum(abs(z - prevZ)))
-		azChange = sum(sum(abs(az - activation1inv(prevZ))))
 		% multiplying by inputsWithBias'
 		% (as in the original article):
 		% - can result in singular matrix and yield worse results
@@ -88,6 +59,7 @@ function [trainedFnn minMse deltaQ1 deltaQ2 z net2z] = traincst(fnn, inputs, out
 		%A1 = (inputsWithBias * inputsWithBias');
 		%b1 = (net1 * inputsWithBias');
 		%weights1 = b1 / A1;
+		az = activation1inv(z);
 		weights1 = az / inputsWithBias;
 
 		% calculate output layer weights
@@ -101,30 +73,24 @@ function [trainedFnn minMse deltaQ1 deltaQ2 z net2z] = traincst(fnn, inputs, out
 		% Step2: evaluate sum of squared errors using calculated weights
 		net1 = weights1 * inputsWithBias;
 		e1 = net1 - az;
-		q1 = sum(sum(e1 .^ 2))
+		q1 = sum(sum(e1 .^ 2));	% error of z compared to w1 * x
+
 		net2 = weights2 * zWithBias;
-		net2z = net2;
 		e2 = net2 - aOutputs;
-		q2 = sum(sum(e2 .^ 2))
-		qSum = q1 + q2
+		q2 = sum(sum(e2 .^ 2));	% error of aO compared to w2 * z (not equal to w2 * f2(w1 * x)!)
 
-		hiddenOutputs = fnn.activation1(net1);	% this can differ from z if z was initialized in non standard way
-		hiddenOutputsWithBias = [hiddenOutputs; repmat(1, 1, nSamples)];
-		net2real = weights2 * hiddenOutputsWithBias;
-		evaluatedOutputs = fnn.activation2(net2real);
-		sat = (sum(sum(net1 > 0.9)) + sum(sum(net1 < -0.9))) ./ size(vec(net1), 1)
-		mase = sum(e2 .^ 2) / nSamples
-		mse = sum((outputs - evaluatedOutputs) .^ 2) / nSamples
-		if mse < minMse
-			minMse = mse;
-		end
+		qSum = q1 + q2;
+		q(i) = qSum;
 
+		hiddenOutputsWithBias = [fnn.activation1(net1); repmat(1, 1, nSamples)];
+		evaluatedOutputs = fnn.activation2(weights2 * hiddenOutputsWithBias);
+		mse(i) = sum((outputs - evaluatedOutputs) .^ 2) / nSamples;
+		nSaturated(i) = sum(sum(abs(net1) > 0.9));	% number of saturated hidden neurons
 
 		% Step3: convergence check
 		%if (abs(mse - prevMse) < minMseChange) || (abs(qSum - prevQ) < minQChange)
 		%	break;
 		%end
-
 
 		% Step4 + 5: check improvement and update intermediate outputs
 		%if qSum > prevQ
@@ -134,36 +100,21 @@ function [trainedFnn minMse deltaQ1 deltaQ2 z net2z] = traincst(fnn, inputs, out
 		%	prevMse = prev2Mse;
 		%	prevQ = prev2Q;
 		%else
-			printf('qSum smaller\n');
 			prev2Mse = prevMse;
+			prevMse = mse(i);
 			prev2Q = prevQ;
-			prevMse = mse;
 			prevQ = qSum;
-
-			if activationInv
-				deltaQ1 = -2 * e1 .* activation1invd(z);
-			else
-				deltaQ1 = -2 * e1 ./ fnn.activationderivative1(z);
-			end
-			nColsWeights2 = size(weights2, 2);
-			deltaQ2 = 2 * weights2(:, 1:nColsWeights2 - 1)' * e2;
-
-			deltaQ = deltaQ1 + deltaQ2;
-			deltaQnorm = sum(sum(deltaQ .^ 2))
-
 			prevZ = z;
 
-			deltaZConstant = stepSize * qSum / deltaQnorm
-			deltaZ = deltaZConstant * deltaQ;
+			deltaQ1 = -2 * e1 .* activation1invd(z);
+			deltaQ2 = 2 * weights2(:, 1:size(weights2, 2) - 1)' * e2;
 
-			qChange = sum(sum(deltaZ .* deltaQ))
-			maxDeltaZ = max(max(deltaZ))
+			deltaQ = deltaQ1 + deltaQ2;
+			deltaQnorm = sum(sum(deltaQ .^ 2));
+			deltaZConstant = stepSize * qSum / deltaQnorm;
+			deltaZ = deltaZConstant * deltaQ;
 			z = z - deltaZ;
 		%end
-		count = count + 1;
-		if count > nIterations
-			break;
-		end
 	end
 
 	% pack fnn and return
