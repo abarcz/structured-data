@@ -36,28 +36,7 @@ function net = initfnn(nInputLines, nHiddenNeurons, nOutputNeurons, outputFun='p
 		'outputFun', outputFun, ...
 		'hiddenFun', hiddenFun);
 
-	if strcmp(outputFun, 'purelin') == 1
-		net.activation2 = @(x) x;
-		net.activationderivative2 = @(x) 1;
-		net.activation2ndderivative2 = @(x) 0;
-	else	% tansig
-		net.activation2 = @(x) tanh(x);
-		net.activationderivative2 = @(x) repmat(1, size(x)) - (tanh(x) .^ 2);
-		net.activation2ndderivative2 = @(x) 2 .* (tanh(x) .^ 3 - tanh(x));
-	end
-	if strcmp(hiddenFun, 'logsig') == 1
-		net.activation1 = @(x) logsig(x);
-		net.activationderivative1 = @(x) logsig(x) .* (1 - logsig(x));
-		net.activation2ndderivative1 = @(x) error('second derivative of logsig not implemented');
-	elseif strcmp(hiddenFun, 'tansig') == 1
-		net.activation1 = @(x) tanh(x);
-		net.activationderivative1 = @(x) repmat(1, size(x)) - (tanh(x) .^ 2);
-		net.activation2ndderivative1 = @(x) 2 .* (tanh(x) .^ 3 - tanh(x));
-	else	% purelin
-		net.activation1 = @(x) x;
-		net.activationderivative1 = @(x) 1;
-		net.activation2ndderivative1 = @(x) 0;
-	end
+	net = postloadfnn(net);
 end
 
 function weights = initializeweights(nInputLines, nNeurons, factor=0)

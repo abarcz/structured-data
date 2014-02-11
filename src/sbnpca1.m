@@ -2,7 +2,7 @@
 function [pc trainedFnn msei mseo] = sbnpca1(data, nComponents, nHiddenNeurons, nIterations, nInputIt, check)
 % Perform inverse NPCA using SBLLM
 %
-% usage: [pc trainedFnn msei mseo] = sbnpca(data, nComponents, nHiddenNeurons, nIterations, nInputIt, check)
+% usage: [pc trainedFnn msei mseo] = sbnpca1(data, nComponents, nHiddenNeurons, nIterations, nInputIt, check)
 %
 % data - each row is a sample
 %

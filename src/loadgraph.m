@@ -1,11 +1,11 @@
 
-function graph = loadgraph(graphName)
+function graph = loadgraph(graphName, asBidirectional=false)
 % Loads a graph from two (three if present) files:
 % - graphName_nodes.csv
 % - graphName_edges.csv
 % (- graphName_output.csv)
 %
-% usage: graph = loadgraph(graphName)
+% usage: graph = loadgraph(graphName, asBidirectional=false)
 %
 % The nodes file should contain a comma-separated matrix NxP,
 % each row (one row per node) contains single node label:
@@ -18,6 +18,7 @@ function graph = loadgraph(graphName)
 % (edge: src->target, node_id is the row number of node label in nodes file: 1..N)
 % If edges don't have any labels, they will be assigned a 0 label.
 % If an edge is bidirectional, it should have two separate entries.
+% (asBidirectional can be used to transform edges to bidirectional)
 %
 % The output file should contain a matrix of desired outputs NxQ,
 % each row (one row per node) contains desired output for given node:
@@ -41,6 +42,17 @@ function graph = loadgraph(graphName)
 
 	nodeLabels = csvread(nodesFilename);
 	edgeLabels = csvread(edgesFilename);
+	if asBidirectional
+		% add second direction edges
+		edgeLabelsBi = edgeLabels;
+		edgeLabelsBi(:, 1) = edgeLabels(:, 2);
+		edgeLabelsBi(:, 2) = edgeLabels(:, 1);
+		edgeLabels = [edgeLabels; edgeLabelsBi];
+	end
+	edgeCoords = edgeLabels(:, 1:2);
+	if size(unique(edgeCoords, 'rows'), 1) != size(edgeCoords, 1)
+		error(sprintf('Duplicate edges in graph "%s"', graphName));
+	end
 	if exist(expectedOutputFilename, 'file') == 2
 		expectedOutput = csvread(expectedOutputFilename);
 		assert(size(expectedOutput, 2) >= minOutputSize);
