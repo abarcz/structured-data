@@ -221,14 +221,14 @@ end
 BACKWARD($\bm{x}$, $\bm{w}$):
 	$\bm{o} = G_{\bm{w}}(\bm{x})$
 	$\bm{A} = \frac{\partial F_{\bm{w}}}{\partial \bm{x}}(\bm{x}, \; \bm{l})$
-	$\bm{b} = \frac{\partial e_{\bm{w}}}{\partial \bm{o}}\cdot \frac{\partial G_{\bm{w}}}{\partial x}(\bm{x})$
+	$\bm{b} = \frac{\partial e_{\bm{w}}}{\partial \bm{o}}\cdot \frac{\partial G_{\bm{w}}}{\partial \bm{x}}(\bm{x})$
 	$\bm{z}(0) = \bm{b}$
 	$t = 0$
 	repeat:
 		$t = t - 1$
 		$\bm{z}(t) = \bm{z}(t + 1) \cdot \bm{A} + \bm{b}$
 	until $(max_i(|z_i(t) - z_i(t + 1)|) \leq minErrorAccDiff)$ or $(|t| \geq maxBackwardSteps)$
-	$\frac{\partial eg_{\bm{w}}}{\partial \bm{w}} = \frac{\partial e_{\bm{w}}}{\partial \bm{o}}\cdot \frac{\partial G_{\bm{w}}}{\partial w}(\bm{x})$
+	$\frac{\partial eg_{\bm{w}}}{\partial \bm{w}} = \frac{\partial e_{\bm{w}}}{\partial \bm{o}}\cdot \frac{\partial G_{\bm{w}}}{\partial \bm{w}}(\bm{x})$
 	$\frac{\partial eh_{\bm{w}}}{\partial \bm{w}} = \bm{z}(t) \cdot \frac{\partial F_{\bm{w}}}{\partial \bm{w}}(\bm{x}, \bm{l}) + \frac{\partial p_{\bm{w}}}{\partial \bm{w}}$
 	return $[\frac{\partial eh_{\bm{w}}}{\partial \bm{w}}; \; \frac{\partial eg_{\bm{w}}}{\partial \bm{w}}]$
 end
