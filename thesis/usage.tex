@@ -18,7 +18,7 @@
 \begin{lstlisting}[style=outcode, language=Matlab, caption=Sample usage session]
 g6 = loadset('../data/g6s3n/g6s3', 10);
 gm = mergegraphs(g6);
-gnn = initgnn(gm.maxIndegree, [5 5], [5 gm.nodeOutputSize], 'tansig');
+gnn = initgnn(gm, 5, [5 5], 'tansig');
 trainedGnn = traingnn(gnn, gm, 20);
 outputs = classifygnn(trainedGnn, gm);
 stats = evaluate(outputs, gm.expectedOutput);
