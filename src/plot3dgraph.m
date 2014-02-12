@@ -8,7 +8,7 @@ function plot3dgraph(graph)
 %
 
 	adjacency = zeros(graph.nNodes);
-	nEdges = size(graph.edgeLabels, 1);
+	nEdges = graph.nEdges;
 	for i = 1:nEdges
 		sourceNode = graph.edgeLabels(i, 1);
 		targetNode = graph.edgeLabels(i, 2);
