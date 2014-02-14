@@ -5,6 +5,9 @@ function [state nSteps] = forward(gnn, graph, maxForwardSteps, state=0)
 %
 % usage: [state nSteps] = forward(gnn, graph, maxForwardSteps, state=0)
 
+	if state == 0
+		state = randn(graph.nNodes, gnn.stateSize);
+	end
 	inputStruct = buildinputs(graph, gnn.stateSize);
 	stateFirstIndex = inputStruct.stateFirstIndex;
 	nSteps = 1;

@@ -29,5 +29,6 @@ function graph = mergegraphs(graphs)
 		graph.edgeLabels = [graph.edgeLabels; newEdgeLabels];
 	end
 	graph.nNodes = size(graph.nodeLabels, 1);
+	graph.nEdges = size(graph.edgeLabels, 1);
 	graph.graphEndIndexes = graphEndIndexes;
 end
