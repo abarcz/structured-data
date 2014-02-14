@@ -1,11 +1,11 @@
 
-function [trainGraphs testGraphs] = loadcrystals(trainFraction, nGraphs)
+function [trainGraphs testGraphs] = loadcrystals(setNames, trainFraction, nGraphs)
 % Loads ../data/crystalgen sets
 
 	indexes = randperm(nGraphs);
 	nTrain = floor(nGraphs * trainFraction);
 	nTest = nGraphs - nTrain;
-	setNames = {'tetrap', 'tetrai'};
+	%setNames = {'tetrap', 'tetrai'};
 	nSets = max(size(setNames));
 
 	trainGraphs = {};

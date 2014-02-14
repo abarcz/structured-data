@@ -38,7 +38,6 @@ function stats = transitionstats(backwardDeltas)
 	correlatedWithDeltas = sum(sumDeltasSign == deltasSign);
 	correlatedWithPenalty = sum(sumDeltasSign == penaltySign);
 	deltasCorrelated = sum(deltasSign == penaltySign);
-	assert(deltasCorrelated == correlatedWithDeltas + correlatedWithPenalty - nDeltas);
 
 	stats = [correlatedWithDeltas, correlatedWithPenalty, deltasCorrelated, 0] / nDeltas * 100;
 	stats(4) = maxRatio;
