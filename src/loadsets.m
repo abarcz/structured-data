@@ -1,11 +1,13 @@
 
-function [trainGraphs testGraphs] = loadcrystals(setNames, trainFraction, nGraphs)
-% Loads ../data/crystalgen sets
+function [trainGraphs testGraphs] = loadsets(setNames, trainFraction, nGraphs)
+% Loads two data sets from ../data/<setName> and mixes them as train and test datasets.
+%
+% usage: [trainGraphs testGraphs] = loadsets(setNames, trainFraction, nGraphs)
+%
 
 	indexes = randperm(nGraphs);
 	nTrain = floor(nGraphs * trainFraction);
 	nTest = nGraphs - nTrain;
-	%setNames = {'tetrap', 'tetrai'};
 	nSets = max(size(setNames));
 
 	trainGraphs = {};
@@ -13,7 +15,7 @@ function [trainGraphs testGraphs] = loadcrystals(setNames, trainFraction, nGraph
 	lastTrainIndex = 0;
 	lastTestIndex = 0;
 	for i = 1:nSets
-		graphs = loadset(sprintf('../data/crystalgen/%s', setNames{i}), nGraphs);
+		graphs = loadset(sprintf('../data/%s', setNames{i}), nGraphs);
 		newTrain = graphs(indexes(1:nTrain));
 		for j = 1:nTrain
 			trainGraphs{lastTrainIndex + j} = newTrain{j};

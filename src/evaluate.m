@@ -23,8 +23,16 @@ function stats = evaluate(output, expected)
 	trueNeg = sum(output(expected == -1) == -1);
 	falseNeg = sum(output(expected == 1) == -1);
 
-	precision = truePos / (truePos + falsePos);
-	recall = truePos / (truePos + falseNeg);
+	if truePos + falsePos == 0
+		precision = 0;
+	else
+		precision = truePos / (truePos + falsePos);
+	end
+	if truePos + falseNeg == 0
+		recall = 0;
+	else
+		recall = truePos / (truePos + falseNeg);
+	end
 	accuracy = (truePos + trueNeg) / size(expected, 1);
 
 	stats = [accuracy, precision, recall];
