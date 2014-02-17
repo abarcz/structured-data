@@ -19,6 +19,9 @@ function savegraph(graphName, graph)
 		if graph.nodeOrientedTask
 			csvwrite(expectedOutputFilename, graph.expectedOutput);
 		else
+			if size(graph.graphOutputIndexes, 1) > 1
+				error('savegraph not implemented for merged graphs');
+			end
 			csvwrite(expectedOutputFilename, graph.expectedOutput(1, :));
 		end
 	end

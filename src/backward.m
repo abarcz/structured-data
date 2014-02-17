@@ -10,9 +10,12 @@ function [weightDeltas nSteps penaltyAdded] = backward(gnn, graph, state, maxBac
 	outputs = applynet(gnn.outputNet, state);
 	outputErrors = 2 .* (graph.expectedOutput - outputs);
 	if graph.nodeOrientedTask == false
-		selectedNodeErrors = outputErrors(1, :);
-		outputErrors = zeros(size(outputErrors));
-		outputErrors(1, :) = selectedNodeErrors;
+		graphOutputErrors = zeros(size(outputErrors));
+		for i = 1:size(graph.graphOutputIndexes, 1)
+			index = graph.graphOutputIndexes(i);
+			graphOutputErrors(index, :) = outputErrors(index, :);
+		end
+		outputErrors = graphOutputErrors;
 	end
 
 	outputDeltas = outputdeltas(gnn.outputNet, graph, state, outputErrors);

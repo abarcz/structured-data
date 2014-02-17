@@ -58,12 +58,14 @@ function graph = loadgraph(graphName, asBidirectional=false)
 		assert(size(expectedOutput, 2) >= minOutputSize);
 		if size(expectedOutput, 1) == 1
 			nodeOrientedTask = false;
+			graphOutputIndexes = [1];
 			graphOutput = expectedOutput(1, :);
 			% for split & merge to work:
 			expectedOutput = zeros(size(nodeLabels, 1), size(graphOutput, 2));
 			expectedOutput(1, :) = graphOutput;
 		else
 			nodeOrientedTask = true;
+			graphOutputIndexes = [0];
 			assert(size(expectedOutput, 1) == size(nodeLabels, 1));
 			assert(size(expectedOutput, 2) >= minOutputSize);
 		end
@@ -103,5 +105,6 @@ function graph = loadgraph(graphName, asBidirectional=false)
 		'nEdges', nEdges,...
 		'maxIndegree', maxIndegree,...
 		'nodeOutputSize', nodeOutputSize,...
-		'nodeOrientedTask', nodeOrientedTask);
+		'nodeOrientedTask', nodeOrientedTask,...
+		'graphOutputIndexes', graphOutputIndexes);
 end

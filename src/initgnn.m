@@ -20,7 +20,6 @@ function gnn = initgnn(graph, stateSize, nHiddenNeurons, outputFun='purelin', mi
 	assert(size(nHiddenNeurons, 2) == 2);
 	assert(minStateDiff > 0);
 	assert(contractionConstant > 0);
-	assert(contractionConstant < 1);
 
 	nodeLabelSize = graph.nodeLabelSize;
 	edgeLabelSize = graph.edgeLabelSize;

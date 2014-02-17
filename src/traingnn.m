@@ -52,7 +52,7 @@ function [bestGnn trainStats] = traingnn(gnn, graph, nIterations, maxForwardStep
 
 		outputs = applynet(gnn.outputNet, state);
 		if graph.nodeOrientedTask == false
-			err = rmse(graph.expectedOutput(1, :), outputs(1, :));
+			err = rmse(graph.expectedOutput(graph.graphOutputIndexes, :), outputs(graph.graphOutputIndexes, :));
 		else
 			err = rmse(graph.expectedOutput, outputs);
 		end
@@ -89,7 +89,7 @@ function [bestGnn trainStats] = traingnn(gnn, graph, nIterations, maxForwardStep
 
 	outputs = applynet(gnn.outputNet, state);
 	if graph.nodeOrientedTask == false
-		err = rmse(graph.expectedOutput(1, :), outputs(1, :));
+		err = rmse(graph.expectedOutput(graph.graphOutputIndexes, :), outputs(graph.graphOutputIndexes, :));
 	else
 		err = rmse(graph.expectedOutput, outputs);
 	end

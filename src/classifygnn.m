@@ -20,6 +20,6 @@ function [outputs nForwardSteps] = classifygnn(gnn, graph, maxForwardSteps=200, 
 	[finalState nForwardSteps] = forward(gnn,graph, maxForwardSteps, state);
 	outputs = applynet(gnn.outputNet, finalState);
 	if graph.nodeOrientedTask == false
-		outputs = outputs(1, :);
+		outputs = outputs(graph.graphOutputIndexes, :);
 	else
 end
