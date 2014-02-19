@@ -1,5 +1,5 @@
 
-function [bestGnn trainStats] = traingnn(gnn, graph, nIterations, maxForwardSteps=200, maxBackwardSteps=200, initialState=0)
+function [gnn trainStats] = traingnn(gnn, graph, nIterations, maxForwardSteps=200, maxBackwardSteps=200, initialState=0)
 % Trains GNN using graph as training set
 %
 % usage: [bestGnn trainStats] = traingnn(gnn, graph, nIterations, maxForwardSteps=200, maxBackwardSteps=200, initialState=0)
@@ -46,6 +46,8 @@ function [bestGnn trainStats] = traingnn(gnn, graph, nIterations, maxForwardStep
 	bestGnn = gnn;
 	rpropTransitionState = initrprop(gnn.transitionNet);
 	rpropOutputState = initrprop(gnn.outputNet);
+	penaltyAddedCount = 0;
+	gnn.nIterations = 0;
 	for iteration = 1:nIterations
 		[state nForwardSteps] = forward(gnn, graph, maxForwardSteps, initialState);
 		trainStats(iteration, FORWARD_STEPS) = nForwardSteps;
@@ -79,6 +81,15 @@ function [bestGnn trainStats] = traingnn(gnn, graph, nIterations, maxForwardStep
 			outputWeightUpdates, 1);
 		gnn.transitionNet = updateweights(gnn.transitionNet,...
 			transitionWeightUpdates, 1);
+		if penaltyAdded
+			penaltyAddedCount = penaltyAddedCount + 1;
+		else
+			penaltyAddedCount = 0;
+		end
+		gnn.nIterations = iteration;
+		if penaltyAddedCount > 10
+			break;
+		end
 	end
 
 	% calculate RMSE of final GNN
