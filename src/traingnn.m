@@ -1,5 +1,5 @@
 
-function [gnn trainStats] = traingnn(gnn, graph, nIterations, maxForwardSteps=200, maxBackwardSteps=200, initialState=0)
+function [bestGnn trainStats interrupted] = traingnn(gnn, graph, nIterations, maxForwardSteps=200, maxBackwardSteps=200, initialState=0)
 % Trains GNN using graph as training set
 %
 % usage: [bestGnn trainStats] = traingnn(gnn, graph, nIterations, maxForwardSteps=200, maxBackwardSteps=200, initialState=0)
@@ -48,6 +48,7 @@ function [gnn trainStats] = traingnn(gnn, graph, nIterations, maxForwardSteps=20
 	rpropOutputState = initrprop(gnn.outputNet);
 	penaltyAddedCount = 0;
 	gnn.nIterations = 0;
+	interrupted = false;
 	for iteration = 1:nIterations
 		[state nForwardSteps] = forward(gnn, graph, maxForwardSteps, initialState);
 		trainStats(iteration, FORWARD_STEPS) = nForwardSteps;
@@ -88,6 +89,7 @@ function [gnn trainStats] = traingnn(gnn, graph, nIterations, maxForwardSteps=20
 		end
 		gnn.nIterations = iteration;
 		if penaltyAddedCount > 10
+			interrupted = true;
 			break;
 		end
 	end

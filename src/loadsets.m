@@ -1,6 +1,6 @@
 
 function [trainGraphs testGraphs] = loadsets(setNames, trainFraction, nGraphs)
-% Loads two data sets from ../data/<setName> and mixes them as train and test datasets.
+% Loads two data sets from <setName> dirs and mixes them as train and test datasets.
 %
 % usage: [trainGraphs testGraphs] = loadsets(setNames, trainFraction, nGraphs)
 %
@@ -15,7 +15,7 @@ function [trainGraphs testGraphs] = loadsets(setNames, trainFraction, nGraphs)
 	lastTrainIndex = 0;
 	lastTestIndex = 0;
 	for i = 1:nSets
-		graphs = loadset(sprintf('../data/%s', setNames{i}), nGraphs);
+		graphs = loadset(setNames{i}, nGraphs);
 		newTrain = graphs(indexes(1:nTrain));
 		for j = 1:nTrain
 			trainGraphs{lastTrainIndex + j} = newTrain{j};

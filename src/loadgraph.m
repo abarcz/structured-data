@@ -18,7 +18,7 @@ function graph = loadgraph(graphName, asBidirectional=false)
 % (edge: src->target, node_id is the row number of node label in nodes file: 1..N)
 % If edges don't have any labels, they will be assigned a 0 label.
 % If an edge is bidirectional, it should have two separate entries.
-% (asBidirectional can be used to transform edges to bidirectional)
+% (asBidirectional can be used to transform edges to bidirectional - labels are inverted)
 %
 % The output file should contain a matrix of desired outputs NxQ,
 % each row (one row per node) contains desired output for given node:
@@ -44,7 +44,7 @@ function graph = loadgraph(graphName, asBidirectional=false)
 	edgeLabels = csvread(edgesFilename);
 	if asBidirectional
 		% add second direction edges
-		edgeLabelsBi = edgeLabels;
+		edgeLabelsBi = -edgeLabels;
 		edgeLabelsBi(:, 1) = edgeLabels(:, 2);
 		edgeLabelsBi(:, 2) = edgeLabels(:, 1);
 		edgeLabels = [edgeLabels; edgeLabelsBi];
