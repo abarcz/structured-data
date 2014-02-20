@@ -9,8 +9,9 @@ function [gnns trainStats testStats initialTrainRmse] = bestgnn(graphs, nGnns, n
 	bestRmse = Inf;
 	for i = 1:nGnns
 		tic();
-		gnn = initgnn(graphsMerged.maxIndegree, [5 5], [5 graphsMerged.nodeOutputSize], 'tansig');
-		[trainedGnn trainStats] = traingnn(gnn, graphsMerged, nInitialIterations, 200, 200, state);
+		gnn = initgnn(graphsMerged, 5, [5 5]);
+		gnn.contractionConstant = 30;
+		[trainedGnn trainStats] = traingnn(gnn, graphsMerged, nInitialIterations, 200, 200);
 		rmse = trainStats(nInitialIterations, 1);
 		initialTrainRmse(i) = rmse;
 		if rmse < bestRmse
