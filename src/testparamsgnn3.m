@@ -1,7 +1,7 @@
 
 function testparamsgnn3(trainGraph, testGraph, nIterations, testname, contractionConstants, stateSizes, state)
 %
-% usage: testparamsgnn2(trainGraph, testGraph, nIterations, testname, contractionConstants, stateSizes, state)
+% usage: testparamsgnn3(trainGraph, testGraph, nIterations, testname, contractionConstants, stateSizes, state)
 %
 
 	assert(size(contractionConstants, 1) == 1);

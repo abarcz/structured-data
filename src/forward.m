@@ -7,6 +7,7 @@ function [state nSteps] = forward(gnn, graph, maxForwardSteps, state=0)
 
 	if state == 0
 		state = initstate(graph.nNodes, gnn.stateSize);
+		gnn.initialStates = cellappend(gnn.initialStates, state);
 	end
 	inputStruct = buildinputs(graph, gnn.stateSize);
 	stateFirstIndex = inputStruct.stateFirstIndex;

@@ -2,7 +2,7 @@
 function [bestGnn trainStats interrupted] = traingnn(gnn, graph, nIterations, maxForwardSteps=200, maxBackwardSteps=200, initialState=0)
 % Trains GNN using graph as training set
 %
-% usage: [bestGnn trainStats] = traingnn(gnn, graph, nIterations, maxForwardSteps=200, maxBackwardSteps=200, initialState=0)
+% usage: [bestGnn trainStats interrupted] = traingnn(gnn, graph, nIterations, maxForwardSteps=200, maxBackwardSteps=200, initialState=0)
 %
 % return:
 % - best gnn obtained during training and all errors
@@ -42,6 +42,7 @@ function [bestGnn trainStats interrupted] = traingnn(gnn, graph, nIterations, ma
 		normalize(graph.edgeLabels(:, 3:end));
 	graph = addgraphinfo(graph);
 
+	gnn.initialStates = {};	% cellarray holding all initialstates (if no initialState was passed to traingnn)
 	minError = Inf;
 	bestGnn = gnn;
 	rpropTransitionState = initrprop(gnn.transitionNet);

@@ -10,7 +10,7 @@ function [gnns trainStats testStats initialTrainRmse] = bestgnn(graphs, nGnns, n
 	for i = 1:nGnns
 		tic();
 		gnn = initgnn(graphsMerged, 5, [5 5]);
-		gnn.contractionConstant = 30;
+		gnn.contractionConstant = 50;
 		[trainedGnn trainStats] = traingnn(gnn, graphsMerged, nInitialIterations, 200, 200);
 		rmse = trainStats(nInitialIterations, 1);
 		initialTrainRmse(i) = rmse;
@@ -20,9 +20,10 @@ function [gnns trainStats testStats initialTrainRmse] = bestgnn(graphs, nGnns, n
 		end
 
 		packedGnn = presavegnn(gnn);
+		packedTrainedGnn = presavegnn(trainedGnn);
 		time = toc();
 		filename = strcat(testname, sprintf('_gnn%d', i), '.mat');
-		save(filename, 'packedGnn', 'trainStats', 'nInitialIterations', 'time');
+		save(filename, 'packedGnn', 'packedTrainedGnn', 'trainStats', 'nInitialIterations', 'time');
 	end
 
 	if nIterations != 0

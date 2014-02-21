@@ -1,7 +1,7 @@
 
 function testparams3(nRounds, trainGraph, testGraph, nIterations, basename, contractionConstants, stateSizes, state)
 %
-% usage: testparams2(nRounds, trainGraph, testGraph, nIterations, basename, contractionConstants, stateSizes, state)
+% usage: testparams3(nRounds, trainGraph, testGraph, nIterations, basename, contractionConstants, stateSizes, state)
 %
 
 	assert(size(contractionConstants, 1) == 1);
