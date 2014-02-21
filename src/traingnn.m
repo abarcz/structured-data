@@ -51,7 +51,7 @@ function [bestGnn trainStats interrupted] = traingnn(gnn, graph, nIterations, ma
 	gnn.nIterations = 0;
 	interrupted = false;
 	for iteration = 1:nIterations
-		[state nForwardSteps] = forward(gnn, graph, maxForwardSteps, initialState);
+		[state nForwardSteps gnn] = forward(gnn, graph, maxForwardSteps, initialState);
 		trainStats(iteration, FORWARD_STEPS) = nForwardSteps;
 
 		outputs = applynet(gnn.outputNet, state);
