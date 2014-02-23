@@ -34,6 +34,7 @@ function gnn = initgnn(graph, stateSize, nHiddenNeurons, outputFun='purelin', mi
 
 	% divide by additional factor, because inputs = fw = maxIn * hw
 	outputNet.weights1 = outputNet.weights1 ./ maxIndegree;
+	%TODO transitionNet.weights1 should also be divided, but only these weights which correspond to the state
 
 	gnn = struct(...
 		'transitionNet', transitionNet,...
