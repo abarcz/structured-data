@@ -1,10 +1,17 @@
 *.swp
 
+common/eps/*eps-converted-to.pdf
 data/g14s7/
 data/g14s7n/
 data/g6s3/
 data/g6s3class/
 data/g6s3n/
+data/crystalgengori/
+data/crystalgennori/
+data/crystalgennorin/
+data/crystalgennorin10/
+data/crystalgennorisph/
+data/crystalgennorisphn/
 presentation/abarcz_wilga.pdf
 presentation/gnn.pdf
 presentation/gnn_en.pdf
