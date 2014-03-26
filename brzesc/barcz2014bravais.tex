@@ -6,12 +6,14 @@
 %
 \title{Graph Neural Networks for 3D Bravais Lattices Classification}
 \author{Aleksy Barcz, Stanis{\l}aw Jankowski}
-\institute{Institute of Electronic Systems, Warsaw University of Technology, Warsaw, Poland}
+\institute{Institute of Electronic Systems, Warsaw University of Technology, Warsaw, Poland
+\email{abarcz@gmail.com, s.jankowski@ise.pw.edu.pl}
+}
 \begin{document}
 \maketitle
 %
 \begin{abstract}
-This paper presents the~computational capabilities of Graph Neural Networks in application to 3D crystal structures. The~Graph Neural Network model is described in terms of encoding and unfolded network. Results of classifying selected 3D Bravais lattices are presented.
+This paper presents the~computational capabilities of Graph Neural Networks in application to 3D crystal structures. The~Graph Neural Network model is described in detail in terms of encoding and unfolded network. Results of classifying selected 3D Bravais lattices are presented, confirming the ability of the Graph Neural Network Model to distinguish between structurally different lattices, lattices containing a single substitution and lattices containing a differently located substitution.
 \end{abstract}
 
 \section{Introduction}
@@ -20,7 +22,10 @@ In the~domain of classification and regression we can distinguish two types of d
 The~first attempts to process graph data with neural networks models were the~Hopfield networks, mapping from one graph node to adjacent nodes~\cite{goulon2005hopfield}. Subsequently, \emph{encoder-decoder} models were invented, like the~RAAM~\cite{pollack1990recursive} and LRAAM model~\cite{sperduti1994labelling}. A single RAAM/LRAAM model usually consists of two fully-connected three layer neural networks (inputs performing no computation, a~hidden layer and an output layer). The~first network, called the~\emph{encoder} is used to build a~lossless compressed representation of graph nodes, while the~\emph{decoder} network is used to restore the~original graph node representation from the~compressed code. Such models can be used to build a~compact representation of DPAGs (directed positional acyclic graphs), where the~representation of a~graph root node is treated as the~whole graph representation. Such a~representation can then be fed to a~standard feed-forward neural network for classification/regression purposes. Later on, the~Backpropagation Through Structure (BPTS) algorithm was formulated~\cite{goller1996learning}, addressing the~\emph{moving target} problem and introducing the~idea of the~\emph{unfolded network}. Finally, two models were created to process graph data without creating a~lossless encoding: the~Graph Machines~\cite{goulon2005learning} and the~Graph Neural Networks~\cite{scarselli2009graph}. Both models are designed to learn an encoding of graphs which is sufficient for a~graph classification/regression task. Such an approach proved to work well in various domains. Graph Machines were successfully used in many QSAR and QSPR tasks~\cite{goulon2007predicting}~\cite{goulon2011novel}, including most recently prediction of fuel compounds properties~\cite{saldana2013rational}. Graph Neural Networks were used in XML document mining~\cite{yong2006xml}, web page ranking~\cite{scarselli2005graph}, spam detection~\cite{scarselli2013solving}, object localisation in images~\cite{monfardini2006graph} and in image classification~\cite{quek2011structural}.
 \\\\
 In the~field of material technology, the~properties of a~material often depend on defects in its crystal structure. Such defects may consist of a~vacant site in the~crystal lattice or of a~\emph{basis} substitution.
-This article describes how three dimensional crystal structures, such as Bravais lattices, can be processed using Graph Neural Networks. By using a~graph oriented model, the~spacial location of lattice points can be described. By using node labels corresponding to lattice points, information about the~basis can be taken into account.
+This article describes how three dimensional crystal structures, such as Bravais lattices, can be processed directly by using Graph Neural Networks. By using a~graph oriented model, the~spacial location of lattice points can be described. By using node labels corresponding to lattice points, information about the~basis can be taken into account.
+
+\subsection{Related Works}
+Neural networks were successfully used to predict solid solubility limits for copper and silver, using Bravais lattices parameters as part of the input~\cite{zhang2008revisiting}. To provide the classifier with vectorial data, Bravais lattices were described using unit cell lengths ($a$, $b$, $c$), axes angles ($\alpha$, $\beta$, $\gamma$) and the crystal system (simple, base-centered, face-centered, body-centered). In another work, Self-Organising Maps were used to describe structure-property relationships of crystal structures represented using powder diffraction patterns~\cite{willighagen2007supervised}. Both these approaches are representative of the vectorial modelling method. The underlying graph-structured data had to be represented in a form which could be fed to a feed-forward neural network. In this article a different approach is proposed: modelling graph structures by directly using graphs and graph neural network models, which proved useful in other, previously mentioned, graph-based domains.
 
 
 \section{The~Graph Neural Network Model}
@@ -58,7 +63,7 @@ A single GNN model is built for a~set of graphs (the~dataset). Each graph belong
 
 \begin{figure}[h!]
 \begin{center}
-	\epsfig{file=eps/f_ext2,width=11cm}
+	\epsfig{file=eps/f_ext2,width=11.5cm}
 	\caption[]{The~$f_{\vec{w}}$ and  $g_{\vec{w}}$ functions for a~single node and one of the~corresponding edges}
 	\label{fig:gnn_fg}
 \end{center}
@@ -66,11 +71,13 @@ A single GNN model is built for a~set of graphs (the~dataset). Each graph belong
 
 
 \subsection{Encoding Network}
-Graph processing by a~GNN model consists of two steps. The first step is to calculate the~state $\vec{x}_n$ for all nodes, using the~transition function $f_{\vec{w}}$ and exploiting the graph structure. The second step is to process this representation using the~output function $g_{\vec{w}}$. The~values of node states depend on one another, according to the~graph structure, so the~whole model can be described in terms of an \emph{encoding network}. The~encoding network consists of the $f_{\vec{w}}$ unit instances connected according to the~graph structure, with an instance of $g_{\vec{w}}$ unit connected at each node. It is important to remember, that there exists only one $h_{\vec{w}}$ and only one $g_{\vec{w}}$ network for the whole GNN. All the~instances are just copies of these two networks, using the~same sets of weights (the~\emph{shared weights} technique). A sample graph and the~corresponding encoding network are presented in Fig.~\ref{fig:gnn_encoding}. It can be seen that if a~graph contains cycles, the~state calculation must be an iterative process, to take into account all the~node dependencies. Furthermore, we would expect a~convergence to be reached, which is also addressed by the~GNN model.
+Graph processing by a~GNN model consists of two steps. The first step is to calculate the~state $\vec{x}_n$ for all nodes, using the~transition function $f_{\vec{w}}$ and exploiting the graph structure. The second step is to process this representation using the~output function $g_{\vec{w}}$. The~values of node states depend on one another, according to the~graph structure, so the~whole model can be described in terms of an \emph{encoding network}. The~encoding network consists of the $f_{\vec{w}}$ unit instances connected according to the~graph structure, with an instance of $g_{\vec{w}}$ unit connected at each node. It is important to remember, that there exists only one $h_{\vec{w}}$ and only one $g_{\vec{w}}$ network for the whole GNN. All the~instances are just copies of these two networks, using the~same sets of weights (the~\emph{shared weights} technique).
+\\\\
+A sample graph and the~corresponding encoding network are presented in Fig.~\ref{fig:gnn_encoding}. It can be seen that if a~graph contains cycles, the~state calculation must be an iterative process, to take into account all the~node dependencies. Furthermore, we would expect a~convergence to be reached, which is also addressed by the~GNN model.
 
 \begin{figure}[h!]
 \begin{center}
-	\epsfig{file=eps/encodinginc,width=8cm}
+	\epsfig{file=eps/encodinginc,width=9cm}
 	\caption[]{A sample graph and the~corresponding encoding network}
 	\label{fig:gnn_encoding}
 \end{center}
@@ -91,6 +98,7 @@ To take into account all graph edges (which may form cycles), another representa
 \end{equation}
 
 \noindent The~global state $\vec{x}$ is computed at each time step and is expected to converge to $\hat{\vec{x}}$ after a~finite number of steps. Then, the~output $\vec{o}_n$ is calculated by the~$g_{\vec{w}}$ units. The~output error $\vec{e}_n = (\vec{d}_n - \vec{o}_n)^2$ (where $\vec{d}_n$ stands for the~expected output) is calculated and backpropagated through the~output units, yielding $\frac{\partial e_{\vec{w}}}{\partial \vec{o}}\cdot \frac{\partial G_{\vec{w}}}{\partial \vec{x}}(\hat{\vec{x}})$. That value is backpropagated through the~unfolded network using the~BPTT/BPTS algorithm. Additionally, at each time step the~$\frac{\partial \vec{e}_{\vec{w}}}{\partial \vec{o}}\cdot \frac{\partial G_{\vec{w}}}{\partial \vec{x}}(\hat{\vec{x}})$ error is injected to the~$f_{\vec{w}}$ layer. In such a~way the~error backpropagated through the~$f_{\vec{w}}$ layer at time $t_i$ comes from two sources. Firstly, it is the~original output error of the~network $\frac{\partial \vec{e}_{\vec{w}}}{\partial \vec{o}}\cdot \frac{\partial G_{\vec{w}}}{\partial \vec{x}}(\hat{\vec{x}})$. Secondly, it is the~error backpropagated from the~subsequent time layers of the~$f_{\vec{w}}$ unit from all nodes connected with the~given node $u$ by an edge $u \Rightarrow n$. The~backpropagation continues until the~error value converges, which usually take less time steps than the~state convergence. The~unfolding and error backpropagation phases are presented in Fig.~\ref{fig:gnn_forback}.
+\\
 
 \begin{figure}[h!]
 \begin{center}
@@ -154,14 +162,14 @@ For the~scope of this work, two simple Bravais lattices were chosen for experime
 
 \begin{figure}[h!]
 \begin{center}
-	\epsfig{file=eps/tetragonal,width=7cm}
+	\epsfig{file=eps/tetragonal,width=8.5cm}
 	\caption[]{Simple tetragonal cell (P) and body-centered tetragonal cell (I)}
 	\label{fig:bravais}
 \end{center}
 \end{figure}
 
 
-For every experiment the~dataset was generated as follows. First a~single graph (cell) was created as a~cubic (P) cell $a = b = c = 1$. Node labels were set to $1$ ($|l_n| = 1$, $l_n = 1$), unless stated otherwise. A second graph, cubic (I) cell, was created by introducing an additional node in the~center of the~graph. Then, datasets were generated by random scaling of all the~input graphs edges using factors pertaining to uniform distribution $U(-5, 5)$, but maintaining the~tetragonal constraint: $a = b \neq c$. Then, a~small random error $\varepsilon$ with zero mean and standard deviation equal to $0.01$ was added to all node and edge labels. For every experiment the~dataset consisted of two classes of 200 graphs each. Among each class every graph node had its expected output set to the~same value: $1$ or $-1$, depending on the~class. During evaluation, a~node was assigned to class depending on the~sign of its output $o_n$. For every experiment, the~training set consisted of 50 graphs, while the~test set consisted of 150 graphs.
+\noindent For every experiment the~dataset was generated as follows. First a~single graph (cell) was created as a~cubic (P) cell $a = b = c = 1$. Node labels were set to $1$ ($|l_n| = 1$, $l_n = 1$), unless stated otherwise. A second graph, cubic (I) cell, was created by introducing an additional node in the~center of the~graph. Then, datasets were generated by random scaling of all the~input graphs edges using factors pertaining to uniform distribution $U(-5, 5)$, but maintaining the~tetragonal constraint: $a = b \neq c$. Then, a~small random error $\varepsilon$ with zero mean and standard deviation equal to $0.01$ was added to all node and edge labels. For every experiment the~dataset consisted of two classes of 200 graphs each. Among each class every graph node had its expected output set to the~same value: $1$ or $-1$, depending on the~class. During evaluation, a~node was assigned to class depending on the~sign of its output $o_n$. For every experiment, the~training set consisted of 50 graphs, while the~test set consisted of 150 graphs.
 \\\\
 For every experiment, the~state size $|\vec{x}_n|$ was set to $5$. The~number of hidden neurons was set for both networks to $5$. For the~output network linear neurons were used as output neurons. The~contraction constant $\mu$ was set to $30$ as smaller values tended to disturb the~learning process significantly. The~maximum number of state calculation and error backpropagation steps was set to $200$. The~number of full training iterations (forward-backward) was set to $200$, as it could be seen that for some GNNs the~RMSE on training set began to drop significantly only after more than $100$ iterations. In each experiment the~best GNN was selected as the~one that achieved the~smallest RMSE on the~training set. Then, the~selected GNN was evaluated on the~test set. The~training set for each experiment consisted of $50$ samples from each of the~two classes ($100$ samples in total). The~test set consisted of $150$ samples from each class ($300$ samples in total).
 
@@ -187,7 +195,9 @@ test set & 98.82\% & 98.03\% &  99.50\% \\
 
 
 \subsection{Single Substitution}
-For this experiment, two tetragonal (I) datasets were used. In one dataset all node labels were set to $1$, while in the~other one the~labels of central nodes were set to $2$, to simulate a~single atom substitution. The~unusually good results for the small random error, presented in Table~\ref{tab:subst}, can be explained by the~simplicity of the~task. As node labels are explicitly given to the~model (not alike the~structure of the~graph, which was the~case described in the~previous section), a~simple linear classifier would be sufficient for this task, even taking into consideration the~noise applied. To check the model performance with a more demanding task, a larger random error $\varepsilon$ with zero mean and standard deviation equal to $0.1$ was added to the original node and edge labels and a new classifier was trained. The results are significantly worse, however, it must be stated, that such a random error disturbs greatly the graph structure in the case of small edge lengths.
+For this experiment, two tetragonal (I) datasets were used. In one dataset all node labels were set to $1$, while in the~other one the~labels of central nodes were set to $2$, to simulate a~single atom substitution. The~unusually good results for the small random error, presented in Table~\ref{tab:subst}, can be explained by the~simplicity of the~task. As node labels are explicitly given to the~model (not alike the~structure of the~graph, which was the~case described in the~previous section), a~simple linear classifier would be sufficient for this task, even taking into consideration the~noise applied.
+\\\\
+To check the model performance with a more demanding task, a larger random error $\varepsilon$ with zero mean and standard deviation equal to $0.1$ was added to the original node and edge labels and a new classifier was trained. The results are significantly worse, however, it must be stated, that such a random error disturbs greatly the graph structure in the case of small edge lengths.
 
 \begin{table}[h!]
 \begin{center}
