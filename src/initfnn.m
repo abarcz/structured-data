@@ -10,7 +10,7 @@ function net = initfnn(nInputLines, nHiddenNeurons, nOutputNeurons, outputFun='p
 % nInputLines : number of input lines, script will add +1 for bias automatically
 % nWeights : number of weights learned from data
 
-	if (strcmp(outputFun, 'purelin') == 0) && (strcmp(outputFun, 'tansig') == 0)
+	if (strcmp(outputFun, 'logsig') == 0) && (strcmp(outputFun, 'tansig') == 0) && (strcmp(outputFun, 'purelin') == 0)
 		error(sprintf('Unknown output activation function: %s', outputFun));
 	end
 	if (strcmp(hiddenFun, 'logsig') == 0) && (strcmp(hiddenFun, 'tansig') == 0) && (strcmp(hiddenFun, 'purelin') == 0)
@@ -43,6 +43,7 @@ function weights = initializeweights(nInputLines, nNeurons, factor=0)
 	if factor == 0
 		factor = nInputLines;
 	end
+	factor = 1;
 	% rand returns values uniformly distributed on (0, 1)
 	weights = (rand(nNeurons, nInputLines) - 0.5) ./ factor;
 end

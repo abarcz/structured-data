@@ -8,10 +8,12 @@ function [trainedFnn mse q nSaturated z] = sbllm(fnn, inputs, outputs, nIteratio
 % outputs - each row contains output for a single sample (normalized)
 % z0 - initial values of z (can be initialized by trainsbllm)
 
-	if strcmp(fnn.outputFun, 'purelin') == 1
-		activation2inv = @(x) x;
+	if strcmp(fnn.outputFun, 'logsig') == 1
+		activation2inv = @(x) reallogit(x);
 	elseif strcmp(fnn.outputFun, 'tansig') == 1
 		activation2inv = @(x) realatanh(x);
+	elseif strcmp(fnn.outputFun, 'purelin') == 1
+		activation2inv = @(x) x;
 	else
 		error(sprintf('Unknown output activation function: %s', fnn.outputFun));
 	end

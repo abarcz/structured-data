@@ -20,13 +20,17 @@ function fnn = postloadfnn(fnn)
 		fnn.activation2ndderivative1 = @(x) 0;
 	end
 
-	if strcmp(fnn.outputFun, 'purelin') == 1
-		fnn.activation2 = @(x) x;
-		fnn.activationderivative2 = @(x) 1;
-		fnn.activation2ndderivative2 = @(x) 0;
-	else	% tansig
+	if strcmp(fnn.outputFun, 'logsig') == 1
+		fnn.activation2 = @(x) logsig(x);
+		fnn.activationderivative2 = @(x) logsig(x) .* (1 - logsig(x));
+		fnn.activation2ndderivative2 = @(x) error('second derivative of logsig not implemented');
+	elseif strcmp(fnn.outputFun, 'tansig') == 1
 		fnn.activation2 = @(x) tanh(x);
 		fnn.activationderivative2 = @(x) repmat(1, size(x)) - (tanh(x) .^ 2);
 		fnn.activation2ndderivative2 = @(x) 2 .* (tanh(x) .^ 3 - tanh(x));
+	else	% purelin
+		fnn.activation2 = @(x) x;
+		fnn.activationderivative2 = @(x) 1;
+		fnn.activation2ndderivative2 = @(x) 0;
 	end
 end
