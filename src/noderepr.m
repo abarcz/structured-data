@@ -6,30 +6,28 @@ function graphn = noderepr(graph)
 % (each node label contain x,y,z coordinates)
 
 	% fill coordinates of points starting from 0,0,0 node (first node)
-	% TODO: very unoptimal, should do a recursive search
 	coordinates = zeros(graph.nNodes, 3);
 	filled = zeros(1, graph.nNodes);
 	filled(1) = 1;
 	coordinates(1, :) = [0 0 0];
-	while sum(filled) < size(filled, 2)
-		for i = 1:graph.nNodes
-			if filled(i)
-				edges = graph.edgeLabels(graph.edgeLabels(:, 1) == i, :);
-				nEdges = size(edges, 1);
-				for j = 1:nEdges
-					target = edges(j, 2);
-					if !filled(target)
-						coordinates(target, :) = coordinates(i, :) + edges(j, 3:5);
-						filled(target) = 1;
-						if sum(filled) == size(filled, 2)
-							break;
-						end
-					end
-				end
+	graph = addgraphinfo(graph, false);
+	visited = zeros(graph.nNodes);
+	nodeQueue = [1];
+	visited(1) = 1;
+	while size(nodeQueue, 2) > 0
+		% pop first element
+		node = nodeQueue(1);
+		nodeQueue = nodeQueue(2:size(nodeQueue, 2));
+		targetNodes = graph.targetNodes{node};
+		for i = 1:size(targetNodes, 2)
+			target = targetNodes(i);
+			if visited(target)
+				continue;
+			else
+				visited(target) = 1;
 			end
-			if sum(filled) == size(filled, 2)
-				break;
-			end
+			nodeQueue(size(nodeQueue, 2) + 1) = target;
+			coordinates(target, :) = coordinates(node, :) + graph.edgeLabelsCell{node, target}(1:3);
 		end
 	end
 	graphn = graph;

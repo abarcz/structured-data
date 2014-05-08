@@ -1,5 +1,5 @@
 
-function graph = addgraphinfo(graph)
+function graph = addgraphinfo(graph, normalizeLabels=true)
 % Add extra structures to graph, facilitating graph processing
 
 	nNodes = graph.nNodes;
@@ -18,7 +18,9 @@ function graph = addgraphinfo(graph)
 	end
 
 	% create cell array of edge labels, for better indexing
-	edgeLabels(:, 3:end) = normalize(edgeLabels(:, 3:end));
+	if normalizeLabels
+		edgeLabels(:, 3:end) = normalize(edgeLabels(:, 3:end));
+	end
 	edgeLabelsCell = {};
 	for i = 1:size(edgeLabels, 1)
 		sourceNode = edgeLabels(i, 1);

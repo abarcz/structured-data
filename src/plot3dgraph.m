@@ -1,5 +1,5 @@
 
-function plot3dgraph(graph)
+function plot3dgraph(graph, hiddenEdges=false)
 % Plots a graph in 3d as unidirectional
 % First three fields of node label are treated as xyz coordinates
 % Requires: octave-plot
@@ -12,6 +12,9 @@ function plot3dgraph(graph)
 	for i = 1:nEdges
 		sourceNode = graph.edgeLabels(i, 1);
 		targetNode = graph.edgeLabels(i, 2);
+		if hiddenEdges && graph.edgeLabels(i, 3) == 0
+			continue;
+		end
 		adjacency(sourceNode, targetNode) = 1;
 		adjacency(targetNode, sourceNode) = 1;
 	end
