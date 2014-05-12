@@ -19,7 +19,7 @@
 }
 
 %% Dane do strony tytułowej
-\author{Aleksy Barcz}
+\author{Aleksy Barcz, Stanisław Jankowski}
 \title{Graph Neural Networks for crystal structures}
 \date{\today}
 \institute{Warsaw University of Technology}
@@ -34,10 +34,10 @@
 \begin{columns}
 	\begin{column}{0.66\textwidth}
 		\begin{itemize}
-			\item Process information about graph structure directly
-			\item Build meaningful representation
-			\item Capable of classification and regression
-			\item Based on feed-forward neural networks
+			\item process information about graph structure directly
+			\item build meaningful representation
+			\item capable of classification and regression
+			\item based on feed-forward neural networks
 		\end{itemize}
 	\end{column}
 	\begin{column}{0.34\textwidth}
@@ -49,31 +49,96 @@
 \begin{frame}
 \frametitle{Applications of graph-oriented neural networks}
 \begin{itemize}
-	\item Drug design
-	\item Prediction of fuel compounds properties
-	\item Object detection in 2D images
-	\item Document mining
+	\item drug design
+	\item prediction of fuel compounds properties
+	\item object detection in 2D images
+	\item document mining
 \end{itemize}
 \end{frame}
 
 \begin{frame}
-\frametitle{GNN - encoding network}
+\frametitle{Graph Neural Networks}
 \begin{center}
 	\includegraphics[scale=0.4]{img/encodinginc}
 \end{center}
 \begin{itemize}
-	\item Building node representation: $x_n = f(...)$
-	\item Node classification: $o_n = g(x_n)$
+	\item building node representation: $x_n = f(...)$
+	\item node classification: $o_n = g(x_n)$
 \end{itemize}
 \end{frame}
 
 \begin{frame}
-\frametitle{Example - single substitution, tetragonal I cells}
+\frametitle{Application to crystal structures}
+\begin{itemize}
+	\item data model should include: \begin{itemize}
+		\item spatial location of atoms and vacancies
+		\item bonds
+		\item atom, vacancy, bond properties
+		\item crystal cell properties
+	\end{itemize}
+	\item highly cyclic data
+	\item first approximation: Bravais lattices
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Data structure}
+\begin{itemize}
+	\item crystal structures represented as Bravais lattices
+	\item graph = unit cell
+	\item node = lattice point
+	\item edge = lattice edge (2 directed edges per lattice edge)
+	\item output evaluated at every node
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Parametrisation}
+\begin{itemize}
+	\item edge label - 3D vector coordinates, bond properties
+	\item node label - physicochemical atom properties
+	\item output - if set to same value for each node, can represent a whole-crystal property
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Experiment: distinguishing crystals with substitutions}
 \begin{columns}
 	\begin{column}{0.34\textwidth}
-		\includegraphics[scale=0.4]{img/tetragonal-I}
+		\includegraphics[scale=0.45]{img/tetragonal-I}
 	\end{column}
 	\begin{column}{0.66\textwidth}
+		\begin{itemize}
+			\item tetragonal body-centered cells
+			\item distinguish crystals with single substitution (different node label)
+			\item distinguish crystals with substitution placed at different lattice point
+		\end{itemize}
+	\end{column}
+\end{columns}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Experiment: dataset generation}
+\begin{itemize}
+	\item random scaling of edges maintaining the tetragonal constraint
+	\item random error added to node labels\\(atom description perturbation)
+	\item random error added to edge labels\\(atom distances perturbation)
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Experiment: training and evaluation}
+\begin{itemize}
+	\item training set: 50 graphs from each class (total: 100)
+	\item test set: 150 graphs from each class (total: 300)
+	\item classifier with smallest RMSE on training set chosen
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Experiment: results}
 
 \begin{table}[h!]
 \begin{center}
@@ -109,15 +174,28 @@ test set & 95.07\% & 92.05\% & 98.66\% \\
 \end{center}
 \end{table}
 
-	\end{column}
-\end{columns}
-
 \end{frame}
 
 \begin{frame}
-\frametitle{Application to Si defects - possibilities}
+\frametitle{Application to Si defects - future challenges}
+\begin{columns}
+	\begin{column}{0.5\textwidth}
+		\includegraphics[scale=0.15]{img/Silicon-unit-cell-3D-balls.png}
+	\end{column}
+	\begin{column}{0.5\textwidth}
+		\begin{itemize}
+			\item approximating activation energy
+			\item different defect classes
+			\item vacancies
+			\item different types of vacancies
+		\end{itemize}
+	\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}
 \begin{center}
-	\includegraphics[scale=0.25]{img/si}
+\Huge{\emph{Thank you}}
 \end{center}
 \end{frame}
 
@@ -182,7 +260,7 @@ test set & 95.07\% & 92.05\% & 98.66\% \\
 	\includegraphics[scale=0.065]{img/rmse1_clipped}
 \end{center}
 \begin{itemize}
-	\item $contractionConstant \in [1.2, 0.9, 0.6]$
+	\item $contractionConstant$
 	\item boundary value depends on dataset
 \end{itemize}
 \end{frame}
