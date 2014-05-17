@@ -1,6 +1,7 @@
 
 function equal = cellcompare(cell1, cell2)
-% Return 1 if cellarrays are same (only for 1D cellarrays containing only row matrices or numbers or recursively cellarrays)
+% Return 1 if cellarrays are same
+% Only for row cellarrays containing only row matrices/numbers/cellarrays (recursively)
 
 	if iscell(cell1)
 		if iscell(cell2)
