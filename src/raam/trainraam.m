@@ -1,8 +1,8 @@
 
-function [fnn maxDiffs sumDiffs keys values] = trainraam(fnn, cell, keys, values, nIterations)
+function [fnn maxDiffs sumDiffs keys values] = trainraam(fnn, cell, keys, values, nIterations, sbllm=1)
 % Train given fnn as RAAM encoder+decoder
 %
-% usage: [fnn maxDiffs sumDiffs keys values] = trainraam(fnn, cell, keys, values, nIterations)
+% usage: [fnn maxDiffs sumDiffs keys values] = trainraam(fnn, cell, keys, values, nIterations, sbllm=1)
 %
 % cell - original tree
 % keys + values - initial encodings of nodes
@@ -10,7 +10,7 @@ function [fnn maxDiffs sumDiffs keys values] = trainraam(fnn, cell, keys, values
 	sumDiffs = zeros(1, nIterations);
 	maxDiffs = zeros(1, nIterations);
 	for i = 1:nIterations
-		fnn = sbllmiteration(fnn, cell, keys, values);
+		fnn = trainiteration(fnn, cell, keys, values, sbllm);
 		[keys values] = buildcurrdict(fnn, cell, keys, values);
 		codesSum = cellsum(values);
 		maxDiff = 0;

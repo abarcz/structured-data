@@ -1,8 +1,8 @@
 
-function fnn = sbllmiteration(fnn, cell, keys, values)
+function fnn = trainiteration(fnn, cell, keys, values, sbllm)
 % Single iteration of RAAM training
 %
-% usage: fnn = sbllmiteration(fnn, cell, keys, values)
+% usage: fnn = trainiteration(fnn, cell, keys, values, sbllm)
 %
 % cell - original tree
 % keys + values - current encodings of nodes
@@ -18,5 +18,9 @@ function fnn = sbllmiteration(fnn, cell, keys, values)
 			inputs = [inputs; input];
 		end
 	end
-	[fnn mse q nSaturated] = trainsbllm(fnn, inputs, inputs, 1);
+	if sbllm
+		[fnn mse q nSaturated] = trainsbllm(fnn, inputs, inputs, 1);
+	else
+		fnn = trainfnn(fnn, inputs, inputs, 1, 0.7);
+	end
 end

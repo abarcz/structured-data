@@ -25,6 +25,7 @@ function equal = cellcompare(cell1, cell2)
 		if iscell(cell2)
 			equal = 0;
 		else
+			assert(sum(size(cell1) == size(cell2)) == 2);
 			equal = (sum(sum(cell1 == cell2)) == size(cell1 == cell2, 2));
 		end
 	end
