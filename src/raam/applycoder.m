@@ -2,7 +2,7 @@
 function outputs = applycoder(fnn, inputs)
 % Apply the coder part of RAAM to (non-biased) inputs
 %
-% usage: outputs = applynet(fnn, inputs)
+% usage: outputs = applycoder(fnn, inputs)
 %
 % inputs - each row is a single sample
 % outputs - each row contains output for a single sample
