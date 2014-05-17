@@ -11,6 +11,7 @@ function code = raamencode(fnn, cell)
 		nodes = nodesatdepth(cell, i);
 		for j = 1:size(nodes, 2)
 			node = nodes{j};
+			assert(size(node, 2) == 2);
 			if cellcontains(keys, node)
 				continue;
 			end
