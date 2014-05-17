@@ -2,7 +2,7 @@
 function outputs = applydecoder(fnn, inputs)
 % Apply decoder part of RAAM network
 %
-% usage: outputs = applynet(fnn, inputs)
+% usage: outputs = applydecoder(fnn, inputs)
 %
 % inputs - each row is a single sample
 % outputs - each row contains output for a single sample

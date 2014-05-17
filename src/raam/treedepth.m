@@ -2,7 +2,7 @@
 function res = treedepth(cell)
 % Calculate depth of tree represented as cellarray
 %
-% usage:
+% usage: res = treedepth(cell)
 %
 
 	if isempty(cell)

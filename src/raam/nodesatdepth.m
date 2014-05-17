@@ -2,7 +2,7 @@
 function nodes = nodesatdepth(tree, depth)
 % Returns list of nodes found at given depth
 %
-%usage:
+% usage: nodes = nodesatdepth(tree, depth)
 %
 	if !iscell(tree) || depth == 0
 		nodes = {};
