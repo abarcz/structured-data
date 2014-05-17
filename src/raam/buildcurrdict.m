@@ -1,6 +1,11 @@
 
 function [keys2 values2] = buildcurrdict(fnn, cell, keys, values)
 % Builds a dictionary of codes - a code for each node of the binary tree
+% Pollacks syntax encoding task.
+%
+% fnn - RAAM coder + decoder network
+% cell - syntax tree
+% keys + values - encodings used in previous RAAM training step
 
 	% {'A', 'D', 'N', 'P', 'V'};
 	keys2 = {[1,0,0,0,0, 0,0,0,0,0], [0,1,0,0,0, 0,0,0,0,0], [0,0,1,0,0, 0,0,0,0,0], [0,0,0,1,0, 0,0,0,0,0], [0,0,0,0,1, 0,0,0,0,0]};

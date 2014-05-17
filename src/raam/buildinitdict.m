@@ -1,8 +1,11 @@
 
 function [keys values] = buildinitdict(cell)
-% Builds a dictionary of codes - a code for each node of the binary tree
+% Builds an initial dictionary of codes - a code for each node of the binary tree
+% Pollacks syntax encoding task.
+%
+% cell - syntax tree
 
-	% {'A', 'D', 'N', 'P', 'V'};
+	% encodings of {'A', 'D', 'N', 'P', 'V'};
 	keys = {[1,0,0,0,0, 0,0,0,0,0], [0,1,0,0,0, 0,0,0,0,0], [0,0,1,0,0, 0,0,0,0,0], [0,0,0,1,0, 0,0,0,0,0], [0,0,0,0,1, 0,0,0,0,0]};
 	values = {[1,0,0,0,0, 0,0,0,0,0], [0,1,0,0,0, 0,0,0,0,0], [0,0,1,0,0, 0,0,0,0,0], [0,0,0,1,0, 0,0,0,0,0], [0,0,0,0,1, 0,0,0,0,0]};
 

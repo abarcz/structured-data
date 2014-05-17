@@ -1,6 +1,7 @@
 
 function res = cellcontains(cell1, cell2)
 % Return 1 if cell1 contains cell2
+% Only for row cellarrays containing only row matrices/numbers/cellarrays (recursively)
 
 	if !iscell(cell1) || !iscell(cell2)
 		error('cellcontains used on non-cells')
