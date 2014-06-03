@@ -30,12 +30,29 @@
 \frame{\titlepage}
 
 \begin{frame}
+\frametitle{Graphs - are FNNs adequate?}
+\begin{columns}
+	\begin{column}{0.66\textwidth}
+		\begin{itemize}
+			\item input = vector
+			\item constant input size
+			\item information about structure is lost
+			\item encodings are handcrafted
+		\end{itemize}
+	\end{column}
+	\begin{column}{0.34\textwidth}
+		\includegraphics[scale=0.4]{img/graph}
+	\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}
 \frametitle{Graph-oriented neural networks}
 \begin{columns}
 	\begin{column}{0.66\textwidth}
 		\begin{itemize}
 			\item process information about graph structure directly
-			\item build meaningful representation
+			\item learn a meaningful representation
 			\item capable of classification and regression
 			\item based on feed-forward neural networks
 		\end{itemize}
@@ -53,6 +70,7 @@
 	\item prediction of fuel compounds properties
 	\item object detection in 2D images
 	\item document mining
+	\item web page ranking
 \end{itemize}
 \end{frame}
 
@@ -84,13 +102,20 @@
 
 \begin{frame}
 \frametitle{Data structure}
-\begin{itemize}
-	\item crystal structures represented as Bravais lattices
-	\item graph = unit cell
-	\item node = lattice point
-	\item edge = lattice edge (2 directed edges per lattice edge)
-	\item output evaluated at every node
-\end{itemize}
+\begin{columns}
+	\begin{column}{0.66\textwidth}
+		\begin{itemize}
+			\item crystals represented as Bravais lattices
+			\item graph = unit cell
+			\item node = lattice point
+			\item edge = lattice edge (2 directed edges per lattice edge)
+			\item output evaluated at every node
+		\end{itemize}
+	\end{column}
+	\begin{column}{0.34\textwidth}
+		\includegraphics[scale=0.45]{img/tetragonal-I}
+	\end{column}
+\end{columns}
 \end{frame}
 
 \begin{frame}
