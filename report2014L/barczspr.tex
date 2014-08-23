@@ -1,0 +1,47 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{polski}
+\usepackage[utf8]{inputenc}
+\usepackage[colorlinks=true,linkcolor=black,urlcolor=blue,citecolor=RoyalBlue]{hyperref}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{alltt}
+\usepackage{booktabs} % eleganckie tabelki
+\usepackage{graphicx}
+\usepackage{bm}		% bold math symbols
+
+\newcounter{liczp}
+\newenvironment{example}{\refstepcounter{liczp}{\noindent
+{\bf Przykład~\theliczp:}\,}}
+
+\usepackage{parcolumns}	% two-column paragraphs
+\usepackage{subfigure}
+\usepackage{floatrow}
+% Table float box with bottom caption, box width adjusted to content
+\newfloatcommand{capbtabbox}{table}[][\FBwidth]
+
+\addtolength{\textwidth}{4cm}
+\addtolength{\hoffset}{-2cm}
+\addtolength{\textheight}{4cm}
+\addtolength{\voffset}{-2cm}
+\date {\today}
+\author {
+Aleksy Barcz\\
+Instytut Systemów Elektronicznych
+}
+%\keywords{teoria wrażliwości, sieci neuronowe}
+
+\title{\vspace{60mm} \textbf{Sprawozdanie z pracowni naukowej} \\ 2014L}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+
+\newpage
+
+\section{Metoda szybkiego uczenia sieci RAAM z wykorzystaniem metody wrażliwościowej}
+Wykonane badania pozwoliły przyspieszyć proces uczenia sieci RAAM na danych strukturalnych (analiza form gramatycznych zdań w języku angielskim), przy użyciu metody wrażliwościowej, stosowanej dotąd tylko do uczenia zwykłych sieci neuronowych. Opis metody oraz uzyskane wyniki zostały zaprezentowane w artykule \emph{Fast learning method for RAAM based on sensitivity analysis}, zaakceptowanym do druku w materiałach pokonferencyjnych konferencji \emph{XXXIV-th IEEE-SPIE Joint Symposium Wilga 2014}, \url{http://wilga.ise.pw.edu.pl/node/744}.
+
+\section{Zastosowanie grafowych sieci neuronowych (GNN) do klasyfikacji siatek Bravais}
+Wykonane badania pozwoliły na zastosowanie grafowych sieci neuronowych do trójwymiarowych danych opisujących struktury krystaliczne jako siatki Bravais, o wysokiej cykliczności. Dotychczas dane tego rodzaju nie były nigdy analizowane przy użyciu metod uczenia maszynowego jako dane strukturalne, a jedynie jako wektory cech, a badania związane z maszynami grafowymi unikały danych cyklicznych. Opis metody oraz wyniki zostały zaprezentowane na konferencji \emph{8th International Conference on Neural Network and Artificial Intelligence (ICNNAI'2014)} oraz opublikowane w artykule \emph{Graph Neural Networks for 3D Bravais lattices classification}~\cite{barcz2014graph}, \url{http://link.springer.com/chapter/10.1007%2F978-3-319-08201-1_8}.
+
+\bibliography{bib/sensitivity,bib/gnn}
+\bibliographystyle{ieeetr}
+\end{document}
