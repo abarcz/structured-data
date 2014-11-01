@@ -46,11 +46,11 @@ function [gnns trainEval testEval trainStats] = crossvalidate(gnn, graphs, nIter
 		gnns{i} = trainedGnn;
 
 		trainOutputs = classifygnn(trainedGnn, trainGraph);
-		trainEval(i, :) = evaluate(trainOutputs, trainGraph.expectedOutput);
+		trainEval(i, :) = evaluate(trainOutputs, getexpectedoutput(trainGraph));
 
 		testGraph = mergegraphs(testGraphs);
 		testOutputs = classifygnn(trainedGnn, testGraph);
-		testEval(i, :) = evaluate(testOutputs, testGraph.expectedOutput);
+		testEval(i, :) = evaluate(testOutputs, getexpectedoutput(testGraph));
 		timeElapsed = toc();
 
 		if testname != 0
