@@ -1,7 +1,7 @@
 
-function [gnns trainStats testStats initialTrainRmse] = bestgnn(graphs, nGnns, nInitialIterations, nIterations, nFolds, testname, state)
+function [gnns trainStats testStats initialTrainRmse] = bestgnn(graphs, nGnns, nInitialIterations, nIterations, nFolds, classification, testname, state)
 %
-% usage: [gnns trainStats testStats initialTrainRmse] = bestgnn(graphs, nGnns, nInitialIterations, nIterations, nFolds, testname, state)
+% usage: [gnns trainStats testStats initialTrainRmse] = bestgnn(graphs, nGnns, nInitialIterations, nIterations, nFolds, classification, testname, state)
 %
 	gnns = {};
 	graphsMerged = mergegraphs(graphs);
@@ -28,7 +28,7 @@ function [gnns trainStats testStats initialTrainRmse] = bestgnn(graphs, nGnns, n
 
 	if nIterations != 0
 		tic();
-		[gnns trainStats testStats] = crossvalidate(bestGnn, graphs, nIterations, nFolds);
+		[gnns trainStats testStats] = crossvalidate(bestGnn, graphs, nIterations, nFolds, classification);
 		time = toc();
 		filename = strcat(testname, '_best.mat');
 		packedGnns = {};
