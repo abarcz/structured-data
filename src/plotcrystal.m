@@ -6,7 +6,7 @@ function plotcrystal(graph, hiddenEdges=false)
 %
 % Requires: octave-plot
 %
-% usage: plotcrystal(graph)
+% usage: plotcrystal(graph, hiddenEdges=false)
 %
 
 	graphn = noderepr(graph);

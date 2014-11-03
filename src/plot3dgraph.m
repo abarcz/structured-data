@@ -4,7 +4,7 @@ function plot3dgraph(graph, hiddenEdges=false)
 % First three fields of node label are treated as xyz coordinates
 % Requires: octave-plot
 %
-% usage: plot3dgraph(graph)
+% usage: plot3dgraph(graph, hiddenEdges=false)
 %
 
 	adjacency = zeros(graph.nNodes);

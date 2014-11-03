@@ -1,8 +1,8 @@
 
-function [outputs nForwardSteps] = classifygnn(gnn, graph, maxForwardSteps=200, state=0)
+function [outputs nForwardSteps] = applygnn(gnn, graph, maxForwardSteps=200, state=0)
 % Classify graph nodes using gnn
 %
-% usage: [outputs nForwardSteps] = classifygnn(gnn, graph, maxForwardSteps=200, state=0)
+% usage: [outputs nForwardSteps] = applygnn(gnn, graph, maxForwardSteps=200, state=0)
 %
 
 	if state != 0

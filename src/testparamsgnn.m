@@ -30,7 +30,7 @@ function testparamsgnn(gnn, graph, nIterations, testname, contractionConstants, 
 
 			tic();
 			[gnn2 trainStats] = traingnn(gnn, graph, nIterations, 200, 200, state);
-			evaluation = evaluate(classifygnn(gnn2, graph, state), graph.expectedOutput);
+			evaluation = evaluate(applygnn(gnn2, graph, state), graph.expectedOutput);
 			timeElapsed = toc();
 
 			save(filename, 'trainStats', 'timeElapsed', 'evaluation', 'contractionConstant', 'minStateDiff', 'minErrorAccDiff');

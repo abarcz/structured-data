@@ -10,11 +10,6 @@ function stats = evaluate(output, expected)
 	assert(unique(expected) == [-1; 1]);
 	assert(size(output, 2) == size(expected, 2));
 
-	% graph oriented task, we select only first node
-	if size(output, 1) == 1
-		expected = expected(1, :);
-	end
-
 	output = sign(output);
 
 	truePos = sum(output(expected == 1) == 1);

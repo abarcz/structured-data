@@ -1,10 +1,12 @@
 
-function [gnns trainEval testEval trainStats] = crossvalidate(gnn, graphs, nIterations, nFolds=10, testname=0)
+function [gnns trainEval testEval trainStats] = crossvalidate(gnn, graphs, nIterations, nFolds=10, classification=true, testname=0)
 % Perform n-fold crossvalidation on cell of graphs
 %
-% usage: [gnns trainEval testEval trainStats] = crossvalidate(gnn, graphs, nIterations, nFolds=10, testname=0)
+% usage: [gnns trainEval testEval trainStats] = crossvalidate(gnn, graphs, nIterations, nFolds=10, classification=true, testname=0)
 %
-% stats are result of evaluate() function (accuracy, precision, recall)
+% stats are result of evaluate() function:
+% - (accuracy, precision, recall) for classification task
+% - error values for approximation task
 %
 
 	nGraphs = size(graphs, 2);
@@ -23,8 +25,14 @@ function [gnns trainEval testEval trainStats] = crossvalidate(gnn, graphs, nIter
 		save(filename, 'graphs', 'packedInitialGnn', 'nIterations', 'nFolds', 'nGraphs');
 	end
 
-	testEval = zeros(nFolds, 3);
-	trainEval = zeros(nFolds, 3);
+	if classification
+		testEval = zeros(nFolds, 3);
+		trainEval = zeros(nFolds, 3);
+	else
+		assert(graphs{1}.nodeOrientedTask == false);	% for nodeOrientedTask not implemented
+		testEval = zeros(nFolds, nTestGraphs);
+		trainEval = zeros(nFolds, nTrainGraphs);
+	end
 	gnns = {};
 	for i = 1:nFolds
 		tic();
@@ -45,12 +53,20 @@ function [gnns trainEval testEval trainStats] = crossvalidate(gnn, graphs, nIter
 		[trainedGnn trainStats] = traingnn(gnn, trainGraph, nIterations);
 		gnns{i} = trainedGnn;
 
-		trainOutputs = classifygnn(trainedGnn, trainGraph);
-		trainEval(i, :) = evaluate(trainOutputs, getexpectedoutput(trainGraph));
+		trainOutputs = applygnn(trainedGnn, trainGraph);
+		if classification
+			trainEval(i, :) = evaluate(trainOutputs, getexpectedoutput(trainGraph));
+		else
+			trainEval(i, :) = getexpectedoutput(trainGraph)' - trainOutputs';
+		end
 
 		testGraph = mergegraphs(testGraphs);
-		testOutputs = classifygnn(trainedGnn, testGraph);
-		testEval(i, :) = evaluate(testOutputs, getexpectedoutput(testGraph));
+		testOutputs = applygnn(trainedGnn, testGraph);
+		if classification
+			testEval(i, :) = evaluate(testOutputs, getexpectedoutput(testGraph));
+		else
+			testEval(i, :) = getexpectedoutput(testGraph)' - testOutputs';
+		end
 		timeElapsed = toc();
 
 		if testname != 0
