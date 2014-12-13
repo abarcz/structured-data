@@ -21,5 +21,5 @@ function [outputs nForwardSteps] = applygnn(gnn, graph, maxForwardSteps=200, sta
 	outputs = applynet(gnn.outputNet, finalState);
 	if graph.nodeOrientedTask == false
 		outputs = outputs(graph.graphOutputIndexes, :);
-	else
+	end
 end
