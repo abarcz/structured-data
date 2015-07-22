@@ -92,9 +92,9 @@ def generate_crystals(impurity, directory):
 	# prepare base Si cell
 	original_node_labels = []
 	output = []
+	output.append([ionization_energy_in_si[impurity]])	# each element in array for write_file to work
 	for i in range(0, n_atoms):
 		original_node_labels.append(element_properties['Si'])
-		output.append([ionization_energy_in_si[impurity]])	# each element in array for write_file to work
 	
 	path = directory.rstrip("/") + "/" + "Si_" + impurity + "_"
 
