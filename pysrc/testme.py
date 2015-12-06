@@ -3,12 +3,12 @@ import scipy.linalg as linalg
 from sklearn.metrics import mean_squared_error
 import matplotlib.pyplot as plt
 
-def plot_net(net, inputs, expected):
+def plot_net(net, inputs, expected, index=0):
 	plt.figure(1)
 	plt.subplot(211)
-	plt.plot(inputs, expected, '.')
+	plt.plot(inputs, expected[:,index], '.')
 	plt.subplot(212)
-	plt.plot(inputs, net.apply(inputs), '.')
+	plt.plot(inputs, net.apply(inputs)[:, index], '.')
 	plt.show()
 
 def testme():
@@ -22,7 +22,7 @@ def init_weights(nInputLines, nNeurons, factor=1):
 	if factor is None:
 		factor = nInputLines
 	# random.rand returns values distributed uniformly on [0, 1)
-	weights = np.matrix((np.random.rand(nNeurons, nInputLines) - 0.5) / (0.5 / 0.15)) #factor)
+	weights = np.matrix((np.random.rand(nNeurons, nInputLines) - 0.5) / factor)
 	return weights
 
 def mul_elementwise(a, b):
@@ -274,7 +274,14 @@ class Net():
 			self.lm_update_weights_k(deltas[k], k)
 		return rmse(expected, outputs)
 
+	def check_dimensions(self, inputs, expected):
+		if inputs.shape[1] != self.hiddenLayer.nInputLines:
+			raise Exception('Incorrect number of input lines: %d, expected: %d' % (inputs.shape[1], self.hiddenLayer.nInputLines))
+		if expected.shape[1] != self.outputLayer.nNeurons:
+			raise Exception('Incorrect number of outputs: %d, expected: %d' % (expected.shape[1], self.outputLayer.nNeurons))
+
 	def lm_train(self, inputs, expected, nEpochs):
+		self.check_dimensions(inputs, expected)
 		rmse = np.zeros(nEpochs)
 		for i in range(nEpochs):
 			rmse[i] = self.lm_single_step(inputs, expected)
