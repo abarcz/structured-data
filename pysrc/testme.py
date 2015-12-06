@@ -101,10 +101,20 @@ class Layer():
 
 
 class LayerDeltas():
-	def __init__(self, weightDeltas, biasDeltas, inputErrors):
+	def __init__(self, weightDeltas=None, biasDeltas=None, inputErrors=None):
+		# LayerDeltas can be either null or fully initialized
+		if inputErrors is None:
+			if (weightDeltas is None) or (biasDeltas is None):
+				raise Exception("LayerDeltas cannot be partially initialized")
 		self.weightDeltas = weightDeltas
 		self.biasDeltas = biasDeltas
 		self.inputErrors = inputErrors
+
+	def __add__(self, other):
+		# null element + other = other
+		if self.weightDeltas is None:
+			return other
+		return LayerDeltas(self.weightDeltas + other.weightDeltas, self.biasDeltas + other.biasDeltas, self.inputErrors + other.inputErrors)
 			
 
 class Net():
@@ -135,14 +145,18 @@ class Net():
 #			print outputs
 			errors = expected - outputs
 			print errors.sum()
+			deltas1Acc = LayerDeltas()
+			deltas2Acc = LayerDeltas()
 			for j in range(nSamples):
 				input = inputs[j, :]
 				error = errors[j, :]
 				#print input
 				#print error
 				(deltas1, deltas2) = self.backpropagate(input, error)
-				self.hiddenLayer.update_weights(deltas1, learningConstant)
-				self.outputLayer.update_weights(deltas2, learningConstant)
+				deltas1Acc = deltas1Acc + deltas1
+				deltas2Acc = deltas2Acc + deltas2
+			self.hiddenLayer.update_weights(deltas1Acc, learningConstant)
+			self.outputLayer.update_weights(deltas2Acc, learningConstant)
 
 	def backpropagate(self, inputs, errors):
 		#print inputs
