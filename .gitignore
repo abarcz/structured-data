@@ -1,4 +1,5 @@
 *.swp
+*.pyc
 
 common/eps/*eps-converted-to.pdf
 data/g14s7/
